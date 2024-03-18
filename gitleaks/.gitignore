@@ -1,0 +1,8 @@
+.idea
+**/target
+**/*.iml
+/out/
+*.tmp
+__pycache__
+config2.py
+/src/result.json
