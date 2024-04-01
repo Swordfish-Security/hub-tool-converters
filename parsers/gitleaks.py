@@ -197,7 +197,7 @@ class GitleaksParser(BasicParser):
 
         finding = Finding(
             idx=dupe_key,
-            ruleId=reason,
+            ruleId=rule_id,
             locationId=file_key,
             line=line,
             code=secret,
