@@ -1,6 +1,6 @@
 import json
 
-from models.finding import Finding
+from models.finding import FindingOwn
 from parsers import BasicParser
 
 
@@ -24,7 +24,7 @@ class SemgrepParser(BasicParser):
         dupes = dict()
 
         for item in data["results"]:
-            finding = Finding(
+            finding = FindingOwn(
                 title=item["check_id"],
                 severity=self.convert_severity(item["extra"]["severity"]),
                 description=self.get_description(item),

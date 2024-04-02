@@ -2,7 +2,7 @@ import hashlib
 import json
 from typing import TextIO
 
-from models.finding import Finding
+from models.finding import FindingOwn
 from models.location import Location
 from models.rule import Rule
 from parsers import BasicParser
@@ -113,7 +113,7 @@ class GitleaksParser(BasicParser):
             (issue["offender"] + file_path + str(line)).encode("utf-8")
         ).hexdigest()
 
-        finding = Finding(
+        finding = FindingOwn(
             idx=dupe_key,
             ruleId=reason,
             locationId=file_key,
@@ -195,7 +195,7 @@ class GitleaksParser(BasicParser):
             (title + secret + str(line)).encode("utf-8")
         ).hexdigest()
 
-        finding = Finding(
+        finding = FindingOwn(
             idx=dupe_key,
             ruleId=rule_id,
             locationId=file_key,

@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 from config.enums import SourceTypes
-from models.finding import Finding
+from models.finding import FindingOwn
 from models.hub import ScanResult, Scan, ScanDetail, Report
 from models.location import Location
 from models.rule import Rule
@@ -25,7 +25,7 @@ class BasicParser(ABC):
         )
         self.rules: dict[str, Rule] = {}
         self.locations: dict[str, Location] = {}
-        self.findings: dict[str, Finding] = {}
+        self.findings: dict[str, FindingOwn] = {}
 
         self.output_path = args.output
         super().__init__()

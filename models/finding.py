@@ -1,11 +1,12 @@
 import datetime
 from dataclasses import dataclass
+from typing import Optional
 
 from models.location import LocationStack
 
 
 @dataclass(kw_only=False, eq=False, order=False)
-class Finding:
+class FindingOwn:
     type: str | None = None
     id: str | None = None
     ruleId: str | None = None
@@ -130,7 +131,7 @@ class Product:
 
 
 @dataclass(kw_only=False, eq=False, order=False)
-class EndpointDojo:
+class Endpoint:
     protocol: str | None = None  # The communication protocol/scheme such as 'http', 'ftp', 'dns', etc.
     userinfo: str | None = None  # User info as 'alice', 'bob', etc.
     host: str | None = None  # The host name or IP address. It must not include the port number. For example '127.0.0.1', 'localhost', 'yourdomain.com'.
@@ -140,13 +141,13 @@ class EndpointDojo:
     fragment: str | None = None  # The fragment identifier which follows the hash mark. The hash mark should be omitted. For example 'section-13', 'paragraph-2'.
     product: Product | None = None
     # endpoint_params: list[EndpointParams] | None = None
-    findings: list['FindingDojo'] | None = None
+    findings: list['Finding'] | None = None
     tags: list[str] | None = None  # Add tags that help describe this endpoint. Choose from the list or add new tags. Press Enter key to add
     inherited_tags: list[str] | None = None  # Internal use tags sepcifically for maintaining parity with product. This field will be present as a subset in the tags field
 
 
 @dataclass(kw_only=False, eq=False, order=False)
-class FindingDojo:
+class Finding:
     title: str | None = None  # A short description of the flaw
     date: datetime.date | None = None  # The date the flaw was discovered
     sla_start_date: datetime.date | None = None  # (readonly)The date used as start date for SLA calculation. Set by expiring risk acceptances. Empty by default, causing a fallback to 'date'
@@ -164,13 +165,13 @@ class FindingDojo:
     impact: str | None = None  # Text describing the impact this flaw has on systems, products, enterprise, etc
     steps_to_reproduce: str | None = None  # Text describing the steps that must be followed in order to reproduce the flaw / bug
     severity_justification: str | None = None  # Text describing why a certain severity was associated with this flaw
-    endpoints: list[EndpointDojo] | None = None  # The hosts within the product that are susceptible to this flaw. + The status of the endpoint associated with this flaw (Vulnerable, Mitigated, ...).
+    endpoints: list[Endpoint] | None = None  # The hosts within the product that are susceptible to this flaw. + The status of the endpoint associated with this flaw (Vulnerable, Mitigated, ...).
     references: str | None = None  # The external documentation available for this flaw
     active: bool = True  # Denotes if this flaw is active or not
     verified: bool = False  # Denotes if this flaw has been manually verified by the tester
     false_p: bool = False  # Denotes if this flaw has been deemed a false positive by the tester
     duplicate: bool = False  # Denotes if this flaw is a duplicate of other flaws reported
-    duplicate_finding: Finding | None = None  # Link to the original finding if this finding is a duplicate
+    duplicate_finding: Optional['Finding'] = None  # Link to the original finding if this finding is a duplicate
     out_of_scope: bool = False  # Denotes if this flaw falls outside the scope of the test and/or engagement
     risk_accepted: bool = False  # Denotes if this finding has been marked as an accepted risk
     under_review: bool = False  # Denotes is this flaw is currently being reviewed
