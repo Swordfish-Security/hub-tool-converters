@@ -1,6 +1,7 @@
 import argparse
 
 from config.constances import PARSER_CLASSES
+from hub.parsers.hub_parser import HubParser
 from utils import check_keys_parser_classes
 
 if __name__ == '__main__':
@@ -58,9 +59,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    parser = PARSER_CLASSES[args.scanner](args)
+    dojo_parser = PARSER_CLASSES[args.scanner]()
 
     with open(args.filename, "r") as f:
-        parser.parse(f)
+        dojo_results = dojo_parser.get_findings(f, '')
 
-    parser.save_report()
+    hub_parser = HubParser(args=args, dojo_results=dojo_results)
+    hub_parser.parse()
+    hub_parser.save()

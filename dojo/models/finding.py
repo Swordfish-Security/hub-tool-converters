@@ -2,46 +2,7 @@ import datetime
 from dataclasses import dataclass
 from typing import Optional
 
-from models.location import LocationStack
-
-
-@dataclass(kw_only=False, eq=False, order=False)
-class FindingOwn:
-    type: str | None = None
-    id: str | None = None
-    ruleId: str | None = None
-    locationId: str | None = None
-    line: int | None = None
-    code: str | None = None
-    status: str | None = None
-    description: str | None = None
-    stacks: list[LocationStack] | None = None
-
-    def __init__(
-            self,
-            idx: str | None = None,
-            ruleId: str | None = None,
-            locationId: str | None = None,
-            line: int | None = None,
-            code: str | None = None,
-            description: str | None = None,
-            status: str | None = None,
-            type: str | None = None
-    ):
-        self.type = type
-        self.id = idx
-        self.ruleId = ruleId
-        self.locationId = locationId
-        self.line = line
-        self.code = code
-        self.description = description
-        self.status = status
-
-        if self.code and self.line:
-            self.stacks = [
-                LocationStack(locationId=self.locationId, line=self.line, code=self.code)
-            ]
-        super().__init__()
+from dojo.models.additional import AdditionalFields
 
 
 @dataclass(kw_only=False, eq=False, order=False)
@@ -122,7 +83,8 @@ class Product:
     external_audience: bool | None = None  # Specify if the application is used by people outside the organization
     internet_accessible: bool | None = None  # Specify if the application is accessible from the public internet
     # regulations: list[Regualation] | None = None
-    tags: list[str] | None = None  # Add tags that help describe this product. Choose from the list or add new tags. Press Enter key to add
+    tags: list[
+              str] | None = None  # Add tags that help describe this product. Choose from the list or add new tags. Press Enter key to add
     enable_product_tag_inheritance: bool | None = None  # Enables product tag inheritance. Any tags added on a product will automatically be added to all Engagements, Tests, and Findings
     enable_simple_risk_acceptance: bool | None = None  # Allows simple risk acceptance by checking/unchecking a checkbox
     enable_full_risk_acceptance: bool | None = None  # Allows full risk acceptance using a risk acceptance form, expiration date, uploaded proof, etc
@@ -142,12 +104,15 @@ class Endpoint:
     product: Product | None = None
     # endpoint_params: list[EndpointParams] | None = None
     findings: list['Finding'] | None = None
-    tags: list[str] | None = None  # Add tags that help describe this endpoint. Choose from the list or add new tags. Press Enter key to add
-    inherited_tags: list[str] | None = None  # Internal use tags sepcifically for maintaining parity with product. This field will be present as a subset in the tags field
+    tags: list[
+              str] | None = None  # Add tags that help describe this endpoint. Choose from the list or add new tags. Press Enter key to add
+    inherited_tags: list[
+                        str] | None = None  # Internal use tags sepcifically for maintaining parity with product. This field will be present as a subset in the tags field
 
 
 @dataclass(kw_only=False, eq=False, order=False)
-class Finding:
+class Finding(AdditionalFields):
+    test: str | None = None
     title: str | None = None  # A short description of the flaw
     date: datetime.date | None = None  # The date the flaw was discovered
     sla_start_date: datetime.date | None = None  # (readonly)The date used as start date for SLA calculation. Set by expiring risk acceptances. Empty by default, causing a fallback to 'date'
@@ -165,7 +130,8 @@ class Finding:
     impact: str | None = None  # Text describing the impact this flaw has on systems, products, enterprise, etc
     steps_to_reproduce: str | None = None  # Text describing the steps that must be followed in order to reproduce the flaw / bug
     severity_justification: str | None = None  # Text describing why a certain severity was associated with this flaw
-    endpoints: list[Endpoint] | None = None  # The hosts within the product that are susceptible to this flaw. + The status of the endpoint associated with this flaw (Vulnerable, Mitigated, ...).
+    endpoints: list[
+                   Endpoint] | None = None  # The hosts within the product that are susceptible to this flaw. + The status of the endpoint associated with this flaw (Vulnerable, Mitigated, ...).
     references: str | None = None  # The external documentation available for this flaw
     active: bool = True  # Denotes if this flaw is active or not
     verified: bool = False  # Denotes if this flaw has been manually verified by the tester
@@ -215,8 +181,10 @@ class Finding:
     planned_remediation_date: datetime.date | None = None  # The date the flaw is expected to be remediated
     planned_remediation_version: str | None = None  # The target version when the vulnerability should be fixed / remediated
     effort_for_fixing: str | None = None  # Effort for fixing / remediating the vulnerability (Low, Medium, High)
-    tags: list[str] | None = None  # Add tags that help describe this finding. Choose from the list or add new tags. Press Enter key to add
-    inherited_tags: list[str] | None = None  # Internal use tags sepcifically for maintaining parity with product. This field will be present as a subset in the tags field
+    tags: list[
+              str] | None = None  # Add tags that help describe this finding. Choose from the list or add new tags. Press Enter key to add
+    inherited_tags: list[
+                        str] | None = None  # Internal use tags sepcifically for maintaining parity with product. This field will be present as a subset in the tags field
 
     SEVERITIES = {'Info': 4, 'Low': 3, 'Medium': 2,
                   'High': 1, 'Critical': 0}
