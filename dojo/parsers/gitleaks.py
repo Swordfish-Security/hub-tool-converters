@@ -1,23 +1,24 @@
 import hashlib
 import json
-from typing import TextIO
 
-from models.finding import Finding
-from models.location import Location
-from models.rule import Rule
-from parsers import BasicParser
-from config.enums import ScannerTypes, SourceTypes
+from dojo.models import Finding
 
 
-class GitleaksParser(BasicParser):
+class GitleaksParser(object):
     """
     A class that can be used to parse the Gitleaks JSON report files
     """
 
-    def parse(
-            self,
-            filename: TextIO,
-    ):
+    def get_scan_types(self):
+        return ["Gitleaks Scan"]
+
+    def get_label_for_scan_types(self, scan_type):
+        return scan_type
+
+    def get_description_for_scan_types(self, scan_type):
+        return "Import Gitleaks Scan findings in JSON format."
+
+    def get_findings(self, filename, test):
         """
         Converts a Gitleaks report to DefectDojo findings
         """
@@ -26,31 +27,23 @@ class GitleaksParser(BasicParser):
         if issues is None:
             return list()
 
+        dupes = dict()
+
         for issue in issues:
             if issue.get("rule"):
-                self.get_finding_legacy(
-                    issue,
-                    self.source,
-                    self.rules,
-                    self.locations,
-                    self.findings
-                )
+                self.get_finding_legacy(issue, test, dupes)
             elif issue.get("Description"):
-                self.get_finding_current(
-                    issue,
-                    self.source,
-                    self.rules,
-                    self.locations,
-                    self.findings
-                )
+                self.get_finding_current(issue, test, dupes)
             else:
                 raise ValueError("Format is not recognized for Gitleaks")
 
-    def get_finding_legacy(self, issue, codebase, rules, locations, findings):
+        return list(dupes.values())
+
+    def get_finding_legacy(self, issue, test, dupes):
         line = None
         file_path = issue["file"]
         reason = issue["rule"]
-        title_text = "Hard Coded " + reason
+        titleText = "Hard Coded " + reason
         description = (
                 "**Commit:** " + issue["commitMessage"].rstrip("\n") + "\n"
         )
@@ -89,45 +82,28 @@ class GitleaksParser(BasicParser):
         if "Github" in reason or "AWS" in reason or "Heroku" in reason:
             severity = "Critical"
 
-        if reason not in rules:
-            rules[reason] = Rule(
-                type=ScannerTypes.SAST.value,
-                name=reason,
-                severity=severity,
-                description=title_text
-            )
-
-        file_key = hashlib.md5(
-            file_path.encode('utf-8')
-        ).hexdigest()
-
-        if file_key not in locations:
-            locations[file_key] = Location(
-                type=SourceTypes.CODE.value,
-                id=file_key,
-                sourceId=codebase.id,
-                fileName=file_path
-            )
+        finding = Finding(
+            title=titleText,
+            test=test,
+            cwe=798,
+            description=description,
+            severity=severity,
+            file_path=file_path,
+            line=line,
+            dynamic_finding=False,
+            static_finding=True,
+        )
+        # manage tags
+        finding.unsaved_tags = issue.get("tags", "").split(", ")
 
         dupe_key = hashlib.sha256(
             (issue["offender"] + file_path + str(line)).encode("utf-8")
         ).hexdigest()
 
-        finding = Finding(
-            idx=dupe_key,
-            ruleId=reason,
-            locationId=file_key,
-            line=line,
-            code=issue['line'],
-            description=description,
-            status="Open",
-            type=ScannerTypes.SAST.value
-        )
+        if dupe_key not in dupes:
+            dupes[dupe_key] = finding
 
-        if dupe_key not in findings:
-            findings[dupe_key] = finding
-
-    def get_finding_current(self, issue, codebase, rules, locations, findings):
+    def get_finding_current(self, issue, test, dupes):
         reason = issue.get("Description")
         line = issue.get("StartLine")
         if line:
@@ -138,12 +114,15 @@ class GitleaksParser(BasicParser):
         secret = issue.get("Secret")
         file_path = issue.get("File")
         commit = issue.get("Commit")
+        # Author and email will not be used because of GDPR
+        # author = issue.get('Author')
+        # email = issue.get('Email')
         date = issue.get("Date")
         message = issue.get("Message")
-        rule_id = issue.get("RuleID")
+        tags = issue.get("Tags")
+        ruleId = issue.get("RuleID")
 
         title = f"Hard coded {reason} found in {file_path}"
-        rule_description = f"Hard coded {reason}"
 
         description = ""
         if secret:
@@ -164,47 +143,37 @@ class GitleaksParser(BasicParser):
             description += f"**Commit hash:** {commit}\n"
         if date:
             description += f"**Commit date:** {date}\n"
-        if rule_id:
-            description += f"**Rule Id:** {rule_id}"
+        if ruleId:
+            description += f"**Rule Id:** {ruleId}"
         if description[-1] == "\n":
             description = description[:-1]
 
         severity = "High"
 
-        if rule_id not in rules:
-            rules[rule_id] = Rule(
-                type=ScannerTypes.SAST.value,
-                name=rule_id,
-                severity=severity,
-                description=rule_description
-            )
-
-        file_key = hashlib.md5(
-            file_path.encode('utf-8')
-        ).hexdigest()
-
-        if file_key not in locations:
-            locations[file_key] = Location(
-                type=SourceTypes.CODE.value,
-                id=file_key,
-                sourceId=codebase.id,
-                fileName=file_path
-            )
-
         dupe_key = hashlib.md5(
             (title + secret + str(line)).encode("utf-8")
         ).hexdigest()
 
-        finding = Finding(
-            idx=dupe_key,
-            ruleId=reason,
-            locationId=file_key,
-            line=line,
-            code=secret,
-            description=description,
-            status="Open",
-            type=ScannerTypes.SAST.value
-        )
-
-        if dupe_key not in findings:
-            findings[dupe_key] = finding
+        if dupe_key in dupes:
+            finding = dupes[dupe_key]
+            finding.description = (
+                    finding.description + "\n\n***\n\n" + description
+            )
+            finding.nb_occurences += 1
+            dupes[dupe_key] = finding
+        else:
+            finding = Finding(
+                title=title,
+                test=test,
+                cwe=798,
+                description=description,
+                severity=severity,
+                file_path=file_path,
+                line=line,
+                dynamic_finding=False,
+                static_finding=True,
+                nb_occurences=1
+            )
+            if tags:
+                finding.unsaved_tags = tags
+            dupes[dupe_key] = finding

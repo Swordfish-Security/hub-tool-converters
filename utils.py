@@ -8,7 +8,7 @@ def check_keys_parser_classes():
     Check that all parsers are in PARSER_CLASSES const
     :return:
     """
-    parsers_dir = os.listdir("parsers")
+    parsers_dir = os.listdir("dojo/parsers")
     set_parsers_classes = set(PARSER_CLASSES.keys())
     exists_parsers: set[str] = set()
     for parser_file in parsers_dir:

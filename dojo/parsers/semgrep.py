@@ -1,14 +1,9 @@
 import json
 
-from models.finding import Finding
-from parsers import BasicParser
+from dojo.models import Finding
 
 
-class SemgrepParser(BasicParser):
-    """
-    A class that can be used to parse the Semgrep JSON report files
-    """
-
+class SemgrepParser(object):
     def get_scan_types(self):
         return ["Semgrep JSON Report"]
 
@@ -18,13 +13,14 @@ class SemgrepParser(BasicParser):
     def get_description_for_scan_types(self, scan_type):
         return "Import Semgrep output (--json)"
 
-    def parse(self, filename):
+    def get_findings(self, filename, test):
         data = json.load(filename)
 
         dupes = dict()
 
         for item in data["results"]:
             finding = Finding(
+                test=test,
                 title=item["check_id"],
                 severity=self.convert_severity(item["extra"]["severity"]),
                 description=self.get_description(item),
@@ -108,8 +104,7 @@ class SemgrepParser(BasicParser):
             if "<![" in snippet:
                 snippet = snippet.replace("<![", "<! [")
                 description += "**Snippet:** ***Caution:*** Please remove the space between `!` and `[` to have the real value due to a workaround to circumvent [#8435](https://github.com/DefectDojo/django-DefectDojo/issues/8435).\n```{}```\n".format(
-                    snippet
-                )
+                    snippet)
             else:
                 description += "**Snippet:**\n```{}```\n".format(snippet)
 
