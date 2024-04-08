@@ -84,6 +84,7 @@ class HubParser:
     def parse(self):
         for finding in self.dojo_results:
             finding.parse_additional_fields()
+            finding.check_additional_fields()
 
             self.__parse_finding(finding)
             self.__parse_location(finding)
