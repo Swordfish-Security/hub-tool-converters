@@ -6,7 +6,7 @@ from config.enums import SourceTypes, ScannerTypes
 from dojo.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHub
 from hub.models.location import Location
-from hub.models.rule import Rule
+from hub.models.rule import Rule, RuleCwe
 from hub.models.source import Source
 
 
@@ -78,12 +78,19 @@ class HubParser:
                 type=ScannerTypes.SAST.value,
                 name=finding.ruleId,
                 severity=finding.severity,
-                description=finding.rule_description
+                description=finding.rule_description,
+                cwe=[RuleCwe(id=finding.cwe)] if finding.cwe else None
             )
+        elif finding.cwe and (not self.rules[finding.ruleId].cwe or
+                              finding.cwe not in [c.id for c in self.rules[finding.ruleId].cwe]):
+            if not self.rules[finding.ruleId].cwe:
+                self.rules[finding.ruleId].cwe = []
+            self.rules[finding.ruleId].cwe.append(RuleCwe(id=finding.cwe))
 
     def parse(self):
         for finding in self.dojo_results:
             finding.parse_additional_fields()
+            finding.check_additional_fields()
 
             self.__parse_finding(finding)
             self.__parse_location(finding)
