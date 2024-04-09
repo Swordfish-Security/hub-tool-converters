@@ -18,17 +18,12 @@ class Rule:
             name: str | None = None,
             severity: str | None = None,
             description: str | None = None,
+            cwe: list[dict[str, str | int]] | None = None
     ):
         self.type = type
         self.name = name
         self.id = name
         self.severity = severity
         self.description = description
-        self.cwe = [
-            {
-                "id": 798,
-                "name": "Use of Hard-coded Credentials",
-                "link": "https://cwe.mitre.org/data/definitions/798.html"
-            }
-        ]
+        self.cwe = cwe
         super().__init__()

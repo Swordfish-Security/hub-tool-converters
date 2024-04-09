@@ -78,7 +78,8 @@ class HubParser:
                 type=ScannerTypes.SAST.value,
                 name=finding.ruleId,
                 severity=finding.severity,
-                description=finding.rule_description
+                description=finding.rule_description,
+                cwe=finding.cwe
             )
 
     def parse(self):

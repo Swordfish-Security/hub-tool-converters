@@ -44,7 +44,7 @@ class AdditionalFields:
     def __parse_dupe_key(self) -> None:
         try:
             self.dupe_key = hashlib.md5(
-                (self.title + self.secret + str(self.line)).encode("utf-8")
+                (self.title + self.secret + str(self.line) + self.file_path).encode("utf-8")
             ).hexdigest()
         except TypeError:
             self.dupe_key = hashlib.md5((self.title + self.file_path + str(self.line)).encode("utf-8")).hexdigest()

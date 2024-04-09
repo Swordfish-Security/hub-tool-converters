@@ -117,7 +117,7 @@ class Finding(AdditionalFields):
     date: datetime.date | None = None  # The date the flaw was discovered
     sla_start_date: datetime.date | None = None  # (readonly)The date used as start date for SLA calculation. Set by expiring risk acceptances. Empty by default, causing a fallback to 'date'
     sla_expiration_date: datetime.date | None = None  # (readonly)The date SLA expires for this finding. Empty by default, causing a fallback to 'date'
-    cwe: int = 0  # The CWE number associated with this flaw
+    cwe: list[dict[str, str | int]] | None = 0  # The CWE number associated with this flaw
     cve: str | None = None  # Vulnerability Id
     epss_score: float | None = None  # EPSS score for the CVE. Describes how likely it is the vulnerability will be exploited in the next 30 days
     epss_percentile: float | None = None  # EPSS percentile for the CVE. Describes how many CVEs are scored at or below this one
