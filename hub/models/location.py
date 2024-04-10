@@ -5,10 +5,10 @@ from config.enums import SourceTypes
 
 @dataclass(kw_only=True, init=True, eq=False, order=False)
 class Location:
-    type: SourceTypes | None = None
-    id: str | None = None
-    sourceId: str | None = None
-    fileName: str | None = None
+    type: SourceTypes
+    id: str
+    sourceId: str
+    fileName: str
     language: str = "Any"
 
 

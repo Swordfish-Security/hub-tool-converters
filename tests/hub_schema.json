@@ -1,0 +1,1087 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.appsec-hub.ru/",
+  "title": "Hub.Report Results Format Version 1.0.0 JSON Schema",
+  "description": "This schema provides the AppSec.Hub report format for Application Security Testing analyzers",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "description": "The URI of the JSON schema corresponding to the version",
+      "type": "string",
+      "format": "uri"
+    },
+    "version": {
+      "description": "The Hub.Report format version of this log file",
+      "enum": [ "1.0.1" ],
+      "type": "string"
+    },
+    "scans": {
+      "description": "The set of scans contained in this log file",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/scan"
+      }
+    }
+  },
+  "required": [
+    "version", "scans"
+  ],
+
+
+  "definitions": {
+    "scan": {
+      "description": "Describes a single run of an analysis tool, and contains the reported output of that run",
+      "type": "object",
+      "required": [
+        "source", "tool", "results"
+      ],
+      "properties": {
+        "scanDetails": {
+          "description": "Information that describes a scan's identity",
+          "$ref": "#/definitions/scanDetails"
+        },
+        "source": {
+          "description": "List of scan sources - codebase, artifact or instance details that was analyzed",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/codebase"
+              },
+              {
+                "$ref": "#/definitions/artifact"
+              },
+              {
+                "$ref": "#/definitions/instance"
+              }
+            ]
+          }
+        },
+        "tool": {
+          "description": "Information about The analysis tool that was run",
+          "$ref": "#/definitions/tool"
+        },
+        "results": {
+          "description": "The set of results contained in an log. The results array can be omitted when a run is solely exporting rules metadata. It must be present (but may be empty) if a log file represents an actual scan",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/result"
+          }
+        }
+      }
+    },
+
+    "scanDetails": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "description": "A description of the identity and role played within the engineering system by this object's containing scan object",
+          "type": "string"
+        },
+        "id": {
+          "description": "A hierarchical string that uniquely identifies this object's containing scan object",
+          "type": "string"
+        },
+        "guid": {
+          "description": "A stable, unique identifier for this object's containing scan object in the form of a GUID",
+          "type": "string"
+        },
+        "baselineGuid": {
+          "description": "The 'guid' property of a previous 'scan'",
+          "type": "string"
+            },
+        "scanDate": {
+          "description": "The Coordinated Universal Time (UTC) date and time at which the analysis tool generated the notification",
+          "type": "string",
+          "format": "date-time"
+        },
+        "reportLink": {
+          "description": "Report link",
+          "type": "string"
+        },
+        "properties": {
+          "description": "Key/value pairs that provide additional information about the scan automation details",
+          "$ref": "#/definitions/propertyBag"
+        }
+      }
+    },
+
+    "codebase": {
+      "description": "Codebase information that was analyzed",
+      "type": "object",
+      "required": [
+        "type", "id", "url", "checkoutPath", "vcsType"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Source type",
+          "enum": [ "codebase" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique source ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Codebase display name"
+        },
+        "url": {
+          "maxLength": 256,
+          "minLength": 0,
+          "type": "string",
+          "description": "Repository URL"
+        },
+        "checkoutPath": {
+          "type": "string",
+          "description": "Codebase checkout path"
+        },
+        "branch": {
+          "maxLength": 128,
+          "minLength": 0,
+          "pattern": "^(?!.*\\/\\.)(?!.*\\.\\.)(?!\\/)(?!.*\\/\\/)(?!.*@\\{)(?!.*\\\\)(?!^@$)[^\u0000-\u001f ~^:?*\\[]*\\/?[^\u0000-\u001f ~^:?*\\[]+(?<!\\.lock)(?<!\\/)(?<!\\.)$",
+          "type": "string",
+          "description": "Branch name",
+          "default": "master"
+        },
+        "commit": {
+          "maxLength": 128,
+          "minLength": 0,
+          "type": "string",
+          "description": "Commit hash",
+          "default": "master"
+        },
+        "vcsType": {
+          "pattern": "git",
+          "type": "string",
+          "description": "Type of VCS repository - \"git\"",
+          "enum": [ "git" ]
+        },
+        "buildTool": {
+          "pattern": "maven|gradle|nuget|npm|pip",
+          "type": "string",
+          "description": "Build tool used to compile this source code. Default: maven",
+          "example": "maven",
+          "enum": [ "maven" ]
+        },
+        "branchFilter": {
+          "maxLength": 128,
+          "minLength": 0,
+          "pattern": "^(?!.*\\/\\.)(?!.*\\.\\.)(?!\\/)(?!.*\\/\\/)(?!.*@\\{)(?!.*\\\\)(?!^@$)[^\u0000-\u001f ~^:?\\[]*\\/?[^\u0000-\u001f ~^:?\\[]+(?<!\\.lock)(?<!\\/)(?<!\\.)$",
+          "type": "string",
+          "description": "Filter pattern for branches to scanned. Default: * (all branches)"
+        }
+      }
+    },
+
+    "artifact": {
+      "description": "Artifact information that was analyzed",
+      "type": "object",
+
+      "required": [
+        "type", "id", "name", "url"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Source type",
+          "enum": [ "artifact" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique source ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Artifact name"
+        },
+        "url": {
+          "maxLength": 256,
+          "minLength": 0,
+          "type": "string",
+          "description": "Artifact URL"
+        }
+      }
+    },
+
+    "instance": {
+      "description": "Instance information that was analyzed",
+      "type": "object",
+      "required": [
+        "type", "id", "url"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Source type",
+          "enum": [ "instance" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique source ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Application instance name"
+        },
+        "url": {
+          "maxLength": 256,
+          "minLength": 0,
+          "type": "string",
+          "description": "Instance URL"
+        },
+        "stage": {
+          "type": "string",
+          "description": "Stage (system test, integration acceptance test, user acceptance test, stage, production)",
+          "enum": ["ST", "IAT", "UAT", "STG", "PROD"]
+        }
+      }
+    },
+
+    "tool": {
+      "type": "object",
+      "required": [ "product" ],
+      "properties": {
+
+        "product": {
+          "description": "The code of the product",
+          "type": "string"
+        },
+        "guid": {
+          "description": "A unique identifier for the tool component in the form of a GUID",
+          "type": "string"
+        },
+        "version": {
+          "description": "The tool component version",
+          "type": "string"
+        },
+        "informationUri": {
+          "description": "The absolute URI at which information about this version of the tool component can be found",
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+
+    "result": {
+      "type": "object",
+      "description": "A result produced by an analysis tool",
+      "properties": {
+
+        "rules": {
+          "description": "rules",
+          "$ref": "#/definitions/rules"
+        },
+        "locations": {
+          "description": "locations",
+          "$ref": "#/definitions/locations"
+        },
+        "findings": {
+          "description": "findings",
+          "$ref": "#/definitions/findings"
+        }
+      }
+    },
+
+    "rules": {
+      "description": "Tool rules",
+      "type": "array",
+      "items": {
+       "oneOf": [
+         {
+           "$ref": "#/definitions/sastRule"
+           },
+          {
+           "$ref": "#/definitions/sca_cRule"
+          },
+          {
+           "$ref": "#/definitions/sca_sRule"
+          },
+          {
+            "$ref": "#/definitions/dastRule"
+          }
+        ]
+       }
+     },
+
+    "sastRule": {
+      "description": "SAST vulnerability rule details",
+      "type": "object",
+
+      "required": [
+        "type", "id", "name", "severity"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Rule type",
+          "enum": [ "sast" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "The stable, unique identifier of the rule"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the rule"
+        },
+        "severity": {
+          "description": "A value specifying the severity level of the result",
+          "$ref": "#/definitions/severity"
+        },
+        "description": {
+          "type": "string",
+          "description": "Rule description"
+        },
+        "cwe": {
+          "type": "array",
+          "description": "Vulnerability CWE",
+          "items": {
+            "$ref": "#/definitions/cwe"
+          }
+        },
+        "recommendation": {
+          "type": "string",
+          "description": "Vulnerability recommendation"
+        },
+        "cause": {
+          "type": "string",
+          "description": "Vulnerability cause"
+        },
+        "risk": {
+          "type": "string",
+          "description": "Vulnerability risk"
+        },
+        "example": {
+          "type": "string",
+          "description": "Vulnerability source code example"
+        },
+        "extraInformation": {
+          "description": "Additional Information about Rule",
+          "$ref": "#/definitions/propertyBag"
+        }
+      }
+    },
+
+    "sca_sRule": {
+      "description": "SCA Security vulnerability rule details",
+      "type": "object",
+      "required": [
+        "type", "id", "severity", "cveId"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Rule type",
+          "enum": [ "sca_s" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "The stable, unique identifier of the rule"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the rule"
+        },
+        "severity": {
+          "description": "Vulnerability severity",
+          "$ref": "#/definitions/severity"
+        },
+        "description": {
+          "type": "string",
+          "description": "Rule description"
+        },
+        "cveId": {
+          "type": "string",
+          "description": "CVE Id"
+        },
+        "cveLink": {
+          "type": "string",
+          "description": "CVE Link"
+        },
+        "cwe": {
+          "type": "array",
+          "description": "Vulnerability CWE",
+          "items": {
+            "$ref": "#/definitions/cwe"
+          }
+        },
+        "cvss2Score": {
+          "type": "string",
+          "description": "Vulnerability score"
+        },
+        "cvss2Vector": {
+          "type": "string",
+          "description": "cvss2 vector"
+        },
+        "cvss3Score": {
+          "type": "string",
+          "description": "Vulnerability score"
+        },
+        "cvss3Vector": {
+          "type": "string",
+          "description": "cvss3 vector"
+        },
+        "recommendation": {
+          "type": "string",
+          "description": "Rule recommendation"
+        },
+        "details": {
+          "type": "string",
+          "description": "Rule details"
+        },
+        "fixVersions": {
+          "type": "array",
+          "description": "List of fix versions ",
+          "items": {
+            "type": "string"
+          }
+        },
+        "publishedDate": {
+          "type": "string",
+          "description": "Vulnerability publication date"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "Vulnerability last modified date date"
+        },
+        "references":
+        {
+          "type": "array",
+          "description": "Rule references",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "extraInformation": {
+          "description": "Additional Information about Rule",
+          "$ref": "#/definitions/propertyBag"
+        }
+      }
+    },
+
+    "sca_cRule": {
+      "description": "SCA Compliance rule details",
+      "type": "object",
+
+      "required": [
+        "type", "id", "name", "severity"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Rule type",
+          "enum": [ "sca_c" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "The stable, unique identifier of the rule"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the policy"
+        },
+        "severity": {
+          "description": "Rule severity",
+          "$ref": "#/definitions/severity"
+        },
+        "description": {
+          "type": "string",
+          "description": "Rule description"
+        },
+        "policyConditions": {
+          "type": "array",
+          "description": "Policy condition",
+          "items": {
+            "$ref": "#/definitions/policyCondition"
+          }
+        },
+        "extraInformation": {
+          "description": "Additional Information about Rule",
+          "$ref": "#/definitions/propertyBag"
+        }
+      }
+    },
+
+    "dastRule": {
+      "description": "DAST vulnerability Rule details",
+      "type": "object",
+      "required": [
+        "type", "id", "name", "severity"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Rule type",
+          "enum": [ "dast" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "The stable, unique identifier of the rule"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the rule"
+        },
+        "severity": {
+          "description": "Vulnerability severity",
+          "$ref": "#/definitions/severity"
+        },
+        "description": {
+          "type": "string",
+          "description": "Rule description"
+        },
+        "recommendation": {
+          "type": "string",
+          "description": "Rule recommendation"
+        },
+        "cwe": {
+          "type": "array",
+          "description": "Vulnerability CWE",
+          "items": {
+            "$ref": "#/definitions/cwe"
+          }
+        },
+        "cvss2Score": {
+          "type": "string",
+          "description": "Vulnerability score"
+        },
+        "cvss2Vector": {
+          "type": "string",
+          "description": "cvss2 vector"
+        },
+        "cvss3Score": {
+          "type": "string",
+          "description": "Vulnerability score"
+        },
+        "cvss3Vector": {
+          "type": "string",
+          "description": "cvss3 vector"
+        },
+        "extraInformation": {
+          "description": "Additional Information about Rule",
+          "$ref": "#/definitions/propertyBag"
+        }
+      }
+    },
+
+    "locations": {
+      "description": "Locations",
+      "type": "array",
+      "items": {
+       "oneOf": [
+         {
+           "$ref": "#/definitions/codebaseLocation"
+           },
+          {
+           "$ref": "#/definitions/componentLocation"
+          },
+          {
+            "$ref": "#/definitions/instanceLocation"
+          }
+        ]
+       }
+     },
+
+    "codebaseLocation": {
+      "description": "The location of the codebase",
+      "type": "object",
+      "required": [
+        "type", "id", "sourceId", "fileName", "language"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Location type",
+          "enum": [ "codebase" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Codebase location id"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Source ID"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "File name"
+        },
+        "language": {
+          "type": "string",
+          "description": "Language"
+        }
+      }
+    },
+
+    "componentLocation": {
+      "description": "The location of the component",
+      "type": "object",
+      "required": [
+        "type", "id", "sourceId", "componentName", "componentVersion"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Location type",
+          "enum": [ "component" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Component location id"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Source ID"
+        },
+        "componentName": {
+          "type": "string",
+          "description": "The name of the component"
+        },
+        "componentVersion": {
+          "type": "string",
+          "description": "The version of the component"
+        },
+        "vendor": {
+          "type": "string",
+          "description": "vendor"
+        },
+        "group": {
+          "type": "string",
+          "description": "The group of the component"
+        },
+        "packageUrl": {
+          "type": "string",
+          "description": "The purl of the component"
+        },
+        "cpe": {
+          "type": "string",
+          "description": "The cpe of the component"
+        },
+        "filePath": {
+          "type": "string",
+          "description": "filePath"
+        },
+        "licenses": {
+          "type": "array",
+          "description": "List of library licenses",
+          "items": {
+            "$ref": "#/definitions/license"
+          }
+        },
+        "published": {
+          "type": "string",
+          "description": "Library publication date"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "Date of last library update"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        }
+      }
+    },
+
+    "instanceLocation": {
+      "description": "The location of the instance",
+      "type": "object",
+      "required": [
+        "type", "id", "sourceId", "url"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Location type",
+          "enum": [ "instance" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Instance location id"
+        },
+        "sourceId": {
+          "type": "string",
+          "description": "Source ID"
+        },
+        "url": {
+          "type": "string",
+          "description": "url"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        }
+      }
+    },
+
+    "findings": {
+      "description": "Findings",
+      "type": "array",
+      "items": {
+       "oneOf": [
+         {
+           "$ref": "#/definitions/sastFinding"
+           },
+          {
+           "$ref": "#/definitions/sca_cFinding"
+          },
+          {
+           "$ref": "#/definitions/sca_sFinding"
+          },
+          {
+            "$ref": "#/definitions/dastFinding"
+          }
+        ]
+       }
+     },
+
+    "sastFinding": {
+      "description": "SAST finding",
+      "type": "object",
+
+      "required": [
+        "type", "id", "ruleId", "locationId"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Finding type",
+          "enum": [ "sast" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Issue External ID"
+        },
+        "ruleId": {
+          "type": "string",
+          "description": "Rule Id"
+        },
+         "locationId": {
+          "type": "string",
+          "description": "Codebase location Id"
+        },
+        "line": {
+          "type": "integer",
+          "description": "Line number"
+        },
+         "code": {
+          "type": "string",
+          "description": "Source code"
+        },
+        "status": {
+          "type": "string",
+          "description": "Finding status",
+          "$ref": "#/definitions/status"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        },
+        "stacks": {
+          "type": "array",
+          "description": "The sequence of function calls leading to the finding",
+          "items": {
+            "$ref": "#/definitions/stack"
+          }
+        },
+        "toolFindingLink": {
+          "type": "string",
+          "description": "Tool finding link"
+        }
+      }
+    },
+
+    "sca_sFinding": {
+      "description": "SCA Security finding",
+      "type": "object",
+      "required": [
+        "type", "id", "locationId", "ruleId"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Finding type",
+          "enum": [ "sca_s" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Issue External ID"
+        },
+        "ruleId": {
+          "type": "string",
+          "description": "Rule Id"
+        },
+        "locationId": {
+          "type": "string",
+          "description": "Component location Id"
+        },
+         "path": {
+         "type": "array",
+         "description": "Path",
+         "items": {
+            "type": "string"
+             }
+          },
+        "status": {
+          "type": "string",
+          "description": "Finding status",
+          "$ref": "#/definitions/status"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        },
+        "toolFindingLink": {
+          "type": "string",
+          "description": "Tool finding link"
+        }
+      }
+    },
+
+    "sca_cFinding": {
+      "description": "SCA Compliance finding",
+      "type": "object",
+      "required": [
+        "type", "id", "locationId", "ruleId"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Finding type",
+          "enum": [ "sca_c" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Issue External ID"
+        },
+        "ruleId": {
+          "type": "string",
+          "description": "Rule Id"
+        },
+        "locationId": {
+          "type": "string",
+          "description": "Component location Id"
+        },
+        "path": {
+          "type": "array",
+          "description": "Path",
+          "items": {
+            "type": "string"
+             }
+         },
+        "status": {
+          "type": "string",
+          "description": "Finding status",
+          "$ref": "#/definitions/status"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        },
+         "group": {
+          "type": "string",
+          "description": "License group"
+        },
+        "reason": {
+          "type": "array",
+          "description": "description",
+          "items": {
+            "type": "object",
+            "properties": {
+              "policyConditionId": {
+                "type": "string"
+              },
+              "effectiveLicenses": {
+                "type": "array",
+                "description": "List of effective licenses",
+                "items": {
+                  "$ref": "#/definitions/license"
+                }
+              }
+            }
+          }
+        },
+        "toolFindingLink": {
+          "type": "string",
+          "description": "Tool finding link"
+        }
+      }
+    },
+
+    "dastFinding": {
+      "description": "DAST finding",
+      "type": "object",
+      "required": [
+        "type", "id", "locationId", "ruleId", "url"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Finding type",
+          "enum": [ "dast" ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Issue External ID"
+        },
+        "ruleId": {
+          "type": "string",
+          "description": "Rule Id"
+        },
+        "locationId": {
+          "type": "string",
+          "description": "Instance location Id"
+        },
+        "url": {
+          "type": "string",
+          "description": "url"
+        },
+        "status": {
+          "type": "string",
+          "description": "Finding status",
+          "$ref": "#/definitions/status"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        },
+        "httpRequest": {
+          "type": "string",
+          "description": "Http request"
+        },
+        "httpResponce": {
+          "type": "string",
+          "description": "Http responce"
+        },
+        "toolFindingLink": {
+          "type": "string",
+          "description": "Tool finding link"
+        }
+      }
+    },
+
+    "policyCondition": {
+      "description": "Policy condition",
+      "type": "object",
+      "required": [ "id" ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Condition id"
+        },
+        "subject": {
+          "type": "string",
+          "description": "Condition subject"
+        },
+        "operator": {
+          "type": "string",
+          "description": "Condition operator"
+        },
+        "value": {
+          "type": "string",
+          "description": "Condition value"
+        }
+      }
+    },
+
+    "license": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The License id"
+        },
+        "name": {
+          "type": "string",
+          "description": "The License name"
+        }
+
+      }
+    },
+
+    "stack": {
+      "description": "Condition",
+      "type": "object",
+
+      "required": [
+        "locationId", "line", "code"
+      ],
+      "properties": {
+        "locationId": {
+          "type": "string",
+          "description": "Location Id"
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Line number"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Sequence"
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Column number"
+        },
+        "code": {
+          "type": "string",
+          "description": "Source code"
+        }
+      }
+    },
+
+    "severity": {
+      "type": "string",
+      "enum": [
+        "Low", "Medium", "High", "Critical"
+      ]
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "To Verify", "Confirmed", "Open", "Fixed", "False Positive", "Accepted risk"
+      ]
+    },
+
+    "cwe": {
+      "type": "object",
+      "required": [ "id" ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The CWE id"
+        },
+        "name": {
+          "type": "string",
+          "description": "The CWE name"
+        },
+        "link": {
+          "type": "string",
+          "description": "The CWE link"
+        }
+      }
+    },
+
+    "propertyBag": {
+      "description": "Key/value pairs that provide additional information about the object",
+      "type": "object",
+      "properties": {
+        "tags": {
+          "description": "A set of distinct strings that provide additional information",
+          "type": "array",
+          "uniqueItems": false,
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

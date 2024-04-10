@@ -41,26 +41,26 @@ class Report:
 
 @dataclass(kw_only=False, eq=False, order=False)
 class FindingHub:
-    type: str | None = None
-    id: str | None = None
-    ruleId: str | None = None
-    locationId: str | None = None
-    line: int | None = None
-    code: str | None = None
-    status: str | None = None
-    description: str | None = None
-    stacks: list[LocationStack] | None = None
+    type: str
+    id: str
+    ruleId: str
+    locationId: str
+    line: int
+    code: str
+    status: str
+    description: str
+    stacks: list[LocationStack]
 
     def __init__(
             self,
-            idx: str | None = None,
-            ruleId: str | None = None,
-            locationId: str | None = None,
-            line: int | None = None,
-            code: str | None = None,
-            description: str | None = None,
-            status: str | None = None,
-            type: str | None = None
+            idx: str,
+            ruleId: str,
+            locationId: str,
+            line: int,
+            code: str,
+            description: str,
+            status: str,
+            type: str
     ):
         self.type = type
         self.id = idx

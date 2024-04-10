@@ -75,17 +75,17 @@ class HubParser:
     def __parse_rule(self, finding: Finding):
         if finding.ruleId not in self.rules:
             self.rules[finding.ruleId] = Rule(
-                type=ScannerTypes.SAST.value,
+                type=self.__get_scanner_type(finding),
                 name=finding.ruleId,
                 severity=finding.severity,
                 description=finding.rule_description,
-                cwe=[RuleCwe(id=finding.cwe)] if finding.cwe else None
+                cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
             )
         elif finding.cwe and (not self.rules[finding.ruleId].cwe or
                               finding.cwe not in [c.id for c in self.rules[finding.ruleId].cwe]):
             if not self.rules[finding.ruleId].cwe:
                 self.rules[finding.ruleId].cwe = []
-            self.rules[finding.ruleId].cwe.append(RuleCwe(id=finding.cwe))
+            self.rules[finding.ruleId].cwe.append(RuleCwe(idx=finding.cwe))
 
     def parse(self):
         for finding in self.dojo_results:

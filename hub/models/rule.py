@@ -6,37 +6,37 @@ from config.enums import ScannerTypes
 @dataclass(kw_only=False, eq=False, order=False)
 class RuleCwe:
     id: int = 0
-    name: str | None = None
-    link: str | None = None
 
     def __init__(
             self,
-            id: int = 0,
             name: str | None = None,
-            link: str | None = None
+            link: str | None = None,
+            idx: int = 0,
     ):
-        self.id = id
-        self.name = name
-        self.link = link
+        self.id = idx
+        if name:
+            self.name = name
+        if link:
+            self.link = link
         super().__init__()
 
 
 @dataclass(kw_only=True, eq=False, order=False)
 class Rule:
-    type: ScannerTypes | None = None
-    name: str | None = None
-    id: str | None = None
-    severity: str | None = None
-    cwe: list[RuleCwe] | None = None
-    description: str | None = None
+    type: ScannerTypes
+    name: str
+    id: str
+    severity: str
+    cwe: list[RuleCwe]
+    description: str
 
     def __init__(
             self,
-            type: ScannerTypes | None = None,
-            name: str | None = None,
-            severity: str | None = None,
-            description: str | None = None,
-            cwe: int = 0
+            type: ScannerTypes,
+            name: str,
+            severity: str,
+            description: str,
+            cwe: list[RuleCwe]
     ):
         self.type = type
         self.name = name

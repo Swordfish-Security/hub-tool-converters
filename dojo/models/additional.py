@@ -12,13 +12,13 @@ class AdditionalFields:
     file_key: str | None = None
 
     def __parse_rule_id(self) -> None:
-
         if "Rule Id" in self.description:
             self.ruleId = self.description.split("**Rule Id:** ")[1].split("\n")[0]
-
-        if self.vuln_id_from_tool:
+        elif self.vuln_id_from_tool:
             if not self.ruleId:
                 self.ruleId = self.vuln_id_from_tool
+        elif "Reason:" in self.description:
+            self.ruleId = self.description.split("**Reason:** ")[1].split("\n")[0]
 
     def __parse_reason(self) -> None:
         # Пример: "Hard coded {reason} found in {file_path}"
@@ -34,6 +34,8 @@ class AdditionalFields:
             self.secret = self.description.split("**Secret:** ")[1].split("\n")[0]
         elif "Snippet:" in self.description:
             self.secret = self.description.split("**Snippet:**\n")[1]
+        elif "String Found:" in self.description:
+            self.secret = self.description.split("**String Found:**\n")[1]
 
     def __parse_file_key(self) -> None:
         if self.file_path is not None:
