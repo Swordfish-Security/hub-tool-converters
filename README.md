@@ -29,8 +29,27 @@
 
 ## Пример запуска
 
+```bash
 python main.py -s gitleaks -f gitleaks_report.json -o hub.json -sn hub-tool-converters
 -su https://github.com/Swordfish-Security/hub-tool-converters.git
+```
+
+## Запуск тестов
+
+1. Создание виртуального окружения и его активация
+```bash
+python -m venv venv && source venv/bin/activate
+```
+
+2. Установка зависимостей
+```bash
+pip install -r requirements.txt
+```
+
+3. Запуск тестов
+```bash
+python -m unittest tests/parsers.py
+```
 
 ## Вносите свой вклад
 
