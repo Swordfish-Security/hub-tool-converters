@@ -85,7 +85,7 @@ class HubParser:
                               finding.cwe not in [c.id for c in self.rules[finding.ruleId].cwe]):
             if not self.rules[finding.ruleId].cwe:
                 self.rules[finding.ruleId].cwe = []
-            self.rules[finding.ruleId].cwe.append(RuleCwe(id=finding.cwe))
+            self.rules[finding.ruleId].cwe.append(RuleCwe(idx=finding.cwe))
 
     def parse(self):
         for finding in self.dojo_results:
