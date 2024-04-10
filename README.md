@@ -30,8 +30,7 @@
 ## Пример запуска
 
 ```bash
-python main.py -s gitleaks -f gitleaks_report.json -o hub.json -sn hub-tool-converters
--su https://github.com/Swordfish-Security/hub-tool-converters.git
+python main.py -s gitleaks -f gitleaks_report.json -o hub.json -sn hub-tool-converters -su https://github.com/Swordfish-Security/hub-tool-converters.git
 ```
 
 ## Запуск тестов

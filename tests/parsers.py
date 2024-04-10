@@ -37,6 +37,8 @@ class ParsersTest(unittest.TestCase):
 
             tests_filenames = os.listdir(f'./tests/{name}')
             for filename in tests_filenames:
+                if '_hub' in filename:
+                    continue
                 self.args.filename = f'./tests/{name}/{filename}'
 
                 self.args.scanner = name
@@ -65,3 +67,11 @@ class ParsersTest(unittest.TestCase):
         for name in self.dojo_reports.keys():
             findings: list = self.dojo_reports[name]['scans'][0]['results'][0]['findings']
             self.assertEqual(len(findings), len(self.dojo_results[name]), f'{name} - {findings} != {self.dojo_results[name]}')
+
+    def test_output_files(self):
+        for name, report in self.dojo_reports.items():
+            scanner, filename = name.split(' - ')
+            filename = filename.replace('.json', '')
+            with open(f'./tests/{scanner}/{filename}_hub.json', 'r') as f:
+                output = json.load(f)
+            self.assertEqual(report, output)
