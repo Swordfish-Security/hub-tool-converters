@@ -52,6 +52,19 @@ class ParsersTest(unittest.TestCase):
 
                 self.dojo_reports.update({f'{name} - {filename}': hub_parser.get_report()})
 
+    def __delete_independent_ids(self, report):
+
+        for scan in report['scans']:
+            scan['scanDetails']['id'] = None
+
+            for source in scan['source']:
+                source['id'] = None
+
+            for result in scan['results']:
+                for location in result['locations']:
+                    location['sourceId'] = None
+
+
     def test_all_parsers_are_included(self):
         check_keys_parser_classes()
 
@@ -74,4 +87,9 @@ class ParsersTest(unittest.TestCase):
             filename = filename.replace('.json', '')
             with open(f'./tests/{scanner}/{filename}_hub.json', 'r') as f:
                 output = json.load(f)
+
+            self.__delete_independent_ids(report)
+            self.__delete_independent_ids(output)
+
+            print(f"\nComparing {name}")
             self.assertEqual(report, output)
