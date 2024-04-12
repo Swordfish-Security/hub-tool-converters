@@ -14,7 +14,7 @@ def import_classes_from_directory(directory_path):
             module = importlib.import_module(f"dojo.parsers.{module_name}")
 
             for name, obj in inspect.getmembers(module):
-                if inspect.isclass(obj) and name != "Finding":
+                if inspect.isclass(obj) and name != "Finding" and name[0].isupper() and 'Parser' in name:
                     globals()[name] = obj
                     PARSER_CLASSES.update({file_name.split(".")[0]: obj})
 
