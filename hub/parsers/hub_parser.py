@@ -48,7 +48,6 @@ class HubParser:
     def __parse_finding(self, finding: Finding):
 
         scanner_type = self.__get_scanner_type(finding)
-
         finding_hub = FindingHub(
             idx=finding.dupe_key,
             ruleId=finding.ruleId,
@@ -59,7 +58,6 @@ class HubParser:
             status="Open",
             type=scanner_type
         )
-
         if finding.dupe_key not in self.findings:
             self.findings[finding.dupe_key] = finding_hub
 
@@ -87,14 +85,19 @@ class HubParser:
                 self.rules[finding.ruleId].cwe = []
             self.rules[finding.ruleId].cwe.append(RuleCwe(idx=finding.cwe))
 
+    def __check_rule_id(self, finding: Finding):
+        if not finding.ruleId:
+            finding.ruleId = f"{self.args.scanner} {finding.severity}"
+
     def parse(self):
         for finding in self.dojo_results:
             finding.parse_additional_fields()
-            finding.check_additional_fields()
 
+            self.__check_rule_id(finding)
             self.__parse_finding(finding)
             self.__parse_location(finding)
             self.__parse_rule(finding)
+            finding.check_additional_fields()
 
     def get_report(self) -> dict:
         scan_result = ScanResult(
