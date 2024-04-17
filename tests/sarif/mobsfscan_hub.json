@@ -1,0 +1,328 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "766f6476-4f58-465e-90ca-b8a08153ebf8",
+                "description": "Import sarif results"
+            },
+            "source": [
+                {
+                    "id": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "sarif"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "android_logging",
+                            "id": "android_logging",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 532
+                                }
+                            ],
+                            "description": "Hard coded logs"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_hidden_ui",
+                            "id": "android_hidden_ui",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Hard coded in"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "sqlite_injection",
+                            "id": "sqlite_injection",
+                            "severity": "Medium",
+                            "cwe": [
+                                {
+                                    "id": 78
+                                }
+                            ],
+                            "description": "Hard coded SQLite"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_detect_tapjacking",
+                            "id": "android_detect_tapjacking",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 200
+                                }
+                            ],
+                            "description": "Hard coded does"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_prevent_screenshot",
+                            "id": "android_prevent_screenshot",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 200
+                                }
+                            ],
+                            "description": "Hard coded does"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_safetynet_api",
+                            "id": "android_safetynet_api",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 353
+                                }
+                            ],
+                            "description": "Hard coded does"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_root_detection",
+                            "id": "android_root_detection",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Hard coded does"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_certificate_transparency",
+                            "id": "android_certificate_transparency",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 295
+                                }
+                            ],
+                            "description": "Hard coded does"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "android_certificate_pinning",
+                            "id": "android_certificate_pinning",
+                            "severity": "Info",
+                            "cwe": [
+                                {
+                                    "id": 295
+                                }
+                            ],
+                            "description": "Hard coded does"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "ad6047709ffcc0b8e2f2577daf066e9a",
+                            "sourceId": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                            "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "f91d0476aac66e2d11ce1f3ece59a05d",
+                            "sourceId": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                            "fileName": "app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "0374ec857381230fa83049643ce3cdee",
+                            "sourceId": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                            "fileName": "./",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "2b26f7707be3e96c3c3bbc4e18db6722",
+                            "ruleId": "android_logging",
+                            "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                            "line": 57,
+                            "code": "```            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());```\n**Rule name:** AndroidLogging",
+                            "status": "Open",
+                            "description": "**Result message:** The App logs information. Please ensure that sensitive information is never logged.\n**Snippet:**\n```            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());```\n**Rule name:** AndroidLogging",
+                            "stacks": [
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 1,
+                                    "code": "```            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());```\n**Rule name:** AndroidLogging",
+                                    "line": 57
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "3422b91bcd63e5293a7bb40564055d5e",
+                            "ruleId": "android_hidden_ui",
+                            "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
+                            "line": 72,
+                            "code": "```            pinTxt.setVisibility(View.INVISIBLE);```\n**Rule name:** AndroidHiddenUi",
+                            "status": "Open",
+                            "description": "**Result message:** Hidden elements in view can be used to hide data from user. But this data can be leaked.\n**Snippet:**\n```            pinTxt.setVisibility(View.INVISIBLE);```\n**Rule name:** AndroidHiddenUi",
+                            "stacks": [
+                                {
+                                    "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
+                                    "sequence": 1,
+                                    "code": "```            pinTxt.setVisibility(View.INVISIBLE);```\n**Rule name:** AndroidHiddenUi",
+                                    "line": 72
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "1cd955b781ec31d080e77d32c2352c39",
+                            "ruleId": "sqlite_injection",
+                            "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                            "line": 67,
+                            "code": "```            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");```\n**Rule name:** SqliteInjection",
+                            "status": "Open",
+                            "description": "**Result message:** App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\n**Snippet:**\n```            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");```\n**Rule name:** SqliteInjection",
+                            "stacks": [
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 1,
+                                    "code": "```            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");```\n**Rule name:** SqliteInjection",
+                                    "line": 67
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c51841a3521727f337932f9eced559ca",
+                            "ruleId": "android_detect_tapjacking",
+                            "locationId": "0374ec857381230fa83049643ce3cdee",
+                            "line": 1,
+                            "code": "```Missing Best Practice```\n**Rule name:** AndroidDetectTapjacking",
+                            "status": "Open",
+                            "description": "**Result message:** This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.\n**Snippet:**\n```Missing Best Practice```\n**Rule name:** AndroidDetectTapjacking",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "```Missing Best Practice```\n**Rule name:** AndroidDetectTapjacking",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2235a3d5b2f396b62bf549a79bc3c13d",
+                            "ruleId": "android_prevent_screenshot",
+                            "locationId": "0374ec857381230fa83049643ce3cdee",
+                            "line": 1,
+                            "code": "```Missing Best Practice```\n**Rule name:** AndroidPreventScreenshot",
+                            "status": "Open",
+                            "description": "**Result message:** This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.\n**Snippet:**\n```Missing Best Practice```\n**Rule name:** AndroidPreventScreenshot",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "```Missing Best Practice```\n**Rule name:** AndroidPreventScreenshot",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "92800d019a87f10fc1ccd8afa3e39ec2",
+                            "ruleId": "android_safetynet_api",
+                            "locationId": "0374ec857381230fa83049643ce3cdee",
+                            "line": 1,
+                            "code": "```Missing Best Practice```\n**Rule name:** AndroidSafetynetApi",
+                            "status": "Open",
+                            "description": "**Result message:** This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. \n**Snippet:**\n```Missing Best Practice```\n**Rule name:** AndroidSafetynetApi",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "```Missing Best Practice```\n**Rule name:** AndroidSafetynetApi",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "68675234d36b6cdcc46dbb367e645ce8",
+                            "ruleId": "android_root_detection",
+                            "locationId": "0374ec857381230fa83049643ce3cdee",
+                            "line": 1,
+                            "code": "```Missing Best Practice```\n**Rule name:** AndroidRootDetection",
+                            "status": "Open",
+                            "description": "**Result message:** This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.\n**Snippet:**\n```Missing Best Practice```\n**Rule name:** AndroidRootDetection",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "```Missing Best Practice```\n**Rule name:** AndroidRootDetection",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "018170e2c315d5569d334e1313569f74",
+                            "ruleId": "android_certificate_transparency",
+                            "locationId": "0374ec857381230fa83049643ce3cdee",
+                            "line": 1,
+                            "code": "```Missing Best Practice```\n**Rule name:** AndroidCertificateTransparency",
+                            "status": "Open",
+                            "description": "**Result message:** This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.\n**Snippet:**\n```Missing Best Practice```\n**Rule name:** AndroidCertificateTransparency",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "```Missing Best Practice```\n**Rule name:** AndroidCertificateTransparency",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "794bee8961dc9521f4cc28c6cdbe3b12",
+                            "ruleId": "android_certificate_pinning",
+                            "locationId": "0374ec857381230fa83049643ce3cdee",
+                            "line": 1,
+                            "code": "```Missing Best Practice```\n**Rule name:** AndroidCertificatePinning",
+                            "status": "Open",
+                            "description": "**Result message:** This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in `network_security_config.xml`.\n**Snippet:**\n```Missing Best Practice```\n**Rule name:** AndroidCertificatePinning",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "```Missing Best Practice```\n**Rule name:** AndroidCertificatePinning",
+                                    "line": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}

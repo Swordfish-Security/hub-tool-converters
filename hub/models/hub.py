@@ -70,8 +70,7 @@ class FindingHub:
         self.code = code
         self.description = description
         self.status = status
-
-        if self.code and self.line:
+        if self.code is not None and self.line is not None:
             self.stacks = [
                 LocationStack(locationId=self.locationId, line=self.line, code=self.code)
             ]
