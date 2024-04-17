@@ -52,6 +52,8 @@ class HorusecParser(object):
             scanner_confidence=self.CONDIFDENCE[
                 data["vulnerabilities"]["confidence"]
             ],
+            static_finding=True,
+            dynamic_finding=False
         )
         # sometimes the attribute 'line' is empty
         if (

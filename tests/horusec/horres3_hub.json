@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "f5297f37-85fe-4835-b8d6-3ed9677fe0c2",
+                "id": "96e05302-08b0-46a6-8db8-e44377fbbb3f",
                 "description": "Import horusec results"
             },
             "source": [
                 {
-                    "id": "5a93f236-9010-464f-adde-feb420edfdcb",
+                    "id": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -25,7 +25,7 @@
                 {
                     "rules": [
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "name": "horusec Critical",
                             "id": "horusec Critical",
                             "severity": "Critical",
@@ -33,7 +33,7 @@
                             "description": "Hard coded None"
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "name": "horusec High",
                             "id": "horusec High",
                             "severity": "High",
@@ -41,7 +41,7 @@
                             "description": "Hard coded weak"
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "name": "horusec Medium",
                             "id": "horusec Medium",
                             "severity": "Medium",
@@ -49,7 +49,7 @@
                             "description": "Hard coded Sensitive"
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "name": "horusec Low",
                             "id": "horusec Low",
                             "severity": "Low",
@@ -61,518 +61,518 @@
                         {
                             "type": "codebase",
                             "id": "8de0863559b1180de668872817455dae",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "Dockerfile.nginx",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8a9c34cc57f6de963b3642f80677b780",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "Dockerfile.django",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2a20a17372964d3fd9383d4026e285d5",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "docker-compose.override.integration_tests.yml",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4e5e90c6228fd48698d074241c2ba760",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "docker-compose.yml",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "04c6e90faac2675aa89e2176d2eec7d8",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "README.md",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1fd0da033753906a29729c3b71ee9e6f",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "docker/entrypoint.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "36f0866f86a7a16775d5f3d2128b3f6e",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/settings/settings.dist.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4b6797599231edf9b7211aed7f7e2ca8",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "docs/content/en/integrations/import.md",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5762ac51c1b99e576b13a357291ebeb0",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/api_v2/serializers.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4fe7497c82082be5dfe525873e008fe2",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/static/dojo/js/index.js",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "d606bb9142d07bf12956fb21593a62d4",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/reports/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1577c48c539dfcd7e3f3b505c9c3fce6",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "tests/dedupe_test.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c89fba180afc15e59ef7f8cbbd86c1ca",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/unittests/test_rest_framework.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "926dd23b8609141c06cf300277a27e01",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/appspider/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3c7ff1360562fc67c0df798d0c34a86b",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/sslscan/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7ca1b3e8ef484602e724db780142effa",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/immuniweb/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "875627b0d2d4bcb50fab40232db4dfe4",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/sslyze/parser_xml.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3c243a3b05b0b0eb7792f156759dc72d",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/ibm_app/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1dd390599a8707d02d8bf0dc5ddc4bf7",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/nessus/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "16861b4aedebdeee4d16c914afb38d9a",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/qualys_webapp/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "fa1363208759766451dc2346a2bfc93f",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/management/commands/csv_findings_export.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "6a008d981f26edb4009eecf093a5d4d6",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/endpoint/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cf7738762dfc0691c7279f5863c0949c",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/dependency_check/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1c1a7e941fb77df05c9cb90b5b30a475",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/ccvs/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f83b72b56a3bce1d4cca0555d3297b19",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/retirejs/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3790121e0cd63ebaab4be1a1fcec7153",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/blackduck/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "dd2c5079aea37e3b531c2d580c39c498",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/huskyci/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "84f32e41da9436d76b197c7f45e7d177",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/trufflehog3/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "e22104d6b64392ec2d949a67e4cfc3f1",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/ort/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4b0b57ce0bdba7d71ed0804af82df578",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/trufflehog/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5f29a901208b629641a7fcda30f35d49",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/cobalt/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5d534d3353e3417cdb74462cddeea1d1",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/twistlock/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "55a327221822b1408497557dc26181cf",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/bundler_audit/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cd2e66e4fe78193266ff7900d37f7b2f",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/scantist/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "58e84dd9a81bbb703c0c4f097a5291a5",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/h1/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1029db487fd7e936fcc17f9a7dae00e9",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/vcg/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "a9141846b7555573b2eb2504d67b49ab",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/bugcrowd/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cc4c993ba5e0ff3a6435ff548372ea22",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/kiuwan/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "9a1e9e1943f29dadd99b21535782a525",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/mend/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2d9c4aee49336dac4e81afcb10ea9cf7",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/whitehat_sentinel/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "6b3061116da9c1ee2465bea1cc772737",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/decorators.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4a9105d13338d488af1e12afe4c747b3",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/finding/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "e4afea3b1d102ebec1fb98471c16d2a2",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/forms.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f18c38ff8f22a18083f6930a15a73263",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/management/commands/migrate_surveys.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "0b3a614b418d483f2954f5b0467377ad",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/reports/widgets.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "31d6533877fcef04cc84bff4b8b7725d",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/survey/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "12bbe123ee4745cbc9e25666fa999837",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/templatetags/display_tags.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "6d8ac5b9d0393754ed7fa6a0245cdd9d",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/templatetags/get_banner.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8973b4fff0b65871a462943725833dfe",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/templatetags/navigation_tags.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5040e0916a47c08c25474eb1a48ad4a1",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/burp_enterprise/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "89d676c1ef62be5a0a16f0e1db11562e",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/contrast/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f80cc475fea3fd87b4433052c9303f19",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/safety/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7a0b749fc8c5806ba615983cb3eebfef",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/sonarqube/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "dfb3bf71b9a9998558ce34e51d202e1b",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/sonarqube_api/importer.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "61ce264512a896e043c4f6cb47586d9d",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/unittests/tools/test_contrast_parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "480e5f0a4f672d96a803cd45d6e7ff32",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/unittests/tools/test_jfrog_xray_unified_parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3a0a1aff660148e9a081688937309def",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/unittests/tools/test_tfsec_parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1de7bbea0d7c20c49516a7ae22b29f0f",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/wsgi.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c9e050edf44aee850241cd11ef1c729c",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/benchmark/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2e0bd640bfa39d3bb5c4b01a1e956faa",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/cred/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f6ee94e3e6ca602de7c92b422c121d47",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/db_migrations/0047_jira_minimum_severity_default.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "d9f6d32505fbd85a61502a6abde4fa3a",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/db_migrations/0061_jira_webhook_secret.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "646613a8f2aafbea13bf4b2b75d93e4e",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/finding/helper.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1530412ba144b1075237642136bf5446",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/google_sheet/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "0ddcd18cff85f3cf073bdd33df44f289",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/middleware.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "16ddff6426d13af21110876b78280f47",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/models.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1984bef532c4490f5003035148f64e86",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/okta.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "708544294eac7d783d8890d3d0bc9772",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/product/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7521715edfd020fc7c9949d98a278938",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/tools/gitlab_api_fuzzing/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cfff068b22b5cc62a5481799b2c97917",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/unittests/test_swagger_schema.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4d01eeaaeaa065192038cb61c39a78c8",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "dojo/unittests/test_tags.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3bcefa5e951b4dfd67d556956854fdf8",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "tests/Import_scanner_test.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c20fd8677fc2705e8f09d28babba56aa",
-                            "sourceId": "5a93f236-9010-464f-adde-feb420edfdcb",
+                            "sourceId": "6f34ecc0-ad24-46e7-8220-dd9d2131ab63",
                             "fileName": "tests/base_test_class.py",
                             "language": "Any"
                         }
                     ],
                     "findings": [
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "770f799fdcda286eb64c7fb09fedf021",
                             "ruleId": "horusec Critical",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -590,7 +590,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c8ac8ac5c74ae3602646dd177cda5790",
                             "ruleId": "horusec Critical",
                             "locationId": "8a9c34cc57f6de963b3642f80677b780",
@@ -608,7 +608,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5bcf74f47945ba7c24bf55d9b45987dd",
                             "ruleId": "horusec Critical",
                             "locationId": "8a9c34cc57f6de963b3642f80677b780",
@@ -626,7 +626,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1a061df60153311cdeb9828030432f4f",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
@@ -644,7 +644,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2a8db09bab13f62592fba39f041faf9e",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
@@ -662,7 +662,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "651af50e3057e02de9c4753a13dd44d3",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
@@ -680,7 +680,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "cca367c217518c169ed25187c68adeb2",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
@@ -698,7 +698,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "28255be345f73b34e15aece4d13f2ce6",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
@@ -716,7 +716,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6a2e5a6bcf14b1d5ceeff1b1f3408d1f",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
@@ -734,7 +734,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "488a8da35177cfe83a7d3230e7cd6a0b",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
@@ -752,7 +752,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "9ca14192d204198c510b9d71204e1110",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
@@ -770,7 +770,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "aa53a3725f260f716ef027c2bda5cf5c",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
@@ -788,7 +788,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "eb3fcb22be383c73df4c20055cfb6a99",
                             "ruleId": "horusec Critical",
                             "locationId": "04c6e90faac2675aa89e2176d2eec7d8",
@@ -806,7 +806,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "43d5ed3409012ce8d755ead2fd89f197",
                             "ruleId": "horusec Critical",
                             "locationId": "1fd0da033753906a29729c3b71ee9e6f",
@@ -824,7 +824,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c45bfc81ce83cdf193e051f54a221a9c",
                             "ruleId": "horusec Critical",
                             "locationId": "36f0866f86a7a16775d5f3d2128b3f6e",
@@ -842,7 +842,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "96c3276a1408bc0c72ef040c714925ae",
                             "ruleId": "horusec Critical",
                             "locationId": "4b6797599231edf9b7211aed7f7e2ca8",
@@ -860,7 +860,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "db2940431bad69be945031901772d8e2",
                             "ruleId": "horusec Critical",
                             "locationId": "36f0866f86a7a16775d5f3d2128b3f6e",
@@ -878,7 +878,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0a47057ebb9f657d8d99b44895d6b34d",
                             "ruleId": "horusec Critical",
                             "locationId": "5762ac51c1b99e576b13a357291ebeb0",
@@ -896,7 +896,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "4b5c93241e779dcad8b55d672cbb9f66",
                             "ruleId": "horusec High",
                             "locationId": "4fe7497c82082be5dfe525873e008fe2",
@@ -914,7 +914,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "063351d553cac2475b5bdfd4a9825633",
                             "ruleId": "horusec High",
                             "locationId": "d606bb9142d07bf12956fb21593a62d4",
@@ -932,7 +932,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a2d41b681b6397e727a6a25160e71e20",
                             "ruleId": "horusec High",
                             "locationId": "1577c48c539dfcd7e3f3b505c9c3fce6",
@@ -950,7 +950,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d12b7e9025e27a85ea5b333ef863ff68",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -968,7 +968,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a04bf57320d6fdc2caf37f69e0897ad5",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -986,7 +986,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "4e042a771da67693fc28410c78c7c671",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -1004,7 +1004,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "ed3ce85480c199562b7427b62092166b",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -1022,7 +1022,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c4541c27b123eb8632ee98437e13b05b",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -1040,7 +1040,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "dfd477136a62c7b8dcbf501af0bf5cfe",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -1058,7 +1058,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "436716bd63df90e449680c30ef82075f",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -1076,7 +1076,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0f99f4e1db0e5e4095bbd1598eafd1f9",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -1094,7 +1094,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "be9693b5574a9877e8a34a32dac3b4b9",
                             "ruleId": "horusec High",
                             "locationId": "926dd23b8609141c06cf300277a27e01",
@@ -1112,7 +1112,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "50a75c4e4e1f6a3df2f603e621354149",
                             "ruleId": "horusec High",
                             "locationId": "3c7ff1360562fc67c0df798d0c34a86b",
@@ -1130,7 +1130,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "adde6b4b983c022a7ba5a9697cb93bd3",
                             "ruleId": "horusec High",
                             "locationId": "7ca1b3e8ef484602e724db780142effa",
@@ -1148,7 +1148,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "be6cfca8b3407bac233c2f1b68446d68",
                             "ruleId": "horusec High",
                             "locationId": "875627b0d2d4bcb50fab40232db4dfe4",
@@ -1166,7 +1166,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "316a82dbac609cc60931a7e95cd6e155",
                             "ruleId": "horusec High",
                             "locationId": "3c243a3b05b0b0eb7792f156759dc72d",
@@ -1184,7 +1184,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "75a25c5cf42e6399795707811960aa4e",
                             "ruleId": "horusec High",
                             "locationId": "1dd390599a8707d02d8bf0dc5ddc4bf7",
@@ -1202,7 +1202,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "9568a2d7178b68300d6450fdc50f6b71",
                             "ruleId": "horusec High",
                             "locationId": "16861b4aedebdeee4d16c914afb38d9a",
@@ -1220,7 +1220,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d8ffcb977f00d4e9821c74257e660367",
                             "ruleId": "horusec High",
                             "locationId": "fa1363208759766451dc2346a2bfc93f",
@@ -1238,7 +1238,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "bc0e9c5918af9b72c67c4c59c5a707ad",
                             "ruleId": "horusec High",
                             "locationId": "d606bb9142d07bf12956fb21593a62d4",
@@ -1256,7 +1256,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5ef7966ba5fc00ae7f99dd4ffd8f65e9",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -1274,7 +1274,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "36cd80f526be9c13e1158e0007e93f9c",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -1292,7 +1292,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "37d85e87f1eab648c2417850e14c8741",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -1310,7 +1310,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "24ba53677aa3c22b506e1ff9774fabde",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -1328,7 +1328,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2654f064bf4f2febe69722eb7eb592bf",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -1346,7 +1346,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "537772784c25b87fe746fcefe1731598",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -1364,7 +1364,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "04282a31f413a55b8a46954a90837dab",
                             "ruleId": "horusec Medium",
                             "locationId": "6a008d981f26edb4009eecf093a5d4d6",
@@ -1382,7 +1382,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c44c97ca5690104acfc0edc57b91ad50",
                             "ruleId": "horusec Medium",
                             "locationId": "cf7738762dfc0691c7279f5863c0949c",
@@ -1400,7 +1400,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "03df4dcb283085246ab647b4855726e5",
                             "ruleId": "horusec Medium",
                             "locationId": "1c1a7e941fb77df05c9cb90b5b30a475",
@@ -1418,7 +1418,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0d1a1169164abdc8beea9c73fb1d2c0e",
                             "ruleId": "horusec Medium",
                             "locationId": "f83b72b56a3bce1d4cca0555d3297b19",
@@ -1436,7 +1436,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "867b8c6a7c36dc8b98ae10e04afa7b46",
                             "ruleId": "horusec Medium",
                             "locationId": "3790121e0cd63ebaab4be1a1fcec7153",
@@ -1454,7 +1454,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1e5920a83f0e21d7e5971d9bb7d65ee1",
                             "ruleId": "horusec Medium",
                             "locationId": "dd2c5079aea37e3b531c2d580c39c498",
@@ -1472,7 +1472,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "57f9c7b9a0e0db915e1599917bafa4fb",
                             "ruleId": "horusec Medium",
                             "locationId": "84f32e41da9436d76b197c7f45e7d177",
@@ -1490,7 +1490,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5bf4c6b3d9ce86ef2c1fe594ec967256",
                             "ruleId": "horusec Medium",
                             "locationId": "e22104d6b64392ec2d949a67e4cfc3f1",
@@ -1508,7 +1508,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "fd28c0acb22f968a859a2e3f4d32e070",
                             "ruleId": "horusec Medium",
                             "locationId": "4b0b57ce0bdba7d71ed0804af82df578",
@@ -1526,7 +1526,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a16f51f848e09b8a68cdbe7b849eca47",
                             "ruleId": "horusec Medium",
                             "locationId": "7ca1b3e8ef484602e724db780142effa",
@@ -1544,7 +1544,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "333ba9cb9792a5c9fd9daf32fdabcb24",
                             "ruleId": "horusec Medium",
                             "locationId": "5f29a901208b629641a7fcda30f35d49",
@@ -1562,7 +1562,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "50f49c41b2a0e76349b10ffd4215de20",
                             "ruleId": "horusec Medium",
                             "locationId": "5d534d3353e3417cdb74462cddeea1d1",
@@ -1580,7 +1580,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b9e5b2c307c17bb2b9609e5a49bf676c",
                             "ruleId": "horusec Medium",
                             "locationId": "55a327221822b1408497557dc26181cf",
@@ -1598,7 +1598,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0c63cd07dc1d3d0163975d5249ca3170",
                             "ruleId": "horusec Medium",
                             "locationId": "cd2e66e4fe78193266ff7900d37f7b2f",
@@ -1616,7 +1616,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "08233b5de43774960b34502da157d343",
                             "ruleId": "horusec Medium",
                             "locationId": "3c243a3b05b0b0eb7792f156759dc72d",
@@ -1634,7 +1634,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3711e624d02e676cf2011f517b61636b",
                             "ruleId": "horusec Medium",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
@@ -1652,7 +1652,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5575126babeb2b46a1880293eb98297f",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
@@ -1670,7 +1670,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "31a85b35ca703ef4c9390a6dd57faa31",
                             "ruleId": "horusec Medium",
                             "locationId": "a9141846b7555573b2eb2504d67b49ab",
@@ -1688,7 +1688,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "60f498588246122d9b92a1c9075096d1",
                             "ruleId": "horusec Medium",
                             "locationId": "cc4c993ba5e0ff3a6435ff548372ea22",
@@ -1706,7 +1706,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "938bbd6379c816c75d2e033c96f837a8",
                             "ruleId": "horusec Medium",
                             "locationId": "9a1e9e1943f29dadd99b21535782a525",
@@ -1724,7 +1724,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "93577744655356900b9f28badde2f1c8",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
@@ -1742,7 +1742,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "144f4decf95e648acfc7603ee6fe2d3e",
                             "ruleId": "horusec Medium",
                             "locationId": "875627b0d2d4bcb50fab40232db4dfe4",
@@ -1760,7 +1760,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0478fbae417db99c728261bf61360985",
                             "ruleId": "horusec Medium",
                             "locationId": "2d9c4aee49336dac4e81afcb10ea9cf7",
@@ -1778,7 +1778,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3397ef7d744e2209cce43e63d0dd873b",
                             "ruleId": "horusec Medium",
                             "locationId": "6b3061116da9c1ee2465bea1cc772737",
@@ -1796,7 +1796,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a3310c20270f4c5bd56e56e82ae628e3",
                             "ruleId": "horusec Medium",
                             "locationId": "4a9105d13338d488af1e12afe4c747b3",
@@ -1814,7 +1814,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "51a6f3f6afd0b864d26df2759bb76d26",
                             "ruleId": "horusec Medium",
                             "locationId": "4a9105d13338d488af1e12afe4c747b3",
@@ -1832,7 +1832,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0c73f97ee123f6d46a1e890ac7735a45",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1850,7 +1850,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1c7fe3a6047caf4a3c462f0e7f5087bf",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1868,7 +1868,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "76a058b6fe9d8656b85c07eba3512b56",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1886,7 +1886,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3bd194f345c91ac525a1e60ccad3c17b",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1904,7 +1904,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "71552aa18734c34921d6c352e1c4dc4b",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1922,7 +1922,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f04581c2caeb0dc62142f68e2a4179b1",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1940,7 +1940,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3e230e091828647dfba98072afe74915",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1958,7 +1958,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "31c55e8a49035fbf58e2008efdb4b23a",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1976,7 +1976,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "4889d3c2de5542edba0e5edf13d52374",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -1994,7 +1994,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d7f63c9a47ea049833a92af719dfb295",
                             "ruleId": "horusec Medium",
                             "locationId": "f18c38ff8f22a18083f6930a15a73263",
@@ -2012,7 +2012,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0f594ea03ba4f7c53f2cb4c7deaccd38",
                             "ruleId": "horusec Medium",
                             "locationId": "f18c38ff8f22a18083f6930a15a73263",
@@ -2030,7 +2030,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3935daee2247e5438bffa2dfa4035cee",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2048,7 +2048,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "e3c70eb36609348f3fb27a73cba3936e",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2066,7 +2066,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "94a1824ca874a59688fb8e99a366f37a",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2084,7 +2084,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a1a7ac860f12753fd4f505c1bf68be88",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2102,7 +2102,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6d824cb025f21f4d01c76dd08f46bd40",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2120,7 +2120,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "e1d565bb1321feb84283718529912ca0",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2138,7 +2138,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "ab1f1edadde0a1bfbb75bafbdcfce544",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2156,7 +2156,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "e65f995df413e25edc47430be705c370",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2174,7 +2174,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "01f81d0492078db31e5a8fc3677c4e76",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2192,7 +2192,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b0928dedf06eb8cc7ee02e793231296a",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2210,7 +2210,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2e983a895299d88f03ac35e40f3aa963",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2228,7 +2228,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "82e840805a7e158073b4ac31b9823033",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2246,7 +2246,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "fe893430a72c636404b1a67ae8f3da01",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2264,7 +2264,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "44f9175b3aa232f3d6aba79562063f9a",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2282,7 +2282,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b95d4ae0c819d487c910c4937eb3d873",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2300,7 +2300,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "56dbb28f1cf0ee93316c024ed4eb3818",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2318,7 +2318,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "9c850df1619ffd6ecbe4aad45bb723f6",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2336,7 +2336,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5ac5d9e18362871e7b3bdcc8758e8585",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2354,7 +2354,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "816b8d0560b146bb59c29c6d2316a0b9",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2372,7 +2372,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "bb93fd769ff54a11861cc5e80d5f387d",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2390,7 +2390,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "14bc9d5aa60f16344e4a8a53c28934ba",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2408,7 +2408,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0eae2a3128b7aaf5876e584a439f087a",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2426,7 +2426,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "19fc9da0ce88064453b92137c1c57323",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2444,7 +2444,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f26cf7cfbff3aada2fee76b306e5f914",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2462,7 +2462,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "af6faef2f16551963bd6da6aafaf1a5f",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2480,7 +2480,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "7dd63860040799e6eedfce9bc8c1870e",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2498,7 +2498,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "26111666e59549b05f73c90663255605",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2516,7 +2516,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5249972d11a2b94be8243458e47414c5",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2534,7 +2534,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "8c38b7c5ef0ffedefc95b7ff99462771",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2552,7 +2552,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "de91afc1e53c50a5347e42933e3cebef",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
@@ -2570,7 +2570,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c02a47cb01c4f6fb01675d483f433b85",
                             "ruleId": "horusec Medium",
                             "locationId": "31d6533877fcef04cc84bff4b8b7725d",
@@ -2588,7 +2588,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "8566b9a28ccff3cd86fbaeed38643bb5",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2606,7 +2606,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "580405b03ef32164e7c594c431b0c6cc",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2624,7 +2624,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2acb5bae8cec6053cea11c703a86edf3",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2642,7 +2642,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d9920e4b06d2d1f48c65a22fb2c12a13",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2660,7 +2660,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2be8ff9762bebb04fe4d81484b2d648b",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2678,7 +2678,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1167ea7c64076530a3d559e6f63d2fd1",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2696,7 +2696,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "131505f999de1a74feb41b90cdcb1d54",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2714,7 +2714,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b2e1302c16b69be7ef6bfdff049745dd",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2732,7 +2732,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "190942267168203f7286bffd5f1fde18",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2750,7 +2750,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "db1656cfc76316613a1b22393a16ca05",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2768,7 +2768,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "366e23cb53c6ceb4d44d8c3e7d3ab379",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2786,7 +2786,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6bbc0385a2be32644e7c8b73c01e4944",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2804,7 +2804,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "7f0a2e454b16933bcbe150d74f53bc19",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2822,7 +2822,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0c35e6be7be6568c0b2b8372a10a4845",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2840,7 +2840,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6bb39828f87ffa49e0eb70887576a4c2",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2858,7 +2858,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "74cac61a7fa2dd535819e1c7bc3b944d",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2876,7 +2876,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "ad0725e0a3d059cf6837462a0abd8518",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2894,7 +2894,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "e7520c2ee2d9a12b2ba8949d6fcb33ac",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2912,7 +2912,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a49deb352c6ee58a6ca4a56e84b028d0",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2930,7 +2930,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6f037e801143cae6e730cb632deba260",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2948,7 +2948,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "ebfc657fdedaf5a230008cf59a201507",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2966,7 +2966,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "591bf7b7462aff5e4cbc901189478ac5",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -2984,7 +2984,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "467d5af3a99c5a1f9d317eacf72d1232",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3002,7 +3002,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "84a0e91f51013bddeb6d686f77e159ad",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3020,7 +3020,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0a5aeda9df9988fda204d0538c3d9f9f",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3038,7 +3038,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "42235b9d79c62d33f4a000c823cb92a2",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3056,7 +3056,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "08ff7eb2ec1543858d2e75765ba01d5d",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3074,7 +3074,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "eca901cd7ef4d094eae7418c97cedee2",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3092,7 +3092,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a431380e258f8ef2c45e9b683899a77c",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3110,7 +3110,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c851a0e6edd5f801666bc8862cddf983",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3128,7 +3128,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3699eac6930e79047715a980880b1517",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3146,7 +3146,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c808dbc7612e5a05f8e7e2d1f8176a3d",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3164,7 +3164,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0fbdcda1d6c3af93ec08545a0ed6add7",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3182,7 +3182,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "00c6874e4dcfaed743d6526537624924",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3200,7 +3200,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "529fc4a925ff96a74fcdbe11a3d48e41",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3218,7 +3218,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c3739133ddd7b5603dc5ea90a09d5cff",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3236,7 +3236,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d7fbd3d04886f56bba8bed527f0d72c2",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3254,7 +3254,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "56577711e8364525041473fa790dd59b",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3272,7 +3272,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "76a2d631894bc3f5e3d224a3c3060cc7",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3290,7 +3290,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3e1b354cdd070714d14e379559dfae0d",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3308,7 +3308,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "66454ec1f5dc4bb941b97c21477d11db",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3326,7 +3326,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "56bd2bcdf9bd263b0d042e8d7a2db1b7",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3344,7 +3344,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "8b9a819d29c56e18f0d1d996424c9f2e",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3362,7 +3362,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b4c8700f1f69e37ad5102e1f44d1ce86",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3380,7 +3380,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "982792a77c20aeb4199bc1425f9ea153",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3398,7 +3398,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "bd252f363127f78920cee7039bfafb02",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3416,7 +3416,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f32579b6621ef308f171e2965c7517ea",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3434,7 +3434,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "fe5a17785a833495d5f6e7717288d9c2",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3452,7 +3452,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1aa86938ca871ca377415caa826337a9",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3470,7 +3470,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f70764c8e18dfd09792d296bc57aba20",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3488,7 +3488,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c2cd33f4bc08b42e87b0d8540148965b",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3506,7 +3506,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "655396029fc70a6882ba355ab8fb3431",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3524,7 +3524,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "15193476e685f04cbd54abe3bb5a5719",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3542,7 +3542,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "7026712cba51690b74f802ae973aadc8",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3560,7 +3560,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "714acb1a6bfe9985dee39c8ce95d90dd",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3578,7 +3578,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "eff4a3bb2eb2465c9471d17d4c16680f",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3596,7 +3596,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5c6d6484196350b8845abba6fbc3cd35",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3614,7 +3614,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "455a8cadf3178d38342b9aa1580c5be8",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3632,7 +3632,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f4b5c4bd1bf068524a6b61c478bdac2a",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
@@ -3650,7 +3650,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "4bb6e4c620fa89b7b9446fd9256bcf71",
                             "ruleId": "horusec Medium",
                             "locationId": "6d8ac5b9d0393754ed7fa6a0245cdd9d",
@@ -3668,7 +3668,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "74d78d53ced3c7b0c2af3a4325923cea",
                             "ruleId": "horusec Medium",
                             "locationId": "6d8ac5b9d0393754ed7fa6a0245cdd9d",
@@ -3686,7 +3686,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1f048a48d027b2db02a3ab0cdd4487f0",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
@@ -3704,7 +3704,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "7bdfd2133766f1bb3d9e7d9f2e69cf4a",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
@@ -3722,7 +3722,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "4eef76c925396dba7746df4418d59ca8",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
@@ -3740,7 +3740,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5a9d532960e719659093b82584f0c3e2",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
@@ -3758,7 +3758,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "8cafeec36dfb89093f3951c2067713ef",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
@@ -3776,7 +3776,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "ad499e4385eb4bbee2d72c1d14f38a78",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
@@ -3794,7 +3794,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d4e5e6497b6090155e17ad38c85ab85c",
                             "ruleId": "horusec Medium",
                             "locationId": "3790121e0cd63ebaab4be1a1fcec7153",
@@ -3812,7 +3812,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5c4f39471744e62a7ffaeb8b7b5171e2",
                             "ruleId": "horusec Medium",
                             "locationId": "a9141846b7555573b2eb2504d67b49ab",
@@ -3830,7 +3830,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "17c38de3d544e6e91543afb13b7f6194",
                             "ruleId": "horusec Medium",
                             "locationId": "55a327221822b1408497557dc26181cf",
@@ -3848,7 +3848,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f6e85466fba3f0b6f86adff225e3ef42",
                             "ruleId": "horusec Medium",
                             "locationId": "5040e0916a47c08c25474eb1a48ad4a1",
@@ -3866,7 +3866,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "4b939a884d9a20694f2063c12e0a4c25",
                             "ruleId": "horusec Medium",
                             "locationId": "1c1a7e941fb77df05c9cb90b5b30a475",
@@ -3884,7 +3884,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "bab4e976265234a38106f0048827889f",
                             "ruleId": "horusec Medium",
                             "locationId": "5f29a901208b629641a7fcda30f35d49",
@@ -3902,7 +3902,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c53775d8e4132952c058fe2d5e12b63a",
                             "ruleId": "horusec Medium",
                             "locationId": "89d676c1ef62be5a0a16f0e1db11562e",
@@ -3920,7 +3920,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "a45960c26648863ef7c878ee160eb433",
                             "ruleId": "horusec Medium",
                             "locationId": "cf7738762dfc0691c7279f5863c0949c",
@@ -3938,7 +3938,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "537efa90a40e39236d402caa3200b104",
                             "ruleId": "horusec Medium",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
@@ -3956,7 +3956,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2e5e22b90fc79712a2f14e6673a24e4f",
                             "ruleId": "horusec Medium",
                             "locationId": "dd2c5079aea37e3b531c2d580c39c498",
@@ -3974,7 +3974,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "9fb5859b039f7da99fead5fdf1f112c2",
                             "ruleId": "horusec Medium",
                             "locationId": "3c243a3b05b0b0eb7792f156759dc72d",
@@ -3992,7 +3992,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "773b4c3c02b529a8e45c51a6d31a62ae",
                             "ruleId": "horusec Medium",
                             "locationId": "7ca1b3e8ef484602e724db780142effa",
@@ -4010,7 +4010,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b4b150b8b27fb99e358515c2cfad7e1a",
                             "ruleId": "horusec Medium",
                             "locationId": "cc4c993ba5e0ff3a6435ff548372ea22",
@@ -4028,7 +4028,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "9464c1a26f4723839c63264b8c9836e8",
                             "ruleId": "horusec Medium",
                             "locationId": "e22104d6b64392ec2d949a67e4cfc3f1",
@@ -4046,7 +4046,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "dd7f8ac20814d77e711d14b67fa47b18",
                             "ruleId": "horusec Medium",
                             "locationId": "16861b4aedebdeee4d16c914afb38d9a",
@@ -4064,7 +4064,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6738ec4687013a669a8c36e40f9ba59e",
                             "ruleId": "horusec Medium",
                             "locationId": "f83b72b56a3bce1d4cca0555d3297b19",
@@ -4082,7 +4082,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c7f4c8458a344cff6b247e7e58c5f4c7",
                             "ruleId": "horusec Medium",
                             "locationId": "f80cc475fea3fd87b4433052c9303f19",
@@ -4100,7 +4100,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b28b3259f0261f6a14276957783239a5",
                             "ruleId": "horusec Medium",
                             "locationId": "cd2e66e4fe78193266ff7900d37f7b2f",
@@ -4118,7 +4118,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "65c05bc763e3d7bea9ad855b9b4abad1",
                             "ruleId": "horusec Medium",
                             "locationId": "7a0b749fc8c5806ba615983cb3eebfef",
@@ -4136,7 +4136,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "01502777beb1584543c246e86876752b",
                             "ruleId": "horusec Medium",
                             "locationId": "dfb3bf71b9a9998558ce34e51d202e1b",
@@ -4154,7 +4154,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "862ea454d0bf42aa614bba2f00d671fc",
                             "ruleId": "horusec Medium",
                             "locationId": "875627b0d2d4bcb50fab40232db4dfe4",
@@ -4172,7 +4172,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "cc2eb6100c59bf399add81a0d306b69f",
                             "ruleId": "horusec Medium",
                             "locationId": "4b0b57ce0bdba7d71ed0804af82df578",
@@ -4190,7 +4190,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3bed866462022e9008d06dc5d337e5ed",
                             "ruleId": "horusec Medium",
                             "locationId": "84f32e41da9436d76b197c7f45e7d177",
@@ -4208,7 +4208,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6aea9f88565455e3b41270ca8f672005",
                             "ruleId": "horusec Medium",
                             "locationId": "5d534d3353e3417cdb74462cddeea1d1",
@@ -4226,7 +4226,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "82ede6e749543dc9449334135ca07d4f",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
@@ -4244,7 +4244,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "eaa058f839ee7d6bb3ec495db4136a1a",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
@@ -4262,7 +4262,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "8fb3a21472b25c9690db32f0d91fc62c",
                             "ruleId": "horusec Medium",
                             "locationId": "2d9c4aee49336dac4e81afcb10ea9cf7",
@@ -4280,7 +4280,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2d9ff6ce8ea95c99e1131f310d842d90",
                             "ruleId": "horusec Medium",
                             "locationId": "9a1e9e1943f29dadd99b21535782a525",
@@ -4298,7 +4298,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "d0aeb23f7c88ad14c6b642f0c35e1368",
                             "ruleId": "horusec Medium",
                             "locationId": "61ce264512a896e043c4f6cb47586d9d",
@@ -4316,7 +4316,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3a1fc50e0691f65c761539d6d11cd8c1",
                             "ruleId": "horusec Medium",
                             "locationId": "61ce264512a896e043c4f6cb47586d9d",
@@ -4334,7 +4334,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1da95d19da5d19c1db16c97fa528ac60",
                             "ruleId": "horusec Medium",
                             "locationId": "61ce264512a896e043c4f6cb47586d9d",
@@ -4352,7 +4352,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "65fa2018a1f4ba7300f7ef28894f2bb4",
                             "ruleId": "horusec Medium",
                             "locationId": "480e5f0a4f672d96a803cd45d6e7ff32",
@@ -4370,7 +4370,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2fdc3146198fcea16dc96815ed3d0ebf",
                             "ruleId": "horusec Medium",
                             "locationId": "480e5f0a4f672d96a803cd45d6e7ff32",
@@ -4388,7 +4388,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "7b8a0137c5b2ba45c9eaf1f86d671415",
                             "ruleId": "horusec Medium",
                             "locationId": "3a0a1aff660148e9a081688937309def",
@@ -4406,7 +4406,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0f2c7da81023b84a3ac276aa3e22725e",
                             "ruleId": "horusec Medium",
                             "locationId": "1de7bbea0d7c20c49516a7ae22b29f0f",
@@ -4424,7 +4424,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5657a393de4d738c9f20dd24b938b273",
                             "ruleId": "horusec Low",
                             "locationId": "8de0863559b1180de668872817455dae",
@@ -4442,7 +4442,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "227110c4c41d34d7e7925184d2db2b2f",
                             "ruleId": "horusec Low",
                             "locationId": "c9e050edf44aee850241cd11ef1c729c",
@@ -4460,7 +4460,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "38de2362f7de1bff45d53e9cccf3c83d",
                             "ruleId": "horusec Low",
                             "locationId": "2e0bd640bfa39d3bb5c4b01a1e956faa",
@@ -4478,7 +4478,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3a6033af0e1a874857fd2ecf38884d8b",
                             "ruleId": "horusec Low",
                             "locationId": "f6ee94e3e6ca602de7c92b422c121d47",
@@ -4496,7 +4496,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "ff8b4b5e5482f13948f912e68872d6b1",
                             "ruleId": "horusec Low",
                             "locationId": "d9f6d32505fbd85a61502a6abde4fa3a",
@@ -4514,7 +4514,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6735cd37c9714ec46c73376989c8ec11",
                             "ruleId": "horusec Low",
                             "locationId": "646613a8f2aafbea13bf4b2b75d93e4e",
@@ -4532,7 +4532,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "e6eda6929c97dd45f5bee1a8235fc871",
                             "ruleId": "horusec Low",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
@@ -4550,7 +4550,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3563a9fcf48317d50e2a7f7dec8ed4da",
                             "ruleId": "horusec Low",
                             "locationId": "1530412ba144b1075237642136bf5446",
@@ -4568,7 +4568,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1a4ed1e23ee12d8cbbade5e1e3e975f6",
                             "ruleId": "horusec Low",
                             "locationId": "1530412ba144b1075237642136bf5446",
@@ -4586,7 +4586,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "eaeaacee85203444f872d8659e2732e7",
                             "ruleId": "horusec Low",
                             "locationId": "0ddcd18cff85f3cf073bdd33df44f289",
@@ -4604,7 +4604,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c74ce8c672a25f783e430d5e357095ec",
                             "ruleId": "horusec Low",
                             "locationId": "16ddff6426d13af21110876b78280f47",
@@ -4622,7 +4622,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "dcdd557f12eb9d185cdfe5d623563302",
                             "ruleId": "horusec Low",
                             "locationId": "16ddff6426d13af21110876b78280f47",
@@ -4640,7 +4640,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "94c1101ea7a1318e5bfc187bc9a67b9e",
                             "ruleId": "horusec Low",
                             "locationId": "1984bef532c4490f5003035148f64e86",
@@ -4658,7 +4658,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "90a4651fe614f4f3cc0e8d7a5dc2c0df",
                             "ruleId": "horusec Low",
                             "locationId": "1984bef532c4490f5003035148f64e86",
@@ -4676,7 +4676,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c758284cf931b9b364e2b9ca1e16b114",
                             "ruleId": "horusec Low",
                             "locationId": "708544294eac7d783d8890d3d0bc9772",
@@ -4694,7 +4694,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "98e724cbe3b7e32652bcfbf666fa3395",
                             "ruleId": "horusec Low",
                             "locationId": "31d6533877fcef04cc84bff4b8b7725d",
@@ -4712,7 +4712,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "c5ff45383dd31be5b50786768bb38631",
                             "ruleId": "horusec Low",
                             "locationId": "5040e0916a47c08c25474eb1a48ad4a1",
@@ -4730,7 +4730,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1b821a9b47d2a8c8d93174e2bb48ccbe",
                             "ruleId": "horusec Low",
                             "locationId": "7521715edfd020fc7c9949d98a278938",
@@ -4748,7 +4748,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "8728e1f3613c327cee028c2b3cd33333",
                             "ruleId": "horusec Low",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
@@ -4766,7 +4766,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "dbb67cee75e7fa3219be0cc309988ced",
                             "ruleId": "horusec Low",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
@@ -4784,7 +4784,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "b758ea5d4465fd89643eab5a1e47d65a",
                             "ruleId": "horusec Low",
                             "locationId": "cc4c993ba5e0ff3a6435ff548372ea22",
@@ -4802,7 +4802,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "05f417f739fe038cd084663cd10b1589",
                             "ruleId": "horusec Low",
                             "locationId": "16861b4aedebdeee4d16c914afb38d9a",
@@ -4820,7 +4820,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "60684c9861db1e4618ea83e27fa4e5fb",
                             "ruleId": "horusec Low",
                             "locationId": "7a0b749fc8c5806ba615983cb3eebfef",
@@ -4838,7 +4838,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "81ce4bc9fac2e43f9860135f89770731",
                             "ruleId": "horusec Low",
                             "locationId": "dfb3bf71b9a9998558ce34e51d202e1b",
@@ -4856,7 +4856,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "967120fab9127bfd4d145def1808edda",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4874,7 +4874,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "bfec7ea7c2eb7f57ddde6a2c4d0eacd7",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4892,7 +4892,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "eedcac94547ca74d60778db8664fcf20",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4910,7 +4910,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "7e4e40747405b499ae79c2e0fff8b8c9",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4928,7 +4928,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6b80402273264e4cc0c219d0561d1690",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4946,7 +4946,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "5601f40e3747da558bcb1a8dfeb3d2f4",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4964,7 +4964,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "6435054196bbbe40eee776342566c13f",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -4982,7 +4982,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "02047adbeb5287d2b32607677bbdff9f",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5000,7 +5000,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "35c204855b1fdca1ab1491ea4e4c37fd",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5018,7 +5018,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f41beec5d670837b0a5cfa8c700093a0",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5036,7 +5036,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "dd147135b612018cbb7cc64260c558e6",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5054,7 +5054,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0ce5cabb79aab8ba2383c49b640ffa5b",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5072,7 +5072,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "07b377f7de08bc5c2e94f4ab2f565713",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5090,7 +5090,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0a5aa2d4a307b8d190375a276a926c3d",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5108,7 +5108,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "0693a730792ebd8ba2bd25300f6b2650",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
@@ -5126,7 +5126,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "f5b1df3b309cacc790417e4442e154ae",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
@@ -5144,7 +5144,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "275887a6f7a4656bd65c87b32a36a52b",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
@@ -5162,7 +5162,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "cf084a268e6d88cdec710db6db609689",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
@@ -5180,7 +5180,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "622eb6de7d412cd94508e2d83056ab2e",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
@@ -5198,7 +5198,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "2ef292f131efb5abb0c40a3ee8631d44",
                             "ruleId": "horusec Low",
                             "locationId": "4d01eeaaeaa065192038cb61c39a78c8",
@@ -5216,7 +5216,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "3c3d89b06b7df0942b0d7f76398c6da6",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
@@ -5234,7 +5234,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "aa9b616c4d54a6637fa548deeccf4cc8",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
@@ -5252,7 +5252,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "708cefd30dfb467e59d61d2fbd91e144",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
@@ -5270,7 +5270,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "1e0ff6bb626f3a647839e530e9192533",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
@@ -5288,7 +5288,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "bc58f7e2a46be2e581075959b4c1e2a5",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
@@ -5306,7 +5306,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "e03302da851a517bcef7471f9bf8bca4",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
@@ -5324,7 +5324,7 @@
                             ]
                         },
                         {
-                            "type": "dast",
+                            "type": "sast",
                             "id": "cfb8367198aac932a440266f7f673674",
                             "ruleId": "horusec Low",
                             "locationId": "c20fd8677fc2705e8f09d28babba56aa",

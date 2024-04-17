@@ -38,6 +38,8 @@ class AdditionalFields:
             self.secret = self.description.split("**String Found:**\n")[1]
         elif "Code:" in self.description:
             self.secret = self.description.split("**Code:**\n")[1]
+        elif "Code flow:" in self.description:
+            self.secret = self.description.split("**Code flow:**\n")[1]
 
     def __parse_file_key(self) -> None:
         if self.file_path is not None:

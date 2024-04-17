@@ -64,7 +64,6 @@ class ParsersTest(unittest.TestCase):
                 for location in result['locations']:
                     location['sourceId'] = None
 
-
     def test_all_parsers_are_included(self):
         check_keys_parser_classes()
 
