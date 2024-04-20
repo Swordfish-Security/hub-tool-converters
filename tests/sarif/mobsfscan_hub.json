@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "766f6476-4f58-465e-90ca-b8a08153ebf8",
+                "id": "e1da08ec-6b1d-4525-915d-6d73bdf76945",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                    "id": "c14401af-bcf7-4743-826b-52d22efff546",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -28,13 +28,13 @@
                             "type": "sast",
                             "name": "android_logging",
                             "id": "android_logging",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 532
                                 }
                             ],
-                            "description": "Hard coded logs"
+                            "description": "logs"
                         },
                         {
                             "type": "sast",
@@ -46,7 +46,7 @@
                                     "id": 919
                                 }
                             ],
-                            "description": "Hard coded in"
+                            "description": "in"
                         },
                         {
                             "type": "sast",
@@ -58,100 +58,100 @@
                                     "id": 78
                                 }
                             ],
-                            "description": "Hard coded SQLite"
+                            "description": "SQLite"
                         },
                         {
                             "type": "sast",
                             "name": "android_detect_tapjacking",
                             "id": "android_detect_tapjacking",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 200
                                 }
                             ],
-                            "description": "Hard coded does"
+                            "description": "does"
                         },
                         {
                             "type": "sast",
                             "name": "android_prevent_screenshot",
                             "id": "android_prevent_screenshot",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 200
                                 }
                             ],
-                            "description": "Hard coded does"
+                            "description": "does"
                         },
                         {
                             "type": "sast",
                             "name": "android_safetynet_api",
                             "id": "android_safetynet_api",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 353
                                 }
                             ],
-                            "description": "Hard coded does"
+                            "description": "does"
                         },
                         {
                             "type": "sast",
                             "name": "android_root_detection",
                             "id": "android_root_detection",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 919
                                 }
                             ],
-                            "description": "Hard coded does"
+                            "description": "does"
                         },
                         {
                             "type": "sast",
                             "name": "android_certificate_transparency",
                             "id": "android_certificate_transparency",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 295
                                 }
                             ],
-                            "description": "Hard coded does"
+                            "description": "does"
                         },
                         {
                             "type": "sast",
                             "name": "android_certificate_pinning",
                             "id": "android_certificate_pinning",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 295
                                 }
                             ],
-                            "description": "Hard coded does"
+                            "description": "does"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "ad6047709ffcc0b8e2f2577daf066e9a",
-                            "sourceId": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                            "sourceId": "c14401af-bcf7-4743-826b-52d22efff546",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f91d0476aac66e2d11ce1f3ece59a05d",
-                            "sourceId": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                            "sourceId": "c14401af-bcf7-4743-826b-52d22efff546",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "0374ec857381230fa83049643ce3cdee",
-                            "sourceId": "dee5fca3-211c-4a01-bf9c-61336bba06bc",
+                            "sourceId": "c14401af-bcf7-4743-826b-52d22efff546",
                             "fileName": "./",
                             "language": "Any"
                         }
@@ -159,7 +159,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "2b26f7707be3e96c3c3bbc4e18db6722",
+                            "id": "88cde34929881664c4dc6e86dda95e6d",
                             "ruleId": "android_logging",
                             "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                             "line": 57,
@@ -177,7 +177,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3422b91bcd63e5293a7bb40564055d5e",
+                            "id": "f2a556197faaa14bef32b0537d4e04e1",
                             "ruleId": "android_hidden_ui",
                             "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
                             "line": 72,
@@ -195,7 +195,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1cd955b781ec31d080e77d32c2352c39",
+                            "id": "bb16f7844f19326f23a7e88b2243825c",
                             "ruleId": "sqlite_injection",
                             "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                             "line": 67,
@@ -213,7 +213,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c51841a3521727f337932f9eced559ca",
+                            "id": "bab68db729e5993f7ef5b2fe7466fbdb",
                             "ruleId": "android_detect_tapjacking",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
@@ -231,7 +231,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2235a3d5b2f396b62bf549a79bc3c13d",
+                            "id": "3b20fcd485671b07d7b54122f46000e6",
                             "ruleId": "android_prevent_screenshot",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
@@ -249,7 +249,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "92800d019a87f10fc1ccd8afa3e39ec2",
+                            "id": "9e7a3ecff0099ed381d3bba8c8811d36",
                             "ruleId": "android_safetynet_api",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
@@ -267,7 +267,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "68675234d36b6cdcc46dbb367e645ce8",
+                            "id": "4f11b4e8658127429ac62585eab2f4b6",
                             "ruleId": "android_root_detection",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
@@ -285,7 +285,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "018170e2c315d5569d334e1313569f74",
+                            "id": "bf6d7df0993287503b59f0fa35c1670a",
                             "ruleId": "android_certificate_transparency",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
@@ -303,7 +303,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "794bee8961dc9521f4cc28c6cdbe3b12",
+                            "id": "2be416263144f42958b7e1a7488e7ea9",
                             "ruleId": "android_certificate_pinning",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,

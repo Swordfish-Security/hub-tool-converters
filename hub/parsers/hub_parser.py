@@ -36,7 +36,7 @@ class HubParser:
 
     def __get_source_type(self):
         # TODO: Add parsing
-        return SourceTypes.CODE.value
+        return SourceTypes.CODEBASE.value
 
     def __get_scanner_type(self, finding: Finding):
         if finding.static_finding:
@@ -67,7 +67,7 @@ class HubParser:
                 type=self.__get_source_type(),
                 id=finding.file_key,
                 sourceId=self.source.id,
-                fileName=finding.file_path
+                fileName=finding.file_path if finding.file_path else 'Unknown'
             )
 
     def __parse_rule(self, finding: Finding):
@@ -75,7 +75,7 @@ class HubParser:
             self.rules[finding.ruleId] = Rule(
                 type=self.__get_scanner_type(finding),
                 name=finding.ruleId,
-                severity=finding.severity,
+                severity='Low' if finding.severity == 'Info' else finding.severity,
                 description=finding.rule_description,
                 cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
             )
@@ -117,7 +117,8 @@ class HubParser:
         report = Report(
             scans=[scan]
         )
-        return report.to_dict()
+        report = report.to_dict()
+        return report
 
     def save(self):
         with open(self.output_path, "w") as outfile:

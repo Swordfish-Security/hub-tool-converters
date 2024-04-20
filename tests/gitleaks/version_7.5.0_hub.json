@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "6c7ea17d-8ed9-40c2-8bb1-cb93c1502109",
+                "id": "f3567fc8-65f2-4ee7-bd17-9b50646049f0",
                 "description": "Import gitleaks results"
             },
             "source": [
                 {
-                    "id": "d8d57c91-9e77-4ce2-a982-94af175e8e5a",
+                    "id": "8f75ec73-9263-4093-b88e-e7a0634c2992",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -34,7 +34,7 @@
                                     "id": 798
                                 }
                             ],
-                            "description": "Hard coded AWS"
+                            "description": "AWS"
                         },
                         {
                             "type": "sast",
@@ -46,28 +46,28 @@
                                     "id": 798
                                 }
                             ],
-                            "description": "Hard coded Asymmetric"
+                            "description": "Asymmetric"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "639c5a76db7ee3c87d0cf2efce09024a",
-                            "sourceId": "d8d57c91-9e77-4ce2-a982-94af175e8e5a",
+                            "sourceId": "8f75ec73-9263-4093-b88e-e7a0634c2992",
                             "fileName": "dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_1_vuln.json",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2ca05ee7b63720ec325aa52924c5c770",
-                            "sourceId": "d8d57c91-9e77-4ce2-a982-94af175e8e5a",
+                            "sourceId": "8f75ec73-9263-4093-b88e-e7a0634c2992",
                             "fileName": "dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_3_vuln.json",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "035a31f850f288361469f95c0844a117",
-                            "sourceId": "d8d57c91-9e77-4ce2-a982-94af175e8e5a",
+                            "sourceId": "8f75ec73-9263-4093-b88e-e7a0634c2992",
                             "fileName": "dojo/unittests/tools/test_gitlab_secret_detection_report_parser.py",
                             "language": "Any"
                         }
@@ -75,7 +75,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "1ff2550cec7e184d1ca2cc85d8326f22",
+                            "id": "4ec18d01aefca5178ced8d6e3eceb447",
                             "ruleId": "AWS Access Key",
                             "locationId": "639c5a76db7ee3c87d0cf2efce09024a",
                             "line": 13,
@@ -93,7 +93,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ffbcb0ef1318978c151000e50fc73c91",
+                            "id": "8a79e25f3dbf6ad81da92ceb2c9e492f",
                             "ruleId": "Asymmetric Private Key",
                             "locationId": "2ca05ee7b63720ec325aa52924c5c770",
                             "line": 13,
@@ -111,7 +111,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f159aaf4ecc04d63c059bd8459f63636",
+                            "id": "428ea54825ea55a01c975538fd06bff2",
                             "ruleId": "AWS Access Key",
                             "locationId": "2ca05ee7b63720ec325aa52924c5c770",
                             "line": 44,
@@ -129,7 +129,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "46660b36e6c3bac2182cb110014d15d0",
+                            "id": "7bd142d19083f929db5f6fabb58035d2",
                             "ruleId": "AWS Access Key",
                             "locationId": "035a31f850f288361469f95c0844a117",
                             "line": 37,

@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "9cf74b07-8b16-44dd-b714-4717920e9d02",
+                "id": "0c19de61-86ba-4e59-970c-0dc8144a576c",
                 "description": "Import gitleaks results"
             },
             "source": [
                 {
-                    "id": "0a1b83a0-df12-4542-8014-85b2a0274a9d",
+                    "id": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -34,7 +34,7 @@
                                     "id": 798
                                 }
                             ],
-                            "description": "Hard coded AWS"
+                            "description": "AWS"
                         },
                         {
                             "type": "sast",
@@ -46,7 +46,7 @@
                                     "id": 798
                                 }
                             ],
-                            "description": "Hard coded RSA"
+                            "description": "RSA"
                         },
                         {
                             "type": "sast",
@@ -58,28 +58,28 @@
                                     "id": 798
                                 }
                             ],
-                            "description": "Hard coded Generic"
+                            "description": "Generic"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "78bd16891bd8af07214271dd5c748afb",
-                            "sourceId": "0a1b83a0-df12-4542-8014-85b2a0274a9d",
+                            "sourceId": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
                             "fileName": "/conf/aws.tf",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "87a2642c4621e799d82ae2214f3cb358",
-                            "sourceId": "0a1b83a0-df12-4542-8014-85b2a0274a9d",
+                            "sourceId": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
                             "fileName": "conf/rsa.pk",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "ccfe001d953dbc1cd4d0d5470911eca7",
-                            "sourceId": "0a1b83a0-df12-4542-8014-85b2a0274a9d",
+                            "sourceId": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
                             "fileName": "tests/api.py",
                             "language": "Any"
                         }
@@ -87,7 +87,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "91e4ecd88f90cc6219f00b5f8e76c457",
+                            "id": "b3f0ed07eee510128abddb8b27c2127a",
                             "ruleId": "aws-access-token",
                             "locationId": "78bd16891bd8af07214271dd5c748afb",
                             "line": 2,
@@ -105,7 +105,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f315e83bbe2e83588e6cea9e26ac9902",
+                            "id": "86c141b2b227d53305103a8b3ce525f9",
                             "ruleId": "RSA-PK",
                             "locationId": "87a2642c4621e799d82ae2214f3cb358",
                             "line": 57,
@@ -123,7 +123,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "65494bae0875896dc7faf2d20009bf61",
+                            "id": "03a8f959a15cd3f6ffaad8320cc704ee",
                             "ruleId": "generic-api-key",
                             "locationId": "ccfe001d953dbc1cd4d0d5470911eca7",
                             "line": 21,

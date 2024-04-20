@@ -472,7 +472,7 @@
       "createdAt": "2021-10-19T17:10:06.589162525Z",
       "vulnerabilities": {
         "vulnerabilityID": "0057d640-1025-48a8-8008-3694e8d0d3a5",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -952,7 +952,7 @@
       "createdAt": "2021-10-19T17:10:06.58915387Z",
       "vulnerabilities": {
         "vulnerabilityID": "47ca92f4-490b-4f32-8017-333448111ad8",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -976,7 +976,7 @@
       "createdAt": "2021-10-19T17:10:06.589157394Z",
       "vulnerabilities": {
         "vulnerabilityID": "bfc152fa-a2bd-42c4-858f-12f003e4cc83",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -1000,7 +1000,7 @@
       "createdAt": "2021-10-19T17:10:06.589158425Z",
       "vulnerabilities": {
         "vulnerabilityID": "90eac018-23ce-4730-8df5-647607d164fd",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -1024,7 +1024,7 @@
       "createdAt": "2021-10-19T17:10:06.589159262Z",
       "vulnerabilities": {
         "vulnerabilityID": "0f7550a6-a9ec-4757-9ebd-16ef6b0386ab",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -1048,7 +1048,7 @@
       "createdAt": "2021-10-19T17:10:06.589161719Z",
       "vulnerabilities": {
         "vulnerabilityID": "c73d3079-ec3c-4ffe-91f4-c8cc6b403a56",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -1072,7 +1072,7 @@
       "createdAt": "2021-10-19T17:10:06.589163406Z",
       "vulnerabilities": {
         "vulnerabilityID": "8e3c219e-d6ac-4d98-b634-e2387ea888fa",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",
@@ -1936,30 +1936,6 @@
       "createdAt": "2021-10-19T17:10:06.589220041Z",
       "vulnerabilities": {
         "vulnerabilityID": "36b51882-f4aa-4ade-9802-f42ec0496584",
-        "line": "51",
-        "column": "0",
-        "confidence": "LOW",
-        "file": "dojo/management/commands/migrate_surveys.py",
-        "code": "50                 # Take all contents from ddse table and insert into dojo table\n51                ",
-        "details": "Possible SQL injection vector through string-based query construction.",
-        "securityTool": "Bandit",
-        "language": "Python",
-        "severity": "MEDIUM",
-        "type": "Vulnerability",
-        "commitAuthor": "-",
-        "commitEmail": "-",
-        "commitHash": "-",
-        "commitMessage": "-",
-        "commitDate": "-",
-        "vulnHash": "316fc0a7fe552ea44705a7a5240d5f4b99564373d89bb02dbe547d21c44a6e03"
-      }
-    },
-    {
-      "vulnerabilityID": "00000000-0000-0000-0000-000000000000",
-      "analysisID": "5a8c201f-34f9-42f0-8bf2-08c9446f0d32",
-      "createdAt": "2021-10-19T17:10:06.589220847Z",
-      "vulnerabilities": {
-        "vulnerabilityID": "c92c20cd-b8ef-4829-8c5b-229913394532",
         "line": "51",
         "column": "0",
         "confidence": "LOW",
@@ -5200,7 +5176,7 @@
       "createdAt": "2021-10-19T17:10:06.589164214Z",
       "vulnerabilities": {
         "vulnerabilityID": "5bfc7905-cb2e-4765-a2e4-65fe79d71873",
-        "line": "0",
+        "line": "1",
         "column": "0",
         "confidence": "MEDIUM",
         "file": "Dockerfile.nginx",

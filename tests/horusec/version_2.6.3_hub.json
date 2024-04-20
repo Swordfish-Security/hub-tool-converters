@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "3ca9b5df-8490-4623-af12-02e80ca0201c",
+                "id": "2b07abfa-499c-499b-a788-b964a8b29d48",
                 "description": "Import horusec results"
             },
             "source": [
                 {
-                    "id": "79282af6-3891-416c-8a32-312644cffe7d",
+                    "id": "46b15194-aec4-4154-a0b6-b81ed4654334",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -30,7 +30,7 @@
                             "id": "horusec Critical",
                             "severity": "Critical",
                             "cwe": null,
-                            "description": "Hard coded None"
+                            "description": "Unknown"
                         },
                         {
                             "type": "sast",
@@ -38,7 +38,7 @@
                             "id": "horusec High",
                             "severity": "High",
                             "cwe": null,
-                            "description": "Hard coded weak"
+                            "description": "weak"
                         },
                         {
                             "type": "sast",
@@ -46,7 +46,7 @@
                             "id": "horusec Medium",
                             "severity": "Medium",
                             "cwe": null,
-                            "description": "Hard coded Sensitive"
+                            "description": "Sensitive"
                         },
                         {
                             "type": "sast",
@@ -54,518 +54,518 @@
                             "id": "horusec Low",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "Hard coded both"
+                            "description": "both"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "1fd0da033753906a29729c3b71ee9e6f",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "docker/entrypoint.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8a9c34cc57f6de963b3642f80677b780",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "Dockerfile.django",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8de0863559b1180de668872817455dae",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "Dockerfile.nginx",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "04c6e90faac2675aa89e2176d2eec7d8",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "README.md",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "36f0866f86a7a16775d5f3d2128b3f6e",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/settings/settings.dist.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2a20a17372964d3fd9383d4026e285d5",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "docker-compose.override.integration_tests.yml",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4e5e90c6228fd48698d074241c2ba760",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "docker-compose.yml",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4b6797599231edf9b7211aed7f7e2ca8",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "docs/content/en/integrations/import.md",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5762ac51c1b99e576b13a357291ebeb0",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/api_v2/serializers.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4fe7497c82082be5dfe525873e008fe2",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/static/dojo/js/index.js",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "d606bb9142d07bf12956fb21593a62d4",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/reports/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1577c48c539dfcd7e3f3b505c9c3fce6",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "tests/dedupe_test.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c89fba180afc15e59ef7f8cbbd86c1ca",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/unittests/test_rest_framework.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "926dd23b8609141c06cf300277a27e01",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/appspider/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7ca1b3e8ef484602e724db780142effa",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/immuniweb/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3c7ff1360562fc67c0df798d0c34a86b",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/sslscan/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "875627b0d2d4bcb50fab40232db4dfe4",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/sslyze/parser_xml.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3c243a3b05b0b0eb7792f156759dc72d",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/ibm_app/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1dd390599a8707d02d8bf0dc5ddc4bf7",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/nessus/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "16861b4aedebdeee4d16c914afb38d9a",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/qualys_webapp/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "fa1363208759766451dc2346a2bfc93f",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/management/commands/csv_findings_export.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "6a008d981f26edb4009eecf093a5d4d6",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/endpoint/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cf7738762dfc0691c7279f5863c0949c",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/dependency_check/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1c1a7e941fb77df05c9cb90b5b30a475",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/ccvs/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f83b72b56a3bce1d4cca0555d3297b19",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/retirejs/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3790121e0cd63ebaab4be1a1fcec7153",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/blackduck/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "dd2c5079aea37e3b531c2d580c39c498",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/huskyci/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "84f32e41da9436d76b197c7f45e7d177",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/trufflehog3/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "e22104d6b64392ec2d949a67e4cfc3f1",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/ort/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4b0b57ce0bdba7d71ed0804af82df578",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/trufflehog/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5f29a901208b629641a7fcda30f35d49",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/cobalt/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5d534d3353e3417cdb74462cddeea1d1",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/twistlock/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "55a327221822b1408497557dc26181cf",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/bundler_audit/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cd2e66e4fe78193266ff7900d37f7b2f",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/scantist/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "58e84dd9a81bbb703c0c4f097a5291a5",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/h1/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1029db487fd7e936fcc17f9a7dae00e9",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/vcg/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "a9141846b7555573b2eb2504d67b49ab",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/bugcrowd/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cc4c993ba5e0ff3a6435ff548372ea22",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/kiuwan/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "9a1e9e1943f29dadd99b21535782a525",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/mend/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2d9c4aee49336dac4e81afcb10ea9cf7",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/whitehat_sentinel/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "6b3061116da9c1ee2465bea1cc772737",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/decorators.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4a9105d13338d488af1e12afe4c747b3",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/finding/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "e4afea3b1d102ebec1fb98471c16d2a2",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/forms.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f18c38ff8f22a18083f6930a15a73263",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/management/commands/migrate_surveys.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "0b3a614b418d483f2954f5b0467377ad",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/reports/widgets.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "31d6533877fcef04cc84bff4b8b7725d",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/survey/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "12bbe123ee4745cbc9e25666fa999837",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/templatetags/display_tags.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "6d8ac5b9d0393754ed7fa6a0245cdd9d",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/templatetags/get_banner.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8973b4fff0b65871a462943725833dfe",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/templatetags/navigation_tags.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "5040e0916a47c08c25474eb1a48ad4a1",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/burp_enterprise/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "89d676c1ef62be5a0a16f0e1db11562e",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/contrast/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f80cc475fea3fd87b4433052c9303f19",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/safety/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7a0b749fc8c5806ba615983cb3eebfef",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/sonarqube/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "dfb3bf71b9a9998558ce34e51d202e1b",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/sonarqube_api/importer.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "61ce264512a896e043c4f6cb47586d9d",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/unittests/tools/test_contrast_parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "480e5f0a4f672d96a803cd45d6e7ff32",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/unittests/tools/test_jfrog_xray_unified_parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3a0a1aff660148e9a081688937309def",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/unittests/tools/test_tfsec_parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1de7bbea0d7c20c49516a7ae22b29f0f",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/wsgi.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c9e050edf44aee850241cd11ef1c729c",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/benchmark/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2e0bd640bfa39d3bb5c4b01a1e956faa",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/cred/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f6ee94e3e6ca602de7c92b422c121d47",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/db_migrations/0047_jira_minimum_severity_default.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "d9f6d32505fbd85a61502a6abde4fa3a",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/db_migrations/0061_jira_webhook_secret.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "646613a8f2aafbea13bf4b2b75d93e4e",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/finding/helper.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1530412ba144b1075237642136bf5446",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/google_sheet/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "0ddcd18cff85f3cf073bdd33df44f289",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/middleware.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "16ddff6426d13af21110876b78280f47",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/models.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1984bef532c4490f5003035148f64e86",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/okta.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "708544294eac7d783d8890d3d0bc9772",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/product/views.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7521715edfd020fc7c9949d98a278938",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/tools/gitlab_api_fuzzing/parser.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "cfff068b22b5cc62a5481799b2c97917",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/unittests/test_swagger_schema.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "4d01eeaaeaa065192038cb61c39a78c8",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "dojo/unittests/test_tags.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "3bcefa5e951b4dfd67d556956854fdf8",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "tests/Import_scanner_test.py",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c20fd8677fc2705e8f09d28babba56aa",
-                            "sourceId": "79282af6-3891-416c-8a32-312644cffe7d",
+                            "sourceId": "46b15194-aec4-4154-a0b6-b81ed4654334",
                             "fileName": "tests/base_test_class.py",
                             "language": "Any"
                         }
@@ -573,7 +573,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "43d5ed3409012ce8d755ead2fd89f197",
+                            "id": "b4185f48eb6d3a3ab695654c31612fc8",
                             "ruleId": "horusec Critical",
                             "locationId": "1fd0da033753906a29729c3b71ee9e6f",
                             "line": 20,
@@ -591,7 +591,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c8ac8ac5c74ae3602646dd177cda5790",
+                            "id": "b219b584ff695c66d240ca0db4cd054a",
                             "ruleId": "horusec Critical",
                             "locationId": "8a9c34cc57f6de963b3642f80677b780",
                             "line": 115,
@@ -609,7 +609,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5bcf74f47945ba7c24bf55d9b45987dd",
+                            "id": "adc6800e8472535fcf0baa1f4e530c6e",
                             "ruleId": "horusec Critical",
                             "locationId": "8a9c34cc57f6de963b3642f80677b780",
                             "line": 131,
@@ -627,7 +627,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "770f799fdcda286eb64c7fb09fedf021",
+                            "id": "a198b604a538a65a1738de589f8633f9",
                             "ruleId": "horusec Critical",
                             "locationId": "8de0863559b1180de668872817455dae",
                             "line": 83,
@@ -645,7 +645,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "eb3fcb22be383c73df4c20055cfb6a99",
+                            "id": "d2cfb9d80e8b891db323a74a1d7cc667",
                             "ruleId": "horusec Critical",
                             "locationId": "04c6e90faac2675aa89e2176d2eec7d8",
                             "line": 98,
@@ -663,7 +663,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c45bfc81ce83cdf193e051f54a221a9c",
+                            "id": "878891bb54632acd1f0733aa170edf50",
                             "ruleId": "horusec Critical",
                             "locationId": "36f0866f86a7a16775d5f3d2128b3f6e",
                             "line": 291,
@@ -681,7 +681,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1a061df60153311cdeb9828030432f4f",
+                            "id": "c4aad14de1a2476b491f43e845fa9ecf",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
                             "line": 31,
@@ -699,7 +699,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2a8db09bab13f62592fba39f041faf9e",
+                            "id": "1f43022eece6dc2b865e03302896a885",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
                             "line": 35,
@@ -717,7 +717,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "651af50e3057e02de9c4753a13dd44d3",
+                            "id": "92893d83f493963ac333dca6ca02686a",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
                             "line": 38,
@@ -735,7 +735,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "cca367c217518c169ed25187c68adeb2",
+                            "id": "01259be9b8c3833ce168683b65d204c2",
                             "ruleId": "horusec Critical",
                             "locationId": "2a20a17372964d3fd9383d4026e285d5",
                             "line": 42,
@@ -753,7 +753,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "28255be345f73b34e15aece4d13f2ce6",
+                            "id": "63ec951d5268000b52a2e92cf199e322",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
                             "line": 43,
@@ -771,7 +771,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6a2e5a6bcf14b1d5ceeff1b1f3408d1f",
+                            "id": "67861901301dd7061b13c2fe97c5f5aa",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
                             "line": 60,
@@ -789,7 +789,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "488a8da35177cfe83a7d3230e7cd6a0b",
+                            "id": "018d927f8e1aaf4994a2c20d1c464b7d",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
                             "line": 76,
@@ -807,7 +807,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9ca14192d204198c510b9d71204e1110",
+                            "id": "fc161fae5de4533aa68557eb8c993d62",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
                             "line": 92,
@@ -825,7 +825,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "aa53a3725f260f716ef027c2bda5cf5c",
+                            "id": "50c2ead1d36649b119516946ab7a82cd",
                             "ruleId": "horusec Critical",
                             "locationId": "4e5e90c6228fd48698d074241c2ba760",
                             "line": 108,
@@ -843,7 +843,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "96c3276a1408bc0c72ef040c714925ae",
+                            "id": "d4c0d7f9e51449d3e10b5fa62851a23b",
                             "ruleId": "horusec Critical",
                             "locationId": "4b6797599231edf9b7211aed7f7e2ca8",
                             "line": 843,
@@ -861,7 +861,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "db2940431bad69be945031901772d8e2",
+                            "id": "93b794b6db28a91c6c009a3b6a506395",
                             "ruleId": "horusec Critical",
                             "locationId": "36f0866f86a7a16775d5f3d2128b3f6e",
                             "line": 254,
@@ -879,7 +879,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0a47057ebb9f657d8d99b44895d6b34d",
+                            "id": "86d37dc95906003a1384abb46c5fbbfa",
                             "ruleId": "horusec Critical",
                             "locationId": "5762ac51c1b99e576b13a357291ebeb0",
                             "line": 602,
@@ -897,7 +897,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4b5c93241e779dcad8b55d672cbb9f66",
+                            "id": "1078628d9dd73a03b719307a55641b4b",
                             "ruleId": "horusec High",
                             "locationId": "4fe7497c82082be5dfe525873e008fe2",
                             "line": 335,
@@ -915,10 +915,10 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e1b995e1be187094e75ab85de56ad29e",
+                            "id": "8d8b33e324da2f27cf32b3199d81c5ca",
                             "ruleId": "horusec High",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Generic\nroot user\n```",
                             "status": "Open",
                             "description": "Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile. - Last USER command in Dockerfile should not be 'root' - Add 'USER <non root user name>' line to the Dockerfile - [https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ https://avd.aquasec.com/appshield/ds002]\n**Code:**\n```Generic\nroot user\n```",
@@ -927,13 +927,13 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Generic\nroot user\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "063351d553cac2475b5bdfd4a9825633",
+                            "id": "e63494cf47b49cb3d1fdc45b2167d40f",
                             "ruleId": "horusec High",
                             "locationId": "d606bb9142d07bf12956fb21593a62d4",
                             "line": 987,
@@ -951,7 +951,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a2d41b681b6397e727a6a25160e71e20",
+                            "id": "60c953deb14d4c26b8d3d3fad85003a8",
                             "ruleId": "horusec High",
                             "locationId": "1577c48c539dfcd7e3f3b505c9c3fce6",
                             "line": 41,
@@ -969,7 +969,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d12b7e9025e27a85ea5b333ef863ff68",
+                            "id": "5abd469b3a7ae0d242b77ce19f6254e4",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 183,
@@ -987,7 +987,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a04bf57320d6fdc2caf37f69e0897ad5",
+                            "id": "0bb3e816a8ae1f607593859ac9286a7e",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 185,
@@ -1005,7 +1005,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4e042a771da67693fc28410c78c7c671",
+                            "id": "13dc306a37ef21d40a1a78eceeba8193",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 187,
@@ -1023,7 +1023,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ed3ce85480c199562b7427b62092166b",
+                            "id": "c505db196dacc091483f5d0112d977a0",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 189,
@@ -1041,7 +1041,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c4541c27b123eb8632ee98437e13b05b",
+                            "id": "2c4025e1fba3ed034311dbadc13ea346",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 191,
@@ -1059,7 +1059,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "dfd477136a62c7b8dcbf501af0bf5cfe",
+                            "id": "c621e21b057013b596b43af3c1ec0786",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 193,
@@ -1077,7 +1077,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "436716bd63df90e449680c30ef82075f",
+                            "id": "e76984656d1c10b41b175d6da79d9abd",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 209,
@@ -1095,7 +1095,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0f99f4e1db0e5e4095bbd1598eafd1f9",
+                            "id": "21e82f3dc4c0a48e9d34703dff4687d5",
                             "ruleId": "horusec High",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 244,
@@ -1113,7 +1113,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "be9693b5574a9877e8a34a32dac3b4b9",
+                            "id": "d399482ebe0e0d5d62ba2d8733953d5c",
                             "ruleId": "horusec High",
                             "locationId": "926dd23b8609141c06cf300277a27e01",
                             "line": 1,
@@ -1131,7 +1131,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "adde6b4b983c022a7ba5a9697cb93bd3",
+                            "id": "02eae34b912b117695e3f0b381fd0c65",
                             "ruleId": "horusec High",
                             "locationId": "7ca1b3e8ef484602e724db780142effa",
                             "line": 2,
@@ -1149,7 +1149,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "50a75c4e4e1f6a3df2f603e621354149",
+                            "id": "5194b254cc5fd86d15c6738e7e203bb4",
                             "ruleId": "horusec High",
                             "locationId": "3c7ff1360562fc67c0df798d0c34a86b",
                             "line": 2,
@@ -1167,7 +1167,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "be6cfca8b3407bac233c2f1b68446d68",
+                            "id": "91f2214db86f0fb509ccbf07a786aab6",
                             "ruleId": "horusec High",
                             "locationId": "875627b0d2d4bcb50fab40232db4dfe4",
                             "line": 2,
@@ -1185,7 +1185,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "316a82dbac609cc60931a7e95cd6e155",
+                            "id": "b2110edfb9fb6d774db42952a50fa80f",
                             "ruleId": "horusec High",
                             "locationId": "3c243a3b05b0b0eb7792f156759dc72d",
                             "line": 3,
@@ -1203,7 +1203,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "75a25c5cf42e6399795707811960aa4e",
+                            "id": "ebd3e93dcdcb53e7f43b485ca92584b3",
                             "ruleId": "horusec High",
                             "locationId": "1dd390599a8707d02d8bf0dc5ddc4bf7",
                             "line": 6,
@@ -1221,7 +1221,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9568a2d7178b68300d6450fdc50f6b71",
+                            "id": "433c03a84437ae3a19186836b7d4b642",
                             "ruleId": "horusec High",
                             "locationId": "16861b4aedebdeee4d16c914afb38d9a",
                             "line": 7,
@@ -1239,7 +1239,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d8ffcb977f00d4e9821c74257e660367",
+                            "id": "d1e3017e1b97f3d0a83fb183e7b9b954",
                             "ruleId": "horusec High",
                             "locationId": "fa1363208759766451dc2346a2bfc93f",
                             "line": 33,
@@ -1257,7 +1257,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bc0e9c5918af9b72c67c4c59c5a707ad",
+                            "id": "44a75c5eeaf723ceb13b12501d6ec64f",
                             "ruleId": "horusec High",
                             "locationId": "d606bb9142d07bf12956fb21593a62d4",
                             "line": 858,
@@ -1275,10 +1275,10 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5ef7966ba5fc00ae7f99dd4ffd8f65e9",
+                            "id": "4719e2ef8bca41b45bce071d42727ca4",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Nginx\n\n```",
                             "status": "Open",
                             "description": "Your Nginx file must include 'server_tokens off;' configuration. There are many different kinds of mistakes that introduce information exposures. The severities of the error can range widely, depending on the context in which the product operates, the type of sensitive information that is revealed, and the benefits it may provide to an attacker. For more information checkout the CWE-200 (https://cwe.mitre.org/data/definitions/200.html) advisory.\n**Code:**\n```Nginx\n\n```",
@@ -1287,16 +1287,16 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Nginx\n\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "36cd80f526be9c13e1158e0007e93f9c",
+                            "id": "738154944ed03f543124bac627f559ba",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Nginx\n\n```",
                             "status": "Open",
                             "description": "Your Nginx file must include the X-Frame-Options header. A web application is expected to place restrictions on whether it is allowed to be rendered within frames, iframes, objects, embed or applet elements. Without the restrictions, users can be tricked into interacting with the application when they were not intending to. For more information checkout the CWE-1021 (https://cwe.mitre.org/data/definitions/1021.html) advisory.\n**Code:**\n```Nginx\n\n```",
@@ -1305,16 +1305,16 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Nginx\n\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "37d85e87f1eab648c2417850e14c8741",
+                            "id": "44ce5f8366d9053d948be7a80b6340aa",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Nginx\n\n```",
                             "status": "Open",
                             "description": "Setting this header will prevent the browser from interpreting files as a different MIME type to what is specified in the Content-Type HTTP header (e.g. treating text/plain as text/css). For more information checkout https://owasp.org/www-project-secure-headers/#x-content-type-options\n**Code:**\n```Nginx\n\n```",
@@ -1323,16 +1323,16 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Nginx\n\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "24ba53677aa3c22b506e1ff9774fabde",
+                            "id": "3f8e1e261ab45291a3d84346638cdd48",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Nginx\n\n```",
                             "status": "Open",
                             "description": "A Content Security Policy (also named CSP) requires careful tuning and precise definition of the policy. If enabled, CSP has significant impact on the way browsers render pages (e.g., inline JavaScript is disabled by default and must be explicitly allowed in the policy). CSP prevents a wide range of attacks, including cross-site scripting and other cross-site injections. For more information checkout https://owasp.org/www-project-secure-headers/#content-security-policy\n**Code:**\n```Nginx\n\n```",
@@ -1341,16 +1341,16 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Nginx\n\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "2654f064bf4f2febe69722eb7eb592bf",
+                            "id": "3f55ed22932c4556ed3473a8f67c088b",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Generic\n':latest' tag used\n```",
                             "status": "Open",
                             "description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated. - Specify a tag in the 'FROM' statement for image 'build' - Add a tag to the image in the 'FROM' statement - [https://avd.aquasec.com/appshield/ds001]\n**Code:**\n```Generic\n':latest' tag used\n```",
@@ -1359,16 +1359,16 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Generic\n':latest' tag used\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "537772784c25b87fe746fcefe1731598",
+                            "id": "a6cf471a2f2cf7bc9c77df6b5b1d7cb3",
                             "ruleId": "horusec Medium",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Generic\n'RUN cd ...' to change directory\n```",
                             "status": "Open",
                             "description": "Use WORKDIR instead of proliferating instructions like 'RUN cd \u2026 && do-something', which are hard to read, troubleshoot, and maintain. - RUN should not be used to change directory: 'cd components &&   yarn'. Use 'WORKDIR' statement instead. - Use WORKDIR to change directory - [https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#workdir https://avd.aquasec.com/appshield/ds013]\n**Code:**\n```Generic\n'RUN cd ...' to change directory\n```",
@@ -1377,13 +1377,13 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Generic\n'RUN cd ...' to change directory\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "04282a31f413a55b8a46954a90837dab",
+                            "id": "e4f9e3467b602a12a3c8a1ddb93b01b4",
                             "ruleId": "horusec Medium",
                             "locationId": "6a008d981f26edb4009eecf093a5d4d6",
                             "line": 78,
@@ -1401,7 +1401,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c44c97ca5690104acfc0edc57b91ad50",
+                            "id": "c02b7d2d659f1dcfb47145332cad41c5",
                             "ruleId": "horusec Medium",
                             "locationId": "cf7738762dfc0691c7279f5863c0949c",
                             "line": 22,
@@ -1419,7 +1419,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "03df4dcb283085246ab647b4855726e5",
+                            "id": "3044aac46ba72862827c51969588bb4d",
                             "ruleId": "horusec Medium",
                             "locationId": "1c1a7e941fb77df05c9cb90b5b30a475",
                             "line": 53,
@@ -1437,7 +1437,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0d1a1169164abdc8beea9c73fb1d2c0e",
+                            "id": "2aae7b38d02289057bfc2fb4c06bacb2",
                             "ruleId": "horusec Medium",
                             "locationId": "f83b72b56a3bce1d4cca0555d3297b19",
                             "line": 40,
@@ -1455,7 +1455,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "867b8c6a7c36dc8b98ae10e04afa7b46",
+                            "id": "313039ce22ad3870a8092b4f8a472692",
                             "ruleId": "horusec Medium",
                             "locationId": "3790121e0cd63ebaab4be1a1fcec7153",
                             "line": 45,
@@ -1473,7 +1473,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1e5920a83f0e21d7e5971d9bb7d65ee1",
+                            "id": "c14cf57a52fbe69274ad92b1f69609a5",
                             "ruleId": "horusec Medium",
                             "locationId": "dd2c5079aea37e3b531c2d580c39c498",
                             "line": 55,
@@ -1491,7 +1491,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "57f9c7b9a0e0db915e1599917bafa4fb",
+                            "id": "1eb57f81072f1242d3ebfef4c606b263",
                             "ruleId": "horusec Medium",
                             "locationId": "84f32e41da9436d76b197c7f45e7d177",
                             "line": 50,
@@ -1509,7 +1509,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5bf4c6b3d9ce86ef2c1fe594ec967256",
+                            "id": "279f0da6f7d5bea8f75b4e24191aef24",
                             "ruleId": "horusec Medium",
                             "locationId": "e22104d6b64392ec2d949a67e4cfc3f1",
                             "line": 55,
@@ -1527,7 +1527,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "fd28c0acb22f968a859a2e3f4d32e070",
+                            "id": "684c94fab58c70b9c11a8d5271589d47",
                             "ruleId": "horusec Medium",
                             "locationId": "4b0b57ce0bdba7d71ed0804af82df578",
                             "line": 54,
@@ -1545,7 +1545,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a16f51f848e09b8a68cdbe7b849eca47",
+                            "id": "ff72927187867d7d04b884f18b5dbe02",
                             "ruleId": "horusec Medium",
                             "locationId": "7ca1b3e8ef484602e724db780142effa",
                             "line": 59,
@@ -1563,7 +1563,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "333ba9cb9792a5c9fd9daf32fdabcb24",
+                            "id": "d829f88e52c7fb6a8a435097016b7a22",
                             "ruleId": "horusec Medium",
                             "locationId": "5f29a901208b629641a7fcda30f35d49",
                             "line": 56,
@@ -1581,7 +1581,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "50f49c41b2a0e76349b10ffd4215de20",
+                            "id": "db2994d644b647e8528d51eb8d3b79ab",
                             "ruleId": "horusec Medium",
                             "locationId": "5d534d3353e3417cdb74462cddeea1d1",
                             "line": 68,
@@ -1599,7 +1599,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b9e5b2c307c17bb2b9609e5a49bf676c",
+                            "id": "4546436646c5d7e2560bc672a0f41165",
                             "ruleId": "horusec Medium",
                             "locationId": "55a327221822b1408497557dc26181cf",
                             "line": 61,
@@ -1617,7 +1617,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0c63cd07dc1d3d0163975d5249ca3170",
+                            "id": "d81f369a5002fd53e005007aa4dccd53",
                             "ruleId": "horusec Medium",
                             "locationId": "cd2e66e4fe78193266ff7900d37f7b2f",
                             "line": 84,
@@ -1635,7 +1635,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "08233b5de43774960b34502da157d343",
+                            "id": "61cfe0c32c7567de49cf679f253cc61a",
                             "ruleId": "horusec Medium",
                             "locationId": "3c243a3b05b0b0eb7792f156759dc72d",
                             "line": 70,
@@ -1653,7 +1653,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3711e624d02e676cf2011f517b61636b",
+                            "id": "62cb65708d54b44a4723f805091e9436",
                             "ruleId": "horusec Medium",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
                             "line": 77,
@@ -1671,7 +1671,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5575126babeb2b46a1880293eb98297f",
+                            "id": "484eee92f07be5356d2b84f5fad2b1ef",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
                             "line": 111,
@@ -1689,7 +1689,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "31a85b35ca703ef4c9390a6dd57faa31",
+                            "id": "1d404ec2bc3d4bbd1c2e99c499e48752",
                             "ruleId": "horusec Medium",
                             "locationId": "a9141846b7555573b2eb2504d67b49ab",
                             "line": 72,
@@ -1707,7 +1707,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "60f498588246122d9b92a1c9075096d1",
+                            "id": "49bb5006934c663393893f9245066731",
                             "ruleId": "horusec Medium",
                             "locationId": "cc4c993ba5e0ff3a6435ff548372ea22",
                             "line": 88,
@@ -1725,7 +1725,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "938bbd6379c816c75d2e033c96f837a8",
+                            "id": "ded1f416c02a6c79b1dae3fab615b15d",
                             "ruleId": "horusec Medium",
                             "locationId": "9a1e9e1943f29dadd99b21535782a525",
                             "line": 104,
@@ -1743,7 +1743,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "93577744655356900b9f28badde2f1c8",
+                            "id": "342346a8144061a372033fbf38197f37",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
                             "line": 171,
@@ -1761,7 +1761,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "144f4decf95e648acfc7603ee6fe2d3e",
+                            "id": "3b279c3842a4aa8bf302bb5b935d3f7b",
                             "ruleId": "horusec Medium",
                             "locationId": "875627b0d2d4bcb50fab40232db4dfe4",
                             "line": 115,
@@ -1779,7 +1779,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0478fbae417db99c728261bf61360985",
+                            "id": "071e6b776ce91d56e53be850f9f70adf",
                             "ruleId": "horusec Medium",
                             "locationId": "2d9c4aee49336dac4e81afcb10ea9cf7",
                             "line": 190,
@@ -1797,7 +1797,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3397ef7d744e2209cce43e63d0dd873b",
+                            "id": "24bbc0e53311514c8eec3ad17627c7a7",
                             "ruleId": "horusec Medium",
                             "locationId": "6b3061116da9c1ee2465bea1cc772737",
                             "line": 155,
@@ -1815,7 +1815,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a3310c20270f4c5bd56e56e82ae628e3",
+                            "id": "5367e741f6932579a534ed4d159ef006",
                             "ruleId": "horusec Medium",
                             "locationId": "4a9105d13338d488af1e12afe4c747b3",
                             "line": 1050,
@@ -1833,7 +1833,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "51a6f3f6afd0b864d26df2759bb76d26",
+                            "id": "869e5f11e66431ceffc61fb086a38284",
                             "ruleId": "horusec Medium",
                             "locationId": "4a9105d13338d488af1e12afe4c747b3",
                             "line": 1050,
@@ -1851,7 +1851,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0c73f97ee123f6d46a1e890ac7735a45",
+                            "id": "2f869448177c2ad7a3500c77e1d3fb1a",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 65,
@@ -1869,7 +1869,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1c7fe3a6047caf4a3c462f0e7f5087bf",
+                            "id": "b0033d487ba708cb5feaddc06da580ef",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 65,
@@ -1887,7 +1887,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "76a058b6fe9d8656b85c07eba3512b56",
+                            "id": "123d8f163c1798a0a77b7114ab97f578",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 73,
@@ -1905,7 +1905,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3bd194f345c91ac525a1e60ccad3c17b",
+                            "id": "d73ec988d1709d21de7b7ee5af6e7271",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 73,
@@ -1923,7 +1923,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "71552aa18734c34921d6c352e1c4dc4b",
+                            "id": "613aaf99b524329cbc9a214895a2621c",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 81,
@@ -1941,7 +1941,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f04581c2caeb0dc62142f68e2a4179b1",
+                            "id": "9a1c90b66bb5e85f3215fb5af7c1d253",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 81,
@@ -1959,7 +1959,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3e230e091828647dfba98072afe74915",
+                            "id": "f4ca3a04a13e4f8ff719c74957951843",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 145,
@@ -1977,7 +1977,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "31c55e8a49035fbf58e2008efdb4b23a",
+                            "id": "5e66f423e774622ef015f2ccc9e7a7c9",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 145,
@@ -1995,7 +1995,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4889d3c2de5542edba0e5edf13d52374",
+                            "id": "5401fb024756ef23d0fa4afaebcdd018",
                             "ruleId": "horusec Medium",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 3052,
@@ -2013,7 +2013,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d7f63c9a47ea049833a92af719dfb295",
+                            "id": "646dd1aff2a59bd253419ea84e94fd02",
                             "ruleId": "horusec Medium",
                             "locationId": "f18c38ff8f22a18083f6930a15a73263",
                             "line": 51,
@@ -2031,7 +2031,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0f594ea03ba4f7c53f2cb4c7deaccd38",
+                            "id": "cad2238368a6391ef08dbdb4b9014baa",
                             "ruleId": "horusec Medium",
                             "locationId": "f18c38ff8f22a18083f6930a15a73263",
                             "line": 55,
@@ -2049,7 +2049,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3935daee2247e5438bffa2dfa4035cee",
+                            "id": "f1701a21c60d4d202c43cd64a3d3eb2b",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 139,
@@ -2067,7 +2067,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e3c70eb36609348f3fb27a73cba3936e",
+                            "id": "650e3dfae2deb101573d6d5c6a556891",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 142,
@@ -2085,7 +2085,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "94a1824ca874a59688fb8e99a366f37a",
+                            "id": "114bf2372a29917c96bd914ba874654a",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 145,
@@ -2103,7 +2103,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a1a7ac860f12753fd4f505c1bf68be88",
+                            "id": "fd577b7a07fc123ff4c45e3fc1dab291",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 145,
@@ -2121,7 +2121,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6d824cb025f21f4d01c76dd08f46bd40",
+                            "id": "b89a28343b8fa4fcc934fec4e33a8cef",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 160,
@@ -2139,7 +2139,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e1d565bb1321feb84283718529912ca0",
+                            "id": "5e3ace3addc6e77fcff556fb43af5fd7",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 163,
@@ -2157,7 +2157,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ab1f1edadde0a1bfbb75bafbdcfce544",
+                            "id": "31b475459490e4d762048887ccc8b4ce",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 170,
@@ -2175,7 +2175,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e65f995df413e25edc47430be705c370",
+                            "id": "0565aded8d999b5d94bfb6982e0afd30",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 170,
@@ -2193,7 +2193,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "01f81d0492078db31e5a8fc3677c4e76",
+                            "id": "45f90606724636ad35462945f18437d7",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 195,
@@ -2211,7 +2211,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b0928dedf06eb8cc7ee02e793231296a",
+                            "id": "87f712d1db0541ac09b60deb0913f1f0",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 195,
@@ -2229,7 +2229,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2e983a895299d88f03ac35e40f3aa963",
+                            "id": "5a1d640c1e2aa65873f2a805ae5a24f9",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 218,
@@ -2247,7 +2247,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "82e840805a7e158073b4ac31b9823033",
+                            "id": "7c0f9f1662b68d4bdde22e33742e7c38",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 218,
@@ -2265,7 +2265,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "fe893430a72c636404b1a67ae8f3da01",
+                            "id": "1445bcfa2ac16713c6927a2ef1ee2bde",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 231,
@@ -2283,7 +2283,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "44f9175b3aa232f3d6aba79562063f9a",
+                            "id": "de164ef820bd4b24b1f9722df2f47909",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 231,
@@ -2301,7 +2301,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b95d4ae0c819d487c910c4937eb3d873",
+                            "id": "20ce3177d83c9b8aaf2ad3c0008df620",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 236,
@@ -2319,7 +2319,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "56dbb28f1cf0ee93316c024ed4eb3818",
+                            "id": "0cfa6c471beb2dca200ddacfbeae19a0",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 236,
@@ -2337,7 +2337,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9c850df1619ffd6ecbe4aad45bb723f6",
+                            "id": "128ebf5299861f414cd27e227348fa88",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 242,
@@ -2355,7 +2355,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5ac5d9e18362871e7b3bdcc8758e8585",
+                            "id": "f417cd6f3b6edec747005f9b5d100bc1",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 242,
@@ -2373,7 +2373,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "816b8d0560b146bb59c29c6d2316a0b9",
+                            "id": "b6d590d71d08878a60f69b3e2703b464",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 295,
@@ -2391,7 +2391,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bb93fd769ff54a11861cc5e80d5f387d",
+                            "id": "7bfe7bd3bfb689823d3bd01cf5394253",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 295,
@@ -2409,7 +2409,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "14bc9d5aa60f16344e4a8a53c28934ba",
+                            "id": "ca9bb070366d7a0fe043d113eaef869d",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 305,
@@ -2427,7 +2427,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0eae2a3128b7aaf5876e584a439f087a",
+                            "id": "a7033b3774739573c1d62e3f5a2025bf",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 305,
@@ -2445,7 +2445,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "19fc9da0ce88064453b92137c1c57323",
+                            "id": "f31e5499dac8ffd82e33ecb650e16f45",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 317,
@@ -2463,7 +2463,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f26cf7cfbff3aada2fee76b306e5f914",
+                            "id": "a488c34f92bc9cd2dfd6b4953400017d",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 317,
@@ -2481,7 +2481,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "af6faef2f16551963bd6da6aafaf1a5f",
+                            "id": "b60f95d7e4e7f02552171ccc244d8b46",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 366,
@@ -2499,7 +2499,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7dd63860040799e6eedfce9bc8c1870e",
+                            "id": "42d15c7b5e93e4ecd8face291af9348e",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 366,
@@ -2517,7 +2517,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "26111666e59549b05f73c90663255605",
+                            "id": "23bad0ac22cf33a4094227fdc292b8e0",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 375,
@@ -2535,7 +2535,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5249972d11a2b94be8243458e47414c5",
+                            "id": "9cf739c6a819e2ab7c487f39a2eac65e",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 375,
@@ -2553,7 +2553,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8c38b7c5ef0ffedefc95b7ff99462771",
+                            "id": "ce014ce9a0671fb616edba989d5b5d06",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 385,
@@ -2571,7 +2571,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "de91afc1e53c50a5347e42933e3cebef",
+                            "id": "dd55f2c02f64cf2bc1b2138f5498cdd1",
                             "ruleId": "horusec Medium",
                             "locationId": "0b3a614b418d483f2954f5b0467377ad",
                             "line": 385,
@@ -2589,7 +2589,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c02a47cb01c4f6fb01675d483f433b85",
+                            "id": "d610c2fd16b3a4a0911a5424085760dc",
                             "ruleId": "horusec Medium",
                             "locationId": "31d6533877fcef04cc84bff4b8b7725d",
                             "line": 457,
@@ -2607,7 +2607,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8566b9a28ccff3cd86fbaeed38643bb5",
+                            "id": "8f74e65bfd543d862679530867c8aad3",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 80,
@@ -2625,7 +2625,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "580405b03ef32164e7c594c431b0c6cc",
+                            "id": "40bb1e754e4120b5de96e84f430f2208",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 80,
@@ -2643,7 +2643,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2acb5bae8cec6053cea11c703a86edf3",
+                            "id": "846ee418a465709b8e6d4fd235982ec8",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 114,
@@ -2661,7 +2661,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d9920e4b06d2d1f48c65a22fb2c12a13",
+                            "id": "b568b428e7758b2d6eccf715bc74ce80",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 114,
@@ -2679,7 +2679,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2be8ff9762bebb04fe4d81484b2d648b",
+                            "id": "0d779ab2f9ef54189d97f3fec753b884",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 144,
@@ -2697,7 +2697,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1167ea7c64076530a3d559e6f63d2fd1",
+                            "id": "0cd5fa769274555ec4a160df4440a8a8",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 144,
@@ -2715,7 +2715,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "131505f999de1a74feb41b90cdcb1d54",
+                            "id": "a75a73ba9cdc7b4169eaba5478334724",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 274,
@@ -2733,7 +2733,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b2e1302c16b69be7ef6bfdff049745dd",
+                            "id": "aea67296e8750501bbe1c0c0252a3e64",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 274,
@@ -2751,7 +2751,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "190942267168203f7286bffd5f1fde18",
+                            "id": "8b3f705ce9d4b03e0232a29112feb302",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 358,
@@ -2769,7 +2769,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "db1656cfc76316613a1b22393a16ca05",
+                            "id": "e798c85eb8bc14c3e79cb7ffc279507c",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 476,
@@ -2787,7 +2787,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "366e23cb53c6ceb4d44d8c3e7d3ab379",
+                            "id": "7ef8ab3a4cced36898c93868e3744a14",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 476,
@@ -2805,7 +2805,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6bbc0385a2be32644e7c8b73c01e4944",
+                            "id": "ad36e32a663ebb1944896cd33bda01e5",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 478,
@@ -2823,7 +2823,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7f0a2e454b16933bcbe150d74f53bc19",
+                            "id": "ce5190146350074f731b7183987b7308",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 478,
@@ -2841,7 +2841,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0c35e6be7be6568c0b2b8372a10a4845",
+                            "id": "b4d652af7744e004add5c8981448947c",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 480,
@@ -2859,7 +2859,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6bb39828f87ffa49e0eb70887576a4c2",
+                            "id": "e4ec0c1f9a3dc45b838521ffb6840a36",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 480,
@@ -2877,7 +2877,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "74cac61a7fa2dd535819e1c7bc3b944d",
+                            "id": "a26a91290d4671e57bddcafbd2e25ad9",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 482,
@@ -2895,7 +2895,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ad0725e0a3d059cf6837462a0abd8518",
+                            "id": "3370aa7007d02c4cf969c1f910e14458",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 482,
@@ -2913,7 +2913,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e7520c2ee2d9a12b2ba8949d6fcb33ac",
+                            "id": "dd77b7f9203ba0e464ecc54ffef1336e",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 484,
@@ -2931,7 +2931,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a49deb352c6ee58a6ca4a56e84b028d0",
+                            "id": "984f9c5d1b670e2d6e3653913789ef7e",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 484,
@@ -2949,7 +2949,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6f037e801143cae6e730cb632deba260",
+                            "id": "8c03a488d9f43550ef587e482b49a96c",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 486,
@@ -2967,7 +2967,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ebfc657fdedaf5a230008cf59a201507",
+                            "id": "f75a22269647099fbec9902f44c777c7",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 486,
@@ -2985,7 +2985,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "591bf7b7462aff5e4cbc901189478ac5",
+                            "id": "55a671cccb07e856880ce0c3d91351c1",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 502,
@@ -3003,7 +3003,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "467d5af3a99c5a1f9d317eacf72d1232",
+                            "id": "cdcc729be284c77a9be80bed23a07417",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 502,
@@ -3021,7 +3021,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "84a0e91f51013bddeb6d686f77e159ad",
+                            "id": "d66fc1e8779ce50dee493ba3ad6a722f",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 504,
@@ -3039,7 +3039,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0a5aeda9df9988fda204d0538c3d9f9f",
+                            "id": "307f41ebfd429142b35e80340e1d6840",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 504,
@@ -3057,7 +3057,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "42235b9d79c62d33f4a000c823cb92a2",
+                            "id": "7da46c7ebbd12c038094aae1dea74a4a",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 506,
@@ -3075,7 +3075,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "08ff7eb2ec1543858d2e75765ba01d5d",
+                            "id": "64a053d503a08f5a3cdffdb729136428",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 506,
@@ -3093,7 +3093,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "eca901cd7ef4d094eae7418c97cedee2",
+                            "id": "a5a39021f26deb1b278a48e977b63b8f",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 508,
@@ -3111,7 +3111,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a431380e258f8ef2c45e9b683899a77c",
+                            "id": "50c0a84c780502cc1a302f47d918e27c",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 508,
@@ -3129,7 +3129,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c851a0e6edd5f801666bc8862cddf983",
+                            "id": "697c57bf2d7473cf0ea12c2f4c9e372a",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 510,
@@ -3147,7 +3147,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3699eac6930e79047715a980880b1517",
+                            "id": "020f37e576e84edc0e161b3810b10731",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 510,
@@ -3165,7 +3165,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c808dbc7612e5a05f8e7e2d1f8176a3d",
+                            "id": "b427ee1add582a19a5f0c3eefeefcf57",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 518,
@@ -3183,7 +3183,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0fbdcda1d6c3af93ec08545a0ed6add7",
+                            "id": "5b869d0b64d8b3933f666a492e69b4bb",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 518,
@@ -3201,7 +3201,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "00c6874e4dcfaed743d6526537624924",
+                            "id": "f46c16c6e6b84a791739e2c93b0e2e2e",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 520,
@@ -3219,7 +3219,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "529fc4a925ff96a74fcdbe11a3d48e41",
+                            "id": "30db2041ad6842ab45199a0b5e0c38c1",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 520,
@@ -3237,7 +3237,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c3739133ddd7b5603dc5ea90a09d5cff",
+                            "id": "3f0dcaadc7be58726b619e4cb6fc26f6",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 522,
@@ -3255,7 +3255,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d7fbd3d04886f56bba8bed527f0d72c2",
+                            "id": "03e9b37974aced2e2073aadd243fc8c3",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 522,
@@ -3273,7 +3273,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "56577711e8364525041473fa790dd59b",
+                            "id": "194cad93db7160008b05f2958f48b721",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 530,
@@ -3291,7 +3291,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "76a2d631894bc3f5e3d224a3c3060cc7",
+                            "id": "3e5239ae12d91f7b4b4bff72821fa839",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 530,
@@ -3309,7 +3309,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3e1b354cdd070714d14e379559dfae0d",
+                            "id": "b04398b437487ef4bfe5ca926c54f450",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 532,
@@ -3327,7 +3327,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "66454ec1f5dc4bb941b97c21477d11db",
+                            "id": "6625bc2ac23d1e924dade899e6ceffd3",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 532,
@@ -3345,7 +3345,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "56bd2bcdf9bd263b0d042e8d7a2db1b7",
+                            "id": "cb8505e3fc681d766c6c08527e18a8e2",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 534,
@@ -3363,7 +3363,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8b9a819d29c56e18f0d1d996424c9f2e",
+                            "id": "bd8ec274cb8973d1eb3425e237c71d3f",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 534,
@@ -3381,7 +3381,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b4c8700f1f69e37ad5102e1f44d1ce86",
+                            "id": "e22d9205ba4c205878133fbcc3fa43fc",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 536,
@@ -3399,7 +3399,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "982792a77c20aeb4199bc1425f9ea153",
+                            "id": "5b32bee407a0cb20aa32424932d76ff7",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 536,
@@ -3417,7 +3417,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bd252f363127f78920cee7039bfafb02",
+                            "id": "c3fb7d7469c18e4e9ed2480b8a1eea23",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 538,
@@ -3435,7 +3435,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f32579b6621ef308f171e2965c7517ea",
+                            "id": "5cb61d27cbf71f5fe79d044b01364fc9",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 538,
@@ -3453,7 +3453,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "fe5a17785a833495d5f6e7717288d9c2",
+                            "id": "c737630ee206882d3b7d6c4b214fd4fc",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 540,
@@ -3471,7 +3471,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1aa86938ca871ca377415caa826337a9",
+                            "id": "6604a5b75f480b155c9d2d529cafa6e5",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 540,
@@ -3489,7 +3489,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f70764c8e18dfd09792d296bc57aba20",
+                            "id": "7b8947201ca143809907c361377666c6",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 548,
@@ -3507,7 +3507,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c2cd33f4bc08b42e87b0d8540148965b",
+                            "id": "3d29183a8f3eaed71ac6226604a98de6",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 548,
@@ -3525,7 +3525,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "655396029fc70a6882ba355ab8fb3431",
+                            "id": "e9b2dc2e8c50dd98da5cd00de7b7e6e1",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 556,
@@ -3543,7 +3543,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "15193476e685f04cbd54abe3bb5a5719",
+                            "id": "ae5296934d1097f198eba1cef330790c",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 556,
@@ -3561,7 +3561,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7026712cba51690b74f802ae973aadc8",
+                            "id": "905b57594b63695c9fc0f6be39938de9",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 903,
@@ -3579,7 +3579,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "714acb1a6bfe9985dee39c8ce95d90dd",
+                            "id": "b7d89f5740ba24c0f660df2c5da0b969",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 903,
@@ -3597,7 +3597,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "eff4a3bb2eb2465c9471d17d4c16680f",
+                            "id": "afb1400fbe9e94aa334e9eecf79a7c74",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 949,
@@ -3615,7 +3615,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5c6d6484196350b8845abba6fbc3cd35",
+                            "id": "e55af9616ae7721bc7684c4cc05f1ced",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 949,
@@ -3633,7 +3633,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "455a8cadf3178d38342b9aa1580c5be8",
+                            "id": "03dcc9483b9d76e620107a00e371e49b",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 988,
@@ -3651,7 +3651,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f4b5c4bd1bf068524a6b61c478bdac2a",
+                            "id": "8b18639167f55288ee3e8838f1c737a0",
                             "ruleId": "horusec Medium",
                             "locationId": "12bbe123ee4745cbc9e25666fa999837",
                             "line": 988,
@@ -3669,7 +3669,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4bb6e4c620fa89b7b9446fd9256bcf71",
+                            "id": "fa6e7c55056e0f7c5ba7d3e6a1e81451",
                             "ruleId": "horusec Medium",
                             "locationId": "6d8ac5b9d0393754ed7fa6a0245cdd9d",
                             "line": 21,
@@ -3687,7 +3687,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "74d78d53ced3c7b0c2af3a4325923cea",
+                            "id": "145a15187231ec083b1b40bf7d969053",
                             "ruleId": "horusec Medium",
                             "locationId": "6d8ac5b9d0393754ed7fa6a0245cdd9d",
                             "line": 21,
@@ -3705,7 +3705,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1f048a48d027b2db02a3ab0cdd4487f0",
+                            "id": "71a5ab9c02d4d569caa27cfcc73770d9",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
                             "line": 23,
@@ -3723,7 +3723,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7bdfd2133766f1bb3d9e7d9f2e69cf4a",
+                            "id": "8ad602474dd13213b83a328adb0a4e65",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
                             "line": 23,
@@ -3741,7 +3741,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4eef76c925396dba7746df4418d59ca8",
+                            "id": "bc51201b8d77373ee2105806790053b9",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
                             "line": 65,
@@ -3759,7 +3759,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5a9d532960e719659093b82584f0c3e2",
+                            "id": "cdbbcb98e9397d08528e8ae5e4033e8e",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
                             "line": 65,
@@ -3777,7 +3777,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8cafeec36dfb89093f3951c2067713ef",
+                            "id": "b84861c61217cda936904cbc5d841612",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
                             "line": 122,
@@ -3795,7 +3795,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ad499e4385eb4bbee2d72c1d14f38a78",
+                            "id": "c5b52dd9060e0bf7bdc3e6c836ed4dc0",
                             "ruleId": "horusec Medium",
                             "locationId": "8973b4fff0b65871a462943725833dfe",
                             "line": 127,
@@ -3813,7 +3813,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d4e5e6497b6090155e17ad38c85ab85c",
+                            "id": "d0ab83c129c82585f4f40c444987e242",
                             "ruleId": "horusec Medium",
                             "locationId": "3790121e0cd63ebaab4be1a1fcec7153",
                             "line": 45,
@@ -3831,7 +3831,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5c4f39471744e62a7ffaeb8b7b5171e2",
+                            "id": "678fd356dd5d21423208285513834217",
                             "ruleId": "horusec Medium",
                             "locationId": "a9141846b7555573b2eb2504d67b49ab",
                             "line": 72,
@@ -3849,7 +3849,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "17c38de3d544e6e91543afb13b7f6194",
+                            "id": "8d8732920284542362b9a07c1493bd36",
                             "ruleId": "horusec Medium",
                             "locationId": "55a327221822b1408497557dc26181cf",
                             "line": 61,
@@ -3867,7 +3867,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f6e85466fba3f0b6f86adff225e3ef42",
+                            "id": "d62989fe38b353ac6ccbe744fadebb42",
                             "ruleId": "horusec Medium",
                             "locationId": "5040e0916a47c08c25474eb1a48ad4a1",
                             "line": 24,
@@ -3885,7 +3885,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4b939a884d9a20694f2063c12e0a4c25",
+                            "id": "fcd7fb1f72f445764ce16dbe9e7aa762",
                             "ruleId": "horusec Medium",
                             "locationId": "1c1a7e941fb77df05c9cb90b5b30a475",
                             "line": 53,
@@ -3903,7 +3903,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bab4e976265234a38106f0048827889f",
+                            "id": "02195d245265a8bbb4b4e2ed4b735b42",
                             "ruleId": "horusec Medium",
                             "locationId": "5f29a901208b629641a7fcda30f35d49",
                             "line": 56,
@@ -3921,7 +3921,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c53775d8e4132952c058fe2d5e12b63a",
+                            "id": "a102cba060930afa325f282d5b7a84be",
                             "ruleId": "horusec Medium",
                             "locationId": "89d676c1ef62be5a0a16f0e1db11562e",
                             "line": 57,
@@ -3939,7 +3939,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a45960c26648863ef7c878ee160eb433",
+                            "id": "a2cd6855240a8b550c3252e7768d71fd",
                             "ruleId": "horusec Medium",
                             "locationId": "cf7738762dfc0691c7279f5863c0949c",
                             "line": 22,
@@ -3957,7 +3957,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "537efa90a40e39236d402caa3200b104",
+                            "id": "f498dba51501a3b4f614c214112abfc2",
                             "ruleId": "horusec Medium",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
                             "line": 77,
@@ -3975,7 +3975,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2e5e22b90fc79712a2f14e6673a24e4f",
+                            "id": "eb8bf1506c3fe5ecb372103bf76932da",
                             "ruleId": "horusec Medium",
                             "locationId": "dd2c5079aea37e3b531c2d580c39c498",
                             "line": 55,
@@ -3993,7 +3993,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9fb5859b039f7da99fead5fdf1f112c2",
+                            "id": "6b5d130a067325c56ff6ff8d6a4d3d4d",
                             "ruleId": "horusec Medium",
                             "locationId": "3c243a3b05b0b0eb7792f156759dc72d",
                             "line": 70,
@@ -4011,7 +4011,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "773b4c3c02b529a8e45c51a6d31a62ae",
+                            "id": "f8658912e5bf781cb48bea4dde760e1e",
                             "ruleId": "horusec Medium",
                             "locationId": "7ca1b3e8ef484602e724db780142effa",
                             "line": 59,
@@ -4029,7 +4029,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b4b150b8b27fb99e358515c2cfad7e1a",
+                            "id": "e860afb9a2edc988b4c5aed946757b9e",
                             "ruleId": "horusec Medium",
                             "locationId": "cc4c993ba5e0ff3a6435ff548372ea22",
                             "line": 88,
@@ -4047,7 +4047,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9464c1a26f4723839c63264b8c9836e8",
+                            "id": "90e913eb2b2fda9e16ab554e0a2d2a96",
                             "ruleId": "horusec Medium",
                             "locationId": "e22104d6b64392ec2d949a67e4cfc3f1",
                             "line": 55,
@@ -4065,7 +4065,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "dd7f8ac20814d77e711d14b67fa47b18",
+                            "id": "263b7015a02670271e86a9b4ff89b9c2",
                             "ruleId": "horusec Medium",
                             "locationId": "16861b4aedebdeee4d16c914afb38d9a",
                             "line": 351,
@@ -4083,7 +4083,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6738ec4687013a669a8c36e40f9ba59e",
+                            "id": "1730c3ca21e0a7205f21e987c5f3c1e6",
                             "ruleId": "horusec Medium",
                             "locationId": "f83b72b56a3bce1d4cca0555d3297b19",
                             "line": 40,
@@ -4101,7 +4101,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c7f4c8458a344cff6b247e7e58c5f4c7",
+                            "id": "5104206c9a3fa1aec353ae4875a908e7",
                             "ruleId": "horusec Medium",
                             "locationId": "f80cc475fea3fd87b4433052c9303f19",
                             "line": 27,
@@ -4119,7 +4119,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b28b3259f0261f6a14276957783239a5",
+                            "id": "5b57beadfa183f83746ae66ba9f17478",
                             "ruleId": "horusec Medium",
                             "locationId": "cd2e66e4fe78193266ff7900d37f7b2f",
                             "line": 84,
@@ -4137,7 +4137,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "65c05bc763e3d7bea9ad855b9b4abad1",
+                            "id": "bd6a7db5b7dac6ea7056ab90aa6e2277",
                             "ruleId": "horusec Medium",
                             "locationId": "7a0b749fc8c5806ba615983cb3eebfef",
                             "line": 33,
@@ -4155,7 +4155,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "01502777beb1584543c246e86876752b",
+                            "id": "507deb9c24cc839ad25bcd9877c613d0",
                             "ruleId": "horusec Medium",
                             "locationId": "dfb3bf71b9a9998558ce34e51d202e1b",
                             "line": 272,
@@ -4173,7 +4173,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "862ea454d0bf42aa614bba2f00d671fc",
+                            "id": "29c2f29e19e9b539b101b28b480c5146",
                             "ruleId": "horusec Medium",
                             "locationId": "875627b0d2d4bcb50fab40232db4dfe4",
                             "line": 115,
@@ -4191,7 +4191,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "cc2eb6100c59bf399add81a0d306b69f",
+                            "id": "47666909727d87c2893200688c68a9ed",
                             "ruleId": "horusec Medium",
                             "locationId": "4b0b57ce0bdba7d71ed0804af82df578",
                             "line": 54,
@@ -4209,7 +4209,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3bed866462022e9008d06dc5d337e5ed",
+                            "id": "3f43578db00db7e36b787462455e05ae",
                             "ruleId": "horusec Medium",
                             "locationId": "84f32e41da9436d76b197c7f45e7d177",
                             "line": 50,
@@ -4227,7 +4227,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6aea9f88565455e3b41270ca8f672005",
+                            "id": "01d025f597f03bfe297da9f929c7e054",
                             "ruleId": "horusec Medium",
                             "locationId": "5d534d3353e3417cdb74462cddeea1d1",
                             "line": 68,
@@ -4245,7 +4245,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "82ede6e749543dc9449334135ca07d4f",
+                            "id": "b9da909dcecb2136773ad72f3d402629",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
                             "line": 111,
@@ -4263,7 +4263,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "eaa058f839ee7d6bb3ec495db4136a1a",
+                            "id": "03a5bee5b8ff5e034633993ee5790b3b",
                             "ruleId": "horusec Medium",
                             "locationId": "1029db487fd7e936fcc17f9a7dae00e9",
                             "line": 171,
@@ -4281,7 +4281,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8fb3a21472b25c9690db32f0d91fc62c",
+                            "id": "8fdd9ff7b1e6c6848a0bdad9655dcca5",
                             "ruleId": "horusec Medium",
                             "locationId": "2d9c4aee49336dac4e81afcb10ea9cf7",
                             "line": 190,
@@ -4299,7 +4299,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2d9ff6ce8ea95c99e1131f310d842d90",
+                            "id": "7e4eaa4a3588f9fe2c3af64b97325356",
                             "ruleId": "horusec Medium",
                             "locationId": "9a1e9e1943f29dadd99b21535782a525",
                             "line": 104,
@@ -4317,7 +4317,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d0aeb23f7c88ad14c6b642f0c35e1368",
+                            "id": "473d5c595aa5874f74d3dc7b7f5cbfa8",
                             "ruleId": "horusec Medium",
                             "locationId": "61ce264512a896e043c4f6cb47586d9d",
                             "line": 34,
@@ -4335,7 +4335,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3a1fc50e0691f65c761539d6d11cd8c1",
+                            "id": "80b89323389945538060e71aa601314e",
                             "ruleId": "horusec Medium",
                             "locationId": "61ce264512a896e043c4f6cb47586d9d",
                             "line": 49,
@@ -4353,7 +4353,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1da95d19da5d19c1db16c97fa528ac60",
+                            "id": "ee5e717aca47ec6e7474949f249fc0cf",
                             "ruleId": "horusec Medium",
                             "locationId": "61ce264512a896e043c4f6cb47586d9d",
                             "line": 53,
@@ -4371,7 +4371,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "65fa2018a1f4ba7300f7ef28894f2bb4",
+                            "id": "15502fe326b6b1a7fd40812d1bcc8f76",
                             "ruleId": "horusec Medium",
                             "locationId": "480e5f0a4f672d96a803cd45d6e7ff32",
                             "line": 206,
@@ -4389,7 +4389,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2fdc3146198fcea16dc96815ed3d0ebf",
+                            "id": "3e7e5f63b1ca0921ab2ab15aa19f7644",
                             "ruleId": "horusec Medium",
                             "locationId": "480e5f0a4f672d96a803cd45d6e7ff32",
                             "line": 209,
@@ -4407,7 +4407,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7b8a0137c5b2ba45c9eaf1f86d671415",
+                            "id": "507445d2c044d4891beac1af0d63aa55",
                             "ruleId": "horusec Medium",
                             "locationId": "3a0a1aff660148e9a081688937309def",
                             "line": 91,
@@ -4425,7 +4425,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0f2c7da81023b84a3ac276aa3e22725e",
+                            "id": "4ba0339f77db94fc33239aa41b1fc8ae",
                             "ruleId": "horusec Medium",
                             "locationId": "1de7bbea0d7c20c49516a7ae22b29f0f",
                             "line": 49,
@@ -4443,10 +4443,10 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5657a393de4d738c9f20dd24b938b273",
+                            "id": "9d819f892c2fd4072b6e7479ef1450b9",
                             "ruleId": "horusec Low",
                             "locationId": "8de0863559b1180de668872817455dae",
-                            "line": 0,
+                            "line": 1,
                             "code": "```Generic\nRUN using 'wget' and 'curl'\n```",
                             "status": "Open",
                             "description": "Avoid using both 'wget' and 'curl' since these tools have the same effect. - Shouldn't use both curl and wget - Pick one util, either 'wget' or 'curl' - [https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#run https://avd.aquasec.com/appshield/ds014]\n**Code:**\n```Generic\nRUN using 'wget' and 'curl'\n```",
@@ -4455,13 +4455,13 @@
                                     "locationId": "8de0863559b1180de668872817455dae",
                                     "sequence": 1,
                                     "code": "```Generic\nRUN using 'wget' and 'curl'\n```",
-                                    "line": 0
+                                    "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "227110c4c41d34d7e7925184d2db2b2f",
+                            "id": "d3e5b0073f68cbf83dbbcd8874a68bf1",
                             "ruleId": "horusec Low",
                             "locationId": "c9e050edf44aee850241cd11ef1c729c",
                             "line": 27,
@@ -4479,7 +4479,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "38de2362f7de1bff45d53e9cccf3c83d",
+                            "id": "8d3e05f73af3e1bb64608ddb5c3570db",
                             "ruleId": "horusec Low",
                             "locationId": "2e0bd640bfa39d3bb5c4b01a1e956faa",
                             "line": 602,
@@ -4497,7 +4497,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3a6033af0e1a874857fd2ecf38884d8b",
+                            "id": "001c77c3571a16eea76f2d8e8c3d810d",
                             "ruleId": "horusec Low",
                             "locationId": "f6ee94e3e6ca602de7c92b422c121d47",
                             "line": 16,
@@ -4515,7 +4515,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ff8b4b5e5482f13948f912e68872d6b1",
+                            "id": "34a55086bb2a2609cbe76c6fcb2d634c",
                             "ruleId": "horusec Low",
                             "locationId": "d9f6d32505fbd85a61502a6abde4fa3a",
                             "line": 21,
@@ -4533,7 +4533,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6735cd37c9714ec46c73376989c8ec11",
+                            "id": "beeebd9321be0e6001f7cdad7ae77e94",
                             "ruleId": "horusec Low",
                             "locationId": "646613a8f2aafbea13bf4b2b75d93e4e",
                             "line": 152,
@@ -4551,7 +4551,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e6eda6929c97dd45f5bee1a8235fc871",
+                            "id": "b29900e9ad67a995f0a77394ce05c99a",
                             "ruleId": "horusec Low",
                             "locationId": "e4afea3b1d102ebec1fb98471c16d2a2",
                             "line": 4,
@@ -4569,7 +4569,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3563a9fcf48317d50e2a7f7dec8ed4da",
+                            "id": "10fef6098bb189e79446f86596ffa640",
                             "ruleId": "horusec Low",
                             "locationId": "1530412ba144b1075237642136bf5446",
                             "line": 326,
@@ -4587,7 +4587,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1a4ed1e23ee12d8cbbade5e1e3e975f6",
+                            "id": "f98e6c52bfa9c0fd38df4d6474f6ea12",
                             "ruleId": "horusec Low",
                             "locationId": "1530412ba144b1075237642136bf5446",
                             "line": 422,
@@ -4605,7 +4605,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "eaeaacee85203444f872d8659e2732e7",
+                            "id": "2d509aad19235176c4e4c0bc7b2c5426",
                             "ruleId": "horusec Low",
                             "locationId": "0ddcd18cff85f3cf073bdd33df44f289",
                             "line": 33,
@@ -4623,7 +4623,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c74ce8c672a25f783e430d5e357095ec",
+                            "id": "b3350fc11690f83d9aeb12027fa49c53",
                             "ruleId": "horusec Low",
                             "locationId": "16ddff6426d13af21110876b78280f47",
                             "line": 2647,
@@ -4641,7 +4641,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "dcdd557f12eb9d185cdfe5d623563302",
+                            "id": "c3f60f754d07e0e9c4e3c1f7eba74580",
                             "ruleId": "horusec Low",
                             "locationId": "16ddff6426d13af21110876b78280f47",
                             "line": 2649,
@@ -4659,7 +4659,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "94c1101ea7a1318e5bfc187bc9a67b9e",
+                            "id": "e56a7064be413b4fbc758f229114334c",
                             "ruleId": "horusec Low",
                             "locationId": "1984bef532c4490f5003035148f64e86",
                             "line": 36,
@@ -4677,7 +4677,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "90a4651fe614f4f3cc0e8d7a5dc2c0df",
+                            "id": "463e2981c759d68597f3f1a558b366d0",
                             "ruleId": "horusec Low",
                             "locationId": "1984bef532c4490f5003035148f64e86",
                             "line": 69,
@@ -4695,7 +4695,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c758284cf931b9b364e2b9ca1e16b114",
+                            "id": "98311206734acf01f5cdcf927c9aff2c",
                             "ruleId": "horusec Low",
                             "locationId": "708544294eac7d783d8890d3d0bc9772",
                             "line": 840,
@@ -4713,7 +4713,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "98e724cbe3b7e32652bcfbf666fa3395",
+                            "id": "bdb3be4e3564c960b82cbdc355eaf6a4",
                             "ruleId": "horusec Low",
                             "locationId": "31d6533877fcef04cc84bff4b8b7725d",
                             "line": 1,
@@ -4731,7 +4731,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c5ff45383dd31be5b50786768bb38631",
+                            "id": "d3ca90e64fdaf381f8330e460a0bcd17",
                             "ruleId": "horusec Low",
                             "locationId": "5040e0916a47c08c25474eb1a48ad4a1",
                             "line": 4,
@@ -4749,7 +4749,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1b821a9b47d2a8c8d93174e2bb48ccbe",
+                            "id": "ca784e71caf0eb6825e6db89756ad30e",
                             "ruleId": "horusec Low",
                             "locationId": "7521715edfd020fc7c9949d98a278938",
                             "line": 34,
@@ -4767,7 +4767,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8728e1f3613c327cee028c2b3cd33333",
+                            "id": "6a4765910fc0671b16fd3c8c3e00cb7d",
                             "ruleId": "horusec Low",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
                             "line": 124,
@@ -4785,7 +4785,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "dbb67cee75e7fa3219be0cc309988ced",
+                            "id": "f4f09d9cac4e4b8938ba8fb841e5d996",
                             "ruleId": "horusec Low",
                             "locationId": "58e84dd9a81bbb703c0c4f097a5291a5",
                             "line": 135,
@@ -4803,7 +4803,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b758ea5d4465fd89643eab5a1e47d65a",
+                            "id": "e5631976b2bd17768bec3e7d3f4acf16",
                             "ruleId": "horusec Low",
                             "locationId": "cc4c993ba5e0ff3a6435ff548372ea22",
                             "line": 79,
@@ -4821,7 +4821,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "05f417f739fe038cd084663cd10b1589",
+                            "id": "0e19f578fd833606611f0b28ecbe8182",
                             "ruleId": "horusec Low",
                             "locationId": "16861b4aedebdeee4d16c914afb38d9a",
                             "line": 7,
@@ -4839,7 +4839,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "60684c9861db1e4618ea83e27fa4e5fb",
+                            "id": "b8a3e5802f7db4f6ad71960be65ea467",
                             "ruleId": "horusec Low",
                             "locationId": "7a0b749fc8c5806ba615983cb3eebfef",
                             "line": 5,
@@ -4857,7 +4857,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "81ce4bc9fac2e43f9860135f89770731",
+                            "id": "add86043095c9baedb4b4b475647b694",
                             "ruleId": "horusec Low",
                             "locationId": "dfb3bf71b9a9998558ce34e51d202e1b",
                             "line": 5,
@@ -4875,7 +4875,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "967120fab9127bfd4d145def1808edda",
+                            "id": "12014c14b52f9fec4cdf7e59eac1073c",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 93,
@@ -4893,7 +4893,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bfec7ea7c2eb7f57ddde6a2c4d0eacd7",
+                            "id": "a28b5a679170a0ef59a63245a37b7dc5",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 253,
@@ -4911,7 +4911,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "eedcac94547ca74d60778db8664fcf20",
+                            "id": "5c9127e408c7e04842af9e953a3a59f7",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 285,
@@ -4929,7 +4929,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7e4e40747405b499ae79c2e0fff8b8c9",
+                            "id": "0f2c96065743623a1fcf5817a9192451",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 288,
@@ -4947,7 +4947,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6b80402273264e4cc0c219d0561d1690",
+                            "id": "268d2765e2c9f400151368bf1821a8d6",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 826,
@@ -4965,7 +4965,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "5601f40e3747da558bcb1a8dfeb3d2f4",
+                            "id": "0b4f5da4d54144d503758414ec17561f",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 827,
@@ -4983,7 +4983,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "6435054196bbbe40eee776342566c13f",
+                            "id": "a2bd539f32122e80ffa385f2a65c9696",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 831,
@@ -5001,7 +5001,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "02047adbeb5287d2b32607677bbdff9f",
+                            "id": "f75a5106381d177a342232a3877eeb65",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 834,
@@ -5019,7 +5019,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "35c204855b1fdca1ab1491ea4e4c37fd",
+                            "id": "7d20d56043ae9d8cb6ce179a464fcf4e",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 842,
@@ -5037,7 +5037,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f41beec5d670837b0a5cfa8c700093a0",
+                            "id": "72abe6993c14ed57a231892e7f744af1",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 843,
@@ -5055,7 +5055,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "dd147135b612018cbb7cc64260c558e6",
+                            "id": "fb3fb914e77772fb2a57d53dd209e696",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 882,
@@ -5073,7 +5073,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0ce5cabb79aab8ba2383c49b640ffa5b",
+                            "id": "9d6d013b2e94bad032d11f859cfac871",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 886,
@@ -5091,7 +5091,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "07b377f7de08bc5c2e94f4ab2f565713",
+                            "id": "6fe1c05c6b149bab057e27c484fe821c",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 894,
@@ -5109,7 +5109,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0a5aa2d4a307b8d190375a276a926c3d",
+                            "id": "ea1cf70e94375637087f6390cd3dc188",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 899,
@@ -5127,7 +5127,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "0693a730792ebd8ba2bd25300f6b2650",
+                            "id": "b9ec61663d3c806c064d4e2ea772d1f8",
                             "ruleId": "horusec Low",
                             "locationId": "c89fba180afc15e59ef7f8cbbd86c1ca",
                             "line": 904,
@@ -5145,7 +5145,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f5b1df3b309cacc790417e4442e154ae",
+                            "id": "11ed9f2fe1bda0960ce0efb045857f81",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
                             "line": 67,
@@ -5163,7 +5163,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "275887a6f7a4656bd65c87b32a36a52b",
+                            "id": "ba054115782a46e7d21ca6e6d6aac097",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
                             "line": 185,
@@ -5181,7 +5181,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "cf084a268e6d88cdec710db6db609689",
+                            "id": "33d74038e201aa3d35083c5399247bf3",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
                             "line": 229,
@@ -5199,7 +5199,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "622eb6de7d412cd94508e2d83056ab2e",
+                            "id": "f9b17ce3928ecbaaf753ab665ae447c8",
                             "ruleId": "horusec Low",
                             "locationId": "cfff068b22b5cc62a5481799b2c97917",
                             "line": 232,
@@ -5217,7 +5217,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2ef292f131efb5abb0c40a3ee8631d44",
+                            "id": "71fc37ab449c57333c95fb617cc953a9",
                             "ruleId": "horusec Low",
                             "locationId": "4d01eeaaeaa065192038cb61c39a78c8",
                             "line": 24,
@@ -5235,7 +5235,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3c3d89b06b7df0942b0d7f76398c6da6",
+                            "id": "216137de92cbc09cfe4fa94b662b016a",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
                             "line": 50,
@@ -5253,7 +5253,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "aa9b616c4d54a6637fa548deeccf4cc8",
+                            "id": "02797a0aef18db6984d883d2b88ed2cb",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
                             "line": 79,
@@ -5271,7 +5271,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "708cefd30dfb467e59d61d2fbd91e144",
+                            "id": "4b69515583f38548382c284382ee4bbd",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
                             "line": 117,
@@ -5289,7 +5289,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1e0ff6bb626f3a647839e530e9192533",
+                            "id": "25f15b65f117709904f7991a5c287600",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
                             "line": 158,
@@ -5307,7 +5307,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bc58f7e2a46be2e581075959b4c1e2a5",
+                            "id": "bbef3534d34367a3af5d029b69f33e03",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
                             "line": 201,
@@ -5325,7 +5325,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e03302da851a517bcef7471f9bf8bca4",
+                            "id": "b747d882c4087765b90b7d2219896ae6",
                             "ruleId": "horusec Low",
                             "locationId": "3bcefa5e951b4dfd67d556956854fdf8",
                             "line": 244,
@@ -5343,7 +5343,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "cfb8367198aac932a440266f7f673674",
+                            "id": "7df96852febdc235baeedab225b5d5ab",
                             "ruleId": "horusec Low",
                             "locationId": "c20fd8677fc2705e8f09d28babba56aa",
                             "line": 191,

@@ -74,6 +74,7 @@ class ParsersTest(unittest.TestCase):
         for name, report in self.dojo_reports.items():
             print(f"\nValidating {name}")
             validate(report, schema)
+            print(f"\nValidated {name}")
 
     def test_unique_ids(self):
         for name in self.dojo_reports.keys():
