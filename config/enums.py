@@ -8,4 +8,6 @@ class ScannerTypes(enum.Enum):
 
 
 class SourceTypes(enum.Enum):
-    CODE = 'codebase'
+    CODEBASE = 'codebase'
+    ARTIFACT = 'artifact'
+    INSTANCE = 'instance'

@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "d9cd1b03-08bc-4e4a-8fc4-b6e2a35b91e3",
+                "id": "f0c2051b-7255-4eaf-b1fd-87bd22bb595b",
                 "description": "Import semgrep results"
             },
             "source": [
                 {
-                    "id": "8acebcc6-b339-432c-8230-9da057104a9c",
+                    "id": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -34,28 +34,28 @@
                                     "id": 696
                                 }
                             ],
-                            "description": "Hard coded java.lang.security.audit.cbc-padding-oracle.cbc-padding-oracle"
+                            "description": "java.lang.security.audit.cbc-padding-oracle.cbc-padding-oracle"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "4730e4e3fa3d2973b7d6fd907535b733",
-                            "sourceId": "8acebcc6-b339-432c-8230-9da057104a9c",
+                            "sourceId": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02194.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "bcc192a00f0a6fd1cfebab12d5f07415",
-                            "sourceId": "8acebcc6-b339-432c-8230-9da057104a9c",
+                            "sourceId": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02195.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "19192bf22d09678733a38d92a7801fb3",
-                            "sourceId": "8acebcc6-b339-432c-8230-9da057104a9c",
+                            "sourceId": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest01150.java",
                             "language": "Any"
                         }
@@ -63,7 +63,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "76c261f78a27374084479ae7d723f73a",
+                            "id": "b863f0c9137bac81ec6152b3c470505f",
                             "ruleId": "java.lang.security.audit.cbc-padding-oracle.cbc-padding-oracle",
                             "locationId": "4730e4e3fa3d2973b7d6fd907535b733",
                             "line": 64,
@@ -81,7 +81,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3b2103f88ccb82a055991bc5d202670d",
+                            "id": "0cb03df5bcb47b1df6cc37db51636069",
                             "ruleId": "java.lang.security.audit.cbc-padding-oracle.cbc-padding-oracle",
                             "locationId": "bcc192a00f0a6fd1cfebab12d5f07415",
                             "line": 64,
@@ -99,7 +99,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "46517932c720cebd1cf9fba5d667fd00",
+                            "id": "9c38088307b76d8cd12e631948f8b2df",
                             "ruleId": "java.lang.security.audit.cbc-padding-oracle.cbc-padding-oracle",
                             "locationId": "19192bf22d09678733a38d92a7801fb3",
                             "line": 66,

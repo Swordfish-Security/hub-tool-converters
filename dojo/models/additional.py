@@ -50,13 +50,13 @@ class AdditionalFields:
     def __parse_dupe_key(self) -> None:
         try:
             self.dupe_key = hashlib.md5(
-                (self.title + self.secret + str(self.line) + self.file_path).encode("utf-8")
+                (self.title + self.secret + str(self.line) + self.file_path + self.description).encode("utf-8")
             ).hexdigest()
         except TypeError:
-            self.dupe_key = hashlib.md5((self.title + self.file_path + str(self.line)).encode("utf-8")).hexdigest()
+            self.dupe_key = hashlib.md5((self.title + self.file_path + str(self.line) + self.description).encode("utf-8")).hexdigest()
 
     def __parse_rule_description(self) -> None:
-        self.rule_description = f'Hard coded {self.reason}'
+        self.rule_description = self.reason if self.reason else "Unknown"
 
     def parse_additional_fields(self) -> None:
         self.__parse_rule_id()

@@ -334,11 +334,12 @@
           "description": "Rule description"
         },
         "cwe": {
-          "type": "array",
+          "type": ["array", "null"],
           "description": "Vulnerability CWE",
           "items": {
             "$ref": "#/definitions/cwe"
-          }
+          },
+          "nullable": true
         },
         "recommendation": {
           "type": "string",

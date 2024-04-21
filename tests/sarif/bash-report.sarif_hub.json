@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "06057a93-0ab5-4ff1-afbd-d894488bad2c",
+                "id": "43a88c08-fbb4-4324-8669-2ba15b4cafa5",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "28c1005c-30a6-4943-81f9-517ec616623d",
+                    "id": "c893ef5e-d681-4f44-a931-6a928ba89441",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -28,76 +28,76 @@
                             "type": "sast",
                             "name": "2076",
                             "id": "2076",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": null,
-                            "description": "Hard coded right-hand"
+                            "description": "right-hand"
                         },
                         {
                             "type": "sast",
                             "name": "2071",
                             "id": "2071",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": null,
-                            "description": "Hard coded for"
+                            "description": "for"
                         },
                         {
                             "type": "sast",
                             "name": "2072",
                             "id": "2072",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": null,
-                            "description": "Hard coded not"
+                            "description": "not"
                         },
                         {
                             "type": "sast",
                             "name": "2077",
                             "id": "2077",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": null,
-                            "description": "Hard coded spaces"
+                            "description": "spaces"
                         },
                         {
                             "type": "sast",
                             "name": "1035",
                             "id": "1035",
-                            "severity": "Info",
+                            "severity": "Low",
                             "cwe": null,
-                            "description": "Hard coded missing"
+                            "description": "missing"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "25eccab89a1c31a6d5afcf23712f6de8",
-                            "sourceId": "28c1005c-30a6-4943-81f9-517ec616623d",
+                            "sourceId": "c893ef5e-d681-4f44-a931-6a928ba89441",
                             "fileName": "file:///home/damien/dd/docker/setEnv.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "274b7789ef0b093059e5e4da00e6d0b1",
-                            "sourceId": "28c1005c-30a6-4943-81f9-517ec616623d",
+                            "sourceId": "c893ef5e-d681-4f44-a931-6a928ba89441",
                             "fileName": "file:///home/damien/dd/docker/dojo-data.bash",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "83ec204667e693b777feb372688d69ae",
-                            "sourceId": "28c1005c-30a6-4943-81f9-517ec616623d",
+                            "sourceId": "c893ef5e-d681-4f44-a931-6a928ba89441",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "97adb0cf0121a1db2f8668e64787202b",
-                            "sourceId": "28c1005c-30a6-4943-81f9-517ec616623d",
+                            "sourceId": "c893ef5e-d681-4f44-a931-6a928ba89441",
                             "fileName": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7b72273b3024b58104952a0df0bca7d9",
-                            "sourceId": "28c1005c-30a6-4943-81f9-517ec616623d",
+                            "sourceId": "c893ef5e-d681-4f44-a931-6a928ba89441",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/common-os.sh",
                             "language": "Any"
                         }
@@ -105,7 +105,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "193af7c102ba04524d3c10117ecf6e2a",
+                            "id": "52b4e7fc3d5a86a7df527c721199651b",
                             "ruleId": "2076",
                             "locationId": "25eccab89a1c31a6d5afcf23712f6de8",
                             "line": 134,
@@ -123,7 +123,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "2051a22af1741d830d8a86f0a8f375a8",
+                            "id": "efe359e3b7b0b554d8a9f5c1a0403d37",
                             "ruleId": "2071",
                             "locationId": "274b7789ef0b093059e5e4da00e6d0b1",
                             "line": 4,
@@ -141,7 +141,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ce20e2819eb0df99e73c715d1b7be566",
+                            "id": "8dd6077c7ce606f7a1bfbfa57415e8de",
                             "ruleId": "2072",
                             "locationId": "83ec204667e693b777feb372688d69ae",
                             "line": 143,
@@ -159,7 +159,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1ed5e87f8e24142c12db2a24d7c1fe1a",
+                            "id": "1f5d8f2f3ccc2c1505ce491febe89d23",
                             "ruleId": "2077",
                             "locationId": "83ec204667e693b777feb372688d69ae",
                             "line": 410,
@@ -177,7 +177,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9479ef821ff09b51239ef5bac1ade226",
+                            "id": "556615c74d9e199e374822072052bbb0",
                             "ruleId": "2077",
                             "locationId": "83ec204667e693b777feb372688d69ae",
                             "line": 412,
@@ -195,7 +195,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "1d33f0571b0fddcd6d67258db038cb1a",
+                            "id": "f68f7f9229e25f9917a5e8e078acc469",
                             "ruleId": "1035",
                             "locationId": "97adb0cf0121a1db2f8668e64787202b",
                             "line": 142,
@@ -213,7 +213,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "bd58450e3f7da27e7f4be33cd62cbec9",
+                            "id": "dcf7151e1731629f55c1247c0bcd0ae6",
                             "ruleId": "2072",
                             "locationId": "97adb0cf0121a1db2f8668e64787202b",
                             "line": 142,
@@ -231,7 +231,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "59357edd070890002d4e82efd267207a",
+                            "id": "4dd9b9a456d90c0c09f228764d2afc9f",
                             "ruleId": "2077",
                             "locationId": "97adb0cf0121a1db2f8668e64787202b",
                             "line": 458,
@@ -249,7 +249,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "67fa980bb8d95bce1c42ac4d8c19f39b",
+                            "id": "be1b1609af741ff22e01c7fa1f3511e9",
                             "ruleId": "2077",
                             "locationId": "97adb0cf0121a1db2f8668e64787202b",
                             "line": 460,
@@ -267,7 +267,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "762cffdda53afe7f2feaa8b6ebc47bc5",
+                            "id": "9f1118b7bf15f9d22949e38779fde6e4",
                             "ruleId": "1035",
                             "locationId": "83ec204667e693b777feb372688d69ae",
                             "line": 143,
@@ -285,7 +285,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f4c02a584e16a683fda3c0947d3ce2f7",
+                            "id": "27b200ed6158f9080e313532aa704874",
                             "ruleId": "1035",
                             "locationId": "7b72273b3024b58104952a0df0bca7d9",
                             "line": 130,
@@ -303,7 +303,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e0929a8fc4982fc6eea54ca098ced671",
+                            "id": "8c12a315440df8034b5ef277a2e82a24",
                             "ruleId": "2072",
                             "locationId": "7b72273b3024b58104952a0df0bca7d9",
                             "line": 130,
