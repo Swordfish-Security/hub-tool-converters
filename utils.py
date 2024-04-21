@@ -1,6 +1,6 @@
 import os
 
-from config.constances import PARSER_CLASSES
+from config.constances import PARSER_CLASSES, TOOL_FORMAT
 
 
 def check_keys_parser_classes():
@@ -19,5 +19,8 @@ def check_keys_parser_classes():
             if parser_file not in PARSER_CLASSES:
                 raise ValueError(f"Parser {parser_file} not in PARSER_CLASSES")
             exists_parsers.add(parser_file)
+            for tool_name in TOOL_FORMAT.keys():
+                if TOOL_FORMAT[tool_name] == parser_file:
+                    exists_parsers.add(tool_name)
     if xor_set := exists_parsers.symmetric_difference(set_parsers_classes):
         raise ValueError(f"{xor_set} scanners are not provided")
