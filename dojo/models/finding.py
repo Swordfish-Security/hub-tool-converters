@@ -2,6 +2,8 @@ import datetime
 from dataclasses import dataclass
 from typing import Optional
 
+import hyperlink
+
 from dojo.models.additional import AdditionalFields
 
 
@@ -108,6 +110,42 @@ class Endpoint:
               str] | None = None  # Add tags that help describe this endpoint. Choose from the list or add new tags. Press Enter key to add
     inherited_tags: list[
                         str] | None = None  # Internal use tags sepcifically for maintaining parity with product. This field will be present as a subset in the tags field
+
+    @staticmethod
+    def from_uri(uri):
+        try:
+            url = hyperlink.parse(url=uri)
+        except UnicodeDecodeError:
+            from urllib.parse import urlparse
+            url = hyperlink.parse(url="//" + urlparse(uri).netloc)
+        except hyperlink.URLParseError as e:
+            raise ValueError('Invalid URL format: {}'.format(e))
+
+        query_parts = []  # inspired by https://github.com/python-hyper/hyperlink/blob/b8c9152cd826bbe8e6cc125648f3738235019705/src/hyperlink/_url.py#L1768
+        for k, v in url.query:
+            if v is None:
+                query_parts.append(k)
+            else:
+                query_parts.append(u"=".join([k, v]))
+        query_string = u"&".join(query_parts)
+
+        protocol = url.scheme if url.scheme != '' else None
+        userinfo = ':'.join(url.userinfo) if url.userinfo not in [(), ('',)] else None
+        host = url.host if url.host != '' else None
+        port = url.port
+        path = '/'.join(url.path)[:500] if url.path not in [None, (), ('',)] else None
+        query = query_string[:1000] if query_string is not None and query_string != '' else None
+        fragment = url.fragment[:500] if url.fragment is not None and url.fragment != '' else None
+
+        return Endpoint(
+            protocol=protocol,
+            userinfo=userinfo,
+            host=host,
+            port=port,
+            path=path,
+            query=query,
+            fragment=fragment,
+        )
 
 
 @dataclass(kw_only=False, eq=False, order=False)

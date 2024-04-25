@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "0c19de61-86ba-4e59-970c-0dc8144a576c",
+                "id": "7eb2a2b7-05b1-48fa-bd9f-95e41be59bc8",
                 "description": "Import gitleaks results"
             },
             "source": [
                 {
-                    "id": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
+                    "id": "86805735-2d3c-486b-acc2-82916eaf05ec",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -65,21 +65,21 @@
                         {
                             "type": "codebase",
                             "id": "78bd16891bd8af07214271dd5c748afb",
-                            "sourceId": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
+                            "sourceId": "86805735-2d3c-486b-acc2-82916eaf05ec",
                             "fileName": "/conf/aws.tf",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "87a2642c4621e799d82ae2214f3cb358",
-                            "sourceId": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
+                            "sourceId": "86805735-2d3c-486b-acc2-82916eaf05ec",
                             "fileName": "conf/rsa.pk",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "ccfe001d953dbc1cd4d0d5470911eca7",
-                            "sourceId": "53c9905b-4ff3-4461-ad72-1c6b5575ef77",
+                            "sourceId": "86805735-2d3c-486b-acc2-82916eaf05ec",
                             "fileName": "tests/api.py",
                             "language": "Any"
                         }
@@ -92,16 +92,8 @@
                             "locationId": "78bd16891bd8af07214271dd5c748afb",
                             "line": 2,
                             "code": "secretAWSsecret",
-                            "status": "Open",
-                            "description": "**Secret:** secretAWSsecret\n**Match:** secretAWSsecret\n**Commit message:** Lorem ipsum dolor sit amet, consetetur sadipscing elitr\n**Commit hash:** 74d53286c550630f80847d37f68aa3065554ac813544072ccd1278da71fafe31\n**Commit date:** 2021-10-14T17:05:15Z\n**Rule Id:** aws-access-token\n\n***\n\n**Secret:** secretAWSsecret\n**Match:** secretAWSsecret\n**Commit message:** Lorem ipsum dolor sit amet, consetetur sadipscing elitr\n**Commit hash:** 9619c91b3fd2998be5d9ce198833d7ac9489d9bc378ad7cd28963d5a967f8699\n**Commit date:** 2021-10-14T17:05:15Z\n**Rule Id:** aws-access-token",
-                            "stacks": [
-                                {
-                                    "locationId": "78bd16891bd8af07214271dd5c748afb",
-                                    "sequence": 1,
-                                    "code": "secretAWSsecret",
-                                    "line": 2
-                                }
-                            ]
+                            "status": "To Verify",
+                            "description": "<p><strong>Secret:</strong> secretAWSsecret\n<strong>Match:</strong> secretAWSsecret\n<strong>Commit message:</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr\n<strong>Commit hash:</strong> 74d53286c550630f80847d37f68aa3065554ac813544072ccd1278da71fafe31\n<strong>Commit date:</strong> 2021-10-14T17:05:15Z\n<strong>Rule Id:</strong> aws-access-token</p>\n<hr />\n<p><strong>Secret:</strong> secretAWSsecret\n<strong>Match:</strong> secretAWSsecret\n<strong>Commit message:</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr\n<strong>Commit hash:</strong> 9619c91b3fd2998be5d9ce198833d7ac9489d9bc378ad7cd28963d5a967f8699\n<strong>Commit date:</strong> 2021-10-14T17:05:15Z\n<strong>Rule Id:</strong> aws-access-token</p>"
                         },
                         {
                             "type": "sast",
@@ -110,16 +102,8 @@
                             "locationId": "87a2642c4621e799d82ae2214f3cb358",
                             "line": 57,
                             "code": "-----BEGIN RSA PRIVATE KEY-----",
-                            "status": "Open",
-                            "description": "**Secret:** -----BEGIN RSA PRIVATE KEY-----\n**Match:** -----BEGIN RSA PRIVATE KEY-----\n**Rule Id:** RSA-PK",
-                            "stacks": [
-                                {
-                                    "locationId": "87a2642c4621e799d82ae2214f3cb358",
-                                    "sequence": 1,
-                                    "code": "-----BEGIN RSA PRIVATE KEY-----",
-                                    "line": 57
-                                }
-                            ]
+                            "status": "To Verify",
+                            "description": "<p><strong>Secret:</strong> -----BEGIN RSA PRIVATE KEY-----\n<strong>Match:</strong> -----BEGIN RSA PRIVATE KEY-----\n<strong>Rule Id:</strong> RSA-PK</p>"
                         },
                         {
                             "type": "sast",
@@ -128,16 +112,8 @@
                             "locationId": "ccfe001d953dbc1cd4d0d5470911eca7",
                             "line": 21,
                             "code": "dfjksdjfs3294dfjlsdaf213",
-                            "status": "Open",
-                            "description": "**Secret:** dfjksdjfs3294dfjlsdaf213\n**Match:** apikey = \"dfjksdjfs3294dfjlsdaf213\"\n**Commit message:**\n```\nLorem ipsum dolor sit amet,\nconsetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\nsed diam voluptua.\n```\n**Commit hash:** 69235ea9ea4d59e18e2cc3c295526de46aa1365c1f0c7a95a22ff1537acdf517\n**Commit date:** 2016-09-16T18:17:59Z\n**Rule Id:** generic-api-key",
-                            "stacks": [
-                                {
-                                    "locationId": "ccfe001d953dbc1cd4d0d5470911eca7",
-                                    "sequence": 1,
-                                    "code": "dfjksdjfs3294dfjlsdaf213",
-                                    "line": 21
-                                }
-                            ]
+                            "status": "To Verify",
+                            "description": "<p><strong>Secret:</strong> dfjksdjfs3294dfjlsdaf213\n<strong>Match:</strong> apikey = \"dfjksdjfs3294dfjlsdaf213\"\n<strong>Commit message:</strong>\n<code>Lorem ipsum dolor sit amet,\nconsetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\nsed diam voluptua.</code>\n<strong>Commit hash:</strong> 69235ea9ea4d59e18e2cc3c295526de46aa1365c1f0c7a95a22ff1537acdf517\n<strong>Commit date:</strong> 2016-09-16T18:17:59Z\n<strong>Rule Id:</strong> generic-api-key</p>"
                         }
                     ]
                 }

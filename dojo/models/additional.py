@@ -1,5 +1,6 @@
 import hashlib
 from dataclasses import dataclass
+import re
 
 
 @dataclass(kw_only=False, eq=False, order=False)
@@ -10,6 +11,11 @@ class AdditionalFields:
     reason: str | None = None
     secret: str | None = None
     file_key: str | None = None
+
+    def __parse_url(self) -> None:
+        if not self.url and "URL:" in self.description:
+            urls = re.findall(r'(https?://[^\s]+)', self.description)
+            self.url = '\n'.join(x.replace('\n', '') for x in urls)
 
     def __parse_rule_id(self) -> None:
         if "Rule Id" in self.description:
@@ -46,6 +52,10 @@ class AdditionalFields:
             self.file_key = hashlib.md5(
                 self.file_path.encode('utf-8')
             ).hexdigest()
+        elif self.url is not None:
+            self.file_key = hashlib.md5(
+                self.url.encode('utf-8')
+            ).hexdigest()
 
     def __parse_dupe_key(self) -> None:
         try:
@@ -53,12 +63,18 @@ class AdditionalFields:
                 (self.title + self.secret + str(self.line) + self.file_path + self.description).encode("utf-8")
             ).hexdigest()
         except TypeError:
-            self.dupe_key = hashlib.md5((self.title + self.file_path + str(self.line) + self.description).encode("utf-8")).hexdigest()
+            self.dupe_key = hashlib.md5(
+                (
+                        self.title +
+                        self.description
+                 ).encode("utf-8")
+            ).hexdigest()
 
     def __parse_rule_description(self) -> None:
         self.rule_description = self.reason if self.reason else "Unknown"
 
     def parse_additional_fields(self) -> None:
+        self.__parse_url()
         self.__parse_rule_id()
         self.__parse_reason()
         self.__parse_secret()

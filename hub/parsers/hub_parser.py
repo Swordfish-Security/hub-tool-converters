@@ -4,18 +4,18 @@ from typing import Any
 
 from config.enums import SourceTypes, ScannerTypes
 from dojo.models import Finding
-from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHub
-from hub.models.location import Location
+from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast
+from hub.models.location import LocationSast, LocationDast
 from hub.models.rule import Rule, RuleCwe
 from hub.models.source import Source
+
+import markdown
 
 
 class HubParser:
 
     def __init__(self, args: Any, dojo_results: list[Finding]):
         self.dojo_results = dojo_results
-
-        source_type = self.__get_source_type()
 
         self.args = args
 
@@ -24,19 +24,22 @@ class HubParser:
             url=args.source_url,
             branch=args.source_branch,
             commit=args.source_commit,
-            type=source_type
         )
         self.rules: dict[str, Rule] = {}
-        self.locations: dict[str, Location] = {}
-        self.findings: dict[str, FindingHub] = {}
+        self.locations: dict[str, LocationSast | LocationDast] = {}
+        self.findings: dict[str, FindingHubSast | FindingHubDast] = {}
 
         self.output_path = args.output
 
         super().__init__()
 
-    def __get_source_type(self):
-        # TODO: Add parsing
-        return SourceTypes.CODEBASE.value
+    def __get_source_type(self, finding: Finding) -> SourceTypes:
+        source_types = {
+            ScannerTypes.DAST.value: SourceTypes.INSTANCE.value,
+            ScannerTypes.SAST.value: SourceTypes.CODEBASE.value,
+            ScannerTypes.SCA.value: SourceTypes.ARTIFACT.value,
+        }
+        return source_types[self.__get_scanner_type(finding=finding)]
 
     def __get_scanner_type(self, finding: Finding):
         if finding.static_finding:
@@ -45,30 +48,69 @@ class HubParser:
             return ScannerTypes.DAST.value
         return ScannerTypes.SCA.value
 
-    def __parse_finding(self, finding: Finding):
+    def __parse_reqresps(self, finding: Finding):
+        """
+        Save request and responses in descriptions
+        """
+        if hasattr(finding, "unsaved_req_resp") and isinstance(finding.unsaved_req_resp, list):
+            for req_resp in finding.unsaved_req_resp:
+                text = ''
+                if isinstance(req_resp, dict):
+                    for key, value in req_resp.items():
+                        text += f'\n{key}: {value}\n'
+                self.findings[finding.dupe_key].description += text
 
+    def __parse_finding(self, finding: Finding):
         scanner_type = self.__get_scanner_type(finding)
-        finding_hub = FindingHub(
-            idx=finding.dupe_key,
-            ruleId=finding.ruleId,
-            locationId=finding.file_key,
-            line=finding.line,
-            code=finding.secret,
-            description=finding.description,
-            status="Open",
-            type=scanner_type
-        )
+        if self.__get_source_type(finding) == SourceTypes.CODEBASE.value:
+            finding_hub = FindingHubSast(
+                idx=finding.dupe_key,
+                ruleId=finding.ruleId,
+                locationId=finding.file_key,
+                line=finding.line,
+                code=finding.secret,
+                description=finding.description,
+                status="To Verify",
+                type=scanner_type
+            )
+
+        elif self.__get_source_type(finding) == SourceTypes.INSTANCE.value:
+            finding_hub = FindingHubDast(
+                idx=finding.dupe_key,
+                ruleId=finding.ruleId,
+                locationId=finding.file_key,
+                url=finding.url,
+                description=finding.description,
+                status="To Verify",
+                type=scanner_type
+            )
+        else:
+            raise ValueError(f"Unknown source type {finding}")
+
+        # Markdown to HTML
+        if finding_hub.description:
+            finding_hub.description = markdown.markdown(finding_hub.description)
+
         if finding.dupe_key not in self.findings:
             self.findings[finding.dupe_key] = finding_hub
 
     def __parse_location(self, finding: Finding):
         if finding.file_key not in self.locations:
-            self.locations[finding.file_key] = Location(
-                type=self.__get_source_type(),
-                id=finding.file_key,
-                sourceId=self.source.id,
-                fileName=finding.file_path if finding.file_path else 'Unknown'
-            )
+            if self.__get_source_type(finding) == SourceTypes.CODEBASE.value:
+                self.locations[finding.file_key] = LocationSast(
+                    type=self.__get_source_type(finding),
+                    id=finding.file_key,
+                    sourceId=self.source.id,
+                    fileName=finding.file_path if finding.file_path else 'Unknown'
+                )
+            elif self.__get_source_type(finding) == SourceTypes.INSTANCE.value:
+                self.locations[finding.file_key] = LocationDast(
+                    type=self.__get_source_type(finding),
+                    id=finding.file_key,
+                    sourceId=self.source.id,
+                    url=finding.url if finding.url else None,
+                    description=finding.description if finding.description else None
+                )
 
     def __parse_rule(self, finding: Finding):
         if finding.ruleId not in self.rules:
@@ -92,11 +134,13 @@ class HubParser:
     def parse(self):
         for finding in self.dojo_results:
             finding.parse_additional_fields()
+            self.source.type = self.__get_source_type(finding)
 
             self.__check_rule_id(finding)
             self.__parse_finding(finding)
             self.__parse_location(finding)
             self.__parse_rule(finding)
+            self.__parse_reqresps(finding)
             finding.check_additional_fields()
 
     def get_report(self) -> dict:

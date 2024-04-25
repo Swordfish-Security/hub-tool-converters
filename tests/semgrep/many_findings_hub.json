@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "f0c2051b-7255-4eaf-b1fd-87bd22bb595b",
+                "id": "0330827a-80f5-4d03-abcd-1d0b94eb0307",
                 "description": "Import semgrep results"
             },
             "source": [
                 {
-                    "id": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
+                    "id": "2f1b6f29-452f-4a05-af14-f94e0fbccbf2",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -41,21 +41,21 @@
                         {
                             "type": "codebase",
                             "id": "4730e4e3fa3d2973b7d6fd907535b733",
-                            "sourceId": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
+                            "sourceId": "2f1b6f29-452f-4a05-af14-f94e0fbccbf2",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02194.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "bcc192a00f0a6fd1cfebab12d5f07415",
-                            "sourceId": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
+                            "sourceId": "2f1b6f29-452f-4a05-af14-f94e0fbccbf2",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02195.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "19192bf22d09678733a38d92a7801fb3",
-                            "sourceId": "bb4f2e9b-e827-4e95-b8ad-fda6589aca57",
+                            "sourceId": "2f1b6f29-452f-4a05-af14-f94e0fbccbf2",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest01150.java",
                             "language": "Any"
                         }
@@ -68,16 +68,8 @@
                             "locationId": "4730e4e3fa3d2973b7d6fd907535b733",
                             "line": 64,
                             "code": "```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                            "status": "Open",
-                            "description": "**Result message:** Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor\ncould discern the difference between plaintext with valid or invalid padding. Further,\nCBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.\nUse 'AES/GCM/NoPadding' instead.\n\n**Snippet:**\n```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                            "stacks": [
-                                {
-                                    "locationId": "4730e4e3fa3d2973b7d6fd907535b733",
-                                    "sequence": 1,
-                                    "code": "```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                                    "line": 64
-                                }
-                            ]
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor\ncould discern the difference between plaintext with valid or invalid padding. Further,\nCBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.\nUse 'AES/GCM/NoPadding' instead.</p>\n<p><strong>Snippet:</strong>\n<code>javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");</code></p>"
                         },
                         {
                             "type": "sast",
@@ -86,16 +78,8 @@
                             "locationId": "bcc192a00f0a6fd1cfebab12d5f07415",
                             "line": 64,
                             "code": "```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                            "status": "Open",
-                            "description": "**Result message:** Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor\ncould discern the difference between plaintext with valid or invalid padding. Further,\nCBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.\nUse 'AES/GCM/NoPadding' instead.\n\n**Snippet:**\n```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                            "stacks": [
-                                {
-                                    "locationId": "bcc192a00f0a6fd1cfebab12d5f07415",
-                                    "sequence": 1,
-                                    "code": "```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                                    "line": 64
-                                }
-                            ]
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor\ncould discern the difference between plaintext with valid or invalid padding. Further,\nCBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.\nUse 'AES/GCM/NoPadding' instead.</p>\n<p><strong>Snippet:</strong>\n<code>javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");</code></p>"
                         },
                         {
                             "type": "sast",
@@ -104,16 +88,8 @@
                             "locationId": "19192bf22d09678733a38d92a7801fb3",
                             "line": 66,
                             "code": "```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                            "status": "Open",
-                            "description": "**Result message:** Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor\ncould discern the difference between plaintext with valid or invalid padding. Further,\nCBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.\nUse 'AES/GCM/NoPadding' instead.\n\n**Snippet:**\n```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                            "stacks": [
-                                {
-                                    "locationId": "19192bf22d09678733a38d92a7801fb3",
-                                    "sequence": 1,
-                                    "code": "```\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```\n",
-                                    "line": 66
-                                }
-                            ]
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor\ncould discern the difference between plaintext with valid or invalid padding. Further,\nCBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.\nUse 'AES/GCM/NoPadding' instead.</p>\n<p><strong>Snippet:</strong>\n<code>javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");</code></p>"
                         }
                     ]
                 }

@@ -538,11 +538,12 @@
           "description": "Rule recommendation"
         },
         "cwe": {
-          "type": "array",
+          "type": ["array", "null"],
           "description": "Vulnerability CWE",
           "items": {
             "$ref": "#/definitions/cwe"
-          }
+          },
+          "nullable": true
         },
         "cvss2Score": {
           "type": "string",
