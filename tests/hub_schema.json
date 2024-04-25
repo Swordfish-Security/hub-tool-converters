@@ -769,7 +769,7 @@
           "description": "Line number"
         },
          "code": {
-          "type": "string",
+          "type": ["string", "null"],
           "description": "Source code"
         },
         "status": {
