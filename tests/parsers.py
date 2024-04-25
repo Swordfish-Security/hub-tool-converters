@@ -5,7 +5,7 @@ from typing import Any
 
 from jsonschema import validate
 
-from config.constances import PARSER_CLASSES
+from config.constances import PARSER_CLASSES, TOOL_FORMAT
 from hub.parsers.hub_parser import HubParser
 from main import check_keys_parser_classes
 
@@ -34,7 +34,8 @@ class ParsersTest(unittest.TestCase):
 
     def __get_dojo_reports(self):
         for name, parser in PARSER_CLASSES.items():
-
+            if name in TOOL_FORMAT:
+                name = TOOL_FORMAT[name]
             tests_filenames = os.listdir(f'./tests/{name}')
             for filename in tests_filenames:
                 if '_hub' in filename:
