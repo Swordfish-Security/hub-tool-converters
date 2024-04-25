@@ -5,6 +5,10 @@ from typing import Any
 
 PARSER_CLASSES: dict[str, Any] = {}
 PARSERS_PATH = "dojo/parsers"
+TOOL_FORMAT: dict[str, str] = {
+    'svace': 'sarif',
+    'pvs-studio': 'sarif'
+}
 
 
 def import_classes_from_directory(directory_path):
@@ -16,7 +20,11 @@ def import_classes_from_directory(directory_path):
             for name, obj in inspect.getmembers(module):
                 if inspect.isclass(obj) and name != "Finding" and name[0].isupper() and 'Parser' in name:
                     globals()[name] = obj
-                    PARSER_CLASSES.update({file_name.split(".")[0]: obj})
+                    format_name = file_name.split(".")[0]
+                    PARSER_CLASSES.update({format_name: obj})
+                    for tool_name in TOOL_FORMAT.keys():
+                        if format_name == TOOL_FORMAT[tool_name]:
+                            PARSER_CLASSES.update({tool_name: obj})
 
 
 # Import classes from the dojo/parsers directory
