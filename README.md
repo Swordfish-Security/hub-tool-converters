@@ -5,7 +5,7 @@
 ## Содержимое репозитория
 
 1. [Модель отчета AppSec.Hub](hub/models/hub.py)
-2. [Парсеры форматов инструментов](dojo/parsers)
+2. [Парсеры форматов инструментов](converters/parsers)
 3. [Конфиг файлы](config)
 4. [Тесты](tests)
 
@@ -17,15 +17,18 @@
 
 ### Параметры запуска
 
-| Параметр             | Описание                                                   | Обязательный             |
-|----------------------|------------------------------------------------------------|--------------------------|
-| -s; --scanner        | Тип сканера (--help для просмотра всех типов)              | Да                       |
-| -f; --filename       | Путь до отчета сканера                                     | Да                       |
-| -o; --output         | Путь где будет создан отчет в формате AppSec.HUB           | Да                       |
-| -sn; --source-name   | Название репозитория в AppSec.Hub                          | Да                       |
-| -su; --source-url    | Урл репозитория                                            | Да                       |
-| -sb; --source-branch | Ветка в репозитории, по которой запускалось сканирование   | Нет, по умолчанию master |
-| -sc; --source-commit | Коммит в репозитории, по которому запускалось сканирование | Нет, по умолчанию master |
+| Параметр          | Описание                                                   | Обязательный             |
+|-------------------|------------------------------------------------------------|--------------------------|
+| -t; --type        | Тип источника (--help для просмотра всех типов)            | Да                       |
+| -s; --scanner     | Тип сканера (--help для просмотра всех типов)              | Да                       |
+| -f; --filename    | Путь до отчета сканера                                     | Да                       |
+| -o; --output      | Путь где будет создан отчет в формате AppSec.HUB           | Да                       |
+| -n; --name        | Название репозитория в AppSec.Hub                          | Да                       |
+| -u; --url         | Урл репозитория                                            | Да                       |
+| -b; --branch      | Ветка в репозитории, по которой запускалось сканирование   | Нет, по умолчанию master |
+| -c; --commit      | Коммит в репозитории, по которому запускалось сканирование | Нет, по умолчанию master |
+| -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)              | Нет, по умолчанию maven  |
+| --stage           | Состояние экземпляра                                       | Нет                      |
 
 ## Пример запуска
 
@@ -41,7 +44,7 @@ pip install -r requirements.txt
 
 3. Запуск конвертера
 ```bash
-python main.py -s gitleaks -f gitleaks_report.json -o hub.json -sn hub-tool-converters -su https://github.com/Swordfish-Security/hub-tool-converters.git
+python main.py -t CODEBASE -s sarif -f ./tests/codebase/sarif/mobsfscan.json -o ./tests/codebase/sarif/mobsfscan_hub.json -n hub-tool-converters -u https://github.com/Swordfish-Security/hub-tool-converters.git
 ```
 
 ## Запуск тестов

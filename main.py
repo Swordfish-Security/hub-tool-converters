@@ -1,8 +1,9 @@
 import argparse
 
 from config.constances import PARSER_CLASSES
+from config.enums import SourceTypes, BuildTool, Stage
 from hub.parsers.hub_parser import HubParser
-from utils import check_keys_parser_classes
+from utils import check_keys_parser_classes, validate_args
 
 if __name__ == '__main__':
     # TODO: Delete for production
@@ -12,6 +13,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         prog="Converter",
         description="Converts scanners output to HUB format",
+    )
+    parser.add_argument(
+        "-t", "--type",
+        type=str,
+        choices=SourceTypes.__members__.keys(),
+        help="Source type",
+        required=True
     )
     parser.add_argument(
         "-s", "--scanner",
@@ -33,31 +41,47 @@ if __name__ == '__main__':
         required=True
     )
     parser.add_argument(
-        "-sn", "--source-name",
+        "-n", "--name",
         type=str,
         help="AppSec.Hub repository's name",
         required=True
     )
     parser.add_argument(
-        "-su", "--source-url",
+        "-u", "--url",
         type=str,
         help="AppSec.Hub repository's URL",
         required=True
     )
     parser.add_argument(
-        "-sb", "--source-branch",
+        "-b", "--branch",
         type=str,
         help="AppSec.Hub repository's branch (default: master)",
         default="master"
     )
     parser.add_argument(
-        "-sc", "--source-commit",
+        "-c", "--commit",
         type=str,
         help="AppSec.Hub repository's commit (default: master)",
         default="master"
     )
+    parser.add_argument(
+        "-bt", "--build-tool",
+        type=str,
+        choices=BuildTool.__members__.keys(),
+        help="Build tool used to compile this source code. Default: maven",
+        default=BuildTool.MAVEN.value
+    )
+    parser.add_argument(
+        "--stage",
+        type=str,
+        choices=Stage.__members__.keys(),
+        help="Stage of instance",
+        required=False
+    )
 
     args = parser.parse_args()
+
+    validate_args(args)
 
     dojo_parser = PARSER_CLASSES[args.scanner]()
 
