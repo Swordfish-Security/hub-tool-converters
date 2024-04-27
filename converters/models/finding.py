@@ -204,7 +204,7 @@ class Finding(AdditionalFields):
     found_by: list[str] | None = None  # The name of the scanner that identified the flaw
     static_finding: bool = False  # Flaw has been detected from a Static Application Security Testing tool (SAST).
     dynamic_finding: bool = True  # Flaw has been detected from a Dynamic Application Security Testing tool (DAST).
-    created: datetime.datetime | None = None  # The date the finding was created inside DefectDojo
+    created: datetime.datetime | None = None  # The date the finding was created inside
     scanner_confidence: int | None = None  # Confidence level of vulnerability which is supplied by the scanner
     sonarqube_issue: str | None = None  # The SonarQube issue associated with this finding
     unique_id_from_tool: str | None = None  # Vulnerability technical id from the source tool. Allows to track unique vulnerabilities

@@ -27,5 +27,5 @@ def import_classes_from_directory(directory_path):
                             PARSER_CLASSES.update({tool_name: obj})
 
 
-# Import classes from the dojo/parsers directory
+# Import classes from the directory
 import_classes_from_directory(PARSERS_PATH)
