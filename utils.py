@@ -1,6 +1,7 @@
 import os
 
 from config.constances import PARSER_CLASSES, TOOL_FORMAT
+from config.enums import SourceTypes
 
 
 def check_keys_parser_classes():
@@ -8,7 +9,7 @@ def check_keys_parser_classes():
     Check that all parsers are in PARSER_CLASSES const
     :return:
     """
-    parsers_dir = os.listdir("dojo/parsers")
+    parsers_dir = os.listdir("converters/parsers")
     set_parsers_classes = set(PARSER_CLASSES.keys())
     exists_parsers: set[str] = set()
     for parser_file in parsers_dir:
@@ -24,3 +25,24 @@ def check_keys_parser_classes():
                     exists_parsers.add(tool_name)
     if xor_set := exists_parsers.symmetric_difference(set_parsers_classes):
         raise ValueError(f"{xor_set} scanners are not provided")
+
+
+def validate_args(args):
+    # Приведение к нижнему регистру
+    args.type = args.type.lower()
+
+    if args.type == SourceTypes.CODEBASE.value:
+        if not args.url or not args.name:
+            raise ValueError("url and name are required for CODEBASE source_type")
+
+    elif args.type == SourceTypes.INSTANCE.value:
+        if not args.url or not args.name:
+            raise ValueError("url is required for INSTANCE source_type")
+
+    elif args.type == SourceTypes.ARTIFACT.value:
+        if not args.url or not args.name:
+            raise ValueError("url is required for ARTIFACT source_type")
+
+    else:
+        raise ValueError("Invalid source type")
+
