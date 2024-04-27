@@ -2,7 +2,7 @@ from dataclasses import dataclass, asdict
 from typing import Any
 
 from hub.models.location import LocationStack
-from hub.models.source import Source
+from hub.models.source import SourceSast
 
 
 @dataclass(kw_only=True, eq=False, order=False, init=True)
@@ -21,7 +21,7 @@ class ScanDetail:
 @dataclass(kw_only=True, eq=False, order=False, init=True)
 class Scan:
     scanDetails: ScanDetail
-    source: list[Source]
+    source: list[SourceSast]
     tool: dict[str, str]
     results: list[ScanResult]
 

@@ -3,11 +3,11 @@ import uuid
 from typing import Any
 
 from config.enums import SourceTypes, ScannerTypes
-from dojo.models import Finding
+from converters.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast
 from hub.models.location import LocationSast, LocationDast
 from hub.models.rule import Rule, RuleCwe
-from hub.models.source import Source
+from hub.models.source import SourceSast, SourceDast
 
 import markdown
 
@@ -18,13 +18,8 @@ class HubParser:
         self.dojo_results = dojo_results
 
         self.args = args
+        self.__create_source()
 
-        self.source: Source = Source(
-            name=args.source_name,
-            url=args.source_url,
-            branch=args.source_branch,
-            commit=args.source_commit,
-        )
         self.rules: dict[str, Rule] = {}
         self.locations: dict[str, LocationSast | LocationDast] = {}
         self.findings: dict[str, FindingHubSast | FindingHubDast] = {}
@@ -33,13 +28,22 @@ class HubParser:
 
         super().__init__()
 
-    def __get_source_type(self, finding: Finding) -> SourceTypes:
-        source_types = {
-            ScannerTypes.DAST.value: SourceTypes.INSTANCE.value,
-            ScannerTypes.SAST.value: SourceTypes.CODEBASE.value,
-            ScannerTypes.SCA.value: SourceTypes.ARTIFACT.value,
-        }
-        return source_types[self.__get_scanner_type(finding=finding)]
+    def __create_source(self):
+        if self.args.type == SourceTypes.CODEBASE.value:
+            self.source: SourceSast = SourceSast(
+                name=self.args.name,
+                url=self.args.url,
+                branch=self.args.branch,
+                commit=self.args.commit,
+            )
+        elif self.args.type == SourceTypes.INSTANCE.value:
+            self.source: SourceDast = SourceDast(
+                name=self.args.name,
+                url=self.args.url,
+                stage=self.args.stage
+            )
+        else:
+            raise ValueError("Invalid source type")
 
     def __get_scanner_type(self, finding: Finding):
         if finding.static_finding:
@@ -62,7 +66,7 @@ class HubParser:
 
     def __parse_finding(self, finding: Finding):
         scanner_type = self.__get_scanner_type(finding)
-        if self.__get_source_type(finding) == SourceTypes.CODEBASE.value:
+        if self.args.type == SourceTypes.CODEBASE.value:
             finding_hub = FindingHubSast(
                 idx=finding.dupe_key,
                 ruleId=finding.ruleId,
@@ -74,7 +78,7 @@ class HubParser:
                 type=scanner_type
             )
 
-        elif self.__get_source_type(finding) == SourceTypes.INSTANCE.value:
+        elif self.args.type == SourceTypes.INSTANCE.value:
             finding_hub = FindingHubDast(
                 idx=finding.dupe_key,
                 ruleId=finding.ruleId,
@@ -96,16 +100,16 @@ class HubParser:
 
     def __parse_location(self, finding: Finding):
         if finding.file_key not in self.locations:
-            if self.__get_source_type(finding) == SourceTypes.CODEBASE.value:
+            if self.args.type == SourceTypes.CODEBASE.value:
                 self.locations[finding.file_key] = LocationSast(
-                    type=self.__get_source_type(finding),
+                    type=self.args.type,
                     id=finding.file_key,
                     sourceId=self.source.id,
                     fileName=finding.file_path if finding.file_path else 'Unknown'
                 )
-            elif self.__get_source_type(finding) == SourceTypes.INSTANCE.value:
+            elif self.args.type == SourceTypes.INSTANCE.value:
                 self.locations[finding.file_key] = LocationDast(
-                    type=self.__get_source_type(finding),
+                    type=self.args.type,
                     id=finding.file_key,
                     sourceId=self.source.id,
                     url=finding.url if finding.url else None,
@@ -134,7 +138,6 @@ class HubParser:
     def parse(self):
         for finding in self.dojo_results:
             finding.parse_additional_fields()
-            self.source.type = self.__get_source_type(finding)
 
             self.__check_rule_id(finding)
             self.__parse_finding(finding)

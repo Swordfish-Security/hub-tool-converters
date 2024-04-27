@@ -1,0 +1,122 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "3e1ce13d-40f6-46be-995a-6e3b905b395c",
+                "description": "Import gitleaks results"
+            },
+            "source": [
+                {
+                    "id": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "gitleaks"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "AWS Access Key",
+                            "id": "AWS Access Key",
+                            "severity": "Critical",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "AWS"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Asymmetric Private Key",
+                            "id": "Asymmetric Private Key",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "Asymmetric"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "639c5a76db7ee3c87d0cf2efce09024a",
+                            "sourceId": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                            "fileName": "dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_1_vuln.json",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "2ca05ee7b63720ec325aa52924c5c770",
+                            "sourceId": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                            "fileName": "dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_3_vuln.json",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "035a31f850f288361469f95c0844a117",
+                            "sourceId": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                            "fileName": "dojo/unittests/tools/test_gitlab_secret_detection_report_parser.py",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "4ec18d01aefca5178ced8d6e3eceb447",
+                            "ruleId": "AWS Access Key",
+                            "locationId": "639c5a76db7ee3c87d0cf2efce09024a",
+                            "line": 13,
+                            "code": "\n```\n      \"raw_source_code_extract\": \"REDACTED\",\n```",
+                            "status": "To Verify",
+                            "description": "<p><strong>Commit:</strong> feat: added GitLab secret detection report parser (#4605)</p>\n<ul>\n<li>\n<p>feat: added GitLab secret detection report parser</p>\n</li>\n<li>\n<p>fix: Flake8 compliance</p>\n</li>\n<li>\n<p>fix: remove entry from test_type.json</p>\n</li>\n<li>\n<p>fix: change severity on parser</p>\n</li>\n<li>\n<p>fix: update findings description field for raw_source_code</p>\n</li>\n<li>\n<p>fix: add unique_id_from_tool for findings</p>\n</li>\n<li>\n<p>fix: remove autoimported module</p>\n</li>\n<li>\n<p>fix: typo</p>\n</li>\n<li>\n<p>test: added unittests for unique_id_from_tool field</p>\n</li>\n<li>\n<p>fix: Flake8 compliant</p>\n</li>\n<li>\n<p>test: add testing for findings date</p>\n</li>\n<li>\n<p>fix: datetime bug parser\n<strong>Commit Hash:</strong> 6d127980966808f7413935678e079dcd7fedf9c2\n<strong>Commit Date:</strong> 2021-07-15T22:00:32+07:00\n<strong>Author:</strong> Bhurinat Wangsutthitham <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#97;&#116;&#101;&#46;&#98;&#119;&#97;&#110;&#103;&#115;&#117;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;\">&#110;&#97;&#116;&#101;&#46;&#98;&#119;&#97;&#110;&#103;&#115;&#117;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>\n<strong>Reason:</strong> AWS Access Key\n<strong>Path:</strong> dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_1_vuln.json\n<strong>Line:</strong> 13\n<strong>Leak URL:</strong> <a href=\"\"></a></p>\n</li>\n</ul>\n<p><strong>String Found:</strong></p>\n<p><code>\"raw_source_code_extract\": \"REDACTED\",</code></p>"
+                        },
+                        {
+                            "type": "sast",
+                            "id": "8a79e25f3dbf6ad81da92ceb2c9e492f",
+                            "ruleId": "Asymmetric Private Key",
+                            "locationId": "2ca05ee7b63720ec325aa52924c5c770",
+                            "line": 13,
+                            "code": "\n```\n      \"raw_source_code_extract\": \"REDACTED\",\n```",
+                            "status": "To Verify",
+                            "description": "<p><strong>Commit:</strong> Merge pull request #4877 from DefectDojo/release/2.1.0</p>\n<p>Release/2.1.0\n<strong>Commit Hash:</strong> 8bbcdfd743c5695bdd7d3bc21aa9417131a7ab12\n<strong>Commit Date:</strong> 2021-07-27T11:19:31-05:00\n<strong>Author:</strong> Cody Maffucci <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#52;&#54;&#52;&#53;&#57;&#54;&#54;&#53;&#43;&#77;&#97;&#102;&#102;&#111;&#111;&#99;&#104;&#64;&#117;&#115;&#101;&#114;&#115;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#46;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;\">&#52;&#54;&#52;&#53;&#57;&#54;&#54;&#53;&#43;&#77;&#97;&#102;&#102;&#111;&#111;&#99;&#104;&#64;&#117;&#115;&#101;&#114;&#115;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#46;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a>\n<strong>Reason:</strong> Asymmetric Private Key\n<strong>Path:</strong> dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_3_vuln.json\n<strong>Line:</strong> 13\n<strong>Leak URL:</strong> <a href=\"\"></a></p>\n<p><strong>String Found:</strong></p>\n<p><code>\"raw_source_code_extract\": \"REDACTED\",</code></p>"
+                        },
+                        {
+                            "type": "sast",
+                            "id": "428ea54825ea55a01c975538fd06bff2",
+                            "ruleId": "AWS Access Key",
+                            "locationId": "2ca05ee7b63720ec325aa52924c5c770",
+                            "line": 44,
+                            "code": "\n```\n      \"raw_source_code_extract\": \"REDACTED\",\n```",
+                            "status": "To Verify",
+                            "description": "<p><strong>Commit:</strong> Merge pull request #4877 from DefectDojo/release/2.1.0</p>\n<p>Release/2.1.0\n<strong>Commit Hash:</strong> 8bbcdfd743c5695bdd7d3bc21aa9417131a7ab12\n<strong>Commit Date:</strong> 2021-07-27T11:19:31-05:00\n<strong>Author:</strong> Cody Maffucci <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#52;&#54;&#52;&#53;&#57;&#54;&#54;&#53;&#43;&#77;&#97;&#102;&#102;&#111;&#111;&#99;&#104;&#64;&#117;&#115;&#101;&#114;&#115;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#46;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;\">&#52;&#54;&#52;&#53;&#57;&#54;&#54;&#53;&#43;&#77;&#97;&#102;&#102;&#111;&#111;&#99;&#104;&#64;&#117;&#115;&#101;&#114;&#115;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#46;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a>\n<strong>Reason:</strong> AWS Access Key\n<strong>Path:</strong> dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_3_vuln.json\n<strong>Line:</strong> 44\n<strong>Leak URL:</strong> <a href=\"\"></a></p>\n<p><strong>String Found:</strong></p>\n<p><code>\"raw_source_code_extract\": \"REDACTED\",</code></p>"
+                        },
+                        {
+                            "type": "sast",
+                            "id": "7bd142d19083f929db5f6fabb58035d2",
+                            "ruleId": "AWS Access Key",
+                            "locationId": "035a31f850f288361469f95c0844a117",
+                            "line": 37,
+                            "code": "\n```\n        self.assertEqual(\"AWS\\nREDACTED\", first_finding.description)\n```",
+                            "status": "To Verify",
+                            "description": "<p><strong>Commit:</strong> Merge pull request #4877 from DefectDojo/release/2.1.0</p>\n<p>Release/2.1.0\n<strong>Commit Hash:</strong> 8bbcdfd743c5695bdd7d3bc21aa9417131a7ab12\n<strong>Commit Date:</strong> 2021-07-27T11:19:31-05:00\n<strong>Author:</strong> Cody Maffucci <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#52;&#54;&#52;&#53;&#57;&#54;&#54;&#53;&#43;&#77;&#97;&#102;&#102;&#111;&#111;&#99;&#104;&#64;&#117;&#115;&#101;&#114;&#115;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#46;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;\">&#52;&#54;&#52;&#53;&#57;&#54;&#54;&#53;&#43;&#77;&#97;&#102;&#102;&#111;&#111;&#99;&#104;&#64;&#117;&#115;&#101;&#114;&#115;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#46;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a>\n<strong>Reason:</strong> AWS Access Key\n<strong>Path:</strong> dojo/unittests/tools/test_gitlab_secret_detection_report_parser.py\n<strong>Line:</strong> 37\n<strong>Leak URL:</strong> <a href=\"\"></a></p>\n<p><strong>String Found:</strong></p>\n<p><code>self.assertEqual(\"AWS\\nREDACTED\", first_finding.description)</code></p>"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}

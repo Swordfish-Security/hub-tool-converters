@@ -1,0 +1,124 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "92aaaa2b-9e0e-444c-b86e-a9cee0b10aa5",
+                "description": "Import gitleaks results"
+            },
+            "source": [
+                {
+                    "id": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "gitleaks"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "aws-access-token",
+                            "id": "aws-access-token",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "AWS"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "RSA-PK",
+                            "id": "RSA-PK",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "RSA"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "generic-api-key",
+                            "id": "generic-api-key",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "Generic"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "78bd16891bd8af07214271dd5c748afb",
+                            "sourceId": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                            "fileName": "/conf/aws.tf",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "87a2642c4621e799d82ae2214f3cb358",
+                            "sourceId": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                            "fileName": "conf/rsa.pk",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "ccfe001d953dbc1cd4d0d5470911eca7",
+                            "sourceId": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                            "fileName": "tests/api.py",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "b3f0ed07eee510128abddb8b27c2127a",
+                            "ruleId": "aws-access-token",
+                            "locationId": "78bd16891bd8af07214271dd5c748afb",
+                            "line": 2,
+                            "code": "secretAWSsecret",
+                            "status": "To Verify",
+                            "description": "<p><strong>Secret:</strong> secretAWSsecret\n<strong>Match:</strong> secretAWSsecret\n<strong>Commit message:</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr\n<strong>Commit hash:</strong> 74d53286c550630f80847d37f68aa3065554ac813544072ccd1278da71fafe31\n<strong>Commit date:</strong> 2021-10-14T17:05:15Z\n<strong>Rule Id:</strong> aws-access-token</p>\n<hr />\n<p><strong>Secret:</strong> secretAWSsecret\n<strong>Match:</strong> secretAWSsecret\n<strong>Commit message:</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr\n<strong>Commit hash:</strong> 9619c91b3fd2998be5d9ce198833d7ac9489d9bc378ad7cd28963d5a967f8699\n<strong>Commit date:</strong> 2021-10-14T17:05:15Z\n<strong>Rule Id:</strong> aws-access-token</p>"
+                        },
+                        {
+                            "type": "sast",
+                            "id": "86c141b2b227d53305103a8b3ce525f9",
+                            "ruleId": "RSA-PK",
+                            "locationId": "87a2642c4621e799d82ae2214f3cb358",
+                            "line": 57,
+                            "code": "-----BEGIN RSA PRIVATE KEY-----",
+                            "status": "To Verify",
+                            "description": "<p><strong>Secret:</strong> -----BEGIN RSA PRIVATE KEY-----\n<strong>Match:</strong> -----BEGIN RSA PRIVATE KEY-----\n<strong>Rule Id:</strong> RSA-PK</p>"
+                        },
+                        {
+                            "type": "sast",
+                            "id": "03a8f959a15cd3f6ffaad8320cc704ee",
+                            "ruleId": "generic-api-key",
+                            "locationId": "ccfe001d953dbc1cd4d0d5470911eca7",
+                            "line": 21,
+                            "code": "dfjksdjfs3294dfjlsdaf213",
+                            "status": "To Verify",
+                            "description": "<p><strong>Secret:</strong> dfjksdjfs3294dfjlsdaf213\n<strong>Match:</strong> apikey = \"dfjksdjfs3294dfjlsdaf213\"\n<strong>Commit message:</strong>\n<code>Lorem ipsum dolor sit amet,\nconsetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,\nsed diam voluptua.</code>\n<strong>Commit hash:</strong> 69235ea9ea4d59e18e2cc3c295526de46aa1365c1f0c7a95a22ff1537acdf517\n<strong>Commit date:</strong> 2016-09-16T18:17:59Z\n<strong>Rule Id:</strong> generic-api-key</p>"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
