@@ -34,8 +34,8 @@ class ArgsInstance(ArgsBase):
 class ParsersTest(unittest.TestCase):
 
     def setUp(self):
-        self.dojo_results: dict[str, Any] = {}
-        self.dojo_reports: dict[str, Any] = {}
+        self.results: dict[str, Any] = {}
+        self.reports: dict[str, Any] = {}
 
         self.args_codebase = ArgsCodebase()
         self.__test(self.args_codebase)
@@ -46,11 +46,11 @@ class ParsersTest(unittest.TestCase):
         self.args = (self.args_instance, self.args_codebase)
 
     def __test(self, args):
-        self.dojo_results.update({args.type: {}})
-        self.dojo_reports.update({args.type: {}})
-        self.__get_dojo_reports(args)
+        self.results.update({args.type: {}})
+        self.reports.update({args.type: {}})
+        self.__get_reports(args)
 
-    def __get_dojo_reports(self, args):
+    def __get_reports(self, args):
         for name, parser in PARSER_CLASSES.items():
             if name in TOOL_FORMAT:
                 name = TOOL_FORMAT[name]
@@ -65,15 +65,15 @@ class ParsersTest(unittest.TestCase):
                 args.filename = f'./tests/{args.type}/{name}/{filename}'
 
                 args.scanner = name
-                dojo_parser = parser()
+                iparser = parser()
 
                 with open(args.filename, "r") as f:
-                    dojo_results = dojo_parser.get_findings(f, '')
-                    self.dojo_results[args.type].update({f'{name} - {filename}': dojo_results})
-                hub_parser = HubParser(args=args, dojo_results=dojo_results)
+                    results = iparser.get_findings(f, '')
+                    self.results[args.type].update({f'{name} - {filename}': results})
+                hub_parser = HubParser(args=args, results=results)
                 hub_parser.parse()
 
-                self.dojo_reports[args.type].update({f'{name} - {filename}': hub_parser.get_report()})
+                self.reports[args.type].update({f'{name} - {filename}': hub_parser.get_report()})
 
     def __delete_independent_ids(self, report):
 
@@ -95,20 +95,20 @@ class ParsersTest(unittest.TestCase):
             schema = json.load(f)
 
         for arg in self.args:
-            for name, report in self.dojo_reports[arg.type].items():
+            for name, report in self.reports[arg.type].items():
                 print(f"\nValidating {name}")
                 validate(report, schema)
                 print(f"\nValidated {name}")
 
     def test_unique_ids(self):
         for arg in self.args:
-            for name in self.dojo_reports[arg.type].keys():
-                findings: list = self.dojo_reports[arg.type][name]['scans'][0]['results'][0]['findings']
-                self.assertEqual(len(findings), len(self.dojo_results[arg.type][name]), f'{name} - {findings} != {self.dojo_results[arg.type][name]}')
+            for name in self.reports[arg.type].keys():
+                findings: list = self.reports[arg.type][name]['scans'][0]['results'][0]['findings']
+                self.assertEqual(len(findings), len(self.results[arg.type][name]), f'{name} - {findings} != {self.results[arg.type][name]}')
 
     def test_output_files(self):
         for arg in self.args:
-            for name, report in self.dojo_reports[arg.type].items():
+            for name, report in self.reports[arg.type].items():
                 scanner, filename = name.split(' - ')
                 filename = filename.replace('.json', '')
                 with open(f'./tests/{arg.type}/{scanner}/{filename}_hub.json', 'r') as f:
