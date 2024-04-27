@@ -83,11 +83,11 @@ if __name__ == '__main__':
 
     validate_args(args)
 
-    dojo_parser = PARSER_CLASSES[args.scanner]()
+    parser = PARSER_CLASSES[args.scanner]()
 
     with open(args.filename, "r") as f:
-        dojo_results = dojo_parser.get_findings(f, '')
+        results = parser.get_findings(f, '')
 
-    hub_parser = HubParser(args=args, dojo_results=dojo_results)
+    hub_parser = HubParser(args=args, results=results)
     hub_parser.parse()
     hub_parser.save()

@@ -14,8 +14,8 @@ import markdown
 
 class HubParser:
 
-    def __init__(self, args: Any, dojo_results: list[Finding]):
-        self.dojo_results = dojo_results
+    def __init__(self, args: Any, results: list[Finding]):
+        self.results = results
 
         self.args = args
         self.__create_source()
@@ -136,7 +136,7 @@ class HubParser:
             finding.ruleId = f"{self.args.scanner} {finding.severity}"
 
     def parse(self):
-        for finding in self.dojo_results:
+        for finding in self.results:
             finding.parse_additional_fields()
 
             self.__check_rule_id(finding)

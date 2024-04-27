@@ -20,7 +20,7 @@ class GitleaksParser(object):
 
     def get_findings(self, filename, test):
         """
-        Converts a Gitleaks report to DefectDojo findings
+        Converts a Gitleaks report to findings
         """
         issues = json.load(filename)
         # empty report are just null object
