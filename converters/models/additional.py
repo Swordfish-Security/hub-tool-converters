@@ -18,6 +18,10 @@ class AdditionalFields:
             self.url = '\n'.join(x.replace('\n', '') for x in urls)
 
     def __parse_rule_id(self) -> None:
+        # Trying to use title for DAST
+        if hasattr(self, "unsaved_endpoints") and isinstance(self.unsaved_endpoints, list):
+            self.ruleId = self.title
+            return
         if "Rule Id" in self.description:
             self.ruleId = self.description.split("**Rule Id:** ")[1].split("\n")[0]
         elif self.vuln_id_from_tool:
@@ -71,7 +75,11 @@ class AdditionalFields:
             ).hexdigest()
 
     def __parse_rule_description(self) -> None:
-        self.rule_description = self.reason if self.reason else "Unknown"
+        # Trying to use title for DAST
+        if hasattr(self, "unsaved_endpoints") and isinstance(self.unsaved_endpoints, list):
+            self.rule_description = self.title + '\n\n' + self.impact + '\n' + self.mitigation
+        else:
+            self.rule_description = self.reason if self.reason else "Unknown"
 
     def parse_additional_fields(self) -> None:
         self.__parse_url()
