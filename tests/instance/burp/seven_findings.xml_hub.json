@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "6fada6c3-8796-42e7-b014-132782efd708",
+                "id": "298926b5-0607-4bdd-adbe-999ff5d3e112",
                 "description": "Import burp results"
             },
             "source": [
                 {
-                    "id": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                    "id": "3cc9129c-adce-4729-a6f0-98c383168d27",
                     "type": "instance",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -23,101 +23,101 @@
                     "rules": [
                         {
                             "type": "dast",
-                            "name": "5245344",
-                            "id": "5245344",
+                            "name": "Frameable response (potential Clickjacking)",
+                            "id": "Frameable response (potential Clickjacking)",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "(potential"
+                            "description": "Frameable response (potential Clickjacking)\n\nIt might be possible for a web page controlled by an attacker to load the content of this response within an iframe on the attacker's page. This may enable a \"clickjacking\" attack, in which the attacker's page overlays the target application's interface with a different interface provided by the attacker. By inducing victim users to perform actions such as mouse clicks and keystrokes, the attacker can cause them to unwittingly carry out actions within the application that is being targeted. This technique allows the attacker to circumvent defenses against cross-site request forgery, and may result in unauthorized actions.  \n  \nNote that this issue is being reported because the application's response does not set a suitable **X-Frame-Options** header in order to prevent framing attacks. Some applications attempt to prevent these attacks from within the HTML page itself, using \"framebusting\" code. However, this type of defense is normally ineffective and can usually be circumvented by a skilled attacker.\n\nYou should review the application functions that are accessible from within the response, and determine whether they can be used by application users to perform any sensitive actions within the application. If so, then a framing attack targeting this response may result in unauthorized actions.  \n  \nTo effectively prevent framing attacks, the application should return a response header with the name **X-Frame-Options** and the value **DENY** to prevent framing altogether, or the value **SAMEORIGIN** to allow framing only by pages on the same origin as the response itself.\n"
                         },
                         {
                             "type": "dast",
-                            "name": "8389120",
-                            "id": "8389120",
+                            "name": "HTML does not specify charset",
+                            "id": "HTML does not specify charset",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "not"
+                            "description": "HTML does not specify charset\n\nIf a web response states that it contains HTML content but does not specify a character set, then the browser may analyze the HTML and attempt to determine which character set it appears to be using. Even if the majority of the HTML actually employs a standard character set such as UTF-8, the presence of non-standard characters anywhere in the response may cause the browser to interpret the content using a different character set. This can have unexpected results, and can lead to cross-site scripting vulnerabilities in which non-standard encodings like UTF-7 can be used to bypass the application's defensive filters.  \n  \nIn most cases, the absence of a charset directive does not constitute a security flaw, particularly if the response contains static content. You should review the contents of the response and the context in which it appears to determine whether any vulnerability exists.\n\nFor every response containing HTML content, the application should include within the Content-type header a directive specifying a standard recognized character set, for example **charset=ISO-8859-1**.\n"
                         },
                         {
                             "type": "dast",
-                            "name": "2097920",
-                            "id": "2097920",
+                            "name": "Cross-site scripting (reflected)",
+                            "id": "Cross-site scripting (reflected)",
                             "severity": "High",
                             "cwe": null,
-                            "description": "(reflected)"
+                            "description": "Cross-site scripting (reflected)\n\nReflected cross-site scripting vulnerabilities arise when data is copied from a request and echoed into the application's immediate response in an unsafe way. An attacker can use the vulnerability to construct a request which, if issued by another application user, will cause JavaScript code supplied by the attacker to execute within the user's browser in the context of that user's session with the application.  \n  \nThe attacker-supplied code can perform a wide variety of actions, such as stealing the victim's session token or login credentials, performing arbitrary actions on the victim's behalf, and logging their keystrokes.  \n  \nUsers can be induced to issue the attacker's crafted request in various ways. For example, the attacker can send a victim a link containing a malicious URL in an email or instant message. They can submit the link to popular web sites that allow content authoring, for example in blog comments. And they can create an innocuous looking web site which causes anyone viewing it to make arbitrary cross-domain requests to the vulnerable application (using either the GET or the POST method).  \n  \nThe security impact of cross-site scripting vulnerabilities is dependent upon the nature of the vulnerable application, the kinds of data and functionality which it contains, and the other applications which belong to the same domain and organization. If the application is used only to display non-sensitive public content, with no authentication or access control functionality, then a cross-site scripting flaw may be considered low risk. However, if the same application resides on a domain which can access cookies for other more security-critical applications, then the vulnerability could be used to attack those other applications, and so may be considered high risk. Similarly, if the organization which owns the application is a likely target for phishing attacks, then the vulnerability could be leveraged to lend credibility to such attacks, by injecting Trojan functionality into the vulnerable application, and exploiting users' trust in the organization in order to capture credentials for other applications which it owns. In many kinds of application, such as those providing online banking functionality, cross-site scripting should always be considered high risk.\n\nIn most situations where user-controllable data is copied into application responses, cross-site scripting attacks can be prevented using two layers of defenses:\n\n  * Input should be validated as strictly as possible on arrival, given the kind of content which it is expected to contain. For example, personal names should consist of alphabetical and a small range of typographical characters, and be relatively short; a year of birth should consist of exactly four numerals; email addresses should match a well-defined regular expression. Input which fails the validation should be rejected, not sanitized.\n  * User input should be HTML-encoded at any point where it is copied into application responses. All HTML metacharacters, including < > \" ' and =, should be replaced with the corresponding HTML entities (&lt; &gt; etc).\n\nIn cases where the application's functionality allows users to author content using a restricted subset of HTML tags and attributes (for example, blog comments which allow limited formatting and linking), it is necessary to parse the supplied HTML to validate that it does not use any dangerous syntax; this is a non-trivial task.\n"
                         },
                         {
                             "type": "dast",
-                            "name": "1049088",
-                            "id": "1049088",
+                            "name": "SQL injection",
+                            "id": "SQL injection",
                             "severity": "High",
                             "cwe": null,
-                            "description": "1049088"
+                            "description": "SQL injection\n\nSQL injection vulnerabilities arise when user-controllable data is incorporated into database SQL queries in an unsafe manner. An attacker can supply crafted input to break out of the data context in which their input appears and interfere with the structure of the surrounding query.  \n  \nVarious attacks can be delivered via SQL injection, including reading or modifying critical application data, interfering with application logic, escalating privileges within the database and executing operating system commands.\n\nThe application should handle errors gracefully and prevent SQL error messages from being returned in responses. \nThe most effective way to prevent SQL injection attacks is to use parameterized queries (also known as prepared statements) for all database access. This method uses two steps to incorporate potentially tainted data into SQL queries: first, the application specifies the structure of the query, leaving placeholders for each item of user input; second, the application specifies the contents of each placeholder. Because the structure of the query has already been defined in the first step, it is not possible for malformed data in the second step to interfere with the query structure. You should review the documentation for your database and application platform to determine the appropriate APIs which you can use to perform parameterized queries. It is strongly recommended that you parameterize _every_ variable data item that is incorporated into database queries, even if it is not obviously tainted, to prevent oversights occurring and avoid vulnerabilities being introduced by changes elsewhere within the code base of the application.  \n  \nYou should be aware that some commonly employed and recommended mitigations for SQL injection vulnerabilities are not always effective:\n\n  * One common defense is to double up any single quotation marks appearing within user input before incorporating that input into a SQL query. This defense is designed to prevent malformed data from terminating the string in which it is inserted. However, if the data being incorporated into queries is numeric, then the defense may fail, because numeric data may not be encapsulated within quotes, in which case only a space is required to break out of the data context and interfere with the query. Further, in second-order SQL injection attacks, data that has been safely escaped when initially inserted into the database is subsequently read from the database and then passed back to it again. Quotation marks that have been doubled up initially will return to their original form when the data is reused, allowing the defense to be bypassed.\n  * Another often cited defense is to use stored procedures for database access. While stored procedures can provide security benefits, they are not guaranteed to prevent SQL injection attacks. The same kinds of vulnerabilities that arise within standard dynamic SQL queries can arise if any SQL is dynamically constructed within stored procedures. Further, even if the procedure is sound, SQL injection can arise if the procedure is invoked in an unsafe manner using user-controllable data.\n\n\n"
                         },
                         {
                             "type": "dast",
-                            "name": "3145984",
-                            "id": "3145984",
+                            "name": "Cleartext submission of password",
+                            "id": "Cleartext submission of password",
                             "severity": "High",
                             "cwe": null,
-                            "description": "of"
+                            "description": "Cleartext submission of password\n\nPasswords submitted over an unencrypted connection are vulnerable to capture by an attacker who is suitably positioned on the network. This includes any malicious party located on the user's own network, within their ISP, within the ISP used by the application, and within the application's hosting infrastructure. Even if switched networks are employed at some of these locations, techniques exist to circumvent this defense and monitor the traffic passing through switches. \n\nThe application should use transport-level encryption (SSL or TLS) to protect all sensitive communications passing between the client and the server. Communications that should be protected include the login mechanism and related functionality, and any functions where sensitive data can be accessed or privileged actions can be performed. These areas of the application should employ their own session handling mechanism, and the session tokens used should never be transmitted over unencrypted communications. If HTTP cookies are used for transmitting session tokens, then the secure flag should be set to prevent transmission over clear-text HTTP.\n"
                         },
                         {
                             "type": "dast",
-                            "name": "5244928",
-                            "id": "5244928",
+                            "name": "Password field with autocomplete enabled",
+                            "id": "Password field with autocomplete enabled",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "with"
+                            "description": "Password field with autocomplete enabled\n\nMost browsers have a facility to remember user credentials that are entered into HTML forms. This function can be configured by the user and also by applications which employ user credentials. If the function is enabled, then credentials entered by the user are stored on their local computer and retrieved by the browser on future visits to the same application.  \n  \nThe stored credentials can be captured by an attacker who gains access to the computer, either locally or through some remote compromise. Further, methods have existed whereby a malicious web site can retrieve the stored credentials for other applications, by exploiting browser vulnerabilities or through application-level cross-domain attacks. \n\nTo prevent browsers from storing credentials entered into HTML forms, you should include the attribute **autocomplete=\"off\"** within the FORM tag (to protect all form fields) or within the relevant INPUT tags (to protect specific individual fields).\n"
                         },
                         {
                             "type": "dast",
-                            "name": "5244416",
-                            "id": "5244416",
+                            "name": "Cookie without HttpOnly flag set",
+                            "id": "Cookie without HttpOnly flag set",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "HttpOnly"
+                            "description": "Cookie without HttpOnly flag set\n\nIf the HttpOnly attribute is set on a cookie, then the cookie's value cannot be read or set by client-side JavaScript. This measure can prevent certain client-side attacks, such as cross-site scripting, from trivially capturing the cookie's value via an injected script.\n\nThere is usually no good reason not to set the HttpOnly flag on all cookies. Unless you specifically require legitimate client-side scripts within your application to read or set a cookie's value, you should set the HttpOnly flag by including this attribute within the relevant Set-cookie directive.  \n  \nYou should be aware that the restrictions imposed by the HttpOnly flag can potentially be circumvented in some circumstances, and that numerous other serious attacks can be delivered by client-side script injection, aside from simple cookie stealing.\n"
                         }
                     ],
                     "locations": [
                         {
                             "type": "instance",
                             "id": "a9ae7e2a09e6885ffbd824e41a393178",
-                            "sourceId": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
                             "url": "http://bwa/bodgeit/product.jsp\nhttp://bwa/bodgeit/search.jsp\nhttp://bwa/bodgeit/",
                             "description": "URL: http://bwa/bodgeit/product.jsp\n\n\nURL: http://bwa/bodgeit/search.jsp\n\n\nURL: http://bwa/bodgeit/\n\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "dea403ec943ad48d57143987e1fd358f",
-                            "sourceId": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
                             "url": "http://bwa/bodgeit/\nhttp://bwa/bodgeit/product.jsp\nhttp://bwa/bodgeit/basket.jsp\nhttp://bwa/bodgeit/search.jsp\nhttp://bwa/bodgeit/contact.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "description": "URL: http://bwa/bodgeit/\n\n\nURL: http://bwa/bodgeit/product.jsp\n\n\nURL: http://bwa/bodgeit/basket.jsp\n\n\nURL: http://bwa/bodgeit/search.jsp\n\n\nURL: http://bwa/bodgeit/contact.jsp\n\n\nURL: http://bwa/bodgeit/login.jsp\n\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "a6de11c15945f1220ca376fec3c02aa4",
-                            "sourceId": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
                             "url": "http://bwa/bodgeit/search.jsp",
                             "description": "URL: http://bwa/bodgeit/search.jsp\n\nThe value of the **q** request parameter is copied into the HTML document as plain text between tags. The payload **5d4ff <script>alert(1)</script>18327** was submitted in the q parameter. This input was echoed unmodified in the application's response.  \n  \nThis proof-of-concept attack demonstrates that it is possible to inject arbitrary JavaScript into the application's response.\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "fb440f2d23cf5cb47a1079f37cef3e90",
-                            "sourceId": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/basket.jsp",
                             "description": "URL: http://bwa/bodgeit/login.jsp\n\nThe **password** parameter appears to be vulnerable to SQL injection attacks. A single quote was submitted in the password parameter, and a general error message was returned. Two single quotes were then submitted and the error message disappeared. You should review the contents of the error message, and the application's handling of other input, to confirm whether a vulnerability is present.\n\nURL: http://bwa/bodgeit/login.jsp\n\nThe **username** parameter appears to be vulnerable to SQL injection attacks. A single quote was submitted in the username parameter, and a general error message was returned. Two single quotes were then submitted and the error message disappeared. You should review the contents of the error message, and the application's handling of other input, to confirm whether a vulnerability is present.\n\nURL: http://bwa/bodgeit/basket.jsp\n\nThe **b_id** cookie appears to be vulnerable to SQL injection attacks. The payload **'** was submitted in the b_id cookie, and a database error message was returned. You should review the contents of the error message, and the application's handling of other input, to confirm whether a vulnerability is present.  \n  \nThe database appears to be Microsoft SQL Server.\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "a7574f9ce5d871e5c1c38a13f6a55c91",
-                            "sourceId": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "description": "URL: http://bwa/bodgeit/login.jsp\n\nThe page contains a form with the following action URL, which is submitted over clear-text HTTP:\n\n  * http://bwa/bodgeit/login.jsp\n\nThe form contains the following password field:\n  * password\n\n\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "ebcad36a5c36bf025379f6963e9fd500",
-                            "sourceId": "545391fe-e7bf-4e10-9fcb-4e8d3a14983c",
+                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
                             "url": "http://bwa/bodgeit/",
                             "description": "URL: http://bwa/bodgeit/\n\nThe following cookie was issued by the application and does not have the HttpOnly flag set:\n\n  * **JSESSIONID=AD00240A932835EDD60B3F7487A9D15D; Path=/**\n\nThe cookie appears to contain a session token, which may increase the risk associated with this issue. You should review the contents of the cookie to determine its function.\n\n"
                         }
@@ -126,7 +126,7 @@
                         {
                             "type": "dast",
                             "id": "dd2c6ccdb912cb9c20ee817e3fa1ab2a",
-                            "ruleId": "5245344",
+                            "ruleId": "Frameable response (potential Clickjacking)",
                             "locationId": "a9ae7e2a09e6885ffbd824e41a393178",
                             "url": "http://bwa/bodgeit/product.jsp\nhttp://bwa/bodgeit/search.jsp\nhttp://bwa/bodgeit/",
                             "status": "To Verify",
@@ -135,7 +135,7 @@
                         {
                             "type": "dast",
                             "id": "29a80bbb5adb1b51792173d229d5988f",
-                            "ruleId": "8389120",
+                            "ruleId": "HTML does not specify charset",
                             "locationId": "dea403ec943ad48d57143987e1fd358f",
                             "url": "http://bwa/bodgeit/\nhttp://bwa/bodgeit/product.jsp\nhttp://bwa/bodgeit/basket.jsp\nhttp://bwa/bodgeit/search.jsp\nhttp://bwa/bodgeit/contact.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "status": "To Verify",
@@ -144,7 +144,7 @@
                         {
                             "type": "dast",
                             "id": "d498a1ac4410f62fee092a4b5b1fc437",
-                            "ruleId": "2097920",
+                            "ruleId": "Cross-site scripting (reflected)",
                             "locationId": "a6de11c15945f1220ca376fec3c02aa4",
                             "url": "http://bwa/bodgeit/search.jsp",
                             "status": "To Verify",
@@ -153,7 +153,7 @@
                         {
                             "type": "dast",
                             "id": "3727ee509e03b335785b79c8784fdd79",
-                            "ruleId": "1049088",
+                            "ruleId": "SQL injection",
                             "locationId": "fb440f2d23cf5cb47a1079f37cef3e90",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/basket.jsp",
                             "status": "To Verify",
@@ -162,7 +162,7 @@
                         {
                             "type": "dast",
                             "id": "154155471754d8c8b147a059cd3bdda6",
-                            "ruleId": "3145984",
+                            "ruleId": "Cleartext submission of password",
                             "locationId": "a7574f9ce5d871e5c1c38a13f6a55c91",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "status": "To Verify",
@@ -171,7 +171,7 @@
                         {
                             "type": "dast",
                             "id": "b730277b249c5bf41c3f1f44df4fa9ac",
-                            "ruleId": "5244928",
+                            "ruleId": "Password field with autocomplete enabled",
                             "locationId": "a7574f9ce5d871e5c1c38a13f6a55c91",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "status": "To Verify",
@@ -180,7 +180,7 @@
                         {
                             "type": "dast",
                             "id": "e24f101bfda3001fabf84773d40e8740",
-                            "ruleId": "5244416",
+                            "ruleId": "Cookie without HttpOnly flag set",
                             "locationId": "ebcad36a5c36bf025379f6963e9fd500",
                             "url": "http://bwa/bodgeit/",
                             "status": "To Verify",
