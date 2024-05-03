@@ -36,7 +36,7 @@ class BurpParser(object):
         items = {}
         for node in tree.findall("issue"):
             item = get_item(node, test)
-            dupe_key = item.vuln_id_from_tool
+            dupe_key = item.unique_id_from_tool
             if dupe_key in items:
                 items[dupe_key].unsaved_endpoints = (
                     items[dupe_key].unsaved_endpoints + item.unsaved_endpoints
@@ -248,7 +248,7 @@ def get_item(item_node, test):
     # Finding and Endpoint objects returned have not been saved to the database
     finding = Finding(
         title=item_node.findall("name")[0].text,
-        url=url,
+        url=url_host + path,
         test=test,
         severity=severity,
         param=parameter,
