@@ -29,11 +29,13 @@ class AdditionalFields:
                 self.ruleId = self.vuln_id_from_tool
         elif "Reason:" in self.description:
             self.ruleId = self.description.split("**Reason:** ")[1].split("\n")[0]
+        elif self.reason:
+            self.ruleId = self.reason
 
     def __parse_reason(self) -> None:
         # Пример: "Hard coded {reason} found in {file_path}"
         #            0    1     !2!      3    4      5
-        if self.title:
+        if not self.reason and self.title:
             self.reason = self.title.split()[2] if len(self.title.split()) > 2 else None
 
         if not self.reason and self.vuln_id_from_tool:
@@ -53,6 +55,8 @@ class AdditionalFields:
                 self.secret = self.description.split("Code:\n")[1]
         elif "Code flow:" in self.description:
             self.secret = self.description.split("**Code flow:**\n")[1]
+        if self.secret:
+            self.secret = self.secret.strip().replace("```", "")
 
     def __parse_file_key(self) -> None:
         if self.file_path is not None:
@@ -83,6 +87,8 @@ class AdditionalFields:
             self.rule_description = self.title + '\n\n' + self.impact + '\n' + self.mitigation
         else:
             self.rule_description = self.reason if self.reason else "Unknown"
+            if self.reason and self.references:
+                self.rule_description += '\n' + self.references
 
     def parse_additional_fields(self) -> None:
         self.__parse_url()

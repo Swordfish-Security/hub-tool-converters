@@ -49,6 +49,7 @@ class FindingHubSast:
     code: str
     status: str
     description: str
+    stacks: list[LocationStack]
 
     def __init__(
             self,

@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "47a2ca32-3920-4b69-8800-6b7bf68e028d",
+                "id": "0bf4ed58-2d90-41d1-ba22-9a2af942e3ef",
                 "description": "Import gosec results"
             },
             "source": [
                 {
-                    "id": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                    "id": "26682ae9-528e-4c4e-8655-795a72a296fb",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -26,89 +26,113 @@
                     "rules": [
                         {
                             "type": "sast",
-                            "name": "gosec Low",
-                            "id": "gosec Low",
+                            "name": "Errors unhandled. - rule G104",
+                            "id": "Errors unhandled. - rule G104",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "-"
+                            "description": "Errors unhandled. - rule G104\nhttps://securego.io/docs/rules/g104.html"
                         },
                         {
                             "type": "sast",
-                            "name": "gosec Medium",
-                            "id": "gosec Medium",
+                            "name": "Blacklisted import crypto/md5: weak cryptographic primitive - rule G501",
+                            "id": "Blacklisted import crypto/md5: weak cryptographic primitive - rule G501",
                             "severity": "Medium",
                             "cwe": null,
-                            "description": "crypto/md5:"
+                            "description": "Blacklisted import crypto/md5: weak cryptographic primitive - rule G501\nhttps://securego.io/docs/rules/g501.html"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Use of weak cryptographic primitive - rule G401",
+                            "id": "Use of weak cryptographic primitive - rule G401",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "Use of weak cryptographic primitive - rule G401\nhttps://securego.io/docs/rules/g401.html"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
+                            "id": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "this method will not auto-escape HTML. Verify data is well formed. - rule G203\nhttps://securego.io/docs/rules/g203.html"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "SQL string formatting - rule G201",
+                            "id": "SQL string formatting - rule G201",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "SQL string formatting - rule G201\nhttps://securego.io/docs/rules/g201.html"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "300ff40dd869c3e56b29de930221087f",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/app.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "43a6ce4bfdc6203c2918d4ab660ef090",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/setting/setting.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/user/user.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "b2d59c0c7e769bf642dfb74439dc579d",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/util/cookie.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c821785c97e8471c133324f49e77ce26",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/util/template.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8f8b5e58437eb58b3cda667d99afc3c3",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/util/middleware/middleware.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "372ca5daa138b427923927d2f2476718",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/csa/csa.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "8ad5f8a094a24a90b5edbc50619d5e79",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/idor/idor.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2ee8ac828af647526989f8c14c258b64",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/sqli/function.go",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "13830767e42dbd5e02bcbc040004d331",
-                            "sourceId": "9236611a-9129-4a6a-8dec-c11d903c6f35",
+                            "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/xss/xss.go",
                             "language": "Any"
                         }
@@ -116,283 +140,507 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "3753ccf385766a6019ec51904c386b1c",
-                            "ruleId": "gosec Low",
+                            "id": "1585421be7a6d74738142eed9624720d",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "300ff40dd869c3e56b29de930221087f",
                             "line": 79,
-                            "code": "\n```s.ListenAndServe()```",
+                            "code": "s.ListenAndServe()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/app.go</p>\n<p>Line number: 79</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>s.ListenAndServe()</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/app.go</p>\n<p>Line number: 79</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>s.ListenAndServe()</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "300ff40dd869c3e56b29de930221087f",
+                                    "sequence": 1,
+                                    "code": "s.ListenAndServe()",
+                                    "line": 79
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "4044fc5b6383557729d27f676e58d717",
-                            "ruleId": "gosec Low",
+                            "id": "ebb166c87370b3d02e7860dcd472d5da",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "43a6ce4bfdc6203c2918d4ab660ef090",
                             "line": 64,
-                            "code": "\n```db,_ := database.Connect()```",
+                            "code": "db,_ := database.Connect()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p>\n<p>Line number: 64</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>db,_ := database.Connect()</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p>\n<p>Line number: 64</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>db,_ := database.Connect()</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "43a6ce4bfdc6203c2918d4ab660ef090",
+                                    "sequence": 1,
+                                    "code": "db,_ := database.Connect()",
+                                    "line": 64
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "8543adc7b83ce40b3c14abc50432114d",
-                            "ruleId": "gosec Low",
+                            "id": "cc5ed632d0fd63d31372520be921f4f9",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "43a6ce4bfdc6203c2918d4ab660ef090",
                             "line": 66,
-                            "code": "\n```_ = db.QueryRow(sql).Scan(&version)```",
+                            "code": "_ = db.QueryRow(sql).Scan(&version)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p>\n<p>Line number: 66</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>_ = db.QueryRow(sql).Scan(&amp;version)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p>\n<p>Line number: 66</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>_ = db.QueryRow(sql).Scan(&amp;version)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "43a6ce4bfdc6203c2918d4ab660ef090",
+                                    "sequence": 1,
+                                    "code": "_ = db.QueryRow(sql).Scan(&version)",
+                                    "line": 66
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "49e83341b4cbdabe4d90403297e340ec",
-                            "ruleId": "gosec Medium",
+                            "id": "4bcfba7ac9efcf1b67617911650fb8ce",
+                            "ruleId": "Blacklisted import crypto/md5: weak cryptographic primitive - rule G501",
                             "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
                             "line": 8,
-                            "code": "\n```\"crypto/md5\"```",
+                            "code": "\"crypto/md5\"",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 8</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 8</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
+                                    "sequence": 1,
+                                    "code": "\"crypto/md5\"",
+                                    "line": 8
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "c65c427d8b1a2977fa3d64842b5d1f41",
-                            "ruleId": "gosec Medium",
+                            "id": "d1357dc713e89e8e9db0fb007ae75230",
+                            "ruleId": "Use of weak cryptographic primitive - rule G401",
                             "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
                             "line": 160,
-                            "code": "\n```md5.New()```",
+                            "code": "md5.New()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 160</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 160</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
+                                    "sequence": 1,
+                                    "code": "md5.New()",
+                                    "line": 160
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "2e4bcef9da7177a68e76ad54cb383d2d",
-                            "ruleId": "gosec Low",
+                            "id": "512eb6f2d3d8a06f56092c5ca3675f36",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
                             "line": 161,
-                            "code": "\n```hasher.Write([]byte(text))```",
+                            "code": "hasher.Write([]byte(text))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 161</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 161</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
+                                    "sequence": 1,
+                                    "code": "hasher.Write([]byte(text))",
+                                    "line": 161
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "72b085124964260194db8cf97eb69145",
-                            "ruleId": "gosec Low",
+                            "id": "78ebf34ee9ea53bdf5be213926b17460",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "b2d59c0c7e769bf642dfb74439dc579d",
                             "line": 42,
-                            "code": "\n```cookie, _ := r.Cookie(name)```",
+                            "code": "cookie, _ := r.Cookie(name)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/cookie.go</p>\n<p>Line number: 42</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>cookie, _ := r.Cookie(name)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/cookie.go</p>\n<p>Line number: 42</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>cookie, _ := r.Cookie(name)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "b2d59c0c7e769bf642dfb74439dc579d",
+                                    "sequence": 1,
+                                    "code": "cookie, _ := r.Cookie(name)",
+                                    "line": 42
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "0a99fc43e1351060202dd7b145bddd13",
-                            "ruleId": "gosec Low",
+                            "id": "72640fc30af1a5e78716e5a700349fa7",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "c821785c97e8471c133324f49e77ce26",
                             "line": 35,
-                            "code": "\n```w.Write(b)```",
+                            "code": "w.Write(b)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 35</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>w.Write(b)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 35</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>w.Write(b)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c821785c97e8471c133324f49e77ce26",
+                                    "sequence": 1,
+                                    "code": "w.Write(b)",
+                                    "line": 35
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "88d3c98774abc889a8c6766264dea86e",
-                            "ruleId": "gosec Low",
+                            "id": "8d4eb7e1e8734ed4cb49542dd724e151",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "c821785c97e8471c133324f49e77ce26",
                             "line": 41,
-                            "code": "\n```template.ExecuteTemplate(w, name, data)```",
+                            "code": "template.ExecuteTemplate(w, name, data)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 41</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>template.ExecuteTemplate(w, name, data)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 41</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>template.ExecuteTemplate(w, name, data)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c821785c97e8471c133324f49e77ce26",
+                                    "sequence": 1,
+                                    "code": "template.ExecuteTemplate(w, name, data)",
+                                    "line": 41
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "9f47b15e122243e5e7e63562d89ae3a9",
-                            "ruleId": "gosec Medium",
+                            "id": "31e4cf447d4840ae33b2a9a259604e54",
+                            "ruleId": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
                             "locationId": "c821785c97e8471c133324f49e77ce26",
                             "line": 45,
-                            "code": "\n```template.HTML(text)```",
+                            "code": "template.HTML(text)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 45</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(text)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 45</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(text)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c821785c97e8471c133324f49e77ce26",
+                                    "sequence": 1,
+                                    "code": "template.HTML(text)",
+                                    "line": 45
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "fd86098ee826a3b0db70d1b4f7acbef9",
-                            "ruleId": "gosec Low",
+                            "id": "60734435113168d005cd5dbba05c7f48",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8f8b5e58437eb58b3cda667d99afc3c3",
                             "line": 70,
-                            "code": "\n```sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)```",
+                            "code": "sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p>\n<p>Line number: 70</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p>\n<p>Line number: 70</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8f8b5e58437eb58b3cda667d99afc3c3",
+                                    "sequence": 1,
+                                    "code": "sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)",
+                                    "line": 70
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "7a9236de93b764f8e260108221576696",
-                            "ruleId": "gosec Low",
+                            "id": "3e200806a0f58d599fc3e6abe3bc41c3",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8f8b5e58437eb58b3cda667d99afc3c3",
                             "line": 73,
-                            "code": "\n```w.Write([]byte(\"Forbidden\"))```",
+                            "code": "w.Write([]byte(\"Forbidden\"))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p>\n<p>Line number: 73</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>w.Write([]byte(\"Forbidden\"))</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p>\n<p>Line number: 73</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>w.Write([]byte(\"Forbidden\"))</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8f8b5e58437eb58b3cda667d99afc3c3",
+                                    "sequence": 1,
+                                    "code": "w.Write([]byte(\"Forbidden\"))",
+                                    "line": 73
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "0ffb18b5faabec50869f090d1b51a090",
-                            "ruleId": "gosec Medium",
+                            "id": "5a0069d50c6725dacd31b2ca13c3ffa9",
+                            "ruleId": "Blacklisted import crypto/md5: weak cryptographic primitive - rule G501",
                             "locationId": "372ca5daa138b427923927d2f2476718",
                             "line": 7,
-                            "code": "\n```\"crypto/md5\"```",
+                            "code": "\"crypto/md5\"",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 7</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 7</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "372ca5daa138b427923927d2f2476718",
+                                    "sequence": 1,
+                                    "code": "\"crypto/md5\"",
+                                    "line": 7
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "c7964bc6704782388da1817dfbc0750d",
-                            "ruleId": "gosec Medium",
+                            "id": "ca692c0fd56d1a1e0e3b69d3ceebf475",
+                            "ruleId": "Use of weak cryptographic primitive - rule G401",
                             "locationId": "372ca5daa138b427923927d2f2476718",
                             "line": 62,
-                            "code": "\n```md5.New()```",
+                            "code": "md5.New()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 62</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 62</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "372ca5daa138b427923927d2f2476718",
+                                    "sequence": 1,
+                                    "code": "md5.New()",
+                                    "line": 62
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "509f715629a3074299b654b1ce96e313",
-                            "ruleId": "gosec Low",
+                            "id": "461671771034ff06681ef5f06a1d7246",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "372ca5daa138b427923927d2f2476718",
                             "line": 63,
-                            "code": "\n```hasher.Write([]byte(text))```",
+                            "code": "hasher.Write([]byte(text))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 63</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 63</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "372ca5daa138b427923927d2f2476718",
+                                    "sequence": 1,
+                                    "code": "hasher.Write([]byte(text))",
+                                    "line": 63
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "1ad3112beee8bfa3c106c5fb9f9259bc",
-                            "ruleId": "gosec Medium",
+                            "id": "45a6bb65c97326e9dbb6946f7b7cbb46",
+                            "ruleId": "Blacklisted import crypto/md5: weak cryptographic primitive - rule G501",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 8,
-                            "code": "\n```\"crypto/md5\"```",
+                            "code": "\"crypto/md5\"",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 8</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 8</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "\"crypto/md5\"",
+                                    "line": 8
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "274f3961946e32675d32768aa4edfadf",
-                            "ruleId": "gosec Low",
+                            "id": "28de14201193cfa5c9855486322cbe10",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 42,
-                            "code": "\n```p.GetData(sid)```",
+                            "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 42</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 42</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "p.GetData(sid)",
+                                    "line": 42
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "3fdcf3afa6ba185ac243dc5dafe111de",
-                            "ruleId": "gosec Low",
+                            "id": "4b4c903f6622160102f5e139d322d70b",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 61,
-                            "code": "\n```p.GetData(sid)```",
+                            "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 61</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 61</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "p.GetData(sid)",
+                                    "line": 61
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "4090733df350c17c1da7728480210464",
-                            "ruleId": "gosec Low",
+                            "id": "a6f2c6e17066dfff6dfb151c69b0d360",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 82,
-                            "code": "\n```p.GetData(sid)```",
+                            "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 82</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 82</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "p.GetData(sid)",
+                                    "line": 82
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "7452a79f443e4998f2d96fb66e484f22",
-                            "ruleId": "gosec Low",
+                            "id": "d460c4f9603b03e0d431fcffb38ce673",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 124,
-                            "code": "\n```p.GetData(sid)```",
+                            "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 124</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 124</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "p.GetData(sid)",
+                                    "line": 124
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "901c7e434575bdd0a4ca6bf50f93bf55",
-                            "ruleId": "gosec Medium",
+                            "id": "86b15e91379cd5361a75d9017d760426",
+                            "ruleId": "Use of weak cryptographic primitive - rule G401",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 164,
-                            "code": "\n```md5.New()```",
+                            "code": "md5.New()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 164</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 164</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "md5.New()",
+                                    "line": 164
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "5d7b62fb871c3e03f143c9a972ba6ef2",
-                            "ruleId": "gosec Low",
+                            "id": "c3860f4c7bd2fda813f42dd93a7a6fb3",
+                            "ruleId": "Errors unhandled. - rule G104",
                             "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "line": 165,
-                            "code": "\n```hasher.Write([]byte(text))```",
+                            "code": "hasher.Write([]byte(text))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 165</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 165</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
+                                    "sequence": 1,
+                                    "code": "hasher.Write([]byte(text))",
+                                    "line": 165
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "fbac85b692f7aca90814a26428cf7aa7",
-                            "ruleId": "gosec Medium",
+                            "id": "b68e1c9c3b6d43a662c8ebc5bc89a97c",
+                            "ruleId": "SQL string formatting - rule G201",
                             "locationId": "2ee8ac828af647526989f8c14c258b64",
                             "line": 36,
-                            "code": "\n```fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=%s`,uid)```",
+                            "code": "fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=%s`,uid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/sqli/function.go</p>\n<p>Line number: 36-39</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n                                FROM Profile as p,Users as u \n                                where p.user_id = u.id \n                                and u.id=%s`,uid)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/sqli/function.go</p>\n<p>Line number: 36-39</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n                                FROM Profile as p,Users as u \n                                where p.user_id = u.id \n                                and u.id=%s`,uid)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "2ee8ac828af647526989f8c14c258b64",
+                                    "sequence": 1,
+                                    "code": "fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=%s`,uid)",
+                                    "line": 36
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "bbf8083842d8824dc4d9fecbf0f681dd",
-                            "ruleId": "gosec Medium",
+                            "id": "bf80fbf8cca156a1113f3259bdb1abfb",
+                            "ruleId": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
                             "locationId": "13830767e42dbd5e02bcbc040004d331",
                             "line": 58,
-                            "code": "\n```template.HTML(value)```",
+                            "code": "template.HTML(value)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 58</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(value)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 58</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(value)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "13830767e42dbd5e02bcbc040004d331",
+                                    "sequence": 1,
+                                    "code": "template.HTML(value)",
+                                    "line": 58
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "63de2abdc53f1b96ff3b223dceb06cfc",
-                            "ruleId": "gosec Medium",
+                            "id": "49c4228a1154271085c6522e2c0c84b3",
+                            "ruleId": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
                             "locationId": "13830767e42dbd5e02bcbc040004d331",
                             "line": 59,
-                            "code": "\n```template.HTML(notFound)```",
+                            "code": "template.HTML(notFound)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 59</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(notFound)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 59</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(notFound)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "13830767e42dbd5e02bcbc040004d331",
+                                    "sequence": 1,
+                                    "code": "template.HTML(notFound)",
+                                    "line": 59
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "cde9da61dc272b321d783b98da17d86c",
-                            "ruleId": "gosec Medium",
+                            "id": "b31fe2093f4d15739da11d2e2d0ca340",
+                            "ruleId": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
                             "locationId": "13830767e42dbd5e02bcbc040004d331",
                             "line": 62,
-                            "code": "\n```template.HTML(value)```",
+                            "code": "template.HTML(value)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 62</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(value)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 62</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(value)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "13830767e42dbd5e02bcbc040004d331",
+                                    "sequence": 1,
+                                    "code": "template.HTML(value)",
+                                    "line": 62
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "3f76afa2aa79c22fcccaa5aca829d9dc",
-                            "ruleId": "gosec Medium",
+                            "id": "0d96157e0cea46b3fd0a827f62dfebff",
+                            "ruleId": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
                             "locationId": "13830767e42dbd5e02bcbc040004d331",
                             "line": 63,
-                            "code": "\n```template.HTML(vuln)```",
+                            "code": "template.HTML(vuln)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 63</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(vuln)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 63</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(vuln)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "13830767e42dbd5e02bcbc040004d331",
+                                    "sequence": 1,
+                                    "code": "template.HTML(vuln)",
+                                    "line": 63
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "82eeff59cc2b26acda1ee82be80f18dd",
-                            "ruleId": "gosec Medium",
+                            "id": "9ab5cfd70fd6a9f222f79c4ed0d71c99",
+                            "ruleId": "this method will not auto-escape HTML. Verify data is well formed. - rule G203",
                             "locationId": "13830767e42dbd5e02bcbc040004d331",
                             "line": 100,
-                            "code": "\n```template.HTML(inlineJS)```",
+                            "code": "template.HTML(inlineJS)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 100</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(inlineJS)</code></p>"
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 100</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(inlineJS)</code></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "13830767e42dbd5e02bcbc040004d331",
+                                    "sequence": 1,
+                                    "code": "template.HTML(inlineJS)",
+                                    "line": 100
+                                }
+                            ]
                         }
                     ]
                 }
