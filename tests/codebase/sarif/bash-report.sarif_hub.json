@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "553ec7ad-8049-4144-a35a-552dd8e43ca5",
+                "id": "67d3d596-f2ea-457b-aa8c-3ebed66f21c4",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "4e669234-b559-4c6d-8a9f-f80475ea8d13",
+                    "id": "66dd7031-5fc9-426e-9a77-17bc49b91a49",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -69,35 +69,35 @@
                         {
                             "type": "codebase",
                             "id": "25eccab89a1c31a6d5afcf23712f6de8",
-                            "sourceId": "4e669234-b559-4c6d-8a9f-f80475ea8d13",
+                            "sourceId": "66dd7031-5fc9-426e-9a77-17bc49b91a49",
                             "fileName": "file:///home/damien/dd/docker/setEnv.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "274b7789ef0b093059e5e4da00e6d0b1",
-                            "sourceId": "4e669234-b559-4c6d-8a9f-f80475ea8d13",
+                            "sourceId": "66dd7031-5fc9-426e-9a77-17bc49b91a49",
                             "fileName": "file:///home/damien/dd/docker/dojo-data.bash",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "83ec204667e693b777feb372688d69ae",
-                            "sourceId": "4e669234-b559-4c6d-8a9f-f80475ea8d13",
+                            "sourceId": "66dd7031-5fc9-426e-9a77-17bc49b91a49",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "97adb0cf0121a1db2f8668e64787202b",
-                            "sourceId": "4e669234-b559-4c6d-8a9f-f80475ea8d13",
+                            "sourceId": "66dd7031-5fc9-426e-9a77-17bc49b91a49",
                             "fileName": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7b72273b3024b58104952a0df0bca7d9",
-                            "sourceId": "4e669234-b559-4c6d-8a9f-f80475ea8d13",
+                            "sourceId": "66dd7031-5fc9-426e-9a77-17bc49b91a49",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/common-os.sh",
                             "language": "Any"
                         }

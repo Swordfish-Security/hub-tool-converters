@@ -5,10 +5,12 @@ from typing import Any
 
 from jsonschema import validate
 
-from config.constances import PARSER_CLASSES, TOOL_FORMAT
+from config.constances import PARSER_CLASSES
 from config.enums import SourceTypes, Stage
+from converters.parsers.sarif import SarifParser
 from hub.parsers.hub_parser import HubParser
 from main import check_keys_parser_classes
+from utils import validate_args
 
 
 class ArgsBase:
@@ -18,6 +20,7 @@ class ArgsBase:
     output: str = ''
     name: str = 'hub-tool-converters'
     url: str = 'https://github.com/Swordfish-Security/hub-tool-converters.git'
+    format: str | None = None
 
 
 class ArgsCodebase(ArgsBase):
@@ -52,8 +55,12 @@ class ParsersTest(unittest.TestCase):
 
     def __get_reports(self, args):
         for name, parser in PARSER_CLASSES.items():
-            if name in TOOL_FORMAT:
-                name = TOOL_FORMAT[name]
+            args.format = None
+
+            if parser is None:
+                # Пока только sarif
+                args.format = 'sarif'
+                parser = SarifParser
 
             if not os.path.exists(f'./tests/{args.type}/{name}'):
                 continue
@@ -65,6 +72,8 @@ class ParsersTest(unittest.TestCase):
                 args.filename = f'./tests/{args.type}/{name}/{filename}'
 
                 args.scanner = name
+                validate_args(args)
+
                 iparser = parser()
 
                 with open(args.filename, "r") as f:

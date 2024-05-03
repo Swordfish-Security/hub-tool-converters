@@ -24,9 +24,15 @@ if __name__ == '__main__':
     parser.add_argument(
         "-s", "--scanner",
         type=str,
-        choices=PARSER_CLASSES.keys(),
         help="Scanner name",
         required=True
+    )
+    parser.add_argument(
+        "--format",
+        type=str,
+        choices=PARSER_CLASSES.keys(),
+        help="Tool from format",
+        required=False
     )
     parser.add_argument(
         "-f", "--filename",
@@ -43,13 +49,13 @@ if __name__ == '__main__':
     parser.add_argument(
         "-n", "--name",
         type=str,
-        help="AppSec.Hub repository's name",
+        help="AppSec.Hub repository's/artifact/instance name",
         required=True
     )
     parser.add_argument(
         "-u", "--url",
         type=str,
-        help="AppSec.Hub repository's URL",
+        help="AppSec.Hub repository's/artifact/instance URL",
         required=True
     )
     parser.add_argument(
@@ -83,7 +89,7 @@ if __name__ == '__main__':
 
     validate_args(args)
 
-    parser = PARSER_CLASSES[args.scanner]()
+    parser = PARSER_CLASSES[args.format]()
 
     with open(args.filename, "r") as f:
         results = parser.get_findings(f, '')

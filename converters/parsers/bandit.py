@@ -43,6 +43,7 @@ class BanditParser(object):
                 severity=item["issue_severity"].title(),
                 file_path=item["filename"],
                 line=item["line_number"],
+                reason=item["issue_text"],
                 date=find_date,
                 static_finding=True,
                 dynamic_finding=False,

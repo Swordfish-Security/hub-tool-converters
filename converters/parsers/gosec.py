@@ -76,6 +76,7 @@ class GosecParser(object):
                     title=title,
                     test=test,
                     description=findingdetail,
+                    reason=title,
                     severity=sev.title(),
                     impact=impact,
                     references=references,
