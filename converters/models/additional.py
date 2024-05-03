@@ -58,6 +58,9 @@ class AdditionalFields:
         if self.secret:
             self.secret = self.secret.strip().replace("```", "")
 
+        elif "\nAt " in self.description:
+            self.secret = self.description.split("\nAt ")[-1].split("\n")[0]
+
     def __parse_file_key(self) -> None:
         if self.file_path is not None:
             self.file_key = hashlib.md5(

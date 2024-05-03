@@ -1,0 +1,1608 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "c98238f2-cf4f-473f-9e4d-d77b08436444",
+                "description": "Import spotbugs results"
+            },
+            "source": [
+                {
+                    "id": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "spotbugs"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "Potential Command Injection",
+                            "id": "Potential Command Injection",
+                            "severity": "Medium",
+                            "cwe": [
+                                {
+                                    "id": 78
+                                }
+                            ],
+                            "description": "Potential Command Injection\n[OWASP: Command Injection](https://www.owasp.org/index.php/Command_Injection)\n[OWASP: Top 10 2013-A1-Injection](https://www.owasp.org/index.php/Top_10_2013-A1-Injection)\n[CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)  "
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Potential CRLF Injection for logs",
+                            "id": "Potential CRLF Injection for logs",
+                            "severity": "Medium",
+                            "cwe": [
+                                {
+                                    "id": 117
+                                }
+                            ],
+                            "description": "Potential CRLF Injection for logs\n[CWE-117: Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)\n[CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection')\n[CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection')\n[OWASP Security Logging](https://github.com/javabeanz/owasp-security-logging)    "
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Untrusted servlet parameter",
+                            "id": "Untrusted servlet parameter",
+                            "severity": "Low",
+                            "cwe": null,
+                            "description": "Untrusted servlet parameter\n[CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)  "
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Found Spring endpoint",
+                            "id": "Found Spring endpoint",
+                            "severity": "Low",
+                            "cwe": null,
+                            "description": "Found Spring endpoint"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Hard coded password",
+                            "id": "Hard coded password",
+                            "severity": "Medium",
+                            "cwe": [
+                                {
+                                    "id": 259
+                                }
+                            ],
+                            "description": "Hard coded password\n[CWE-259: Use of Hard-coded Password](https://cwe.mitre.org/data/definitions/259.html)  "
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Potential Path Traversal (file read)",
+                            "id": "Potential Path Traversal (file read)",
+                            "severity": "Medium",
+                            "cwe": [
+                                {
+                                    "id": 22
+                                }
+                            ],
+                            "description": "Potential Path Traversal (file read)\n[WASC: Path Traversal](http://projects.webappsec.org/w/page/13246952/Path%20Traversal)\n[OWASP: Path Traversal](https://www.owasp.org/index.php/Path_Traversal)\n[CAPEC-126: Path Traversal](https://capec.mitre.org/data/definitions/126.html)\n[CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)  "
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/command/IdentityFunctionCommandInjection.kt",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "40a351dacf6a1c648bd61f429e192d0d",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/command/StringManipulationCommandInjection.kt",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "37c42f3607b15d600cea11f0a33a7215",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/injection/KotlinLogging.kt",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "af606ad64c3a876c3d725d7ad8b9f3c9",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/injection/KotlinSSRFController.kt",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "0b18cd0986edf33bb2dacc946445dd72",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/injection/KotlinSlf4jSample.kt",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "3253498ada9fdd158121350c43337738",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/password/HardCode2.kt",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "c139d7bd764de966fd5dd6afac210efb",
+                            "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
+                            "fileName": "securitytest/pathtraversal/PathTraversalKotlin.kt",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "62c884b56b0cda978499fcaba1e607b7",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 95,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 95]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection</p>\n<p>This usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection</p>\n<p>At IdentityFunctionCommandInjection.kt:[lines 20-170]</p>\n<p>In class securitytest.command.IdentityFunctionCommandInjection</p>\n<p>In method securitytest.command.IdentityFunctionCommandInjection.tained input executed after also does nothing(String)</p>\n<p>At IdentityFunctionCommandInjection.kt:[line 95]</p>\n<p>Sink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;</p>\n<p>Sink parameter 0</p>\n<p>Unknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after also does nothing(Ljava/lang/String;)V parameter 0</p>\n<p>Method usage not detected</p>\n<p>In IdentityFunctionCommandInjection.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 95]",
+                                    "line": 95
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "de2ae03c9ff500eabf4f3220272a3fe0",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 31,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 105]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after always false not filter(String)\nAt IdentityFunctionCommandInjection.kt:[line 31]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/CharSequence.charAt(I)C\nUnknown source java/lang/Appendable.append(C)Ljava/lang/Appendable;\nAt IdentityFunctionCommandInjection.kt:[line 29]\nAt IdentityFunctionCommandInjection.kt:[line 105]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 105]",
+                                    "line": 31
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "188ce75a5032093f90d03e2699169389",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 25,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 99]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after always true filter(String)\nAt IdentityFunctionCommandInjection.kt:[line 25]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/CharSequence.charAt(I)C\nUnknown source java/lang/Appendable.append(C)Ljava/lang/Appendable;\nAt IdentityFunctionCommandInjection.kt:[line 23]\nAt IdentityFunctionCommandInjection.kt:[line 99]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 99]",
+                                    "line": 25
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "89d5cd9e9783a6d04b60af9bd8325ec0",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 59,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 123]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after drop last while always false(String)\nAt IdentityFunctionCommandInjection.kt:[line 59]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after drop last while always false(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt\nAt IdentityFunctionCommandInjection.kt:[line 121]\nAt IdentityFunctionCommandInjection.kt:[line 123]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 123]",
+                                    "line": 59
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "644bfa6d2054e67f7c97e863b123b83d",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 53,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 119]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after drop while always false(String)\nAt IdentityFunctionCommandInjection.kt:[line 53]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after drop while always false(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt\nAt IdentityFunctionCommandInjection.kt:[line 119]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 119]",
+                                    "line": 53
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "02853076601a159b0d04ef27570f73be",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 47,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 47]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after identity function with apply(String)\nAt IdentityFunctionCommandInjection.kt:[line 47]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after identity function with apply(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 47]",
+                                    "line": 47
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "f67f8b857184de458e0a3f2d9e0b15cb",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 43,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 43]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after identity function with let(String)\nAt IdentityFunctionCommandInjection.kt:[line 43]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after identity function with let(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 43]",
+                                    "line": 43
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "e9ef152944217864baee5303ce44a0a5",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 37,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 37]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after identity function with run(String)\nAt IdentityFunctionCommandInjection.kt:[line 37]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after identity function with run(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 37]",
+                                    "line": 37
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "1c929b7b1adc52afe82272cff63a765f",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 71,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 69]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after take last while always true then reversed(String)\nAt IdentityFunctionCommandInjection.kt:[line 71]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nAt IdentityFunctionCommandInjection.kt:[line 69]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 69]",
+                                    "line": 71
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "a1c9187550026e915740757c9fdf797d",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 65,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 127]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after take while always true(String)\nAt IdentityFunctionCommandInjection.kt:[line 65]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after take while always true(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt\nAt IdentityFunctionCommandInjection.kt:[line 127]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 127]",
+                                    "line": 65
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "70bea8bcff92064c485f73e9265b0805",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 77,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 158]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after trim always false(String)\nAt IdentityFunctionCommandInjection.kt:[line 77]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nUnknown source java/lang/CharSequence.subSequence(II)Ljava/lang/CharSequence;\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after trim always false(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt\nAt IdentityFunctionCommandInjection.kt:[line 136]\nAt IdentityFunctionCommandInjection.kt:[line 158]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 158]",
+                                    "line": 77
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "5a779519804575c07b2cadf923c66232",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 83,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 162]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after trim end always false(String)\nAt IdentityFunctionCommandInjection.kt:[line 83]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nUnknown source java/lang/CharSequence.subSequence(II)Ljava/lang/CharSequence;\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after trim end always false(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt\nAt IdentityFunctionCommandInjection.kt:[line 159]\nAt IdentityFunctionCommandInjection.kt:[line 162]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 162]",
+                                    "line": 83
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "691bced178da11f19ce4020d1bd734ae",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                            "line": 89,
+                            "code": "IdentityFunctionCommandInjection.kt:[line 168]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt IdentityFunctionCommandInjection.kt:[lines 20-170]\nIn class securitytest.command.IdentityFunctionCommandInjection\nIn method securitytest.command.IdentityFunctionCommandInjection.tained input executed after trim start always false(String)\nAt IdentityFunctionCommandInjection.kt:[line 89]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nUnknown source java/lang/CharSequence.subSequence(II)Ljava/lang/CharSequence;\nUnknown source securitytest/command/IdentityFunctionCommandInjection.tained input executed after trim start always false(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn IdentityFunctionCommandInjection.kt\nAt IdentityFunctionCommandInjection.kt:[line 165]\nAt IdentityFunctionCommandInjection.kt:[line 168]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "89a1d752e22ba7ff7d32db2fe0e67b74",
+                                    "sequence": 1,
+                                    "code": "IdentityFunctionCommandInjection.kt:[line 168]",
+                                    "line": 89
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "96a8221414e7a81760954efaae8629b0",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 31,
+                            "code": "StringManipulationCommandInjection.kt:[line 31]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after (de)capitalisation(String)\nAt StringManipulationCommandInjection.kt:[line 31]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 31]",
+                                    "line": 31
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c90102ece41a6ed423d5753f1f727e39",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 25,
+                            "code": "StringManipulationCommandInjection.kt:[line 23]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after applying suffix with plus(String)\nAt StringManipulationCommandInjection.kt:[line 25]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/StringManipulationCommandInjection.tained input executed after applying suffix with plus(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn StringManipulationCommandInjection.kt\nAt StringManipulationCommandInjection.kt:[line 23]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 23]",
+                                    "line": 25
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2448ae8e4f2a25a5dd25ccd563c28cfd",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 55,
+                            "code": "StringManipulationCommandInjection.kt:[line 55]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after end padding(String)\nAt StringManipulationCommandInjection.kt:[line 55]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 55]",
+                                    "line": 55
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "eb0e6cc8fd936a90b209e6d042c27c87",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 163,
+                            "code": "StringManipulationCommandInjection.kt:[line 163]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after end truncation(String)\nAt StringManipulationCommandInjection.kt:[line 163]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 163]",
+                                    "line": 163
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "12d6424f0d328339299dc86f21df4fd4",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 37,
+                            "code": "StringManipulationCommandInjection.kt:[line 37]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after first characters removed(String)\nAt StringManipulationCommandInjection.kt:[line 37]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 37]",
+                                    "line": 37
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "fed462f4e90ebc34987f18b7b6f911c9",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 49,
+                            "code": "StringManipulationCommandInjection.kt:[line 49]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after front padding(String)\nAt StringManipulationCommandInjection.kt:[line 49]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 49]",
+                                    "line": 49
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2e1c5b0c03b39eee96da25b74c0d2bef",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 157,
+                            "code": "StringManipulationCommandInjection.kt:[line 157]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after front truncation(String)\nAt StringManipulationCommandInjection.kt:[line 157]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 157]",
+                                    "line": 157
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "20102b0c4e44fd8bf8034676fdb8bc54",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 61,
+                            "code": "StringManipulationCommandInjection.kt:[line 61]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after indentation(String)\nAt StringManipulationCommandInjection.kt:[line 61]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 61]",
+                                    "line": 61
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c6e4502cb64bb5cae84df8b229603161",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 43,
+                            "code": "StringManipulationCommandInjection.kt:[line 43]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after last characters removed(String)\nAt StringManipulationCommandInjection.kt:[line 43]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 43]",
+                                    "line": 43
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "5da5390a00e1610e0971095028bf7829",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 67,
+                            "code": "StringManipulationCommandInjection.kt:[line 67]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after remove prefix(String)\nAt StringManipulationCommandInjection.kt:[line 67]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 67]",
+                                    "line": 67
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2cc69dd3e4d55a5092b77ebdad1496e3",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 73,
+                            "code": "StringManipulationCommandInjection.kt:[line 71]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after remove range(String)\nAt StringManipulationCommandInjection.kt:[line 73]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nAt StringManipulationCommandInjection.kt:[line 71]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 71]",
+                                    "line": 73
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "fbbdd7e1a29606ac69474770f60055c9",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 79,
+                            "code": "StringManipulationCommandInjection.kt:[line 79]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after remove suffix(String)\nAt StringManipulationCommandInjection.kt:[line 79]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 79]",
+                                    "line": 79
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "7c266b163f5605486a7a4c4d2f90b838",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 85,
+                            "code": "StringManipulationCommandInjection.kt:[line 85]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after remove surrounding(String)\nAt StringManipulationCommandInjection.kt:[line 85]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 85]",
+                                    "line": 85
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "f31acc3db86b687c570bd0565a4eab08",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 103,
+                            "code": "StringManipulationCommandInjection.kt:[line 103]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after replace after(String)\nAt StringManipulationCommandInjection.kt:[line 103]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 103]",
+                                    "line": 103
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "7a6d29274412c1bf7a3ab98cd1102fa0",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 109,
+                            "code": "StringManipulationCommandInjection.kt:[line 109]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after replace after last(String)\nAt StringManipulationCommandInjection.kt:[line 109]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 109]",
+                                    "line": 109
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "3c796e0996f68bfdcd92e260e39802e2",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 115,
+                            "code": "StringManipulationCommandInjection.kt:[line 115]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after replace before(String)\nAt StringManipulationCommandInjection.kt:[line 115]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 115]",
+                                    "line": 115
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c26c5a6601b35974f66b5e0ed496075f",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 121,
+                            "code": "StringManipulationCommandInjection.kt:[line 121]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after replace before last(String)\nAt StringManipulationCommandInjection.kt:[line 121]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 121]",
+                                    "line": 121
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "6690f239e21cc10b5a1b1d95777a1315",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 97,
+                            "code": "StringManipulationCommandInjection.kt:[line 97]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after replace first(String)\nAt StringManipulationCommandInjection.kt:[line 97]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 97]",
+                                    "line": 97
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "b08b93000b389ef96b1995847875f308",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 91,
+                            "code": "StringManipulationCommandInjection.kt:[line 89]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after replacement(String)\nAt StringManipulationCommandInjection.kt:[line 91]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source securitytest/command/StringManipulationCommandInjection.tained input executed after replacement(Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn StringManipulationCommandInjection.kt\nAt StringManipulationCommandInjection.kt:[line 89]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 89]",
+                                    "line": 91
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "01fc836d4ccb0a9bac62b39f788f5240",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 127,
+                            "code": "StringManipulationCommandInjection.kt:[line 125]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after reversal(String)\nAt StringManipulationCommandInjection.kt:[line 127]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nAt StringManipulationCommandInjection.kt:[line 125]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 125]",
+                                    "line": 127
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "e4c45323b164c889c0d9ad7b0e343902",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 133,
+                            "code": "StringManipulationCommandInjection.kt:[line 131]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after trimming(String)\nAt StringManipulationCommandInjection.kt:[line 133]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nAt StringManipulationCommandInjection.kt:[line 131]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 131]",
+                                    "line": 133
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "cefca2ef2fa43525932250d9b341e0e9",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 151,
+                            "code": "StringManipulationCommandInjection.kt:[line 149]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after trimming end(String)\nAt StringManipulationCommandInjection.kt:[line 151]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nAt StringManipulationCommandInjection.kt:[line 149]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 149]",
+                                    "line": 151
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0fba334fec447c640b9fbbde8ed244b5",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 139,
+                            "code": "StringManipulationCommandInjection.kt:[line 139]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after trimming indent(String)\nAt StringManipulationCommandInjection.kt:[line 139]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 139]",
+                                    "line": 139
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "1dff7f364e2233ab49a6d9aa1aa9dbbb",
+                            "ruleId": "Potential Command Injection",
+                            "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                            "line": 145,
+                            "code": "StringManipulationCommandInjection.kt:[line 143]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Command Injection\nThis usage of java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process; can be vulnerable to Command Injection\nAt StringManipulationCommandInjection.kt:[lines 20-164]\nIn class securitytest.command.StringManipulationCommandInjection\nIn method securitytest.command.StringManipulationCommandInjection.tained input executed after trimming start(String)\nAt StringManipulationCommandInjection.kt:[line 145]\nSink method java/lang/Runtime.exec(Ljava/lang/String;)Ljava/lang/Process;\nSink parameter 0\nUnknown source java/lang/Object.toString()Ljava/lang/String;\nAt StringManipulationCommandInjection.kt:[line 143]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "40a351dacf6a1c648bd61f429e192d0d",
+                                    "sequence": 1,
+                                    "code": "StringManipulationCommandInjection.kt:[line 143]",
+                                    "line": 145
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c4847622171efc0ab88d613f0738a75d",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 20,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.config(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 20]\nSink method java/util/logging/Logger.config(Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 20
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "cf5a8d02a99463ef842cdea2264312b0",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 21,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.entering(Ljava/lang/String;Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 21]\nSink method java/util/logging/Logger.entering(Ljava/lang/String;Ljava/lang/String;)V\nSink parameter 1\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 21
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "7b8125688b312cbeb122b368145cffa5",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 22,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.entering(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 22]\nSink method java/util/logging/Logger.entering(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 22
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ccb23db2311915c2664a2d1782c8da52",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 23,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.entering(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 23]\nSink method java/util/logging/Logger.entering(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 23
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "9450a7133e94354f64d2c6b0da332d92",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 24,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.exiting(Ljava/lang/String;Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 24]\nSink method java/util/logging/Logger.exiting(Ljava/lang/String;Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 24
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "009164a18381f04e0d84b17fac4614bc",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 25,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.exiting(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 25]\nSink method java/util/logging/Logger.exiting(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 25
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "846ad331be0c9ebf8639639f88a442a3",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 26,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.fine(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 26]\nSink method java/util/logging/Logger.fine(Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 26
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "5aef047365b4ce84e63d1e5ced808eb7",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 27,
+                            "code": "KotlinLogging.kt:[line 90]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.finer(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 27]\nSink method java/util/logging/Logger.finer(Ljava/lang/String;)V\nSink parameter 0\nTainted source java/lang/Object.toString()Ljava/lang/String;\nTainted source java/lang/CharSequence.subSequence(II)Ljava/lang/CharSequence;\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 68]\nAt KotlinLogging.kt:[line 90]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 90]",
+                                    "line": 27
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c475582f3a6c8ec232e0d7284b179eaf",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 28,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.finest(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 28]\nSink method java/util/logging/Logger.finest(Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 28
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "e699d316d131544d3df67054c2597164",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 29,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 29]\nSink method java/util/logging/Logger.info(Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 29
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2bb17fba9280c19a87d549b5420a4c0d",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 30,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 30]\nSink method java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 30
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2db25d7dfcaf89a1fd091f1441b9b66c",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 31,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 31]\nSink method java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 1\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 31
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "1709144f3df5df7558c889c18b6e09a2",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 32,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;[Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 32]\nSink method java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;[Ljava/lang/Object;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 32
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "9da527ae01b964c82d0e1d00dbfbb27e",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 33,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 33]\nSink method java/util/logging/Logger.log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V\nSink parameter 1\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 33
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "4913a25b17c720aaeef6e50ab153f50d",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 34,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 34]\nSink method java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V\nSink parameter 2\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 34
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "fc0724ceb0e75f43137ed557441cb087",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 35,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 35]\nSink method java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 1\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 35
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "adb4f4ee08e4ff0460692a3bd0f2bb1a",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 36,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 36]\nSink method java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 36
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "8ad22aadb947e0381fa90259a6d7d488",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 37,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 37]\nSink method java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V\nSink parameter 3\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 37
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "462879da25d19e868f67a961f4f4a0a9",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 38,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Supplier;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 38]\nSink method java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Supplier;)V\nSink parameter 2\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 38
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "13d2cc1acff276fff3be2d62f86c2a12",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 39,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/function/Supplier;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 39]\nSink method java/util/logging/Logger.logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/function/Supplier;)V\nSink parameter 2\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 39
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "379285452269d13ccc653e38d51c422d",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 40,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 40]\nSink method java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/util/ResourceBundle;Ljava/lang/String;[Ljava/lang/Object;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 40
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "5115623b354febd6224c99659fe84712",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 41,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/util/ResourceBundle;Ljava/lang/String;Ljava/lang/Throwable;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 41]\nSink method java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/util/ResourceBundle;Ljava/lang/String;Ljava/lang/Throwable;)V\nSink parameter 4\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 41
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "366904d594a9121b70e18700e4ae1402",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 42,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 42]\nSink method java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V\nSink parameter 3\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 42
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0c91c1b9781abd702c73630de0aafa20",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 43,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 43]\nSink method java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 3\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 43
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "b6706edc236f5469d2efca07ec13ce13",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 44,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 44]\nSink method java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V\nSink parameter 4\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 44
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "b07ff6e25c9e5033fc45d41906a7d261",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 45,
+                            "code": "KotlinLogging.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 45]\nSink method java/util/logging/Logger.logrb(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V\nSink parameter 1\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 27]",
+                                    "line": 45
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "863de4a2d92b04a73186b0a62377e560",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 46,
+                            "code": "KotlinLogging.kt:[line 46]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.severe(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 46]\nSink method java/util/logging/Logger.severe(Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]\nAt KotlinLogging.kt:[line 46]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 46]",
+                                    "line": 46
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c73bacb587cbd64c36e39417588f1b83",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 47,
+                            "code": "KotlinLogging.kt:[line 47]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.throwing(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 47]\nSink method java/util/logging/Logger.throwing(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V\nSink parameter 1\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]\nAt KotlinLogging.kt:[line 46]\nAt KotlinLogging.kt:[line 47]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 47]",
+                                    "line": 47
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "9cff4f818b769f521e5e370c12e21920",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 48,
+                            "code": "KotlinLogging.kt:[line 48]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of java/util/logging/Logger.warning(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 48]\nSink method java/util/logging/Logger.warning(Ljava/lang/String;)V\nSink parameter 0\nTainted source javax/servlet/http/HttpServletRequest.getParameter(Ljava/lang/String;)Ljava/lang/String;\nAt KotlinLogging.kt:[line 12]\nAt KotlinLogging.kt:[line 27]\nAt KotlinLogging.kt:[line 46]\nAt KotlinLogging.kt:[line 48]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 48]",
+                                    "line": 48
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "90c37bea1ab7fd137392a0332ae4b81c",
+                            "ruleId": "Untrusted servlet parameter",
+                            "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                            "line": 12,
+                            "code": "KotlinLogging.kt:[line 12]",
+                            "status": "To Verify",
+                            "description": "<p>Untrusted servlet parameter\nThe method getParameter returns a String value that is controlled by the client\nAt KotlinLogging.kt:[lines 8-90]\nIn class securitytest.injection.KotlinLogging\nIn method securitytest.injection.KotlinLogging.javaUtilLogging()\nAt KotlinLogging.kt:[line 12]\nValue getParameter</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "37c42f3607b15d600cea11f0a33a7215",
+                                    "sequence": 1,
+                                    "code": "KotlinLogging.kt:[line 12]",
+                                    "line": 12
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "51d1e0f120be771396879ad70eed8e5b",
+                            "ruleId": "Found Spring endpoint",
+                            "locationId": "af606ad64c3a876c3d725d7ad8b9f3c9",
+                            "line": 15,
+                            "code": "KotlinSSRFController.kt:[lines 15-33]",
+                            "status": "To Verify",
+                            "description": "<p>Found Spring endpoint\nsecuritytest.injection.KotlinSSRFController is a Spring endpoint (Controller)\nAt KotlinSSRFController.kt:[lines 11-33]\nIn class securitytest.injection.KotlinSSRFController\nIn method securitytest.injection.KotlinSSRFController.kotlinssrf(String)\nAt KotlinSSRFController.kt:[lines 15-33]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "af606ad64c3a876c3d725d7ad8b9f3c9",
+                                    "sequence": 1,
+                                    "code": "KotlinSSRFController.kt:[lines 15-33]",
+                                    "line": 15
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "df7f0bb2da8c8f422167f5ac1dde5093",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 10,
+                            "code": "KotlinSlf4jSample.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 10]\nSink method org/slf4j/Logger.info(Ljava/lang/String;)V\nSink parameter 0\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.input\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.getInput()Ljava/lang/String;\nAt KotlinSlf4jSample.kt:[line 10]\nAt KotlinSlf4jSample.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 27]",
+                                    "line": 10
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "380d1b4392818361e180f7f80d2c7c77",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 11,
+                            "code": "KotlinSlf4jSample.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 11]\nSink method org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 1\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.input\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.getInput()Ljava/lang/String;\nAt KotlinSlf4jSample.kt:[line 11]\nAt KotlinSlf4jSample.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 27]",
+                                    "line": 11
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "27049de5f3f3e31dcefbcbf6d7cb2bf4",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 12,
+                            "code": "KotlinSlf4jSample.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 12]\nSink method org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 0\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.input\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.getInput()Ljava/lang/String;\nAt KotlinSlf4jSample.kt:[line 12]\nAt KotlinSlf4jSample.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 27]",
+                                    "line": 12
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c8460af4f6f287041156b36fa5fca421",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 14,
+                            "code": "KotlinSlf4jSample.kt:[line 27]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 14]\nSink method org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V\nSink parameter 0\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.input\nUnknown source securitytest/injection/KotlinSlf4jSample$DataClass.getInput()Ljava/lang/String;\nAt KotlinSlf4jSample.kt:[line 14]\nAt KotlinSlf4jSample.kt:[line 27]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 27]",
+                                    "line": 14
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "8bf8902254a28c339ef196f5b9cca0c8",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 15,
+                            "code": "KotlinSlf4jSample.kt:[line 15]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 15]\nSink method org/slf4j/Logger.info(Ljava/lang/String;)V\nSink parameter 0\nUnknown source securitytest/injection/KotlinSlf4jSample.slf4j(Lorg/slf4j/Logger;Lsecuritytest/injection/KotlinSlf4jSample$DataClass;Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn KotlinSlf4jSample.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 15]",
+                                    "line": 15
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "4d0cb678e4c092b03dd8c7825b312d39",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 16,
+                            "code": "KotlinSlf4jSample.kt:[line 16]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 16]\nSink method org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 1\nUnknown source securitytest/injection/KotlinSlf4jSample.slf4j(Lorg/slf4j/Logger;Lsecuritytest/injection/KotlinSlf4jSample$DataClass;Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn KotlinSlf4jSample.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 16]",
+                                    "line": 16
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c81c4fe1c6e169a5908c3c4d0fd55308",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 17,
+                            "code": "KotlinSlf4jSample.kt:[line 17]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 17]\nSink method org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;)V\nSink parameter 0\nUnknown source securitytest/injection/KotlinSlf4jSample.slf4j(Lorg/slf4j/Logger;Lsecuritytest/injection/KotlinSlf4jSample$DataClass;Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn KotlinSlf4jSample.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 17]",
+                                    "line": 17
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "1fe567b26d3f55d13a8b1b90ead33417",
+                            "ruleId": "Potential CRLF Injection for logs",
+                            "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                            "line": 19,
+                            "code": "KotlinSlf4jSample.kt:[line 19]",
+                            "status": "To Verify",
+                            "description": "<p>Potential CRLF Injection for logs\nThis use of org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V might be used to include CRLF characters into log messages\nAt KotlinSlf4jSample.kt:[lines 5-24]\nIn class securitytest.injection.KotlinSlf4jSample\nIn method securitytest.injection.KotlinSlf4jSample.slf4j(Logger, KotlinSlf4jSample$DataClass, String)\nAt KotlinSlf4jSample.kt:[line 19]\nSink method org/slf4j/Logger.info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V\nSink parameter 0\nUnknown source securitytest/injection/KotlinSlf4jSample.slf4j(Lorg/slf4j/Logger;Lsecuritytest/injection/KotlinSlf4jSample$DataClass;Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn KotlinSlf4jSample.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0b18cd0986edf33bb2dacc946445dd72",
+                                    "sequence": 1,
+                                    "code": "KotlinSlf4jSample.kt:[line 19]",
+                                    "line": 19
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "3fc50c6408183c0e16a01e7ba0d2b5c1",
+                            "ruleId": "Hard coded password",
+                            "locationId": "3253498ada9fdd158121350c43337738",
+                            "line": 35,
+                            "code": "HardCode2.kt:[line 35]",
+                            "status": "To Verify",
+                            "description": "<p>Hard coded password\nHard coded password found\nAt HardCode2.kt:[lines 11-54]\nIn class securitytest.password.HardCode2\nIn method securitytest.password.HardCode2.kotlinssrf(String)\nAt HardCode2.kt:[line 35]\nSink method kotlin/jvm/internal/Intrinsics.areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z\nSink parameter 0</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "3253498ada9fdd158121350c43337738",
+                                    "sequence": 1,
+                                    "code": "HardCode2.kt:[line 35]",
+                                    "line": 35
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0725908ba7fbed23bbc916830b635640",
+                            "ruleId": "Potential Path Traversal (file read)",
+                            "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                            "line": 32,
+                            "code": "PathTraversalKotlin.kt:[line 32]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Path Traversal (file read)\nThis API (kotlin/io/FilesKt.createTempDir$default(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;ILjava/lang/Object;)Ljava/io/File;) reads a file whose location might be specified by user input\nAt PathTraversalKotlin.kt:[lines 25-43]\nIn class securitytest.pathtraversal.PathTraversalKotlin\nIn method securitytest.pathtraversal.PathTraversalKotlin.main(String[])\nAt PathTraversalKotlin.kt:[line 32]\nSink method kotlin/io/FilesKt.createTempDir$default(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;ILjava/lang/Object;)Ljava/io/File;\nSink parameter 3\nUnknown source securitytest/pathtraversal/PathTraversalKotlin.main([Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn PathTraversalKotlin.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                                    "sequence": 1,
+                                    "code": "PathTraversalKotlin.kt:[line 32]",
+                                    "line": 32
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "6cc67bde4dd94cb6e6c7eef813ff504f",
+                            "ruleId": "Potential Path Traversal (file read)",
+                            "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                            "line": 33,
+                            "code": "PathTraversalKotlin.kt:[line 33]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Path Traversal (file read)\nThis API (kotlin/io/FilesKt.createTempDir(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;) reads a file whose location might be specified by user input\nAt PathTraversalKotlin.kt:[lines 25-43]\nIn class securitytest.pathtraversal.PathTraversalKotlin\nIn method securitytest.pathtraversal.PathTraversalKotlin.main(String[])\nAt PathTraversalKotlin.kt:[line 33]\nSink method kotlin/io/FilesKt.createTempDir(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;\nSink parameter 0\nUnknown source java/io/File.<init>(Ljava/lang/String;)V\nAt PathTraversalKotlin.kt:[line 33]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                                    "sequence": 1,
+                                    "code": "PathTraversalKotlin.kt:[line 33]",
+                                    "line": 33
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "51eaac9be60c22c34d82c0f197f5a868",
+                            "ruleId": "Potential Path Traversal (file read)",
+                            "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                            "line": 35,
+                            "code": "PathTraversalKotlin.kt:[line 35]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Path Traversal (file read)\nThis API (kotlin/io/FilesKt.createTempFile$default(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;ILjava/lang/Object;)Ljava/io/File;) reads a file whose location might be specified by user input\nAt PathTraversalKotlin.kt:[lines 25-43]\nIn class securitytest.pathtraversal.PathTraversalKotlin\nIn method securitytest.pathtraversal.PathTraversalKotlin.main(String[])\nAt PathTraversalKotlin.kt:[line 35]\nSink method kotlin/io/FilesKt.createTempFile$default(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;ILjava/lang/Object;)Ljava/io/File;\nSink parameter 3\nUnknown source securitytest/pathtraversal/PathTraversalKotlin.main([Ljava/lang/String;)V parameter 0\nMethod usage not detected\nIn PathTraversalKotlin.kt</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                                    "sequence": 1,
+                                    "code": "PathTraversalKotlin.kt:[line 35]",
+                                    "line": 35
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c71b39ec17280480249e85b4c506f0b5",
+                            "ruleId": "Potential Path Traversal (file read)",
+                            "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                            "line": 36,
+                            "code": "PathTraversalKotlin.kt:[line 36]",
+                            "status": "To Verify",
+                            "description": "<p>Potential Path Traversal (file read)\nThis API (kotlin/io/FilesKt.createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;) reads a file whose location might be specified by user input\nAt PathTraversalKotlin.kt:[lines 25-43]\nIn class securitytest.pathtraversal.PathTraversalKotlin\nIn method securitytest.pathtraversal.PathTraversalKotlin.main(String[])\nAt PathTraversalKotlin.kt:[line 36]\nSink method kotlin/io/FilesKt.createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;\nSink parameter 0\nUnknown source java/io/File.<init>(Ljava/lang/String;)V\nAt PathTraversalKotlin.kt:[line 36]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "c139d7bd764de966fd5dd6afac210efb",
+                                    "sequence": 1,
+                                    "code": "PathTraversalKotlin.kt:[line 36]",
+                                    "line": 36
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
