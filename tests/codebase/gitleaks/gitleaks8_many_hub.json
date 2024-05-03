@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "92aaaa2b-9e0e-444c-b86e-a9cee0b10aa5",
+                "id": "997c2ecf-ba4d-49ae-8455-21cd6d0c5c49",
                 "description": "Import gitleaks results"
             },
             "source": [
                 {
-                    "id": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                    "id": "2ee07e48-7b89-455e-bff3-11575a9335f1",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -65,21 +65,21 @@
                         {
                             "type": "codebase",
                             "id": "78bd16891bd8af07214271dd5c748afb",
-                            "sourceId": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                            "sourceId": "2ee07e48-7b89-455e-bff3-11575a9335f1",
                             "fileName": "/conf/aws.tf",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "87a2642c4621e799d82ae2214f3cb358",
-                            "sourceId": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                            "sourceId": "2ee07e48-7b89-455e-bff3-11575a9335f1",
                             "fileName": "conf/rsa.pk",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "ccfe001d953dbc1cd4d0d5470911eca7",
-                            "sourceId": "208ce59b-0912-45bd-88d4-08bb8d75af39",
+                            "sourceId": "2ee07e48-7b89-455e-bff3-11575a9335f1",
                             "fileName": "tests/api.py",
                             "language": "Any"
                         }

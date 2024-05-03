@@ -1,6 +1,6 @@
 import os
 
-from config.constances import PARSER_CLASSES, TOOL_FORMAT
+from config.constances import PARSER_CLASSES, TESTS_PATH
 from config.enums import SourceTypes
 
 
@@ -20,9 +20,13 @@ def check_keys_parser_classes():
             if parser_file not in PARSER_CLASSES:
                 raise ValueError(f"Parser {parser_file} not in PARSER_CLASSES")
             exists_parsers.add(parser_file)
-            for tool_name in TOOL_FORMAT.keys():
-                if TOOL_FORMAT[tool_name] == parser_file:
-                    exists_parsers.add(tool_name)
+
+    for directory in os.listdir(TESTS_PATH):
+        if os.path.isdir(os.path.join(TESTS_PATH, directory)):
+            for scanner in os.listdir(os.path.join(TESTS_PATH, directory)):
+                if scanner in PARSER_CLASSES:
+                    exists_parsers.add(scanner)
+
     if xor_set := exists_parsers.symmetric_difference(set_parsers_classes):
         raise ValueError(f"{xor_set} scanners are not provided")
 
@@ -30,6 +34,8 @@ def check_keys_parser_classes():
 def validate_args(args):
     # Приведение к нижнему регистру
     args.type = args.type.lower()
+    if args.format is None:
+        args.format = args.scanner
 
     if args.type == SourceTypes.CODEBASE.value:
         if not args.url or not args.name:

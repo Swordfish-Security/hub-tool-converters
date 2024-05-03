@@ -5,10 +5,7 @@ from typing import Any
 
 PARSER_CLASSES: dict[str, Any] = {}
 PARSERS_PATH = "converters/parsers"
-TOOL_FORMAT: dict[str, str] = {
-    'svace': 'sarif',
-    'pvs-studio': 'sarif'
-}
+TESTS_PATH = "./tests/"
 
 
 def import_classes_from_directory(directory_path):
@@ -22,10 +19,18 @@ def import_classes_from_directory(directory_path):
                     globals()[name] = obj
                     format_name = file_name.split(".")[0]
                     PARSER_CLASSES.update({format_name: obj})
-                    for tool_name in TOOL_FORMAT.keys():
-                        if format_name == TOOL_FORMAT[tool_name]:
-                            PARSER_CLASSES.update({tool_name: obj})
 
 
 # Import classes from the directory
 import_classes_from_directory(PARSERS_PATH)
+
+
+def add_without_parser_scanners_to_parser_classes(xdir):
+    for directory in os.listdir(xdir):
+        if os.path.isdir(os.path.join(xdir, directory)):
+            for scanner in os.listdir(os.path.join(xdir, directory)):
+                if scanner not in PARSER_CLASSES and '__' not in scanner and '.' not in scanner:
+                    PARSER_CLASSES.update({scanner: None})
+
+
+add_without_parser_scanners_to_parser_classes(TESTS_PATH)
