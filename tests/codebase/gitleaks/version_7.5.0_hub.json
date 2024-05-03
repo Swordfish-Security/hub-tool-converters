@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "3e1ce13d-40f6-46be-995a-6e3b905b395c",
+                "id": "9eb421b0-deb4-45e6-9e08-7c5e2226f20c",
                 "description": "Import gitleaks results"
             },
             "source": [
                 {
-                    "id": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                    "id": "e553dcaf-231b-4212-896b-9e0e88a925e0",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -53,21 +53,21 @@
                         {
                             "type": "codebase",
                             "id": "639c5a76db7ee3c87d0cf2efce09024a",
-                            "sourceId": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                            "sourceId": "e553dcaf-231b-4212-896b-9e0e88a925e0",
                             "fileName": "dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_1_vuln.json",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "2ca05ee7b63720ec325aa52924c5c770",
-                            "sourceId": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                            "sourceId": "e553dcaf-231b-4212-896b-9e0e88a925e0",
                             "fileName": "dojo/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_3_vuln.json",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "035a31f850f288361469f95c0844a117",
-                            "sourceId": "ddeb36dc-36ef-42e8-af00-819e12114de7",
+                            "sourceId": "e553dcaf-231b-4212-896b-9e0e88a925e0",
                             "fileName": "dojo/unittests/tools/test_gitlab_secret_detection_report_parser.py",
                             "language": "Any"
                         }

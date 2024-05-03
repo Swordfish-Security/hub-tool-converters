@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "298926b5-0607-4bdd-adbe-999ff5d3e112",
+                "id": "d6d98d3e-b059-480e-98a9-a6ad3cbdd58d",
                 "description": "Import burp results"
             },
             "source": [
                 {
-                    "id": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                    "id": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                     "type": "instance",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -82,42 +82,42 @@
                         {
                             "type": "instance",
                             "id": "a9ae7e2a09e6885ffbd824e41a393178",
-                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                            "sourceId": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                             "url": "http://bwa/bodgeit/product.jsp\nhttp://bwa/bodgeit/search.jsp\nhttp://bwa/bodgeit/",
                             "description": "URL: http://bwa/bodgeit/product.jsp\n\n\nURL: http://bwa/bodgeit/search.jsp\n\n\nURL: http://bwa/bodgeit/\n\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "dea403ec943ad48d57143987e1fd358f",
-                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                            "sourceId": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                             "url": "http://bwa/bodgeit/\nhttp://bwa/bodgeit/product.jsp\nhttp://bwa/bodgeit/basket.jsp\nhttp://bwa/bodgeit/search.jsp\nhttp://bwa/bodgeit/contact.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "description": "URL: http://bwa/bodgeit/\n\n\nURL: http://bwa/bodgeit/product.jsp\n\n\nURL: http://bwa/bodgeit/basket.jsp\n\n\nURL: http://bwa/bodgeit/search.jsp\n\n\nURL: http://bwa/bodgeit/contact.jsp\n\n\nURL: http://bwa/bodgeit/login.jsp\n\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "a6de11c15945f1220ca376fec3c02aa4",
-                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                            "sourceId": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                             "url": "http://bwa/bodgeit/search.jsp",
                             "description": "URL: http://bwa/bodgeit/search.jsp\n\nThe value of the **q** request parameter is copied into the HTML document as plain text between tags. The payload **5d4ff <script>alert(1)</script>18327** was submitted in the q parameter. This input was echoed unmodified in the application's response.  \n  \nThis proof-of-concept attack demonstrates that it is possible to inject arbitrary JavaScript into the application's response.\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "fb440f2d23cf5cb47a1079f37cef3e90",
-                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                            "sourceId": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/basket.jsp",
                             "description": "URL: http://bwa/bodgeit/login.jsp\n\nThe **password** parameter appears to be vulnerable to SQL injection attacks. A single quote was submitted in the password parameter, and a general error message was returned. Two single quotes were then submitted and the error message disappeared. You should review the contents of the error message, and the application's handling of other input, to confirm whether a vulnerability is present.\n\nURL: http://bwa/bodgeit/login.jsp\n\nThe **username** parameter appears to be vulnerable to SQL injection attacks. A single quote was submitted in the username parameter, and a general error message was returned. Two single quotes were then submitted and the error message disappeared. You should review the contents of the error message, and the application's handling of other input, to confirm whether a vulnerability is present.\n\nURL: http://bwa/bodgeit/basket.jsp\n\nThe **b_id** cookie appears to be vulnerable to SQL injection attacks. The payload **'** was submitted in the b_id cookie, and a database error message was returned. You should review the contents of the error message, and the application's handling of other input, to confirm whether a vulnerability is present.  \n  \nThe database appears to be Microsoft SQL Server.\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "a7574f9ce5d871e5c1c38a13f6a55c91",
-                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                            "sourceId": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                             "url": "http://bwa/bodgeit/login.jsp\nhttp://bwa/bodgeit/login.jsp",
                             "description": "URL: http://bwa/bodgeit/login.jsp\n\nThe page contains a form with the following action URL, which is submitted over clear-text HTTP:\n\n  * http://bwa/bodgeit/login.jsp\n\nThe form contains the following password field:\n  * password\n\n\n\n"
                         },
                         {
                             "type": "instance",
                             "id": "ebcad36a5c36bf025379f6963e9fd500",
-                            "sourceId": "3cc9129c-adce-4729-a6f0-98c383168d27",
+                            "sourceId": "f5e1a6a7-4ccf-41fb-912a-83808bb0fa11",
                             "url": "http://bwa/bodgeit/",
                             "description": "URL: http://bwa/bodgeit/\n\nThe following cookie was issued by the application and does not have the HttpOnly flag set:\n\n  * **JSESSIONID=AD00240A932835EDD60B3F7487A9D15D; Path=/**\n\nThe cookie appears to contain a session token, which may increase the risk associated with this issue. You should review the contents of the cookie to determine its function.\n\n"
                         }

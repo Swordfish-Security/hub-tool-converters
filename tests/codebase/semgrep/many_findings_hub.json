@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "61b2c8fe-ac31-4bcd-9479-0d5aa6ebef93",
+                "id": "97a786dd-893e-4b00-8d5e-53617fa4cf8b",
                 "description": "Import semgrep results"
             },
             "source": [
                 {
-                    "id": "ef09f514-02e4-4350-acea-7fbd85da42d7",
+                    "id": "b5c7d75b-5eac-438d-9de7-03cd0ce26d94",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -41,21 +41,21 @@
                         {
                             "type": "codebase",
                             "id": "4730e4e3fa3d2973b7d6fd907535b733",
-                            "sourceId": "ef09f514-02e4-4350-acea-7fbd85da42d7",
+                            "sourceId": "b5c7d75b-5eac-438d-9de7-03cd0ce26d94",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02194.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "bcc192a00f0a6fd1cfebab12d5f07415",
-                            "sourceId": "ef09f514-02e4-4350-acea-7fbd85da42d7",
+                            "sourceId": "b5c7d75b-5eac-438d-9de7-03cd0ce26d94",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02195.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "19192bf22d09678733a38d92a7801fb3",
-                            "sourceId": "ef09f514-02e4-4350-acea-7fbd85da42d7",
+                            "sourceId": "b5c7d75b-5eac-438d-9de7-03cd0ce26d94",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest01150.java",
                             "language": "Any"
                         }
