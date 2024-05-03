@@ -49,7 +49,7 @@ class FindingHubSast:
     code: str
     status: str
     description: str
-    stacks: list[LocationStack]
+    stacks: list[LocationStack] = None
 
     def __init__(
             self,
@@ -70,7 +70,7 @@ class FindingHubSast:
         self.code = code
         self.description = description
         self.status = status
-        if self.code is not None and self.line is not None:
+        if self.line is not None:
             self.stacks = [
                 LocationStack(locationId=self.locationId, line=self.line, code=self.code)
             ]
