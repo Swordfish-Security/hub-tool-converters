@@ -95,6 +95,7 @@ class SpotbugsParser(object):
                 cwe=int(bug.get("cweid", default=0)),
                 severity=severity,
                 description=description,
+                reason=title,
                 test=test,
                 static_finding=True,
                 dynamic_finding=False,
