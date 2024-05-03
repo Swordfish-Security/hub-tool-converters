@@ -35,6 +35,8 @@ def validate_args(args):
     # Приведение к нижнему регистру
     args.type = args.type.lower()
     if args.format is None:
+        if args.scanner not in PARSER_CLASSES.keys():
+            raise ValueError("scanner is not supported, provide format if available")
         args.format = args.scanner
 
     if args.type == SourceTypes.CODEBASE.value:

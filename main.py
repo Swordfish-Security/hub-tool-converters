@@ -24,13 +24,13 @@ if __name__ == '__main__':
     parser.add_argument(
         "-s", "--scanner",
         type=str,
-        choices=PARSER_CLASSES.keys(),
         help="Scanner name",
         required=True
     )
     parser.add_argument(
         "--format",
         type=str,
+        choices=PARSER_CLASSES.keys(),
         help="Tool from format",
         required=False
     )
