@@ -1,0 +1,134 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "149738e9-832d-402e-bac0-e76005e13e78",
+                "description": "Import trufflehog results"
+            },
+            "source": [
+                {
+                    "id": "139d73cc-0628-4151-9eb4-623e12b4c24a",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "trufflehog"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "AWS",
+                            "id": "AWS",
+                            "severity": "Critical",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "AWS\nN/A"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "URI",
+                            "id": "URI",
+                            "severity": "Critical",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "URI\nN/A"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "PrivateKey",
+                            "id": "PrivateKey",
+                            "severity": "Critical",
+                            "cwe": [
+                                {
+                                    "id": 798
+                                }
+                            ],
+                            "description": "PrivateKey\nN/A"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "14f802e1fba977727845e8872c1743a7",
+                            "sourceId": "139d73cc-0628-4151-9eb4-623e12b4c24a",
+                            "fileName": "keys",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "e3fd16b44447f497aa89161654a54dd4",
+                            "ruleId": "AWS",
+                            "locationId": "14f802e1fba977727845e8872c1743a7",
+                            "line": 4,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Repository:</strong> https://github.com/trufflesecurity/test_keys.git\n<strong>Link:</strong> https://github.com/trufflesecurity/test_keys/blob/fbc14303ffbf8fb1c2c1914e8dda7d0121633aca/keys\n<strong>Commit Hash:</strong> fbc14303ffbf8fb1c2c1914e8dda7d0121633aca\n<strong>Commit Date:</strong> 2022-06-16 10:17:40 -0700 -0700\n<strong>Committer:</strong> counter <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;\">&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;</a>\n<strong>Reason:</strong> AWS\n<strong>Path:</strong> keys\n<strong>Contents:</strong> AKIAYVP4CIPPERUVIFXG\n<strong>Extra Data:</strong>\n    account: 595918472158\n    arn: arn:aws:iam::595918472158:user/canarytokens.com@@mirux23ppyky6hx3l6vclmhnj\n    user_id: AIDAYVP4CIPPJ5M54LRCY</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "14f802e1fba977727845e8872c1743a7",
+                                    "sequence": 1,
+                                    "code": null,
+                                    "line": 4
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "7bc39c6589df115cc47ce3ad1da0515b",
+                            "ruleId": "URI",
+                            "locationId": "14f802e1fba977727845e8872c1743a7",
+                            "line": 3,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Repository:</strong> https://github.com/trufflesecurity/test_keys.git\n<strong>Link:</strong> https://github.com/trufflesecurity/test_keys/blob/77b2a3e56973785a52ba4ae4b8dac61d4bac016f/keys\n<strong>Commit Hash:</strong> 77b2a3e56973785a52ba4ae4b8dac61d4bac016f\n<strong>Commit Date:</strong> 2022-06-16 10:27:56 -0700 -0700\n<strong>Committer:</strong> counter <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;\">&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;</a>\n<strong>Reason:</strong> URI\n<strong>Path:</strong> keys\n<strong>Contents:</strong> https://<strong><em>*</em>:</strong><strong><em>@the-internet.herokuapp.com/basic_auth\n</em>*Repository:</strong> https://github.com/trufflesecurity/test_keys.git\n<strong>Link:</strong> https://github.com/trufflesecurity/test_keys/blob/77b2a3e56973785a52ba4ae4b8dac61d4bac016f/keys\n<strong>Commit Hash:</strong> 77b2a3e56973785a52ba4ae4b8dac61d4bac016f\n<strong>Commit Date:</strong> 2022-06-16 10:27:56 -0700 -0700\n<strong>Committer:</strong> counter <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;\">&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;</a>\n<strong>Reason:</strong> URI\n<strong>Path:</strong> keys\n<strong>Contents:</strong> https://<strong><em>*</em>:</strong>***@the-internet.herokuapp.com/basic_auth</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "14f802e1fba977727845e8872c1743a7",
+                                    "sequence": 1,
+                                    "code": null,
+                                    "line": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "b2c693dd06651065df9886e8d1acf96c",
+                            "ruleId": "PrivateKey",
+                            "locationId": "14f802e1fba977727845e8872c1743a7",
+                            "line": 1,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Repository:</strong> https://github.com/trufflesecurity/test_keys.git\n<strong>Link:</strong> https://github.com/trufflesecurity/test_keys/blob/77b2a3e56973785a52ba4ae4b8dac61d4bac016f/keys\n<strong>Commit Hash:</strong> 77b2a3e56973785a52ba4ae4b8dac61d4bac016f\n<strong>Commit Date:</strong> 2022-06-16 10:27:56 -0700 -0700\n<strong>Committer:</strong> counter <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;\">&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#64;&#99;&#111;&#117;&#110;&#116;&#101;&#114;&#115;&#45;&#77;&#97;&#99;&#66;&#111;&#111;&#107;&#45;&#65;&#105;&#114;&#46;&#108;&#111;&#99;&#97;&#108;</a>\n<strong>Reason:</strong> PrivateKey\n<strong>Path:</strong> keys\n<strong>Contents:</strong> -----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAACmFl\n<strong>Structured Data:</strong>\n    github_ssh_key: [{'user': 'thisisforgithub0'}]</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "14f802e1fba977727845e8872c1743a7",
+                                    "sequence": 1,
+                                    "code": null,
+                                    "line": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
