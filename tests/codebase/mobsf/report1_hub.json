@@ -1,0 +1,371 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "eb81dd3a-4b0d-4045-a1db-ddce8da78769",
+                "description": "Import mobsf results"
+            },
+            "source": [
+                {
+                    "id": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "mobsf"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "mobsf High",
+                            "id": "mobsf High",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Unknown"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "mobsf Info",
+                            "id": "mobsf Info",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Unknown"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "mobsf Low",
+                            "id": "mobsf Low",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "object"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": null,
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "Unknown",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/armeabi-v7a/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "1709be653005aa06d5e0ecab40193312",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/arm64-v8a/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "de1f640b89a1dc756b890d60e10ac37d",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/armeabi/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "513feaa3946fbe50d86a413cf3a250e1",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/x86_64/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/mips64/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "9d95803e5a82d5c5e668f247622bdea0",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/mips/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "caac9450db20d02f537961fa2107cd3d",
+                            "sourceId": "b75edc4b-482d-4285-95a0-c3af4d80f37b",
+                            "fileName": "lib/x86/libdivajni.so",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "f8185bdf85556561751dfbebaec15190",
+                            "ruleId": "mobsf High",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.WRITE_EXTERNAL_STORAGE\n<strong>Description:</strong> Allows an application to write to external storage.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "090e061c331e3378c6fc3c35a159bcff",
+                            "ruleId": "mobsf High",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.READ_EXTERNAL_STORAGE <strong>Description:</strong>\nAllows an application to read from external storage.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "dc18966037ec20ded1c7c0e9b147070c",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.INTERNET <strong>Description:</strong> Allows an\napplication to create network sockets.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "38a5b61df6ee474450aafca598a149dd",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>The App logs information. Sensitive information should never be logged.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c4e184de4aaea9044f29311a09bedfed",
+                            "ruleId": "mobsf High",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App uses SQLite Database and execute raw SQL query. Untrusted user input in\nraw SQL queries can cause SQL Injection. Also sensitive information should be\nencrypted and written to the database.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "73030117f25c0ed98019ade5359b78b6",
+                            "ruleId": "mobsf High",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App can read/write to External Storage. Any App can read data written to\nExternal Storage.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "33be65c6eca7a177f45000a9d3ad32a6",
+                            "ruleId": "mobsf High",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App creates temp file. Sensitive information should never be written into a\ntemp file.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "48d6ba5b4cecdeee0c27c95d18a017f5",
+                            "ruleId": "mobsf High",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "a7c34e87f4852e4774215b5c79bec7e6",
+                            "ruleId": "mobsf Info",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is build with -fPIC flag which enables Position independent\ncode. This makes Return Oriented Programming (ROP) attacks much more difficult\nto execute reliably.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "68d839ea7dcaf18e564dda89ce44da7e",
+                            "ruleId": "mobsf High",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "6f192b69ab65c8093d561e73cab41750",
+                            "ruleId": "mobsf High",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "568a1db714209ee7b01d6dc9fe0209d1",
+                            "ruleId": "mobsf Info",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "19e94b9a7bce40970e129f55fca7dbc3",
+                            "ruleId": "mobsf Info",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "94f0eb48ea26e91a6ae8068d14b77d38",
+                            "ruleId": "mobsf Low",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0d73d926189d68bc763d034c30bd75a8",
+                            "ruleId": "mobsf Info",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "1f91a809f1b99d8434ac0de40348df6d",
+                            "ruleId": "mobsf High",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "54c4ba02f599839cee9a3d3602437a55",
+                            "ruleId": "mobsf Info",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object has a stack canary value added to the stack so that it will\nbe overwritten by a stack buffer that overflows the return address. This\nallows detection of overflows by verifying the integrity of the canary before\nfunction return.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "95881181855e3cfd81e4a58ce33c8007",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_local_file_io <strong>Description:</strong> Local File I/O Operations</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "fa54c7c531ad9b9dad2809faae2b0ae2",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_start_activity <strong>Description:</strong> Starting Activity</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "78de312b337dc2777b81770a717487d6",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_ipc <strong>Description:</strong> Inter Process Communication</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ec9649c09e967d723bee90ecf006c8f5",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_content_provider <strong>Description:</strong> Content Provider</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0ad952b07560652a5ba9a3197af51773",
+                            "ruleId": "mobsf Info",
+                            "locationId": null,
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_native_code <strong>Description:</strong> Loading Native Code (Shared Library)</p>",
+                            "stacks": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
