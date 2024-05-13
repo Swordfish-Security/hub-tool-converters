@@ -72,7 +72,7 @@ class HubParser:
                 ruleId=finding.ruleId,
                 locationId=finding.file_key,
                 line=finding.line,
-                code=finding.secret,
+                code=finding.code,
                 description=finding.description,
                 status="To Verify",
                 type=scanner_type

@@ -42,24 +42,28 @@ class AdditionalFields:
             self.reason = self.vuln_id_from_tool
 
     def __parse_secret(self) -> None:
-        if "Secret:" in self.description:
-            self.secret = self.description.split("**Secret:** ")[1].split("\n")[0]
-        elif "Snippet:" in self.description:
-            self.secret = self.description.split("**Snippet:**\n")[1]
-        elif "String Found:" in self.description:
-            self.secret = self.description.split("**String Found:**\n")[1]
-        elif "Code:" in self.description:
-            try:
-                self.secret = self.description.split("**Code:**\n")[1]
-            except IndexError:
-                self.secret = self.description.split("Code:\n")[1]
-        elif "Code flow:" in self.description:
-            self.secret = self.description.split("**Code flow:**\n")[1]
-        if self.secret:
-            self.secret = self.secret.strip().replace("```", "")
+        if not self.code:
 
-        elif "\nAt " in self.description:
-            self.secret = self.description.split("\nAt ")[-1].split("\n")[0]
+            if "Secret:" in self.description:
+                self.secret = self.description.split("**Secret:** ")[1].split("\n")[0]
+            elif "Snippet:" in self.description:
+                self.secret = self.description.split("**Snippet:**\n")[1]
+            elif "String Found:" in self.description:
+                self.secret = self.description.split("**String Found:**\n")[1]
+            elif "Code:" in self.description:
+                try:
+                    self.secret = self.description.split("**Code:**\n")[1]
+                except IndexError:
+                    self.secret = self.description.split("Code:\n")[1]
+            elif "Code flow:" in self.description:
+                self.secret = self.description.split("**Code flow:**\n")[1]
+            if self.secret:
+                self.secret = self.secret.strip().replace("```", "")
+
+            elif "\nAt " in self.description:
+                self.secret = self.description.split("\nAt ")[-1].split("\n")[0]
+
+            self.code = self.secret
 
     def __parse_file_key(self) -> None:
         if self.file_path is not None:
