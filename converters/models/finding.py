@@ -150,6 +150,8 @@ class Endpoint:
 
 @dataclass(kw_only=False, eq=False, order=False)
 class Finding(AdditionalFields):
+    code: str | None = None
+
     test: str | None = None
     title: str | None = None  # A short description of the flaw
     date: datetime.date | None = None  # The date the flaw was discovered

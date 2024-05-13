@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "57b7d02b-4de9-4c3d-bdc5-c1b074cd2004",
+                "id": "1e9b9620-8c65-4780-96fd-04585cd5bb44",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "bfc53eff-a4c8-43c9-ac03-db64d2c31bc5",
+                    "id": "111f57c1-5875-4396-95d5-c33f0a59ad87",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -34,7 +34,7 @@
                                     "id": 532
                                 }
                             ],
-                            "description": "logs"
+                            "description": "logs\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs"
                         },
                         {
                             "type": "sast",
@@ -46,7 +46,7 @@
                                     "id": 919
                                 }
                             ],
-                            "description": "in"
+                            "description": "in\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-for-sensitive-data-disclosure-through-the-user-interface-mstg-storage-7"
                         },
                         {
                             "type": "sast",
@@ -58,7 +58,7 @@
                                     "id": 78
                                 }
                             ],
-                            "description": "SQLite"
+                            "description": "SQLite\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2"
                         },
                         {
                             "type": "sast",
@@ -70,7 +70,7 @@
                                     "id": 200
                                 }
                             ],
-                            "description": "does"
+                            "description": "does\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-for-overlay-attacks-mstg-platform-9"
                         },
                         {
                             "type": "sast",
@@ -82,7 +82,7 @@
                                     "id": 200
                                 }
                             ],
-                            "description": "does"
+                            "description": "does\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#finding-sensitive-information-in-auto-generated-screenshots-mstg-storage-9"
                         },
                         {
                             "type": "sast",
@@ -94,7 +94,7 @@
                                     "id": 353
                                 }
                             ],
-                            "description": "does"
+                            "description": "does\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1"
                         },
                         {
                             "type": "sast",
@@ -106,7 +106,7 @@
                                     "id": 919
                                 }
                             ],
-                            "description": "does"
+                            "description": "does\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1"
                         },
                         {
                             "type": "sast",
@@ -118,7 +118,7 @@
                                     "id": 295
                                 }
                             ],
-                            "description": "does"
+                            "description": "does\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4"
                         },
                         {
                             "type": "sast",
@@ -130,28 +130,28 @@
                                     "id": 295
                                 }
                             ],
-                            "description": "does"
+                            "description": "does\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "ad6047709ffcc0b8e2f2577daf066e9a",
-                            "sourceId": "bfc53eff-a4c8-43c9-ac03-db64d2c31bc5",
+                            "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "f91d0476aac66e2d11ce1f3ece59a05d",
-                            "sourceId": "bfc53eff-a4c8-43c9-ac03-db64d2c31bc5",
+                            "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "0374ec857381230fa83049643ce3cdee",
-                            "sourceId": "bfc53eff-a4c8-43c9-ac03-db64d2c31bc5",
+                            "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
                             "fileName": "./",
                             "language": "Any"
                         }
@@ -159,93 +159,165 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "88cde34929881664c4dc6e86dda95e6d",
+                            "id": "d39b53e6d6d79e78a6cb3f1e9887e232",
                             "ruleId": "android_logging",
                             "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                             "line": 57,
-                            "code": "```            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());```\n**Rule name:** AndroidLogging",
+                            "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.\n<strong>Snippet:</strong>\n<code>Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());</code>\n<strong>Rule name:</strong> AndroidLogging</p>"
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.\n<strong>Snippet:</strong>\n<code>Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());</code>\n<strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 1,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 57
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "f2a556197faaa14bef32b0537d4e04e1",
+                            "id": "e53fb3f8bf5848289b6b702ca3a7a05c",
                             "ruleId": "android_hidden_ui",
                             "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
                             "line": 72,
-                            "code": "```            pinTxt.setVisibility(View.INVISIBLE);```\n**Rule name:** AndroidHiddenUi",
+                            "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.\n<strong>Snippet:</strong>\n<code>pinTxt.setVisibility(View.INVISIBLE);</code>\n<strong>Rule name:</strong> AndroidHiddenUi</p>"
+                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.\n<strong>Snippet:</strong>\n<code>pinTxt.setVisibility(View.INVISIBLE);</code>\n<strong>Rule name:</strong> AndroidHiddenUi</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
+                                    "sequence": 1,
+                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
+                                    "line": 72
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "bb16f7844f19326f23a7e88b2243825c",
+                            "id": "44a5d368f8c659097091ff4a96e97cdc",
                             "ruleId": "sqlite_injection",
                             "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                             "line": 67,
-                            "code": "```            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");```\n**Rule name:** SqliteInjection",
+                            "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\n<strong>Snippet:</strong>\n<code>mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");</code>\n<strong>Rule name:</strong> SqliteInjection</p>"
+                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\n<strong>Snippet:</strong>\n<code>mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");</code>\n<strong>Rule name:</strong> SqliteInjection</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 1,
+                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
+                                    "line": 67
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "bab68db729e5993f7ef5b2fe7466fbdb",
+                            "id": "19343216db4eef07cd39a213c77af91a",
                             "ruleId": "android_detect_tapjacking",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
-                            "code": "```Missing Best Practice```\n**Rule name:** AndroidDetectTapjacking",
+                            "code": "Missing Best Practice\n**Rule name:** AndroidDetectTapjacking",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidDetectTapjacking</p>"
+                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidDetectTapjacking</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidDetectTapjacking",
+                                    "line": 1
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "3b20fcd485671b07d7b54122f46000e6",
+                            "id": "a566c4d85d57f823c7395e2a0468cc34",
                             "ruleId": "android_prevent_screenshot",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
-                            "code": "```Missing Best Practice```\n**Rule name:** AndroidPreventScreenshot",
+                            "code": "Missing Best Practice\n**Rule name:** AndroidPreventScreenshot",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidPreventScreenshot</p>"
+                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidPreventScreenshot</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidPreventScreenshot",
+                                    "line": 1
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "9e7a3ecff0099ed381d3bba8c8811d36",
+                            "id": "e572e8327ee63695ab3f5821ae3c0c98",
                             "ruleId": "android_safetynet_api",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
-                            "code": "```Missing Best Practice```\n**Rule name:** AndroidSafetynetApi",
+                            "code": "Missing Best Practice\n**Rule name:** AndroidSafetynetApi",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. \n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidSafetynetApi</p>"
+                            "description": "<p><strong>Result message:</strong> This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. \n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidSafetynetApi</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidSafetynetApi",
+                                    "line": 1
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "4f11b4e8658127429ac62585eab2f4b6",
+                            "id": "15104c73bbb85111e4a1c92f1d474afc",
                             "ruleId": "android_root_detection",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
-                            "code": "```Missing Best Practice```\n**Rule name:** AndroidRootDetection",
+                            "code": "Missing Best Practice\n**Rule name:** AndroidRootDetection",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidRootDetection</p>"
+                            "description": "<p><strong>Result message:</strong> This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidRootDetection</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidRootDetection",
+                                    "line": 1
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "bf6d7df0993287503b59f0fa35c1670a",
+                            "id": "6540926afea1c17e934251980998b9a7",
                             "ruleId": "android_certificate_transparency",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
-                            "code": "```Missing Best Practice```\n**Rule name:** AndroidCertificateTransparency",
+                            "code": "Missing Best Practice\n**Rule name:** AndroidCertificateTransparency",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidCertificateTransparency</p>"
+                            "description": "<p><strong>Result message:</strong> This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidCertificateTransparency</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidCertificateTransparency",
+                                    "line": 1
+                                }
+                            ]
                         },
                         {
                             "type": "sast",
-                            "id": "2be416263144f42958b7e1a7488e7ea9",
+                            "id": "7c53cff3e624f61ae9a36992096c2421",
                             "ruleId": "android_certificate_pinning",
                             "locationId": "0374ec857381230fa83049643ce3cdee",
                             "line": 1,
-                            "code": "```Missing Best Practice```\n**Rule name:** AndroidCertificatePinning",
+                            "code": "Missing Best Practice\n**Rule name:** AndroidCertificatePinning",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in <code>network_security_config.xml</code>.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidCertificatePinning</p>"
+                            "description": "<p><strong>Result message:</strong> This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in <code>network_security_config.xml</code>.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidCertificatePinning</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "0374ec857381230fa83049643ce3cdee",
+                                    "sequence": 1,
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidCertificatePinning",
+                                    "line": 1
+                                }
+                            ]
                         }
                     ]
                 }
