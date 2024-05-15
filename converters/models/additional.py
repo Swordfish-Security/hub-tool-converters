@@ -74,12 +74,17 @@ class AdditionalFields:
             self.file_key = hashlib.md5(
                 self.url.encode('utf-8')
             ).hexdigest()
+        else:
+            self.file_key = 'Unknown'
 
     def __parse_dupe_key(self) -> None:
         try:
-            self.dupe_key = hashlib.md5(
-                (self.title + self.secret + str(self.line) + self.file_path + self.description).encode("utf-8")
-            ).hexdigest()
+            key = self.title
+            if self.secret:
+                key = key + self.secret
+            if self.line:
+                key = key + str(self.line)
+            self.dupe_key = hashlib.md5((key + self.file_path + self.description).encode("utf-8")).hexdigest()
         except TypeError:
             self.dupe_key = hashlib.md5(
                 (

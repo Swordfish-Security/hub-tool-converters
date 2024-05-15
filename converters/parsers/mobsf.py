@@ -93,7 +93,7 @@ class MobSFParser(object):
                         "title": details.get("name", ""),
                         "severity": self.getSeverityForPermission(details.get("status")),
                         "description": "**Permission Type:** " + details.get("name", "") + " (" + details.get("status", "") + ")\n\n**Description:** " + details.get("description", "") + "\n\n**Reason:** " + details.get("reason", ""),
-                        "file_path": None
+                        "file_path": "Permissions"
                     }
                     mobsf_findings.append(mobsf_item)
             else:
@@ -103,7 +103,7 @@ class MobSFParser(object):
                         "title": permission,
                         "severity": self.getSeverityForPermission(details.get("status", "")),
                         "description": "**Permission Type:** " + permission + "\n\n**Description:** " + details.get("description", ""),
-                        "file_path": None
+                        "file_path": "Permissions"
                     }
                     mobsf_findings.append(mobsf_item)
 
@@ -159,7 +159,7 @@ class MobSFParser(object):
                             "title": details["title"],
                             "severity": details["severity"].title(),
                             "description": details["description"] + "\n\n " + details["name"],
-                            "file_path": None
+                            "file_path": "Manifest"
                         }
                         mobsf_findings.append(mobsf_item)
                 else:
@@ -169,7 +169,7 @@ class MobSFParser(object):
                             "title": details["title"],
                             "severity": details["stat"].title(),
                             "description": details["desc"] + "\n\n " + details["name"],
-                            "file_path": None
+                            "file_path": "Manifest"
                         }
                         mobsf_findings.append(mobsf_item)
 
@@ -292,7 +292,7 @@ class MobSFParser(object):
                     "title": details["title"],
                     "severity": details["stat"],
                     "description": details["desc"],
-                    "file_path": None
+                    "file_path": "Manifest"
                 }
                 mobsf_findings.append(mobsf_item)
 
@@ -333,7 +333,9 @@ class MobSFParser(object):
             sev = self.getCriticalityRating(mobsf_finding["severity"])
             description = ""
             file_path = None
+            reason = title
             if mobsf_finding["category"]:
+                reason = mobsf_finding["category"] + ' ' + reason
                 description += "**Category:** " + mobsf_finding["category"] + "\n\n"
             description = description + html2text(mobsf_finding["description"])
             finding = Finding(
@@ -347,6 +349,7 @@ class MobSFParser(object):
                 static_finding=True,
                 dynamic_finding=False,
                 nb_occurences=1,
+                reason=reason
             )
             if mobsf_finding["file_path"]:
                 finding.file_path = mobsf_finding["file_path"]

@@ -23,3 +23,11 @@ class SourceDast:
     name: str
     url: str
     stage: Stage | None = None
+
+
+@dataclass(kw_only=True, init=True, eq=False, order=False)
+class SourceArtifact:
+    id: str = str(uuid.uuid4())
+    type: SourceTypes = SourceTypes.ARTIFACT.value
+    name: str
+    url: str
