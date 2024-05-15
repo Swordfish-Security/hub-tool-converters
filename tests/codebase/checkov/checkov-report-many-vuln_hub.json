@@ -1,0 +1,106 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "293132c4-8f90-4d44-ad70-369b2865da97",
+                "description": "Import checkov results"
+            },
+            "source": [
+                {
+                    "id": "192bd1ee-879c-4373-9d62-a8cf2e9a7b67",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "checkov"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "checkov Medium",
+                            "id": "checkov Medium",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "key\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "97fd815a3803a0588876bdd862014fed",
+                            "sourceId": "192bd1ee-879c-4373-9d62-a8cf2e9a7b67",
+                            "fileName": "file_path",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "b98eb6eb274a8c9ef7935c1045370c5f",
+                            "ruleId": "checkov Medium",
+                            "locationId": "97fd815a3803a0588876bdd862014fed",
+                            "line": 1,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_41\nEnsure the key vault is recoverable</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "97fd815a3803a0588876bdd862014fed",
+                                    "sequence": 1,
+                                    "code": null,
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "10392851ab0b2763b537322a045227bc",
+                            "ruleId": "checkov Medium",
+                            "locationId": "97fd815a3803a0588876bdd862014fed",
+                            "line": 1,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_42\nEnsure the key vault is recoverable</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "97fd815a3803a0588876bdd862014fed",
+                                    "sequence": 1,
+                                    "code": null,
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "22c4958a291ad21c100be9132c7aeb9c",
+                            "ruleId": "checkov Medium",
+                            "locationId": "97fd815a3803a0588876bdd862014fed",
+                            "line": 1,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_43\nEnsure the key vault is recoverable</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "97fd815a3803a0588876bdd862014fed",
+                                    "sequence": 1,
+                                    "code": null,
+                                    "line": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
