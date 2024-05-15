@@ -1,0 +1,1112 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "6f8abb8b-8c4b-4207-85b0-7d6766024725",
+                "description": "Import mobsf results"
+            },
+            "source": [
+                {
+                    "id": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "mobsf"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "Mobile Permissions android.permission.WRITE_EXTERNAL_STORAGE",
+                            "id": "Mobile Permissions android.permission.WRITE_EXTERNAL_STORAGE",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Mobile Permissions android.permission.WRITE_EXTERNAL_STORAGE"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Mobile Permissions android.permission.READ_EXTERNAL_STORAGE",
+                            "id": "Mobile Permissions android.permission.READ_EXTERNAL_STORAGE",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Mobile Permissions android.permission.READ_EXTERNAL_STORAGE"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Mobile Permissions android.permission.INTERNET",
+                            "id": "Mobile Permissions android.permission.INTERNET",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Mobile Permissions android.permission.INTERNET"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Code Analysis android_logging",
+                            "id": "Code Analysis android_logging",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Code Analysis android_logging"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Code Analysis android_sql_raw_query",
+                            "id": "Code Analysis android_sql_raw_query",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Code Analysis android_sql_raw_query"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Code Analysis android_read_write_external",
+                            "id": "Code Analysis android_read_write_external",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Code Analysis android_read_write_external"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Code Analysis android_temp_file",
+                            "id": "Code Analysis android_temp_file",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Code Analysis android_temp_file"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis The shared object does not have NX bit set",
+                            "id": "Binary Analysis The shared object does not have NX bit set",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis The shared object does not have NX bit set"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis The shared object is build with -fPIC flag which enables Position independent code",
+                            "id": "Binary Analysis The shared object is build with -fPIC flag which enables Position independent code",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis The shared object is build with -fPIC flag which enables Position independent code"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "id": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis This shared object does not have a stack canary value added to the stack"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis This shared object does not have RELRO enabled",
+                            "id": "Binary Analysis This shared object does not have RELRO enabled",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis This shared object does not have RELRO enabled"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "id": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis The shared object does not have run-time search path or RPATH set"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis The shared object does not have RUNPATH set",
+                            "id": "Binary Analysis The shared object does not have RUNPATH set",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis The shared object does not have RUNPATH set"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis The shared object does not have any fortified functions",
+                            "id": "Binary Analysis The shared object does not have any fortified functions",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis The shared object does not have any fortified functions"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis Symbols are stripped",
+                            "id": "Binary Analysis Symbols are stripped",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis Symbols are stripped"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "id": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "severity": "High",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis The shared object is built without Position Independent Code flag"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Binary Analysis This shared object has a stack canary value added to the stack so that it will be overwritten by a stack buffer that overflows the return address",
+                            "id": "Binary Analysis This shared object has a stack canary value added to the stack so that it will be overwritten by a stack buffer that overflows the return address",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Binary Analysis This shared object has a stack canary value added to the stack so that it will be overwritten by a stack buffer that overflows the return address"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Android API Local File I/O Operations",
+                            "id": "Android API Local File I/O Operations",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Android API Local File I/O Operations"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Android API Starting Activity",
+                            "id": "Android API Starting Activity",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Android API Starting Activity"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Android API Inter Process Communication",
+                            "id": "Android API Inter Process Communication",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Android API Inter Process Communication"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Android API Content Provider",
+                            "id": "Android API Content Provider",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Android API Content Provider"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "Android API Loading Native Code (Shared Library)",
+                            "id": "Android API Loading Native Code (Shared Library)",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 919
+                                }
+                            ],
+                            "description": "Android API Loading Native Code (Shared Library)"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "d08ccf52b4cdd08e41cfb99ec42e0b29",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "Permissions",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "Unknown",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "Unknown",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/armeabi-v7a/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "1709be653005aa06d5e0ecab40193312",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/arm64-v8a/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "de1f640b89a1dc756b890d60e10ac37d",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/armeabi/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "513feaa3946fbe50d86a413cf3a250e1",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/x86_64/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/mips64/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "9d95803e5a82d5c5e668f247622bdea0",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/mips/libdivajni.so",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "caac9450db20d02f537961fa2107cd3d",
+                            "sourceId": "994f8c55-a3bb-4f1a-956b-d50b9cbbc3ae",
+                            "fileName": "lib/x86/libdivajni.so",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "5ed737ec07b490addaf1fd327f201d5f",
+                            "ruleId": "Mobile Permissions android.permission.WRITE_EXTERNAL_STORAGE",
+                            "locationId": "d08ccf52b4cdd08e41cfb99ec42e0b29",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.WRITE_EXTERNAL_STORAGE\n<strong>Description:</strong> Allows an application to write to external storage.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "44022a94ac97ef89b79f5b1163bb9448",
+                            "ruleId": "Mobile Permissions android.permission.READ_EXTERNAL_STORAGE",
+                            "locationId": "d08ccf52b4cdd08e41cfb99ec42e0b29",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.READ_EXTERNAL_STORAGE <strong>Description:</strong>\nAllows an application to read from external storage.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0dc0f511ce0e40b970822c73c492d490",
+                            "ruleId": "Mobile Permissions android.permission.INTERNET",
+                            "locationId": "d08ccf52b4cdd08e41cfb99ec42e0b29",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.INTERNET <strong>Description:</strong> Allows an\napplication to create network sockets.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "38a5b61df6ee474450aafca598a149dd",
+                            "ruleId": "Code Analysis android_logging",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>The App logs information. Sensitive information should never be logged.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c4e184de4aaea9044f29311a09bedfed",
+                            "ruleId": "Code Analysis android_sql_raw_query",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App uses SQLite Database and execute raw SQL query. Untrusted user input in\nraw SQL queries can cause SQL Injection. Also sensitive information should be\nencrypted and written to the database.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "73030117f25c0ed98019ade5359b78b6",
+                            "ruleId": "Code Analysis android_read_write_external",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App can read/write to External Storage. Any App can read data written to\nExternal Storage.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "33be65c6eca7a177f45000a9d3ad32a6",
+                            "ruleId": "Code Analysis android_temp_file",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App creates temp file. Sensitive information should never be written into a\ntemp file.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "027b71f34ff94b9f50b830ae1de4e630",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "befead0018a80f09bdb0d1b0afbcb96f",
+                            "ruleId": "Binary Analysis The shared object is build with -fPIC flag which enables Position independent code",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is build with -fPIC flag which enables Position independent\ncode. This makes Return Oriented Programming (ROP) attacks much more difficult\nto execute reliably.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0988e23a053f62bb1207ecfd0c52de6a",
+                            "ruleId": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "d17d5feba58f9a34927d8c52cb61506d",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "79da825ac789ff5ac12d58f80593acfd",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "85c037a07e05d030ea2edabc80cb938f",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ef6a0860ccdd97e1a7d278f1b5d1b81b",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ab40e1a30e32e59c9d318ba18b44e6b6",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "8794aef58f6d8a62a9918d03bcff55a4",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "40afe9b98df115057ddacdc72bac7f6b",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "8f46ed49cb8fef8a0d459b040ecba985",
+                            "ruleId": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "f1a1f8214ab81db42f87200f6072712d",
+                            "ruleId": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "d8ba1a8aaa77e627bb0ec837aacedd66",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ed1205ef70f8e104c720d7f6891f6623",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "279b5b0be2faf84f85b6f744934f5026",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ceaccec5e4093c1fc1bb50c79191b332",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "e0e1e317d37429cee1cf57e5f2e3e15d",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "1709be653005aa06d5e0ecab40193312",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0a0d07e87eb045e828f07517c26e6a44",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2ac13bc1cca638d0d0282be7538a3ba6",
+                            "ruleId": "Binary Analysis The shared object is build with -fPIC flag which enables Position independent code",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is build with -fPIC flag which enables Position independent\ncode. This makes Return Oriented Programming (ROP) attacks much more difficult\nto execute reliably.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "29e4c3ae79d7a82bbb48167f9c54daf4",
+                            "ruleId": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "44d00727fadb7a38d5ccdeff2e21ff25",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0851b6f3d9c0000f4a50f93c744b0cbd",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "3e2579c027bdb303f4b8ae50638d4193",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "d82a61acbf5f873ce0221305381533b0",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0d82bc371015fc67bb6193531aff0714",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "de1f640b89a1dc756b890d60e10ac37d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "48c9ed98c7e47f9872ff0aead2a3f08d",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "3b78d36df3d1ebcf6359d3f29bfa6721",
+                            "ruleId": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "6821918d99907b9ef7357c4cb55aceff",
+                            "ruleId": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "4065c83bc19cd5f54ce99984c6b5cb93",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "a04fea799dd470b4b2d48ebbfef861e0",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "11e75690432a122b4d0d376e99b0a557",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "17276e9b4e717acb5ff12fe1f7866dd5",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "9fb50d77f99f91dd30c820e2d974b1b6",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "513feaa3946fbe50d86a413cf3a250e1",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c534170dfceb6650a7bb4c1e4f8ae3d0",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "bc78159e708213e703a06f6c8e66be28",
+                            "ruleId": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "902f8b2d8afd2a5303b81b800b741beb",
+                            "ruleId": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ecbca691c473fa42134e886cdeff01de",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "30a053bdcb71ac9379f58c68e2f6f9a6",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "49ce3c6e9766a30dbb8d7b92328f175c",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "76dd3594a477a08f690cab2189ff4888",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "2c80b479bbf120b9ddb9dfea051e88f6",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "6e5c6cfb2aad34a1c2bd00b4d4073b94",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "41c851950e6d5b0943dab75f66981bac",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "360163fdf8bcf36a591edd05e542d4d3",
+                            "ruleId": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "12f9dbcdfa36cae250887d208f9879a1",
+                            "ruleId": "Binary Analysis This shared object does not have a stack canary value added to the stack",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "cee521e14e64b27736f768697b53ba6c",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "99b2764935f7c94b177afd48e025ca2b",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "fff5300652872850dcac9066b10a9c41",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "efdf967fd078767a4dfe4d962ccb271f",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "cac9fe25ffe5c8523cf7aaaf33e15de0",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "9d95803e5a82d5c5e668f247622bdea0",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "33d6226b61dbe11160ab6bcaf9070afd",
+                            "ruleId": "Binary Analysis The shared object does not have NX bit set",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ccd151273c3373fe7b5f2e3729c0bf9b",
+                            "ruleId": "Binary Analysis The shared object is built without Position Independent Code flag",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "91e90f9e3c4ee815cc8da29692817093",
+                            "ruleId": "Binary Analysis This shared object has a stack canary value added to the stack so that it will be overwritten by a stack buffer that overflows the return address",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object has a stack canary value added to the stack so that it will\nbe overwritten by a stack buffer that overflows the return address. This\nallows detection of overflows by verifying the integrity of the canary before\nfunction return.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "29afc1ec113d7b472b0e7a422763d21f",
+                            "ruleId": "Binary Analysis This shared object does not have RELRO enabled",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "c633994a888282e36d10f234d9b90033",
+                            "ruleId": "Binary Analysis The shared object does not have run-time search path or RPATH set",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "abd3c1a8b08e14b014e14abf3eed66e6",
+                            "ruleId": "Binary Analysis The shared object does not have RUNPATH set",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ee5c9738b0b87d6acfbf21eb0c22533e",
+                            "ruleId": "Binary Analysis The shared object does not have any fortified functions",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "39f09f1bb32e55e40182ae057dd0bf8b",
+                            "ruleId": "Binary Analysis Symbols are stripped",
+                            "locationId": "caac9450db20d02f537961fa2107cd3d",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "95881181855e3cfd81e4a58ce33c8007",
+                            "ruleId": "Android API Local File I/O Operations",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_local_file_io <strong>Description:</strong> Local File I/O Operations</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "fa54c7c531ad9b9dad2809faae2b0ae2",
+                            "ruleId": "Android API Starting Activity",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_start_activity <strong>Description:</strong> Starting Activity</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "78de312b337dc2777b81770a717487d6",
+                            "ruleId": "Android API Inter Process Communication",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_ipc <strong>Description:</strong> Inter Process Communication</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "ec9649c09e967d723bee90ecf006c8f5",
+                            "ruleId": "Android API Content Provider",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_content_provider <strong>Description:</strong> Content Provider</p>",
+                            "stacks": null
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0ad952b07560652a5ba9a3197af51773",
+                            "ruleId": "Android API Loading Native Code (Shared Library)",
+                            "locationId": "Unknown",
+                            "line": null,
+                            "code": null,
+                            "status": "To Verify",
+                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_native_code <strong>Description:</strong> Loading Native Code (Shared Library)</p>",
+                            "stacks": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
