@@ -25,14 +25,14 @@
 | -o; --output      | Путь где будет создан отчет в формате AppSec.HUB                                                                                    | Да                                                    |
 | -n; --name        | Название репозитория в AppSec.Hub                                                                                                   | Да                                                    |
 | -u; --url         | Урл репозитория                                                                                                                     | Да                                                    |
-| --format          | Формат входного файла (bandit, burp, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, svace)                  | Нет, по умолчанию взято значение из аргумента scanner |
+| --format          | Формат входного файла (bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, svace)         | Нет, по умолчанию взято значение из аргумента scanner |
 | -b; --branch      | Ветка в репозитории, по которой запускалось сканирование                                                                            | Нет, по умолчанию master                              |
 | -c; --commit      | Коммит в репозитории, по которому запускалось сканирование                                                                          | Нет, по умолчанию master                              |
 | -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)                                                                                       | Нет, по умолчанию maven                               |
 | --stage           | Стадия экземпляра (ST - System Test, UAT - User Acceptance Test, IAT - Integration Acceptance Test, STG - Stage, PROD - Production) | Нет                                                   |
 
 ### Список поддерживаемых форматов
-bandit, burp, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog
+bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog
 
 ## Пример запуска
 
