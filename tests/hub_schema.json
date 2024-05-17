@@ -765,7 +765,7 @@
           "description": "Codebase location Id"
         },
         "line": {
-          "type": "integer",
+          "type": ["integer", "null"],
           "description": "Line number"
         },
          "code": {
@@ -782,7 +782,7 @@
           "description": "description"
         },
         "stacks": {
-          "type": "array",
+          "type": ["array", "null"],
           "description": "The sequence of function calls leading to the finding",
           "items": {
             "$ref": "#/definitions/stack"

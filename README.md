@@ -17,19 +17,22 @@
 
 ### Параметры запуска
 
-| Параметр          | Описание                                                   | Обязательный                                          |
-|-------------------|------------------------------------------------------------|-------------------------------------------------------|
-| -t; --type        | Тип источника (--help для просмотра всех типов)            | Да                                                    |
-| -s; --scanner     | Тип сканера (--help для просмотра всех типов)              | Да                                                    |
-| -f; --filename    | Путь до отчета сканера                                     | Да                                                    |
-| -o; --output      | Путь где будет создан отчет в формате AppSec.HUB           | Да                                                    |
-| -n; --name        | Название репозитория в AppSec.Hub                          | Да                                                    |
-| -u; --url         | Урл репозитория                                            | Да                                                    |
-| --format          | Парсер для обработки файла                                 | Нет, по умолчанию взято значение из аргумента scanner |
-| -b; --branch      | Ветка в репозитории, по которой запускалось сканирование   | Нет, по умолчанию master                              |
-| -c; --commit      | Коммит в репозитории, по которому запускалось сканирование | Нет, по умолчанию master                              |
-| -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)              | Нет, по умолчанию maven                               |
-| --stage           | Состояние экземпляра                                       | Нет                                                   |
+| Параметр          | Описание                                                                                                    | Обязательный                                          |
+|-------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| -t; --type        | Тип источника (--help для просмотра всех типов)                                                             | Да                                                    |
+| -s; --scanner     | Тип сканера (если задан формат, то сканер может быть любым, иначе совпадать с одним из допустимых форматов) | Да                                                    |
+| -f; --filename    | Путь до отчета сканера                                                                                      | Да                                                    |
+| -o; --output      | Путь где будет создан отчет в формате AppSec.HUB                                                            | Да                                                    |
+| -n; --name        | Название репозитория в AppSec.Hub                                                                           | Да                                                    |
+| -u; --url         | Урл репозитория                                                                                             | Да                                                    |
+| --format          | Парсер для обработки файла                                                                                  | Нет, по умолчанию взято значение из аргумента scanner |
+| -b; --branch      | Ветка в репозитории, по которой запускалось сканирование                                                    | Нет, по умолчанию master                              |
+| -c; --commit      | Коммит в репозитории, по которому запускалось сканирование                                                  | Нет, по умолчанию master                              |
+| -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)                                                               | Нет, по умолчанию maven                               |
+| --stage           | Стадия экземпляра (--help для просмотра всех допустимых стадий)                                             | Нет                                                   |
+
+### Список поддерживаемых форматов
+bandit, burp, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog
 
 ## Пример запуска
 
@@ -45,9 +48,17 @@ pip install -r requirements.txt
 
 3. Запуск конвертера
 ```bash
-python main.py -t CODEBASE -s sarif -f ./tests/codebase/sarif/mobsfscan.json -o ./tests/codebase/sarif/mobsfscan_hub.json -n hub-tool-converters -u https://github.com/Swordfish-Security/hub-tool-converters.git
+python main.py -s trufflehog -t CODEBASE -f tests/codebase/trufflehog/v3_github.json -o trufflehog_hub.json -n hub-tool-converters -u https://github.com/Swordfish-Security/hub-tool-converters.git
 ```
 
+4. Запуск конвертера для сканера с форматом
+```bash
+python main.py -s pvs-studio -t CODEBASE --format sarif -f pvs-studio.sarif -o pvs-studio_hub.json -n hub-tool-converters -u https://github.com/Swordfish-Security/hub-tool-converters.git
+```
+или
+```bash
+python main.py -s svace -t CODEBASE --format sarif -f tests/codebase/svace/svace.sarif -o svace_hub.json -n hub-tool-converters -u https://github.com/Swordfish-Security/hub-tool-converters.git
+```
 ## Запуск тестов
 
 1. Создание виртуального окружения и его активация

@@ -7,7 +7,7 @@ from converters.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast
 from hub.models.location import LocationSast, LocationDast
 from hub.models.rule import Rule, RuleCwe
-from hub.models.source import SourceSast, SourceDast
+from hub.models.source import SourceSast, SourceDast, SourceArtifact
 
 import markdown
 
@@ -42,6 +42,11 @@ class HubParser:
                 url=self.args.url,
                 stage=self.args.stage
             )
+        elif self.args.type == SourceTypes.ARTIFACT.value:
+            self.source: SourceDast = SourceArtifact(
+                name=self.args.name,
+                url=self.args.url
+            )
         else:
             raise ValueError("Invalid source type")
 
@@ -66,7 +71,7 @@ class HubParser:
 
     def __parse_finding(self, finding: Finding):
         scanner_type = self.__get_scanner_type(finding)
-        if self.args.type == SourceTypes.CODEBASE.value:
+        if scanner_type == ScannerTypes.SAST.value:
             finding_hub = FindingHubSast(
                 idx=finding.dupe_key,
                 ruleId=finding.ruleId,
@@ -78,7 +83,7 @@ class HubParser:
                 type=scanner_type
             )
 
-        elif self.args.type == SourceTypes.INSTANCE.value:
+        elif scanner_type == ScannerTypes.DAST.value:
             finding_hub = FindingHubDast(
                 idx=finding.dupe_key,
                 ruleId=finding.ruleId,
@@ -103,14 +108,14 @@ class HubParser:
             if self.args.type == SourceTypes.CODEBASE.value:
                 self.locations[finding.file_key] = LocationSast(
                     type=self.args.type,
-                    id=finding.file_key,
+                    id=finding.file_key if finding.file_key else 'Unknown',
                     sourceId=self.source.id,
                     fileName=finding.file_path if finding.file_path else 'Unknown'
                 )
             elif self.args.type == SourceTypes.INSTANCE.value:
                 self.locations[finding.file_key] = LocationDast(
                     type=self.args.type,
-                    id=finding.file_key,
+                    id=finding.file_key if finding.file_key else 'Unknown',
                     sourceId=self.source.id,
                     url=finding.url if finding.url else None,
                     description=finding.description if finding.description else None
