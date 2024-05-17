@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "b00be912-4a4f-48dd-9e85-ce59daed30cb",
+                "id": "0299efbf-f7e6-42d1-bb4c-f377ba0d1203",
                 "description": "Import checkov results"
             },
             "source": [
                 {
-                    "id": "adeca541-8902-4a3b-8b2c-d14d076edeb5",
+                    "id": "2fd5fc77-b435-458f-9fc6-3a86205e021d",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -133,14 +133,14 @@
                         {
                             "type": "codebase",
                             "id": "e41ca6e77b2fd05f88af42234fe0a9dd",
-                            "sourceId": "adeca541-8902-4a3b-8b2c-d14d076edeb5",
+                            "sourceId": "2fd5fc77-b435-458f-9fc6-3a86205e021d",
                             "fileName": "/aws/db-app.tf",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "d6af67052aa600f74472fb976b381429",
-                            "sourceId": "adeca541-8902-4a3b-8b2c-d14d076edeb5",
+                            "sourceId": "2fd5fc77-b435-458f-9fc6-3a86205e021d",
                             "fileName": "/aws/resources/Dockerfile",
                             "language": "Any"
                         }
@@ -148,7 +148,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "d3cc7ffc367548a5f0d94b57f756d195",
+                            "id": "ad0b92369a55a52dc4f49167b380279f",
                             "ruleId": "CKV_AWS_161",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 1,
@@ -166,7 +166,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "ff38d00998d4ec76cf6f4381e30b6dd7",
+                            "id": "d90bba98037089f61e25c612fe6711c7",
                             "ruleId": "CKV_AWS_16",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 1,
@@ -184,7 +184,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a16297826acc4d953d540ac01ef5986f",
+                            "id": "e7607dcc9ed5ec416d0ee5a7db544620",
                             "ruleId": "CKV_AWS_129",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 1,
@@ -202,7 +202,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "f72fa2f3e21b432791a518530896b963",
+                            "id": "ecfacd3af246b76310621161cf1fa826",
                             "ruleId": "CKV_AWS_157",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 1,
@@ -220,7 +220,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b077e11c5e54cfe73aec83d1a14dedde",
+                            "id": "8c2f0802b711f2625f0213a6a52d4fdf",
                             "ruleId": "CKV_AWS_17",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 1,
@@ -238,7 +238,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "e7b57c9fbefe98f14fa524ee0742f184",
+                            "id": "72d1280dc15634739dcb61cd16ff020f",
                             "ruleId": "CKV_AWS_118",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 1,
@@ -256,7 +256,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "93956172e3291a9b006f70dfde4bab72",
+                            "id": "1e0286afcb8b1fa6671a16f516a54b00",
                             "ruleId": "CKV_AWS_79",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 242,
@@ -274,7 +274,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "17dcc66d9772f9cebb2511d44a3dd730",
+                            "id": "568c856909d703ced263f00d80097bee",
                             "ruleId": "CKV_AWS_8",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 242,
@@ -292,7 +292,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "211dfb3ddcf684e3a2122bf9358da2b6",
+                            "id": "86adb3b11cfba5fdf020a0539f5d192c",
                             "ruleId": "CKV_AWS_135",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 242,
@@ -310,7 +310,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "12be8d222bc2084c2ddc626ec0479b15",
+                            "id": "9d2c7d4942ded13560b93120ede2beda",
                             "ruleId": "CKV_AWS_126",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 242,
@@ -328,7 +328,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "21802711b186a7e3940edbb242dda368",
+                            "id": "54d2caf0c7be07927bf6c459fe726218",
                             "ruleId": "CKV2_AWS_17",
                             "locationId": "e41ca6e77b2fd05f88af42234fe0a9dd",
                             "line": 242,
@@ -346,7 +346,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "91945710935777bf3d47061a401d1fee",
+                            "id": "f14985d85948db3c39a62c1349dc825d",
                             "ruleId": "CKV_DOCKER_3",
                             "locationId": "d6af67052aa600f74472fb976b381429",
                             "line": 0,
@@ -364,7 +364,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "a3ef94f0c1b2e93f59d38016e8ca1810",
+                            "id": "5d02026a112d47adefbf91955e782197",
                             "ruleId": "CKV_DOCKER_2",
                             "locationId": "d6af67052aa600f74472fb976b381429",
                             "line": 0,

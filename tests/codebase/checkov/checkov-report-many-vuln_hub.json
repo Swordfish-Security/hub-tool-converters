@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "cf346550-6a7c-4a07-8403-442fc457a380",
+                "id": "44b8eb17-5bbe-4206-8aeb-6de695ee68e9",
                 "description": "Import checkov results"
             },
             "source": [
                 {
-                    "id": "82966255-1b78-4000-8ddc-72144f4cc9dc",
+                    "id": "1df325a8-b704-4162-85d2-34b22fb9dd01",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -53,7 +53,7 @@
                         {
                             "type": "codebase",
                             "id": "97fd815a3803a0588876bdd862014fed",
-                            "sourceId": "82966255-1b78-4000-8ddc-72144f4cc9dc",
+                            "sourceId": "1df325a8-b704-4162-85d2-34b22fb9dd01",
                             "fileName": "file_path",
                             "language": "Any"
                         }
@@ -61,54 +61,54 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "b98eb6eb274a8c9ef7935c1045370c5f",
+                            "id": "db1cf5f2bfccdaabcb31630d8f26bf5e",
                             "ruleId": "CKV_AZURE_41",
                             "locationId": "97fd815a3803a0588876bdd862014fed",
                             "line": 1,
-                            "code": null,
+                            "code": "N/A",
                             "status": "To Verify",
                             "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_41\nEnsure the key vault is recoverable</p>",
                             "stacks": [
                                 {
                                     "locationId": "97fd815a3803a0588876bdd862014fed",
                                     "sequence": 1,
-                                    "code": null,
+                                    "code": "N/A",
                                     "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "10392851ab0b2763b537322a045227bc",
+                            "id": "50d769eafd98edf2fe28e840b90ebcd5",
                             "ruleId": "CKV_AZURE_42",
                             "locationId": "97fd815a3803a0588876bdd862014fed",
                             "line": 1,
-                            "code": null,
+                            "code": "N/A",
                             "status": "To Verify",
                             "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_42\nEnsure the key vault is recoverable</p>",
                             "stacks": [
                                 {
                                     "locationId": "97fd815a3803a0588876bdd862014fed",
                                     "sequence": 1,
-                                    "code": null,
+                                    "code": "N/A",
                                     "line": 1
                                 }
                             ]
                         },
                         {
                             "type": "sast",
-                            "id": "22c4958a291ad21c100be9132c7aeb9c",
+                            "id": "00c5004cafe172f1991c90a739c7c73e",
                             "ruleId": "CKV_AZURE_43",
                             "locationId": "97fd815a3803a0588876bdd862014fed",
                             "line": 1,
-                            "code": null,
+                            "code": "N/A",
                             "status": "To Verify",
                             "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_43\nEnsure the key vault is recoverable</p>",
                             "stacks": [
                                 {
                                     "locationId": "97fd815a3803a0588876bdd862014fed",
                                     "sequence": 1,
-                                    "code": null,
+                                    "code": "N/A",
                                     "line": 1
                                 }
                             ]

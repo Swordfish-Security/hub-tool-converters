@@ -81,6 +81,8 @@ def get_item(vuln, test, check_type):
     if "code_block" in vuln:
         code = vuln["code_block"]
         code_line = "".join(line[1] for line in code)
+    if not code_line:
+        code_line = 'N/A'
 
     resource = None
     if "resource" in vuln:
