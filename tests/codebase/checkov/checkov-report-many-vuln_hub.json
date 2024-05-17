@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "293132c4-8f90-4d44-ad70-369b2865da97",
+                "id": "cf346550-6a7c-4a07-8403-442fc457a380",
                 "description": "Import checkov results"
             },
             "source": [
                 {
-                    "id": "192bd1ee-879c-4373-9d62-a8cf2e9a7b67",
+                    "id": "82966255-1b78-4000-8ddc-72144f4cc9dc",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -26,18 +26,34 @@
                     "rules": [
                         {
                             "type": "sast",
-                            "name": "checkov Medium",
-                            "id": "checkov Medium",
+                            "name": "CKV_AZURE_41",
+                            "id": "CKV_AZURE_41",
                             "severity": "Medium",
                             "cwe": null,
-                            "description": "key\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                            "description": "CKV_AZURE_41\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "CKV_AZURE_42",
+                            "id": "CKV_AZURE_42",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "CKV_AZURE_42\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "CKV_AZURE_43",
+                            "id": "CKV_AZURE_43",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "CKV_AZURE_43\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "97fd815a3803a0588876bdd862014fed",
-                            "sourceId": "192bd1ee-879c-4373-9d62-a8cf2e9a7b67",
+                            "sourceId": "82966255-1b78-4000-8ddc-72144f4cc9dc",
                             "fileName": "file_path",
                             "language": "Any"
                         }
@@ -46,7 +62,7 @@
                         {
                             "type": "sast",
                             "id": "b98eb6eb274a8c9ef7935c1045370c5f",
-                            "ruleId": "checkov Medium",
+                            "ruleId": "CKV_AZURE_41",
                             "locationId": "97fd815a3803a0588876bdd862014fed",
                             "line": 1,
                             "code": null,
@@ -64,7 +80,7 @@
                         {
                             "type": "sast",
                             "id": "10392851ab0b2763b537322a045227bc",
-                            "ruleId": "checkov Medium",
+                            "ruleId": "CKV_AZURE_42",
                             "locationId": "97fd815a3803a0588876bdd862014fed",
                             "line": 1,
                             "code": null,
@@ -82,7 +98,7 @@
                         {
                             "type": "sast",
                             "id": "22c4958a291ad21c100be9132c7aeb9c",
-                            "ruleId": "checkov Medium",
+                            "ruleId": "CKV_AZURE_43",
                             "locationId": "97fd815a3803a0588876bdd862014fed",
                             "line": 1,
                             "code": null,

@@ -64,6 +64,7 @@ def get_item(vuln, test, check_type):
     title = (
         vuln["check_name"] if "check_name" in vuln else "check_name not found"
     )
+    check = title if "check_id" not in vuln else vuln['check_id']
     description = f"Check Type: {check_type}\n"
     if "check_id" in vuln:
         description += f"Check Id: {vuln['check_id']}\n"
@@ -105,4 +106,5 @@ def get_item(vuln, test, check_type):
         component_name=resource,
         static_finding=True,
         dynamic_finding=False,
+        reason=check,
     )

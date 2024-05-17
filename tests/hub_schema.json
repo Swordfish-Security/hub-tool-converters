@@ -1031,7 +1031,7 @@
           "description": "Column number"
         },
         "code": {
-          "type": "string",
+          "type": ["string", "none"],
           "description": "Source code"
         }
       }
