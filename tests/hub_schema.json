@@ -1017,12 +1017,12 @@
         },
         "line": {
           "type": "integer",
-          "minimum": 1,
+          "minimum": 0,
           "description": "Line number"
         },
         "sequence": {
           "type": "integer",
-          "minimum": 1,
+          "minimum": 0,
           "description": "Sequence"
         },
         "column": {

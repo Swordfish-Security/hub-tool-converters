@@ -1,0 +1,122 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "44b8eb17-5bbe-4206-8aeb-6de695ee68e9",
+                "description": "Import checkov results"
+            },
+            "source": [
+                {
+                    "id": "1df325a8-b704-4162-85d2-34b22fb9dd01",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git"
+                }
+            ],
+            "tool": {
+                "product": "checkov"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "CKV_AZURE_41",
+                            "id": "CKV_AZURE_41",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "CKV_AZURE_41\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "CKV_AZURE_42",
+                            "id": "CKV_AZURE_42",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "CKV_AZURE_42\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                        },
+                        {
+                            "type": "sast",
+                            "name": "CKV_AZURE_43",
+                            "id": "CKV_AZURE_43",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "CKV_AZURE_43\nhttps://docs.bridgecrew.io/docs/ensure-the-key-vault-is-recoverable"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "97fd815a3803a0588876bdd862014fed",
+                            "sourceId": "1df325a8-b704-4162-85d2-34b22fb9dd01",
+                            "fileName": "file_path",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "db1cf5f2bfccdaabcb31630d8f26bf5e",
+                            "ruleId": "CKV_AZURE_41",
+                            "locationId": "97fd815a3803a0588876bdd862014fed",
+                            "line": 1,
+                            "code": "N/A",
+                            "status": "To Verify",
+                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_41\nEnsure the key vault is recoverable</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "97fd815a3803a0588876bdd862014fed",
+                                    "sequence": 1,
+                                    "code": "N/A",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "50d769eafd98edf2fe28e840b90ebcd5",
+                            "ruleId": "CKV_AZURE_42",
+                            "locationId": "97fd815a3803a0588876bdd862014fed",
+                            "line": 1,
+                            "code": "N/A",
+                            "status": "To Verify",
+                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_42\nEnsure the key vault is recoverable</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "97fd815a3803a0588876bdd862014fed",
+                                    "sequence": 1,
+                                    "code": "N/A",
+                                    "line": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "00c5004cafe172f1991c90a739c7c73e",
+                            "ruleId": "CKV_AZURE_43",
+                            "locationId": "97fd815a3803a0588876bdd862014fed",
+                            "line": 1,
+                            "code": "N/A",
+                            "status": "To Verify",
+                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_43\nEnsure the key vault is recoverable</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "97fd815a3803a0588876bdd862014fed",
+                                    "sequence": 1,
+                                    "code": "N/A",
+                                    "line": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
