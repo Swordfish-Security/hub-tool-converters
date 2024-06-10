@@ -43,7 +43,7 @@ class HubParser:
                 stage=self.args.stage
             )
         elif self.args.type == SourceTypes.ARTIFACT.value:
-            self.source: SourceDast = SourceArtifact(
+            self.source: SourceArtifact = SourceArtifact(
                 name=self.args.name,
                 url=self.args.url
             )
