@@ -276,7 +276,7 @@ class cycloneDXXMLParser:
                 references=references,
                 component_name=component_name,
                 component_version=component_version,
-                static_finding=True,
+                static_finding=False,
                 dynamic_finding=False,
                 vuln_id_from_tool=vuln_id,
                 nb_occurences=1,
@@ -398,7 +398,7 @@ class cycloneDXJSONParser:
                     component_name=component_name,
                     component_version=component_version,
                     references=references,
-                    static_finding=True,
+                    static_finding=False,
                     dynamic_finding=False,
                     vuln_id_from_tool=vulnerability.get("id"),
                 )

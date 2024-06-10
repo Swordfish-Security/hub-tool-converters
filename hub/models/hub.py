@@ -105,3 +105,30 @@ class FindingHubDast:
         self.description = description
         self.status = status
         super().__init__()
+
+
+@dataclass(kw_only=False, eq=False, order=False)
+class FindingHubScaS:
+    type: str
+    id: str
+    ruleId: str
+    locationId: str
+    status: str
+    description: str
+
+    def __init__(
+            self,
+            idx: str,
+            ruleId: str,
+            locationId: str,
+            description: str,
+            status: str,
+            type: str
+    ):
+        self.type = type
+        self.id = idx
+        self.ruleId = ruleId
+        self.locationId = locationId
+        self.description = description
+        self.status = status
+        super().__init__()

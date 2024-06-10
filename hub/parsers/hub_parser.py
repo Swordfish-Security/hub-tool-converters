@@ -4,7 +4,7 @@ from typing import Any
 
 from config.enums import SourceTypes, ScannerTypes
 from converters.models import Finding
-from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast
+from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS
 from hub.models.location import LocationSast, LocationDast
 from hub.models.rule import Rule, RuleCwe
 from hub.models.source import SourceSast, SourceDast, SourceArtifact
@@ -94,7 +94,14 @@ class HubParser:
                 type=scanner_type
             )
         else:
-            raise ValueError(f"Unknown source type {finding}")
+            finding_hub = FindingHubScaS(
+                idx=finding.dupe_key,
+                ruleId=finding.ruleId,
+                locationId=finding.file_key,
+                description=finding.description,
+                status="To Verify",
+                type=scanner_type
+            )
 
         # Markdown to HTML
         if finding_hub.description:
