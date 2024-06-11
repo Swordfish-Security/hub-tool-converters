@@ -45,3 +45,20 @@ class Rule:
         self.description = description
         self.cwe = cwe
         super().__init__()
+
+
+@dataclass(kw_only=True, eq=False, order=False)
+class RuleSCA(Rule):
+    cveId: str
+
+    def __init__(
+            self,
+            type: ScannerTypes,
+            name: str,
+            severity: str,
+            description: str,
+            cwe: list[RuleCwe]
+    ):
+        self.cveId = name
+        super().__init__(type, name, severity, description, cwe)
+

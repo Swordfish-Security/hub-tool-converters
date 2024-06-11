@@ -4,9 +4,9 @@ from typing import Any
 
 from config.enums import SourceTypes, ScannerTypes
 from converters.models import Finding
-from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast
-from hub.models.location import LocationSast, LocationDast
-from hub.models.rule import Rule, RuleCwe
+from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS
+from hub.models.location import LocationSast, LocationDast, LocationSca
+from hub.models.rule import Rule, RuleCwe, RuleSCA
 from hub.models.source import SourceSast, SourceDast, SourceArtifact
 
 import markdown
@@ -21,7 +21,7 @@ class HubParser:
         self.__create_source()
 
         self.rules: dict[str, Rule] = {}
-        self.locations: dict[str, LocationSast | LocationDast] = {}
+        self.locations: dict[str, LocationSast | LocationDast | LocationSca] = {}
         self.findings: dict[str, FindingHubSast | FindingHubDast] = {}
 
         self.output_path = args.output
@@ -43,7 +43,7 @@ class HubParser:
                 stage=self.args.stage
             )
         elif self.args.type == SourceTypes.ARTIFACT.value:
-            self.source: SourceDast = SourceArtifact(
+            self.source: SourceArtifact = SourceArtifact(
                 name=self.args.name,
                 url=self.args.url
             )
@@ -55,7 +55,7 @@ class HubParser:
             return ScannerTypes.SAST.value
         elif finding.dynamic_finding:
             return ScannerTypes.DAST.value
-        return ScannerTypes.SCA.value
+        return ScannerTypes.SCA_S.value
 
     def __parse_reqresps(self, finding: Finding):
         """
@@ -94,7 +94,14 @@ class HubParser:
                 type=scanner_type
             )
         else:
-            raise ValueError(f"Unknown source type {finding}")
+            finding_hub = FindingHubScaS(
+                idx=finding.dupe_key,
+                ruleId=finding.ruleId,
+                locationId=finding.file_key,
+                description=finding.description,
+                status="To Verify",
+                type=scanner_type
+            )
 
         # Markdown to HTML
         if finding_hub.description:
@@ -105,14 +112,15 @@ class HubParser:
 
     def __parse_location(self, finding: Finding):
         if finding.file_key not in self.locations:
-            if self.args.type == SourceTypes.CODEBASE.value:
+            scanner_type = self.__get_scanner_type(finding)
+            if scanner_type == ScannerTypes.SAST.value:
                 self.locations[finding.file_key] = LocationSast(
                     type=self.args.type,
                     id=finding.file_key if finding.file_key else 'Unknown',
                     sourceId=self.source.id,
                     fileName=finding.file_path if finding.file_path else 'Unknown'
                 )
-            elif self.args.type == SourceTypes.INSTANCE.value:
+            elif scanner_type == ScannerTypes.DAST.value:
                 self.locations[finding.file_key] = LocationDast(
                     type=self.args.type,
                     id=finding.file_key if finding.file_key else 'Unknown',
@@ -120,16 +128,34 @@ class HubParser:
                     url=finding.url if finding.url else None,
                     description=finding.description if finding.description else None
                 )
+            elif scanner_type == ScannerTypes.SCA_S.value:
+                self.locations[finding.file_key] = LocationSca(
+                    type='component',
+                    id=finding.file_key if finding.file_key else 'Unknown',
+                    sourceId=self.source.id,
+                    componentName=finding.component_name,
+                    componentVersion=finding.component_version
+                )
 
     def __parse_rule(self, finding: Finding):
         if finding.ruleId not in self.rules:
-            self.rules[finding.ruleId] = Rule(
-                type=self.__get_scanner_type(finding),
-                name=finding.ruleId,
-                severity='Low' if finding.severity == 'Info' else finding.severity,
-                description=finding.rule_description,
-                cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
-            )
+            finding_type = self.__get_scanner_type(finding)
+            if finding_type == ScannerTypes.SCA_S.value:
+                self.rules[finding.ruleId] = RuleSCA(
+                    type=self.__get_scanner_type(finding),
+                    name=finding.ruleId,
+                    severity='Low' if finding.severity == 'Info' else finding.severity,
+                    description=finding.description,
+                    cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
+                )
+            else:
+                self.rules[finding.ruleId] = Rule(
+                    type=self.__get_scanner_type(finding),
+                    name=finding.ruleId,
+                    severity='Low' if finding.severity == 'Info' else finding.severity,
+                    description=finding.rule_description,
+                    cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
+                )
         elif finding.cwe and (not self.rules[finding.ruleId].cwe or
                               finding.cwe not in [c.id for c in self.rules[finding.ruleId].cwe]):
             if not self.rules[finding.ruleId].cwe:

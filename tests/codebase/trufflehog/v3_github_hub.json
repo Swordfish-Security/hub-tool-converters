@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "53a74961-fd71-45df-b1a9-91bc1764d3e0",
+                "id": "bd1c4ca0-00ec-45fe-a5b2-10895cbf90d9",
                 "description": "Import trufflehog results"
             },
             "source": [
                 {
-                    "id": "00255380-4c56-4302-a7b5-27ea09b30445",
+                    "id": "1494a02d-6ab8-4ee6-95e9-63ec1ef409e2",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -65,7 +65,7 @@
                         {
                             "type": "codebase",
                             "id": "14f802e1fba977727845e8872c1743a7",
-                            "sourceId": "00255380-4c56-4302-a7b5-27ea09b30445",
+                            "sourceId": "1494a02d-6ab8-4ee6-95e9-63ec1ef409e2",
                             "fileName": "keys",
                             "language": "Any"
                         }
@@ -73,7 +73,7 @@
                     "findings": [
                         {
                             "type": "sast",
-                            "id": "e3fd16b44447f497aa89161654a54dd4",
+                            "id": "475f8a2cf0d6c494bacc1f3212093f54",
                             "ruleId": "AWS",
                             "locationId": "14f802e1fba977727845e8872c1743a7",
                             "line": 4,
@@ -91,7 +91,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "7bc39c6589df115cc47ce3ad1da0515b",
+                            "id": "532eb424f09760e42ad802850bb0ecd5",
                             "ruleId": "URI",
                             "locationId": "14f802e1fba977727845e8872c1743a7",
                             "line": 3,
@@ -109,7 +109,7 @@
                         },
                         {
                             "type": "sast",
-                            "id": "b2c693dd06651065df9886e8d1acf96c",
+                            "id": "9c5ba000300e52b44954b9e072076469",
                             "ruleId": "PrivateKey",
                             "locationId": "14f802e1fba977727845e8872c1743a7",
                             "line": 1,
