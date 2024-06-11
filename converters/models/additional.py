@@ -74,6 +74,8 @@ class AdditionalFields:
             self.file_key = hashlib.md5(
                 self.url.encode('utf-8')
             ).hexdigest()
+        elif self.component_name is not None and self.component_version is not None:
+            self.file_key = self.component_name + '@' + self.component_version
         else:
             self.file_key = 'Unknown'
 

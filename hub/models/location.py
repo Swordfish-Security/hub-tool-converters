@@ -22,8 +22,17 @@ class LocationDast:
 
 
 @dataclass(kw_only=True, init=True, eq=False, order=False)
+class LocationSca:
+    type: SourceTypes
+    id: str
+    sourceId: str
+    componentName: str
+    componentVersion: str
+
+
+@dataclass(kw_only=True, init=True, eq=False, order=False)
 class LocationStack:
     locationId: str
-    sequence: int = 1
     code: str
     line: int
+    sequence: int = 1

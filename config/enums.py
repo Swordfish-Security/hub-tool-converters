@@ -4,7 +4,7 @@ import enum
 class ScannerTypes(enum.Enum):
     SAST = "sast"
     DAST = "dast"
-    SCA = "sca"
+    SCA_S = "sca_s"
 
 
 class SourceTypes(enum.Enum):
