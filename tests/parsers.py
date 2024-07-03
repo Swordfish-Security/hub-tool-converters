@@ -6,7 +6,7 @@ from typing import Any
 from jsonschema import validate
 
 from config.constances import PARSER_CLASSES
-from config.enums import SourceTypes, Stage
+from config.enums import SourceTypes, Stage, BuildTool
 from converters.parsers.sarif import SarifParser
 from hub.parsers.hub_parser import HubParser
 from main import check_keys_parser_classes
@@ -27,6 +27,7 @@ class ArgsCodebase(ArgsBase):
     type = SourceTypes.CODEBASE.value
     branch: str = "master"
     commit: str = "master"
+    build_tool: BuildTool = BuildTool.MAVEN.value.lower()
 
 
 class ArgsInstance(ArgsBase):
