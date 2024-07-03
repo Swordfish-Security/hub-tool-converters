@@ -75,7 +75,7 @@ if __name__ == '__main__':
         type=str,
         choices=BuildTool.__members__.keys(),
         help="Build tool used to compile this source code. Default: maven",
-        default=BuildTool.MAVEN.value
+        default=BuildTool.MAVEN.value.lower()
     )
     parser.add_argument(
         "--stage",
