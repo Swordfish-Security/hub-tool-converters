@@ -35,6 +35,7 @@ class HubParser:
                 url=self.args.url,
                 branch=self.args.branch,
                 commit=self.args.commit,
+                buildTool=self.args.build_tool.lower()
             )
         elif self.args.type == SourceTypes.INSTANCE.value:
             self.source: SourceDast = SourceDast(

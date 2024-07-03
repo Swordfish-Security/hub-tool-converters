@@ -1,7 +1,7 @@
 import uuid
 from dataclasses import dataclass
 
-from config.enums import SourceTypes, Stage
+from config.enums import SourceTypes, Stage, BuildTool
 
 
 @dataclass(kw_only=True, init=True, eq=False, order=False)
@@ -14,6 +14,7 @@ class SourceSast:
     branch: str
     commit: str
     vcsType: str = 'git'
+    buildTool: BuildTool = BuildTool.MAVEN.value.lower()
 
 
 @dataclass(kw_only=True, init=True, eq=False, order=False)
