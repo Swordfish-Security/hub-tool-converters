@@ -1,5 +1,6 @@
 import hashlib
 from dataclasses import dataclass
+from html_sanitizer import Sanitizer
 import re
 
 
@@ -11,6 +12,7 @@ class AdditionalFields:
     reason: str | None = None
     secret: str | None = None
     file_key: str | None = None
+    sanitizer = Sanitizer()
 
     def __parse_url(self) -> None:
         if not self.url and "URL:" in self.description:
@@ -22,8 +24,11 @@ class AdditionalFields:
         if hasattr(self, "unsaved_endpoints") and isinstance(self.unsaved_endpoints, list):
             self.ruleId = self.title
             return
-        if "Rule Id" in self.description:
+        if "**Rule Id:**" in self.description:
             self.ruleId = self.description.split("**Rule Id:** ")[1].split("\n")[0]
+        elif "Rule Id:" in self.description:
+            dirty = self.description.split("Rule Id:")[1].split("\n")[0]
+            self.ruleId = self.sanitizer.sanitize(dirty).strip('"`,;{}()%*[]^:/\\@~\'').strip()
         elif self.vuln_id_from_tool:
             if not self.ruleId:
                 self.ruleId = self.vuln_id_from_tool
@@ -44,8 +49,11 @@ class AdditionalFields:
     def __parse_secret(self) -> None:
         if not self.code:
 
-            if "Secret:" in self.description:
+            if "**Secret:**" in self.description:
                 self.secret = self.description.split("**Secret:** ")[1].split("\n")[0]
+            elif "Secret:" in self.description:
+                self.secret = self.sanitizer.sanitize(
+                    self.description.replace('\\n','\n').split("Secret:")[1].split("\n")[0]).strip()
             elif "Snippet:" in self.description:
                 self.secret = self.description.split("**Snippet:**\n")[1]
             elif "String Found:" in self.description:

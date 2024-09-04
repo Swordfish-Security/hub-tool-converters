@@ -5,3 +5,4 @@ hyperlink==21.0.0
 markdown==3.6
 python-dateutil==2.9.0
 cvss==3.1
+html-sanitizer==2.4.4
