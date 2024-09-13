@@ -15,7 +15,8 @@
                     "checkoutPath": "/",
                     "branch": "master",
                     "commit": "master",
-                    "vcsType": "git"
+                    "vcsType": "git",
+                    "buildTool": "maven"
                 }
             ],
             "tool": {

@@ -4,7 +4,7 @@
     {
       "scanDetails": {
         "id": "7686080e-6d43-4ab2-ba11-38f7097d070c",
-        "description": "Import pt-cs results"
+        "description": "Import cyclonedx results"
       },
       "source": [
         {
@@ -15,11 +15,12 @@
           "checkoutPath": "/",
           "branch": "master",
           "commit": "master",
-          "vcsType": "git"
+          "vcsType": "git",
+          "buildTool": "maven"
         }
       ],
       "tool": {
-        "product": "pt-cs"
+        "product": "cyclonedx"
       },
       "results": [
         {

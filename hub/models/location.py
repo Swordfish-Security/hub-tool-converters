@@ -33,6 +33,6 @@ class LocationSca:
 @dataclass(kw_only=True, init=True, eq=False, order=False)
 class LocationStack:
     locationId: str
+    sequence: int = 1
     code: str
     line: int
-    sequence: int = 1
