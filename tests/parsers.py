@@ -35,11 +35,18 @@ class ArgsInstance(ArgsBase):
     stage: Stage.ST = Stage.ST.value
 
 
+class ArgsArtifact(ArgsBase):
+    type = SourceTypes.ARTIFACT.value
+
+
 class ParsersTest(unittest.TestCase):
 
     def setUp(self):
         self.results: dict[str, Any] = {}
         self.reports: dict[str, Any] = {}
+
+        self.args_artifact = ArgsArtifact()
+        self.__test(self.args_artifact)
 
         self.args_codebase = ArgsCodebase()
         self.__test(self.args_codebase)
@@ -47,7 +54,7 @@ class ParsersTest(unittest.TestCase):
         self.args_instance = ArgsInstance()
         self.__test(self.args_instance)
 
-        self.args = (self.args_instance, self.args_codebase)
+        self.args = (self.args_artifact, self.args_codebase, self.args_instance)
 
     def __test(self, args):
         self.results.update({args.type: {}})
