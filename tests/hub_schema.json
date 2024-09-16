@@ -401,7 +401,7 @@
           "description": "CVE Link"
         },
         "cwe": {
-          "type": "array",
+          "type": ["array", "null"],
           "description": "Vulnerability CWE",
           "items": {
             "$ref": "#/definitions/cwe"
