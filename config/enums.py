@@ -19,6 +19,8 @@ class BuildTool(enum.Enum):
     PIP = 'pip'
     NUGET = 'nuget'
     NPM = 'npm'
+    GO_MOD = 'go mod'
+    COMPOSER = 'composer'
 
 
 class Stage(enum.Enum):
