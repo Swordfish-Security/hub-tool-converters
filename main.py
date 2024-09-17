@@ -5,6 +5,17 @@ from config.enums import SourceTypes, BuildTool, Stage
 from hub.parsers.hub_parser import HubParser
 from utils import check_keys_parser_classes, validate_args
 
+
+def _prepare_choice(choices):
+    fixed_choices = list()
+    for choice in choices:
+        fixed_choices.append(choice)
+        fixed_choices.append(choice.lower())
+        fixed_choices.append(choice.replace('_', ' '))
+        fixed_choices.append(choice.replace('_', ' ').lower())
+    return set(fixed_choices)
+
+
 if __name__ == '__main__':
     # TODO: Delete for production
     # Only for tests here
@@ -17,7 +28,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "-t", "--type",
         type=str,
-        choices=SourceTypes.__members__.keys(),
+        choices=_prepare_choice(SourceTypes.__members__.keys()),
         help="Source type",
         required=True
     )
@@ -30,7 +41,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--format",
         type=str,
-        choices=PARSER_CLASSES.keys(),
+        choices=_prepare_choice(PARSER_CLASSES.keys()),
         help="Tool from format",
         required=False
     )
@@ -73,7 +84,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "-bt", "--build-tool",
         type=str,
-        choices=BuildTool.__members__.keys(),
+        choices=_prepare_choice(BuildTool.__members__.keys()),
         help="Build tool used to compile this source code. Default: maven",
         default=BuildTool.MAVEN.value.lower()
     )
