@@ -103,9 +103,6 @@ class SemgrepParser(object):
         if snippet is not None:
             if "<![" in snippet:
                 snippet = snippet.replace("<![", "<! [")
-                description += "**Snippet:** ***Caution:*** Please remove the space between `!` and `[` to have the real value due to a workaround to circumvent [#8435](https://github.com/DefectDojo/django-DefectDojo/issues/8435).\n```{}```\n".format(
-                    snippet)
-            else:
-                description += "**Snippet:**\n```{}```\n".format(snippet)
+            description += "**Snippet:**\n```{}```\n".format(snippet)
 
         return description
