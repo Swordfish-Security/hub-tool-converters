@@ -151,25 +151,25 @@
             "/app/entrypoint_scripts/os/ubuntu.sh",
             "/app/entrypoint_scripts/os/linux.sh",
             "/app/entrypoint_scripts/common/config-vars.sh",
-            "/app/entrypoint_scripts/common/install-dojo.sh",
+            "/app/entrypoint_scripts/common/install-project.sh",
             "/app/entrypoint_scripts/common/common-os.sh",
-            "/app/entrypoint_scripts/common/dojo-shared-resources.sh",
+            "/app/entrypoint_scripts/common/project-shared-resources.sh",
             "/app/entrypoint_scripts/common/cmd-args.sh",
             "/app/entrypoint_scripts/common/prompt.sh",
             "/app/entrypoint_scripts/run/startup-docker.bash",
-            "/app/entrypoint_scripts/run/run-local-dojo.bash",
+            "/app/entrypoint_scripts/run/run-local-project.bash",
             "/app/setup/setup.bash",
             "/app/setup/upgrade.bash",
             "/app/setup/scripts/os/ubuntu.sh",
             "/app/setup/scripts/os/linux.sh",
             "/app/setup/scripts/common/config-vars.sh",
-            "/app/setup/scripts/common/install-dojo.sh",
+            "/app/setup/scripts/common/install-project.sh",
             "/app/setup/scripts/common/common-os.sh",
-            "/app/setup/scripts/common/dojo-shared-resources.sh",
+            "/app/setup/scripts/common/project-shared-resources.sh",
             "/app/setup/scripts/common/cmd-args.sh",
             "/app/setup/scripts/common/prompt.sh",
             "/app/setup/scripts/run/startup-docker.bash",
-            "/app/setup/scripts/run/run-local-dojo.bash",
+            "/app/setup/scripts/run/run-local-project.bash",
             "/app/docker/entrypoint-uwsgi-dev.sh",
             "/app/docker/entrypoint.sh",
             "/app/docker/entrypoint-uwsgi.sh",
@@ -178,7 +178,7 @@
             "/app/docker/entrypoint-celery.sh",
             "/app/docker/entrypoint-unit-tests.sh",
             "/app/docker/entrypoint-nginx.sh",
-            "/app/docker/dojo-data.bash",
+            "/app/docker/project-data.bash",
             "/app/docker/entrypoint-unit-tests-devDocker.sh",
             "/app/docker/setEnv.sh",
             "/app/docker/entrypoint-celery-worker.sh",
@@ -188,7 +188,7 @@
             "/app/docker/unit-tests.sh"
           ],
           "executionSuccessful": true,
-          "commandLine": "-a --shell=bash -f json -S error --color=never /app/legacy-setup.bash /app/test.sh /app/upgrade.bash /app/entrypoint_scripts/os/ubuntu.sh /app/entrypoint_scripts/os/linux.sh /app/entrypoint_scripts/common/config-vars.sh /app/entrypoint_scripts/common/install-dojo.sh /app/entrypoint_scripts/common/common-os.sh /app/entrypoint_scripts/common/dojo-shared-resources.sh /app/entrypoint_scripts/common/cmd-args.sh /app/entrypoint_scripts/common/prompt.sh /app/entrypoint_scripts/run/startup-docker.bash /app/entrypoint_scripts/run/run-local-dojo.bash /app/setup/setup.bash /app/setup/upgrade.bash /app/setup/scripts/os/ubuntu.sh /app/setup/scripts/os/linux.sh /app/setup/scripts/common/config-vars.sh /app/setup/scripts/common/install-dojo.sh /app/setup/scripts/common/common-os.sh /app/setup/scripts/common/dojo-shared-resources.sh /app/setup/scripts/common/cmd-args.sh /app/setup/scripts/common/prompt.sh /app/setup/scripts/run/startup-docker.bash /app/setup/scripts/run/run-local-dojo.bash /app/docker/entrypoint-uwsgi-dev.sh /app/docker/entrypoint.sh /app/docker/entrypoint-uwsgi.sh /app/docker/entrypoint-uwsgi-ptvsd.sh /app/docker/wait-for-it.sh /app/docker/entrypoint-celery.sh /app/docker/entrypoint-unit-tests.sh /app/docker/entrypoint-nginx.sh /app/docker/dojo-data.bash /app/docker/entrypoint-unit-tests-devDocker.sh /app/docker/setEnv.sh /app/docker/entrypoint-celery-worker.sh /app/docker/entrypoint-initializer.sh /app/docker/entrypoint-celery-beat.sh /app/docker/entrypoint-integration-tests.sh /app/docker/unit-tests.sh",
+          "commandLine": "-a --shell=bash -f json -S error --color=never /app/legacy-setup.bash /app/test.sh /app/upgrade.bash /app/entrypoint_scripts/os/ubuntu.sh /app/entrypoint_scripts/os/linux.sh /app/entrypoint_scripts/common/config-vars.sh /app/entrypoint_scripts/common/install-project.sh /app/entrypoint_scripts/common/common-os.sh /app/entrypoint_scripts/common/project-shared-resources.sh /app/entrypoint_scripts/common/cmd-args.sh /app/entrypoint_scripts/common/prompt.sh /app/entrypoint_scripts/run/startup-docker.bash /app/entrypoint_scripts/run/run-local-project.bash /app/setup/setup.bash /app/setup/upgrade.bash /app/setup/scripts/os/ubuntu.sh /app/setup/scripts/os/linux.sh /app/setup/scripts/common/config-vars.sh /app/setup/scripts/common/install-project.sh /app/setup/scripts/common/common-os.sh /app/setup/scripts/common/project-shared-resources.sh /app/setup/scripts/common/cmd-args.sh /app/setup/scripts/common/prompt.sh /app/setup/scripts/run/startup-docker.bash /app/setup/scripts/run/run-local-project.bash /app/docker/entrypoint-uwsgi-dev.sh /app/docker/entrypoint.sh /app/docker/entrypoint-uwsgi.sh /app/docker/entrypoint-uwsgi-ptvsd.sh /app/docker/wait-for-it.sh /app/docker/entrypoint-celery.sh /app/docker/entrypoint-unit-tests.sh /app/docker/entrypoint-nginx.sh /app/docker/project-data.bash /app/docker/entrypoint-unit-tests-devDocker.sh /app/docker/setEnv.sh /app/docker/entrypoint-celery-worker.sh /app/docker/entrypoint-initializer.sh /app/docker/entrypoint-celery-beat.sh /app/docker/entrypoint-integration-tests.sh /app/docker/unit-tests.sh",
           "endTimeUtc": "2021-03-08T15:39:40Z",
           "workingDirectory": {
             "uri": "file:///home/damien/dd"
@@ -271,7 +271,7 @@
                   "startLine": 4
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/docker/dojo-data.bash"
+                  "uri": "file:///home/damien/dd/docker/project-data.bash"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -312,7 +312,7 @@
                   "startLine": 143
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -353,7 +353,7 @@
                   "startLine": 410
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -394,7 +394,7 @@
                   "startLine": 412
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -435,7 +435,7 @@
                   "startLine": 142
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/setup/scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -476,7 +476,7 @@
                   "startLine": 142
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/setup/scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -517,7 +517,7 @@
                   "startLine": 458
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/setup/scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -558,7 +558,7 @@
                   "startLine": 460
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/setup/scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -599,7 +599,7 @@
                   "startLine": 143
                 },
                 "artifactLocation": {
-                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh"
+                  "uri": "file:///home/damien/dd/entrypoint_scripts/common/project-shared-resources.sh"
                 },
                 "contextRegion": {
                   "snippet": {
@@ -716,7 +716,7 @@
       "versionControlProvenance": [
         {
           "branch": "dev",
-          "repositoryUri": "https://github.com/damiencarol/django-DefectDojo",
+          "repositoryUri": "https://github.com/damiencarol/django-Project",
           "revisionId": "288c68d1ba1f35ebeff1d1bdb032186a23f0ea5b"
         }
       ]

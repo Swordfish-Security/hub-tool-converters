@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "d97690f5-b38b-4d4c-a5e0-fef18573ef46",
+                "id": "bacf1700-3185-4684-abe9-07bad815c67c",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "ed7d4cf3-5119-4551-8a36-9b35c3df7df4",
+                    "id": "4aea100e-3860-43fa-9d1b-0025da382452",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -70,35 +70,35 @@
                         {
                             "type": "codebase",
                             "id": "25eccab89a1c31a6d5afcf23712f6de8",
-                            "sourceId": "ed7d4cf3-5119-4551-8a36-9b35c3df7df4",
+                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
                             "fileName": "file:///home/damien/dd/docker/setEnv.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
-                            "id": "274b7789ef0b093059e5e4da00e6d0b1",
-                            "sourceId": "ed7d4cf3-5119-4551-8a36-9b35c3df7df4",
-                            "fileName": "file:///home/damien/dd/docker/dojo-data.bash",
+                            "id": "1a89d0b781386d207ec5d7c3f3a3e1d6",
+                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "fileName": "file:///home/damien/dd/docker/project-data.bash",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
-                            "id": "83ec204667e693b777feb372688d69ae",
-                            "sourceId": "ed7d4cf3-5119-4551-8a36-9b35c3df7df4",
-                            "fileName": "file:///home/damien/dd/entrypoint_scripts/common/dojo-shared-resources.sh",
+                            "id": "c86e442b4211a54735732324079b33d9",
+                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "fileName": "file:///home/damien/dd/entrypoint_scripts/common/project-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
-                            "id": "97adb0cf0121a1db2f8668e64787202b",
-                            "sourceId": "ed7d4cf3-5119-4551-8a36-9b35c3df7df4",
-                            "fileName": "file:///home/damien/dd/setup/scripts/common/dojo-shared-resources.sh",
+                            "id": "93688eb57b93becff6c9435f546b5ac0",
+                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "fileName": "file:///home/damien/dd/setup/scripts/common/project-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7b72273b3024b58104952a0df0bca7d9",
-                            "sourceId": "ed7d4cf3-5119-4551-8a36-9b35c3df7df4",
+                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/common-os.sh",
                             "language": "Any"
                         }
@@ -124,16 +124,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "8a2e996c93d21241aa83a89e00e98385",
+                            "id": "7d1257d6ad0458bce7e05c76e12e65f9",
                             "ruleId": "2071",
-                            "locationId": "274b7789ef0b093059e5e4da00e6d0b1",
+                            "locationId": "1a89d0b781386d207ec5d7c3f3a3e1d6",
                             "line": 4,
                             "code": "if [ $# > 1 ]\n\n**Rule name:** \n**Rule short description:** > is for string comparisons",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> &gt; is for string comparisons. Use -gt instead.\n<strong>Snippet:</strong>\n<code>if [ $# &gt; 1 ]</code>\n<strong>Rule name:</strong> \n<strong>Rule short description:</strong> &gt; is for string comparisons</p>",
                             "stacks": [
                                 {
-                                    "locationId": "274b7789ef0b093059e5e4da00e6d0b1",
+                                    "locationId": "1a89d0b781386d207ec5d7c3f3a3e1d6",
                                     "sequence": 1,
                                     "code": "if [ $# > 1 ]\n\n**Rule name:** \n**Rule short description:** > is for string comparisons",
                                     "line": 4
@@ -142,16 +142,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "84c51cda4ecc657c050c8066143962ea",
+                            "id": "8e1985e03d3377d1c9ab52badc21550b",
                             "ruleId": "2072",
-                            "locationId": "83ec204667e693b777feb372688d69ae",
+                            "locationId": "c86e442b4211a54735732324079b33d9",
                             "line": 143,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.\n<strong>Snippet:</strong>\n<code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code>\n<strong>Rule name:</strong> \n<strong>Rule short description:</strong> Decimals are not supported</p>",
                             "stacks": [
                                 {
-                                    "locationId": "83ec204667e693b777feb372688d69ae",
+                                    "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
                                     "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                                     "line": 143
@@ -160,16 +160,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "3bc0a65bbecaaf41566bbf7b47c47cfe",
+                            "id": "957e5d82568e6cfa563df84cf01ec877",
                             "ruleId": "2077",
-                            "locationId": "83ec204667e693b777feb372688d69ae",
+                            "locationId": "c86e442b4211a54735732324079b33d9",
                             "line": 410,
                             "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.\n<strong>Snippet:</strong>\n<code>if [ $DBTYPE==\"mysql\" ]; then</code>\n<strong>Rule name:</strong> </p>",
                             "stacks": [
                                 {
-                                    "locationId": "83ec204667e693b777feb372688d69ae",
+                                    "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
                                     "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
                                     "line": 410
@@ -178,16 +178,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "4935d8206423512690755949e6ffa0ba",
+                            "id": "8e46ddd5d65b2209d5b9e61262996c16",
                             "ruleId": "2077",
-                            "locationId": "83ec204667e693b777feb372688d69ae",
+                            "locationId": "c86e442b4211a54735732324079b33d9",
                             "line": 412,
                             "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.\n<strong>Snippet:</strong>\n<code>elif [ $DBTYPE==\"postgres\" ]; then</code>\n<strong>Rule name:</strong> </p>",
                             "stacks": [
                                 {
-                                    "locationId": "83ec204667e693b777feb372688d69ae",
+                                    "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
                                     "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
                                     "line": 412
@@ -196,16 +196,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "d0c603e9406bc92f14d2ffb05ee1cdc1",
+                            "id": "9cb95e17385767e1f7a9dd6146f18346",
                             "ruleId": "1035",
-                            "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                            "locationId": "93688eb57b93becff6c9435f546b5ac0",
                             "line": 142,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> You are missing a required space here.\n<strong>Snippet:</strong>\n<code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code>\n<strong>Rule name:</strong> </p>",
                             "stacks": [
                                 {
-                                    "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                                    "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
                                     "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                                     "line": 142
@@ -214,16 +214,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "02895a40fb38437b2f63d8aafcd535e3",
+                            "id": "62ab6e74373a2a6f213695b27c397c3d",
                             "ruleId": "2072",
-                            "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                            "locationId": "93688eb57b93becff6c9435f546b5ac0",
                             "line": 142,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.\n<strong>Snippet:</strong>\n<code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code>\n<strong>Rule name:</strong> \n<strong>Rule short description:</strong> Decimals are not supported</p>",
                             "stacks": [
                                 {
-                                    "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                                    "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
                                     "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                                     "line": 142
@@ -232,16 +232,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "61a547895f2cb6e586cae4f4d6d08b74",
+                            "id": "d00f2675aee38a159d9eec8621fcfbbd",
                             "ruleId": "2077",
-                            "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                            "locationId": "93688eb57b93becff6c9435f546b5ac0",
                             "line": 458,
                             "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.\n<strong>Snippet:</strong>\n<code>if [ $DBTYPE==\"mysql\" ]; then</code>\n<strong>Rule name:</strong> </p>",
                             "stacks": [
                                 {
-                                    "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                                    "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
                                     "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
                                     "line": 458
@@ -250,16 +250,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "c5f16185ea8eec1818e96e85de7c7650",
+                            "id": "6de2095cd846b20d40e29c0840bf9ea8",
                             "ruleId": "2077",
-                            "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                            "locationId": "93688eb57b93becff6c9435f546b5ac0",
                             "line": 460,
                             "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.\n<strong>Snippet:</strong>\n<code>elif [ $DBTYPE==\"postgres\" ]; then</code>\n<strong>Rule name:</strong> </p>",
                             "stacks": [
                                 {
-                                    "locationId": "97adb0cf0121a1db2f8668e64787202b",
+                                    "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
                                     "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
                                     "line": 460
@@ -268,16 +268,16 @@
                         },
                         {
                             "type": "sast",
-                            "id": "9fe930aade574f902ec170bef3a74a6e",
+                            "id": "e56393a672d3acd1d27be04fb244f295",
                             "ruleId": "1035",
-                            "locationId": "83ec204667e693b777feb372688d69ae",
+                            "locationId": "c86e442b4211a54735732324079b33d9",
                             "line": 143,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                             "status": "To Verify",
                             "description": "<p><strong>Result message:</strong> You are missing a required space here.\n<strong>Snippet:</strong>\n<code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code>\n<strong>Rule name:</strong> </p>",
                             "stacks": [
                                 {
-                                    "locationId": "83ec204667e693b777feb372688d69ae",
+                                    "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
                                     "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                                     "line": 143
