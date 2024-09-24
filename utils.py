@@ -1,6 +1,6 @@
 import os
 
-from config.constances import PARSER_CLASSES, TESTS_PATH
+from config.constances import PARSER_CLASSES, TESTS_PATH, PARSERS_PATH
 from config.enums import SourceTypes
 
 
@@ -9,7 +9,7 @@ def check_keys_parser_classes():
     Check that all parsers are in PARSER_CLASSES const
     :return:
     """
-    parsers_dir = os.listdir("converters/parsers")
+    parsers_dir = os.listdir(PARSERS_PATH)
     set_parsers_classes = set(PARSER_CLASSES.keys())
     exists_parsers: set[str] = set()
     for parser_file in parsers_dir:
