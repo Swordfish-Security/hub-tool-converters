@@ -4,8 +4,8 @@ import os
 from typing import Any
 
 PARSER_CLASSES: dict[str, Any] = {}
-PARSERS_PATH = "converters/parsers"
-TESTS_PATH = "./tests/"
+PARSERS_PATH = os.path.dirname(__file__) + "/../converters/parsers"
+TESTS_PATH = os.path.dirname(__file__) + "/../tests/"
 
 
 def import_classes_from_directory(directory_path):
