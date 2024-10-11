@@ -115,11 +115,14 @@ class HubParser:
         if finding.file_key not in self.locations:
             scanner_type = self.__get_scanner_type(finding)
             if scanner_type == ScannerTypes.SAST.value:
+                file_name = finding.file_path or 'Unknown'
+                if self.args.path_replace:
+                    file_name = file_name.replace(self.args.path_replace, '')
                 self.locations[finding.file_key] = LocationSast(
                     type=self.args.type,
                     id=finding.file_key if finding.file_key else 'Unknown',
                     sourceId=self.source.id,
-                    fileName=finding.file_path if finding.file_path else 'Unknown'
+                    fileName=file_name
                 )
             elif scanner_type == ScannerTypes.DAST.value:
                 self.locations[finding.file_key] = LocationDast(

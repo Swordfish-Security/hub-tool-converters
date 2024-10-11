@@ -21,6 +21,7 @@ class ArgsBase:
     name: str = 'hub-tool-converters'
     url: str = 'https://github.com/Swordfish-Security/hub-tool-converters.git'
     format: str | None = None
+    path_replace: str | None = None
 
 
 class ArgsCodebase(ArgsBase):
