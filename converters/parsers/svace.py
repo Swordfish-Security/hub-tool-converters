@@ -63,9 +63,10 @@ class SvaceParser(object):
     def get_severity(self, severity):
         """Map SVACE severity to a standard severity."""
         severity_mapping = {
-            "Minor": "Low",
-            "Major": "Medium",
-            "Critical": "High"
+            "Unspecified": "Low",
+            "Minor": "Medium",
+            "Major": "High",
+            "Critical": "Critical"
         }
         return severity_mapping.get(severity, "Low")
 
