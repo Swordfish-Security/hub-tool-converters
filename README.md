@@ -32,7 +32,7 @@
 | --stage           | Стадия экземпляра (ST - System Test, UAT - User Acceptance Test, IAT - Integration Acceptance Test, STG - Stage, PROD - Production)    | Нет                                                   |
 
 ### Список поддерживаемых форматов
-bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, cyclonedx
+bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, cyclonedx, svace (csv)
 
 ## Пример запуска
 

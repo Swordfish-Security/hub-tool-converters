@@ -293,7 +293,7 @@ def get_references(rule):
             helpText = get_message_from_multiformatMessageString(
                 rule["help"], rule
             )
-            if helpText.startswith("http"):
+            if helpText and helpText.startswith("http"):
                 reference = helpText
 
     return reference
