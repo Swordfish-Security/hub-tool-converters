@@ -57,7 +57,7 @@ class SvaceParser(object):
         description += f"**Найденный фрагмент:** `{row['function']}`\n\n"
         description += f"**Сообщение анализатора:** {row['msg']}\n\n"
         description += f"**Предлагаемое действие:** {row['action']}\n\n"
-        description += f"**Комментарии:**\n\n{self.get_comments(row)}\n"
+        description += self.get_comments(row)
         return description
 
     def get_severity(self, severity):
@@ -73,6 +73,6 @@ class SvaceParser(object):
     def get_comments(self, row):
         comments = []
         for key, value in row.items():
-            if key.startswith("comment_"):
+            if key.startswith("comment_") and value:
                 comments.append(value + "\n\n")
-        return " ".join(comments)
+        return f"**Комментарии:**\n\n{' '.join(comments)}"
