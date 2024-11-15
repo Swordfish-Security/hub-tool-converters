@@ -84,12 +84,12 @@ class KasperskyCSJSONParser:
             finding = Finding(
                 title=title,
                 test=test,
-                description=f"{title}\n{description}",
+                description=description,
                 severity=severity,
                 mitigation="",  # todo add if necessary
                 component_name=vulnerability.get("PkgName"),
                 component_version=vulnerability.get("InstalledVersion"),
-                references="\n".join(vulnerability.get("References")),  # todo add if necessary
+                references="\n".join(vulnerability.get("References")),
                 static_finding=False,
                 dynamic_finding=False,
                 vuln_id_from_tool=vulnerability.get("VulnerabilityID"),
