@@ -73,6 +73,7 @@ class KasperskyCSJSONParser:
 
         findings = []
         for vulnerability in results.get("Vulnerabilities", []):
+            title = f"{vulnerability.get('PkgName')}:{vulnerability.get('InstalledVersion')} | {vulnerability.get('lnerabilityID')}"
             description = vulnerability.get("Description")
 
             severity = _fix_severity(vulnerability.get("Severity"))
@@ -81,14 +82,14 @@ class KasperskyCSJSONParser:
                 description = "Description was not provided."
 
             finding = Finding(
-                title=f"{vulnerability.get("PkgName")}:{vulnerability.get("InstalledVersion")} | {vulnerability.get("VulnerabilityID")}",
+                title=title,
                 test=test,
-                description=description,
+                description=f"{title}\n{description}",
                 severity=severity,
                 mitigation="",  # todo add if necessary
                 component_name=vulnerability.get("PkgName"),
                 component_version=vulnerability.get("InstalledVersion"),
-                references="",  # todo add if necessary
+                references="\n".join(vulnerability.get("References")),  # todo add if necessary
                 static_finding=False,
                 dynamic_finding=False,
                 vuln_id_from_tool=vulnerability.get("VulnerabilityID"),
