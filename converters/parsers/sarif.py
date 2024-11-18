@@ -355,7 +355,9 @@ def get_item(result, rules, artifacts, run_date):
     # if there is a location get it
     file_path = None
     line = None
+    finding_stacks = None
     if "locations" in result:
+        finding_stacks = _get_finding_stacks(result["locations"])
         location = result["locations"][0]
         if "physicalLocation" in location:
             file_path = location["physicalLocation"]["artifactLocation"]["uri"]
@@ -383,6 +385,7 @@ def get_item(result, rules, artifacts, run_date):
         file_path=file_path,
         line=line,
         references=get_references(rule),
+        finding_stacks = finding_stacks
     )
 
     if "ruleId" in result:
@@ -468,3 +471,22 @@ def get_fingerprints_hashes(values):
                 "value": value,
             }
     return fingerprints
+
+
+def _get_finding_stacks(locations) -> list:
+    finding_stacks = []
+
+    for sequence, location in enumerate(locations, start=1):
+        physical_location = location.get("physicalLocation")
+        if physical_location:
+            region = physical_location.get("region")
+            if region:
+                start_line = region.get("startLine")
+                if start_line:
+                    stack = {
+                        "sequence": sequence,
+                        "line": start_line
+                    }
+                    finding_stacks.append(stack)
+
+    return finding_stacks

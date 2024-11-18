@@ -173,6 +173,48 @@
                                     "sequence": 1,
                                     "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 57
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 2,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 71
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 3,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 72
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 4,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 71
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 5,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 50
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 6,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 56
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 7,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 61
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 8,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "line": 85
                                 }
                             ]
                         },
@@ -191,6 +233,12 @@
                                     "sequence": 1,
                                     "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
                                     "line": 72
+                                },
+                                {
+                                    "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
+                                    "sequence": 2,
+                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
+                                    "line": 73
                                 }
                             ]
                         },
@@ -209,6 +257,12 @@
                                     "sequence": 1,
                                     "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
                                     "line": 67
+                                },
+                                {
+                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                                    "sequence": 2,
+                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
+                                    "line": 70
                                 }
                             ]
                         },
