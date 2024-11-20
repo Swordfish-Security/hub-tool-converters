@@ -1,11 +1,11 @@
 import json
 import uuid
-from typing import Any
+from typing import Any, Optional
 
 from config.enums import SourceTypes, ScannerTypes
 from converters.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS
-from hub.models.location import LocationSast, LocationDast, LocationSca
+from hub.models.location import LocationSast, LocationDast, LocationSca, LocationStack
 from hub.models.rule import Rule, RuleCwe, RuleSCA
 from hub.models.source import SourceSast, SourceDast, SourceArtifact
 
@@ -70,6 +70,19 @@ class HubParser:
                         text += f'\n{key}: {value}\n'
                 self.findings[finding.dupe_key].description += text
 
+    def __parse_finding_stacks(self, finding_stacks, location_id) -> Optional[list[LocationStack]]:
+        stacks = []
+        if finding_stacks:
+            for finding_stack in finding_stacks:
+                stacks.append(
+                    LocationStack(
+                        locationId=location_id,
+                        sequence=finding_stack["sequence"],
+                        code=finding_stack["code"],
+                        line=finding_stack["line"]
+                    ))
+            return stacks
+
     def __parse_finding(self, finding: Finding):
         scanner_type = self.__get_scanner_type(finding)
         if scanner_type == ScannerTypes.SAST.value:
@@ -81,7 +94,8 @@ class HubParser:
                 code=finding.code,
                 description=finding.description,
                 status="To Verify",
-                type=scanner_type
+                type=scanner_type,
+                stacks=self.__parse_finding_stacks(finding.finding_stacks, finding.file_key)
             )
 
         elif scanner_type == ScannerTypes.DAST.value:
