@@ -70,7 +70,7 @@ class HubParser:
                         text += f'\n{key}: {value}\n'
                 self.findings[finding.dupe_key].description += text
 
-    def __parse_finding_stacks(self, finding_stacks, location_id, finding_code) -> Optional[list[LocationStack]]:
+    def __parse_finding_stacks(self, finding_stacks, location_id) -> Optional[list[LocationStack]]:
         stacks = []
         if finding_stacks:
             for finding_stack in finding_stacks:
@@ -78,7 +78,7 @@ class HubParser:
                     LocationStack(
                         locationId=location_id,
                         sequence=finding_stack["sequence"],
-                        code=finding_code,
+                        code=finding_stack["code"],
                         line=finding_stack["line"]
                     ))
             return stacks
@@ -95,7 +95,7 @@ class HubParser:
                 description=finding.description,
                 status="To Verify",
                 type=scanner_type,
-                stacks=self.__parse_finding_stacks(finding.finding_stacks, finding.file_key, finding.code)
+                stacks=self.__parse_finding_stacks(finding.finding_stacks, finding.file_key)
             )
 
         elif scanner_type == ScannerTypes.DAST.value:

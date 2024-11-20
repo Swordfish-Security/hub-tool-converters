@@ -171,49 +171,49 @@
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 1,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());",
                                     "line": 57
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 2,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while inserting into database: \" + e.getMessage());",
                                     "line": 71
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 3,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());",
                                     "line": 72
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 4,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());",
                                     "line": 71
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 5,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "        EditText cctxt = (EditText) findViewById(R.id.ccText);\n        try {\n            // Assuming we do some HTTP requests credit card validation and processing\n            //Everything seems fine and then we hit some unforseen error\n            processCC(cctxt.getText().toString());\n        } catch (RuntimeException re) {\n            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());\n            Toast.makeText(this, \"An error occured. Please try again later\", Toast.LENGTH_SHORT).show();\n        }",
                                     "line": 50
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 6,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());",
                                     "line": 56
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 7,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.d(\"Diva-sqli\", \"Error occurred while creating database for SQLI: \" + e.getMessage());",
                                     "line": 61
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 8,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                                    "code": "            Log.d(\"Diva-sqli\", \"Error occurred while searching in database: \" + e.getMessage());",
                                     "line": 85
                                 }
                             ]
@@ -231,13 +231,13 @@
                                 {
                                     "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
                                     "sequence": 1,
-                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
+                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);",
                                     "line": 72
                                 },
                                 {
                                     "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
                                     "sequence": 2,
-                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
+                                    "code": "            abutton.setVisibility(View.INVISIBLE);",
                                     "line": 73
                                 }
                             ]
@@ -255,13 +255,13 @@
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 1,
-                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
+                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");",
                                     "line": 67
                                 },
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 2,
-                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
+                                    "code": "            cr = mDB.rawQuery(\"SELECT * FROM sqliuser WHERE user = '\" + srchtxt.getText().toString() + \"'\", null);",
                                     "line": 70
                                 }
                             ]
@@ -279,7 +279,7 @@
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice\n**Rule name:** AndroidDetectTapjacking",
+                                    "code": "Missing Best Practice",
                                     "line": 1
                                 }
                             ]
@@ -297,7 +297,7 @@
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice\n**Rule name:** AndroidPreventScreenshot",
+                                    "code": "Missing Best Practice",
                                     "line": 1
                                 }
                             ]
@@ -315,7 +315,7 @@
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice\n**Rule name:** AndroidSafetynetApi",
+                                    "code": "Missing Best Practice",
                                     "line": 1
                                 }
                             ]
@@ -333,7 +333,7 @@
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice\n**Rule name:** AndroidRootDetection",
+                                    "code": "Missing Best Practice",
                                     "line": 1
                                 }
                             ]
@@ -351,7 +351,7 @@
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice\n**Rule name:** AndroidCertificateTransparency",
+                                    "code": "Missing Best Practice",
                                     "line": 1
                                 }
                             ]
@@ -369,7 +369,7 @@
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice\n**Rule name:** AndroidCertificatePinning",
+                                    "code": "Missing Best Practice",
                                     "line": 1
                                 }
                             ]

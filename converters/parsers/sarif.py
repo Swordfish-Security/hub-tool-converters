@@ -481,10 +481,12 @@ def _get_finding_stacks(locations) -> list:
         if physical_location:
             region = physical_location.get("region")
             if region:
+                snippet = region.get("snippet")
                 start_line = region.get("startLine")
-                if start_line:
+                if snippet and start_line is not None:
                     stack = {
                         "sequence": sequence,
+                        "code": snippet.get("text"),
                         "line": start_line
                     }
                     finding_stacks.append(stack)
