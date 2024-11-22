@@ -97,8 +97,8 @@ class KasperskyCSJSONParser:
 
             if report_date:
                 finding.date = report_date
-
-            finding.severity = _get_cvssv3(vulnerability.get("CVSS")).severities()[0]
+            if not finding.severity:
+                finding.severity = _get_cvssv3(vulnerability.get("CVSS")).severities()[0]
             vulnerability_ids = []
 
             if vulnerability.get("VulnerabilityID"):

@@ -24,7 +24,7 @@
                             "type": "sca_s",
                             "name": "CVE-2016-2781",
                             "id": "CVE-2016-2781",
-                            "severity": "Medium",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 20
@@ -50,7 +50,7 @@
                             "type": "sca_s",
                             "name": "CVE-2016-20013",
                             "id": "CVE-2016-20013",
-                            "severity": "High",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 770
@@ -85,7 +85,7 @@
                             "type": "sca_s",
                             "name": "CVE-2024-2511",
                             "id": "CVE-2024-2511",
-                            "severity": "Medium",
+                            "severity": "Low",
                             "cwe": null,
                             "description": "Issue summary: Some non-default TLS server configurations can cause unbounded\nmemory growth when processing TLSv1.3 sessions\n\nImpact summary: An attacker may exploit certain server configurations to trigger\nunbounded memory growth that would lead to a Denial of Service\n\nThis problem can occur in TLSv1.3 if the non-default SSL_OP_NO_TICKET option is\nbeing used (but not if early_data support is also configured and the default\nanti-replay protection is in use). In this case, under certain conditions, the\nsession cache can get into an incorrect state and it will fail to flush properly\nas it fills. The session cache will continue to grow in an unbounded manner. A\nmalicious client could deliberately create the scenario for this failure to\nforce a Denial of Service. It may also happen by accident in normal operation.\n\nThis issue only affects TLS servers supporting TLSv1.3. It does not affect TLS\nclients.\n\nThe FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue. OpenSSL\n1.0.2 is also not affected by this issue.",
                             "cveId": "CVE-2024-2511"
@@ -94,7 +94,7 @@
                             "type": "sca_s",
                             "name": "CVE-2024-4603",
                             "id": "CVE-2024-4603",
-                            "severity": "Medium",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 834
@@ -107,7 +107,7 @@
                             "type": "sca_s",
                             "name": "CVE-2024-4741",
                             "id": "CVE-2024-4741",
-                            "severity": "High",
+                            "severity": "Low",
                             "cwe": null,
                             "description": "A use-after-free vulnerability was found in OpenSSL. Calling the OpenSSL API SSL_free_buffers function may cause memory to be accessed that was previously freed in some situations.",
                             "cveId": "CVE-2024-4741"
@@ -116,7 +116,7 @@
                             "type": "sca_s",
                             "name": "CVE-2024-5535",
                             "id": "CVE-2024-5535",
-                            "severity": "Medium",
+                            "severity": "Low",
                             "cwe": [
                                 {
                                     "id": 200
