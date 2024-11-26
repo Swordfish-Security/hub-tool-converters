@@ -117,7 +117,7 @@
                                 {
                                     "locationId": "25eccab89a1c31a6d5afcf23712f6de8",
                                     "sequence": 1,
-                                    "code": "if [ ${#} -eq 1 ] && [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]\n\n**Rule name:**",
+                                    "code": "if [ ${#} -eq 1 ] && [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]\n",
                                     "line": 134
                                 }
                             ]
@@ -135,7 +135,7 @@
                                 {
                                     "locationId": "1a89d0b781386d207ec5d7c3f3a3e1d6",
                                     "sequence": 1,
-                                    "code": "if [ $# > 1 ]\n\n**Rule name:** \n**Rule short description:** > is for string comparisons",
+                                    "code": "if [ $# > 1 ]\n",
                                     "line": 4
                                 }
                             ]
@@ -153,7 +153,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                                     "line": 143
                                 }
                             ]
@@ -171,7 +171,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
+                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n",
                                     "line": 410
                                 }
                             ]
@@ -189,7 +189,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
+                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n",
                                     "line": 412
                                 }
                             ]
@@ -207,7 +207,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                                     "line": 142
                                 }
                             ]
@@ -225,7 +225,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                                     "line": 142
                                 }
                             ]
@@ -243,7 +243,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
+                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n",
                                     "line": 458
                                 }
                             ]
@@ -261,7 +261,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
+                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n",
                                     "line": 460
                                 }
                             ]
@@ -279,7 +279,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                                     "line": 143
                                 }
                             ]
@@ -297,7 +297,7 @@
                                 {
                                     "locationId": "7b72273b3024b58104952a0df0bca7d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                                     "line": 130
                                 }
                             ]
@@ -315,7 +315,7 @@
                                 {
                                     "locationId": "7b72273b3024b58104952a0df0bca7d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                                     "line": 130
                                 }
                             ]
