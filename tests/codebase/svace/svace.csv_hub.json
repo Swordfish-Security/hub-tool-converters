@@ -1,0 +1,146 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "867acbe6-3a06-4c4b-869a-749c9ae42ffc",
+                "description": "Import svace results"
+            },
+            "source": [
+                {
+                    "id": "3b16f071-784f-4de6-9c6b-21e9762f02de",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git",
+                    "buildTool": "maven"
+                }
+            ],
+            "tool": {
+                "product": "svace"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sast",
+                            "name": "NO_CATCH",
+                            "id": "NO_CATCH",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": " "
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "codebase",
+                            "id": "1134a43aa4c327489a5ff3fb7b7d53ba",
+                            "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
+                            "fileName": "/.build/src/main/java/hello/HelloWorld.java",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "29cf29395443515d099993816041333c",
+                            "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
+                            "fileName": "/.build/src/main/java/hello/HelloWorld2.java",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "23fed3fc1b547f122265d3380fee39ee",
+                            "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
+                            "fileName": "/.build/src/main/java/hello/HelloWorld3.java",
+                            "language": "Any"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "12e7730955b36fb08c59360d830ce96b",
+                            "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
+                            "fileName": "/.build/src/main/java/hello/HelloWorld4.java",
+                            "language": "Any"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sast",
+                            "id": "c1ba346ac130921e7261067dce3d4dbf",
+                            "ruleId": "NO_CATCH",
+                            "locationId": "1134a43aa4c327489a5ff3fb7b7d53ba",
+                            "line": 7,
+                            "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                            "status": "Confirmed",
+                            "description": "<p><strong>ID \u0443\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u0438:</strong> dc3e10dd-b7f3-48df-87ea-1cbb35544524</p>\n<p><strong>\u0414\u0432\u0438\u0436\u043e\u043a \u0430\u043d\u0430\u043b\u0438\u0437\u0430:</strong> SvEng</p>\n<p><strong>\u042f\u0437\u044b\u043a \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438:</strong> JAVA</p>\n<p><strong>\u041d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0439 \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442:</strong> <code>hello/HelloWorld.main:([Ljava/lang/String;)V</code></p>\n<p><strong>\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u0430:</strong> Top-level function 'HelloWorld.main' doesn't catch exceptions of types 'java/lang/IllegalArgumentException<em>, org/joda/time/IllegalInstantException</em>', which could be thrown by callees.</p>\n<p><strong>\u041f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u043e\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435:</strong> Fix required</p>\n<p><strong>\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438:</strong></p>\n<p>\u0422\u0435\u0441\u0442-\u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439</p>\n<p>\u0412\u0442\u043e\u0440\u043e\u0439 \u0442\u0435\u0441\u0442-\u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "1134a43aa4c327489a5ff3fb7b7d53ba",
+                                    "sequence": 1,
+                                    "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                                    "line": 7
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "cee7acb59d81029496add4aa809361a3",
+                            "ruleId": "NO_CATCH",
+                            "locationId": "29cf29395443515d099993816041333c",
+                            "line": 7,
+                            "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                            "status": "Accepted risk",
+                            "description": "<p><strong>ID \u0443\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u0438:</strong> dc3e10dd-b7f3-48df-87ea-1cbb35544524</p>\n<p><strong>\u0414\u0432\u0438\u0436\u043e\u043a \u0430\u043d\u0430\u043b\u0438\u0437\u0430:</strong> SvEng</p>\n<p><strong>\u042f\u0437\u044b\u043a \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438:</strong> JAVA</p>\n<p><strong>\u041d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0439 \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442:</strong> <code>hello/HelloWorld.main:([Ljava/lang/String;)V</code></p>\n<p><strong>\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u0430:</strong> Top-level function 'HelloWorld.main' doesn't catch exceptions of types 'java/lang/IllegalArgumentException<em>, org/joda/time/IllegalInstantException</em>', which could be thrown by callees.</p>\n<p><strong>\u041f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u043e\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435:</strong> Fix required</p>\n<p><strong>\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438:</strong></p>\n<p>\u0412\u0442\u043e\u0440\u043e\u0439 \u0442\u0435\u0441\u0442-\u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "29cf29395443515d099993816041333c",
+                                    "sequence": 1,
+                                    "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                                    "line": 7
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "71d25569b1d695a3a62d2a1794419c3e",
+                            "ruleId": "NO_CATCH",
+                            "locationId": "23fed3fc1b547f122265d3380fee39ee",
+                            "line": 7,
+                            "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                            "status": "False Positive",
+                            "description": "<p><strong>ID \u0443\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u0438:</strong> dc3e10dd-b7f3-48df-87ea-1cbb35544524</p>\n<p><strong>\u0414\u0432\u0438\u0436\u043e\u043a \u0430\u043d\u0430\u043b\u0438\u0437\u0430:</strong> SvEng</p>\n<p><strong>\u042f\u0437\u044b\u043a \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438:</strong> JAVA</p>\n<p><strong>\u041d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0439 \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442:</strong> <code>hello/HelloWorld.main:([Ljava/lang/String;)V</code></p>\n<p><strong>\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u0430:</strong> Top-level function 'HelloWorld.main' doesn't catch exceptions of types 'java/lang/IllegalArgumentException<em>, org/joda/time/IllegalInstantException</em>', which could be thrown by callees.</p>\n<p><strong>\u041f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u043e\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435:</strong> Fix required</p>\n<p><strong>\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438:</strong></p>\n<p>\u0422\u0435\u0441\u0442-\u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439</p>",
+                            "stacks": [
+                                {
+                                    "locationId": "23fed3fc1b547f122265d3380fee39ee",
+                                    "sequence": 1,
+                                    "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                                    "line": 7
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "d290415b7693c375b14a354e865d8303",
+                            "ruleId": "NO_CATCH",
+                            "locationId": "12e7730955b36fb08c59360d830ce96b",
+                            "line": 7,
+                            "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                            "status": "To Verify",
+                            "description": "<p><strong>ID \u0443\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u0438:</strong> dc3e10dd-b7f3-48df-87ea-1cbb35544524</p>\n<p><strong>\u0414\u0432\u0438\u0436\u043e\u043a \u0430\u043d\u0430\u043b\u0438\u0437\u0430:</strong> SvEng</p>\n<p><strong>\u042f\u0437\u044b\u043a \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438:</strong> JAVA</p>\n<p><strong>\u041d\u0430\u0439\u0434\u0435\u043d\u043d\u044b\u0439 \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442:</strong> <code>hello/HelloWorld.main:([Ljava/lang/String;)V</code></p>\n<p><strong>\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440\u0430:</strong> Top-level function 'HelloWorld.main' doesn't catch exceptions of types 'java/lang/IllegalArgumentException<em>, org/joda/time/IllegalInstantException</em>', which could be thrown by callees.</p>\n<p><strong>\u041f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c\u043e\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435:</strong> Fix required</p>\n<p><strong>\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438:</strong></p>",
+                            "stacks": [
+                                {
+                                    "locationId": "12e7730955b36fb08c59360d830ce96b",
+                                    "sequence": 1,
+                                    "code": "hello/HelloWorld.main:([Ljava/lang/String;)V",
+                                    "line": 7
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
