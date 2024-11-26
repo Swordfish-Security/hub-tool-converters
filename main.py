@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
     parser = PARSER_CLASSES[args.format]()
 
-    with open(args.filename, "r", encoding="utf-8") as f:
+    with open(args.filename, "r", encoding='utf-8') as f:
         results = parser.get_findings(f, '')
 
     hub_parser = HubParser(args=args, results=results)

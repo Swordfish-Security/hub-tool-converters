@@ -93,7 +93,7 @@ class HubParser:
                 line=finding.line,
                 code=finding.code,
                 description=finding.description,
-                status="To Verify",
+                status=self.__get_status(finding),
                 type=scanner_type,
                 stacks=self.__parse_finding_stacks(finding.finding_stacks, finding.file_key)
             )
@@ -105,7 +105,7 @@ class HubParser:
                 locationId=finding.file_key,
                 url=finding.url,
                 description=finding.description,
-                status="To Verify",
+                status=self.__get_status(finding),
                 type=scanner_type
             )
         else:
@@ -114,7 +114,7 @@ class HubParser:
                 ruleId=finding.ruleId,
                 locationId=finding.file_key,
                 description=finding.description,
-                status="To Verify",
+                status=self.__get_status(finding),
                 type=scanner_type
             )
 
@@ -180,6 +180,15 @@ class HubParser:
     def __check_rule_id(self, finding: Finding):
         if not finding.ruleId:
             finding.ruleId = f"{self.args.scanner} {finding.severity}"
+
+    def __get_status(self, finding: Finding):
+        if finding.verified:
+            return "Confirmed"
+        elif finding.false_p:
+            return "False Positive"
+        elif finding.risk_accepted:
+            return "Accepted Risk"
+        return "To Verify"
 
     def parse(self):
         for finding in self.results:
