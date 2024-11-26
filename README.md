@@ -32,7 +32,8 @@
 | --stage           | Стадия экземпляра (ST - System Test, UAT - User Acceptance Test, IAT - Integration Acceptance Test, STG - Stage, PROD - Production)    | Нет                                                   |
 
 ### Список поддерживаемых форматов
-bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, cyclonedx, svace (csv)
+
+bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, cyclonedx, kaspersky-cs, svace
 
 ## Пример запуска
 
@@ -59,6 +60,11 @@ python main.py -s pvs-studio -t CODEBASE --format sarif -f pvs-studio.sarif -o p
 ```bash
 python main.py -s svace -t CODEBASE --format sarif -f tests/codebase/svace/svace.sarif -o svace_hub.json -n hub-tool-converters -u https://github.com/Swordfish-Security/hub-tool-converters.git
 ```
+
+```bash
+python main.py -s kaspersky-cs -t ARTIFACT -f input-file.json -o output-file.json -n artifact_name -u https://artifact-url.rpm
+```
+
 ## Запуск тестов
 
 1. Создание виртуального окружения и его активация
