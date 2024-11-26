@@ -33,7 +33,7 @@
 
 ### Список поддерживаемых форматов
 
-bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, cyclonedx, kaspersky-cs, svace
+bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, cyclonedx, kaspersky-cs, svace(только .csv, в формате .sarif запускать через sarif)
 
 ## Пример запуска
 

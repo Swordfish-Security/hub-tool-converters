@@ -187,7 +187,7 @@ class HubParser:
         elif finding.false_p:
             return "False Positive"
         elif finding.risk_accepted:
-            return "Accepted Risk"
+            return "Accepted risk"
         return "To Verify"
 
     def parse(self):
