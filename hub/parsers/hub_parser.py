@@ -3,6 +3,7 @@ import uuid
 from typing import Any, Optional
 
 from config.enums import SourceTypes, ScannerTypes
+from config.constances import PARSERS_NAMES_TO_FIX
 from converters.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS
 from hub.models.location import LocationSast, LocationDast, LocationSca, LocationStack
@@ -161,7 +162,10 @@ class HubParser:
                     name=finding.ruleId,
                     severity='Low' if finding.severity == 'Info' else finding.severity,
                     description=finding.description,
-                    cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
+                    cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None,
+                    references=finding.references,
+                    cvssv3=finding.cvssv3,
+                    cvssv3_score=finding.cvssv3_score
                 )
             else:
                 self.rules[finding.ruleId] = Rule(
@@ -202,6 +206,8 @@ class HubParser:
             finding.check_additional_fields()
 
     def get_report(self) -> dict:
+        if self.args.scanner in PARSERS_NAMES_TO_FIX:
+            self.args.scanner = self.args.scanner.replace("_", "-")
         scan_result = ScanResult(
             rules=list(self.rules.values()),
             locations=list(self.locations.values()),

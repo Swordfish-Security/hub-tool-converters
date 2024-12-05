@@ -1,5 +1,5 @@
 import datetime
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 
 import hyperlink
@@ -172,7 +172,7 @@ class Finding(AdditionalFields):
     severity_justification: str | None = None  # Text describing why a certain severity was associated with this flaw
     endpoints: list[
                    Endpoint] | None = None  # The hosts within the product that are susceptible to this flaw. + The status of the endpoint associated with this flaw (Vulnerable, Mitigated, ...).
-    references: str | None = None  # The external documentation available for this flaw
+    references: list[str] | str = field(default_factory=list)  # The external documentation available for this flaw
     active: bool = True  # Denotes if this flaw is active or not
     verified: bool = False  # Denotes if this flaw has been manually verified by the tester
     false_p: bool = False  # Denotes if this flaw has been deemed a false positive by the tester

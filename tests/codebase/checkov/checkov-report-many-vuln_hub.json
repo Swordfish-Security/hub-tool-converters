@@ -68,7 +68,7 @@
                             "line": 1,
                             "code": "N/A",
                             "status": "To Verify",
-                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_41\nEnsure the key vault is recoverable</p>",
+                            "description": "<p>Check Type: terraform<br />Check Id: CKV_AZURE_41<br />Ensure the key vault is recoverable</p>",
                             "stacks": [
                                 {
                                     "locationId": "97fd815a3803a0588876bdd862014fed",
@@ -86,7 +86,7 @@
                             "line": 1,
                             "code": "N/A",
                             "status": "To Verify",
-                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_42\nEnsure the key vault is recoverable</p>",
+                            "description": "<p>Check Type: terraform<br />Check Id: CKV_AZURE_42<br />Ensure the key vault is recoverable</p>",
                             "stacks": [
                                 {
                                     "locationId": "97fd815a3803a0588876bdd862014fed",
@@ -104,7 +104,7 @@
                             "line": 1,
                             "code": "N/A",
                             "status": "To Verify",
-                            "description": "<p>Check Type: terraform\nCheck Id: CKV_AZURE_43\nEnsure the key vault is recoverable</p>",
+                            "description": "<p>Check Type: terraform<br />Check Id: CKV_AZURE_43<br />Ensure the key vault is recoverable</p>",
                             "stacks": [
                                 {
                                     "locationId": "97fd815a3803a0588876bdd862014fed",

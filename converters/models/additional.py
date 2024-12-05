@@ -109,7 +109,7 @@ class AdditionalFields:
             self.rule_description = self.title + '\n\n' + self.impact + '\n' + self.mitigation
         else:
             self.rule_description = self.reason if self.reason else "Unknown"
-            if self.reason and self.references:
+            if self.reason and self.references and isinstance(self.references, str):
                 self.rule_description += '\n' + self.references
 
     def parse_additional_fields(self) -> None:

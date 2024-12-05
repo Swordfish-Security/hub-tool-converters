@@ -364,7 +364,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.WRITE_EXTERNAL_STORAGE\n<strong>Description:</strong> Allows an application to write to external storage.</p>",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p><p><strong>Permission Type:</strong> android.permission.WRITE_EXTERNAL_STORAGE<br /><strong>Description:</strong> Allows an application to write to external storage.</p>",
                             "stacks": null
                         },
                         {
@@ -375,7 +375,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.READ_EXTERNAL_STORAGE <strong>Description:</strong>\nAllows an application to read from external storage.</p>",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p><p><strong>Permission Type:</strong> android.permission.READ_EXTERNAL_STORAGE <strong>Description:</strong><br />Allows an application to read from external storage.</p>",
                             "stacks": null
                         },
                         {
@@ -386,7 +386,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Mobile Permissions</p>\n<p><strong>Permission Type:</strong> android.permission.INTERNET <strong>Description:</strong> Allows an\napplication to create network sockets.</p>",
+                            "description": "<p><strong>Category:</strong> Mobile Permissions</p><p><strong>Permission Type:</strong> android.permission.INTERNET <strong>Description:</strong> Allows an<br />application to create network sockets.</p>",
                             "stacks": null
                         },
                         {
@@ -397,7 +397,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>The App logs information. Sensitive information should never be logged.</p>",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p><p>The App logs information. Sensitive information should never be logged.</p>",
                             "stacks": null
                         },
                         {
@@ -408,7 +408,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App uses SQLite Database and execute raw SQL query. Untrusted user input in\nraw SQL queries can cause SQL Injection. Also sensitive information should be\nencrypted and written to the database.</p>",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p><p>App uses SQLite Database and execute raw SQL query. Untrusted user input in<br />raw SQL queries can cause SQL Injection. Also sensitive information should be<br />encrypted and written to the database.</p>",
                             "stacks": null
                         },
                         {
@@ -419,7 +419,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App can read/write to External Storage. Any App can read data written to\nExternal Storage.</p>",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p><p>App can read/write to External Storage. Any App can read data written to<br />External Storage.</p>",
                             "stacks": null
                         },
                         {
@@ -430,7 +430,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Code Analysis</p>\n<p>App creates temp file. Sensitive information should never be written into a\ntemp file.</p>",
+                            "description": "<p><strong>Category:</strong> Code Analysis</p><p>App creates temp file. Sensitive information should never be written into a<br />temp file.</p>",
                             "stacks": null
                         },
                         {
@@ -441,7 +441,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -452,7 +452,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is build with -fPIC flag which enables Position independent\ncode. This makes Return Oriented Programming (ROP) attacks much more difficult\nto execute reliably.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is build with -fPIC flag which enables Position independent<br />code. This makes Return Oriented Programming (ROP) attacks much more difficult<br />to execute reliably.</p>",
                             "stacks": null
                         },
                         {
@@ -463,7 +463,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have a stack canary value added to the stack.<br />Stack canraies are used to detect and prevent exploits from overwriting return<br />address. Use the option -fstack-protector-all to enable stack canaries.</p>",
                             "stacks": null
                         },
                         {
@@ -474,7 +474,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -485,7 +485,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -496,7 +496,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -507,7 +507,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -518,7 +518,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -529,7 +529,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -540,7 +540,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is built without Position Independent Code flag. In order to<br />prevent an attacker from reliably jumping to, for example, a particular<br />exploited function in memory, Address space layout randomization (ASLR)<br />randomly arranges the address space positions of key data areas of a process,<br />including the base of the executable and the positions of the stack,heap and<br />libraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
                             "stacks": null
                         },
                         {
@@ -551,7 +551,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have a stack canary value added to the stack.<br />Stack canraies are used to detect and prevent exploits from overwriting return<br />address. Use the option -fstack-protector-all to enable stack canaries.</p>",
                             "stacks": null
                         },
                         {
@@ -562,7 +562,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -573,7 +573,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -584,7 +584,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -595,7 +595,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -606,7 +606,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -617,7 +617,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -628,7 +628,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is build with -fPIC flag which enables Position independent\ncode. This makes Return Oriented Programming (ROP) attacks much more difficult\nto execute reliably.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is build with -fPIC flag which enables Position independent<br />code. This makes Return Oriented Programming (ROP) attacks much more difficult<br />to execute reliably.</p>",
                             "stacks": null
                         },
                         {
@@ -639,7 +639,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have a stack canary value added to the stack.<br />Stack canraies are used to detect and prevent exploits from overwriting return<br />address. Use the option -fstack-protector-all to enable stack canaries.</p>",
                             "stacks": null
                         },
                         {
@@ -650,7 +650,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -661,7 +661,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -672,7 +672,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -683,7 +683,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -694,7 +694,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -705,7 +705,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -716,7 +716,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is built without Position Independent Code flag. In order to<br />prevent an attacker from reliably jumping to, for example, a particular<br />exploited function in memory, Address space layout randomization (ASLR)<br />randomly arranges the address space positions of key data areas of a process,<br />including the base of the executable and the positions of the stack,heap and<br />libraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
                             "stacks": null
                         },
                         {
@@ -727,7 +727,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have a stack canary value added to the stack.<br />Stack canraies are used to detect and prevent exploits from overwriting return<br />address. Use the option -fstack-protector-all to enable stack canaries.</p>",
                             "stacks": null
                         },
                         {
@@ -738,7 +738,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -749,7 +749,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -760,7 +760,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -771,7 +771,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -782,7 +782,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -793,7 +793,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -804,7 +804,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is built without Position Independent Code flag. In order to<br />prevent an attacker from reliably jumping to, for example, a particular<br />exploited function in memory, Address space layout randomization (ASLR)<br />randomly arranges the address space positions of key data areas of a process,<br />including the base of the executable and the positions of the stack,heap and<br />libraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
                             "stacks": null
                         },
                         {
@@ -815,7 +815,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have a stack canary value added to the stack.<br />Stack canraies are used to detect and prevent exploits from overwriting return<br />address. Use the option -fstack-protector-all to enable stack canaries.</p>",
                             "stacks": null
                         },
                         {
@@ -826,7 +826,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -837,7 +837,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -848,7 +848,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -859,7 +859,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -870,7 +870,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -881,7 +881,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -892,7 +892,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is built without Position Independent Code flag. In order to<br />prevent an attacker from reliably jumping to, for example, a particular<br />exploited function in memory, Address space layout randomization (ASLR)<br />randomly arranges the address space positions of key data areas of a process,<br />including the base of the executable and the positions of the stack,heap and<br />libraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
                             "stacks": null
                         },
                         {
@@ -903,7 +903,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have a stack canary value added to the stack.\nStack canraies are used to detect and prevent exploits from overwriting return\naddress. Use the option -fstack-protector-all to enable stack canaries.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have a stack canary value added to the stack.<br />Stack canraies are used to detect and prevent exploits from overwriting return<br />address. Use the option -fstack-protector-all to enable stack canaries.</p>",
                             "stacks": null
                         },
                         {
@@ -914,7 +914,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -925,7 +925,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -936,7 +936,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -947,7 +947,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -958,7 +958,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -969,7 +969,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have NX bit set. NX bit offer protection against\nexploitation of memory corruption vulnerabilities by marking memory page as\nnon-executable. Use option --noexecstack or -z noexecstack to mark stack as\nnon executable.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have NX bit set. NX bit offer protection against<br />exploitation of memory corruption vulnerabilities by marking memory page as<br />non-executable. Use option --noexecstack or -z noexecstack to mark stack as<br />non executable.</p>",
                             "stacks": null
                         },
                         {
@@ -980,7 +980,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object is built without Position Independent Code flag. In order to\nprevent an attacker from reliably jumping to, for example, a particular\nexploited function in memory, Address space layout randomization (ASLR)\nrandomly arranges the address space positions of key data areas of a process,\nincluding the base of the executable and the positions of the stack,heap and\nlibraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object is built without Position Independent Code flag. In order to<br />prevent an attacker from reliably jumping to, for example, a particular<br />exploited function in memory, Address space layout randomization (ASLR)<br />randomly arranges the address space positions of key data areas of a process,<br />including the base of the executable and the positions of the stack,heap and<br />libraries. Use compiler option -fPIC to enable Position Independent Code.</p>",
                             "stacks": null
                         },
                         {
@@ -991,7 +991,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object has a stack canary value added to the stack so that it will\nbe overwritten by a stack buffer that overflows the return address. This\nallows detection of overflows by verifying the integrity of the canary before\nfunction return.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object has a stack canary value added to the stack so that it will<br />be overwritten by a stack buffer that overflows the return address. This<br />allows detection of overflows by verifying the integrity of the canary before<br />function return.</p>",
                             "stacks": null
                         },
                         {
@@ -1002,7 +1002,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>This shared object does not have RELRO enabled. The entire GOT (.got and\n.got.plt both) are writable. Without this compiler flag, buffer overflows on a\nglobal variable can overwrite GOT entries. Use the option -z,relro,-z,now to\nenable full RELRO and only -z,relro to enable partial RELRO.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>This shared object does not have RELRO enabled. The entire GOT (.got and<br />.got.plt both) are writable. Without this compiler flag, buffer overflows on a<br />global variable can overwrite GOT entries. Use the option -z,relro,-z,now to<br />enable full RELRO and only -z,relro to enable partial RELRO.</p>",
                             "stacks": null
                         },
                         {
@@ -1013,7 +1013,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have run-time search path or RPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have run-time search path or RPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -1024,7 +1024,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have RUNPATH set.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have RUNPATH set.</p>",
                             "stacks": null
                         },
                         {
@@ -1035,7 +1035,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>The shared object does not have any fortified functions. Fortified functions\nprovides buffer overflow checks against glibc's commons insecure functions\nlike strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority\nfunctions.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>The shared object does not have any fortified functions. Fortified functions<br />provides buffer overflow checks against glibc's commons insecure functions<br />like strcpy, gets etc. Use the compiler option -D_FORTIFY_SOURCE=2 to fority<br />functions.</p>",
                             "stacks": null
                         },
                         {
@@ -1046,7 +1046,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Binary Analysis</p>\n<p>Symbols are stripped.</p>",
+                            "description": "<p><strong>Category:</strong> Binary Analysis</p><p>Symbols are stripped.</p>",
                             "stacks": null
                         },
                         {
@@ -1057,7 +1057,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_local_file_io <strong>Description:</strong> Local File I/O Operations</p>",
+                            "description": "<p><strong>Category:</strong> Android API</p><p><strong>API:</strong> api_local_file_io <strong>Description:</strong> Local File I/O Operations</p>",
                             "stacks": null
                         },
                         {
@@ -1068,7 +1068,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_start_activity <strong>Description:</strong> Starting Activity</p>",
+                            "description": "<p><strong>Category:</strong> Android API</p><p><strong>API:</strong> api_start_activity <strong>Description:</strong> Starting Activity</p>",
                             "stacks": null
                         },
                         {
@@ -1079,7 +1079,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_ipc <strong>Description:</strong> Inter Process Communication</p>",
+                            "description": "<p><strong>Category:</strong> Android API</p><p><strong>API:</strong> api_ipc <strong>Description:</strong> Inter Process Communication</p>",
                             "stacks": null
                         },
                         {
@@ -1090,7 +1090,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_content_provider <strong>Description:</strong> Content Provider</p>",
+                            "description": "<p><strong>Category:</strong> Android API</p><p><strong>API:</strong> api_content_provider <strong>Description:</strong> Content Provider</p>",
                             "stacks": null
                         },
                         {
@@ -1101,7 +1101,7 @@
                             "line": null,
                             "code": null,
                             "status": "To Verify",
-                            "description": "<p><strong>Category:</strong> Android API</p>\n<p><strong>API:</strong> api_native_code <strong>Description:</strong> Loading Native Code (Shared Library)</p>",
+                            "description": "<p><strong>Category:</strong> Android API</p><p><strong>API:</strong> api_native_code <strong>Description:</strong> Loading Native Code (Shared Library)</p>",
                             "stacks": null
                         }
                     ]

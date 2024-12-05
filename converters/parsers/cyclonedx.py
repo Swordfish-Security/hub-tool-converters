@@ -235,17 +235,13 @@ class cycloneDXXMLParser:
             "b:ratings/b:rating/b:severity", namespaces=ns
         )
         severity = cyclonedxhelper().fix_severity(severity)
-        references = ""
+        references = []
         for advisory in vulnerability.findall(
             "b:advisories/b:advisory", namespaces=ns
         ):
-            title = advisory.findtext("b:title", namespaces=ns)
-            if title:
-                references += f"**Title:** {title}\n"
             url = advisory.findtext("b:url", namespaces=ns)
             if url:
-                references += f"**URL:** {url}\n"
-            references += "\n"
+                references.append(url) #todo check multiple references
         vulnerability_ids = []
         # set id as first vulnerability id
         if vuln_id:
@@ -293,9 +289,11 @@ class cycloneDXXMLParser:
                 if "CVSSv3" == method or "CVSSv31" == method:
                     raw_vector = rating.findtext("b:vector", namespaces=ns)
                     severity = rating.findtext("b:severity", namespaces=ns)
+                    score = rating.findtext("b:score", namespaces=ns)
                     cvssv3 = cyclonedxhelper()._get_cvssv3(raw_vector)
                     if cvssv3:
                         finding.cvssv3 = cvssv3.clean_vector()
+                        finding.cvssv3_score = score
                         if severity:
                             finding.severity = cyclonedxhelper().fix_severity(severity)
                         else:
@@ -370,16 +368,12 @@ class cycloneDXJSONParser:
                 severity = cyclonedxhelper().fix_severity(severity)
             else:
                 severity = "Medium"
-            references = ""
+            references = []
             advisories = vulnerability.get("advisories", [])
             for advisory in advisories:
-                title = advisory.get("title")
-                if title:
-                    references += f"**Title:** {title}\n"
                 url = advisory.get("url")
                 if url:
-                    references += f"**URL:** {url}\n"
-                references += "\n"
+                    references.append(url)
             # for each component affected we create a finding if the "affects"
             # node is here
             for affect in vulnerability.get("affects", []):
@@ -415,6 +409,7 @@ class cycloneDXJSONParser:
                         severity = rating.get("severity")
                         if cvssv3:
                             finding.cvssv3 = cvssv3.clean_vector()
+                            finding.cvssv3_score = rating.get("score")
                             if severity:
                                 finding.severity = cyclonedxhelper().fix_severity(severity)
                             else:

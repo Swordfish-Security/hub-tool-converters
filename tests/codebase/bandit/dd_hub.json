@@ -346,7 +346,7 @@
                             "line": 39,
                             "code": "\n38         for acunetix_project_finding in acunetix_project_findings:\n39             dupe_key = hashlib.md5((acunetix_project_finding.title + acunetix_project.description).encode(\"utf-8\")).hexdigest()\n40 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/acunetix/parser.py</code>\n<strong>Line number:</strong> <code>39</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n38         for acunetix_project_finding in acunetix_project_findings:\n39             dupe_key = hashlib.md5((acunetix_project_finding.title + acunetix_project.description).encode(\"utf-8\")).hexdigest()\n40 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/acunetix/parser.py</code><br /><strong>Line number:</strong> <code>39</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />38         for acunetix_project_finding in acunetix_project_findings:<br />39             dupe_key = hashlib.md5((acunetix_project_finding.title + acunetix_project.description).encode(\"utf-8\")).hexdigest()<br />40 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "06d7c7d3bdb7332f5d49fbf2b5555edd",
@@ -364,7 +364,7 @@
                             "line": 5,
                             "code": "\n4 import html2text\n5 from lxml import etree\n6 from lxml.etree import XMLSyntaxError\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B410</code>\n<strong>Filename:</strong> <code>project/tools/acunetix/parser_helper.py</code>\n<strong>Line number:</strong> <code>5</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n4 import html2text\n5 from lxml import etree\n6 from lxml.etree import XMLSyntaxError</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B410</code><br /><strong>Filename:</strong> <code>project/tools/acunetix/parser_helper.py</code><br /><strong>Line number:</strong> <code>5</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />4 import html2text<br />5 from lxml import etree<br />6 from lxml.etree import XMLSyntaxError</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "0deaed9becd1ab103ab6de82c73af401",
@@ -382,7 +382,7 @@
                             "line": 6,
                             "code": "\n5 from lxml import etree\n6 from lxml.etree import XMLSyntaxError\n7 \n8 from .parser_models import AcunetixScanReport, ProjectFinding\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B410</code>\n<strong>Filename:</strong> <code>project/tools/acunetix/parser_helper.py</code>\n<strong>Line number:</strong> <code>6</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n5 from lxml import etree\n6 from lxml.etree import XMLSyntaxError\n7 \n8 from .parser_models import AcunetixScanReport, ProjectFinding</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B410</code><br /><strong>Filename:</strong> <code>project/tools/acunetix/parser_helper.py</code><br /><strong>Line number:</strong> <code>6</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />5 from lxml import etree<br />6 from lxml.etree import XMLSyntaxError<br />7 <br />8 from .parser_models import AcunetixScanReport, ProjectFinding</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "0deaed9becd1ab103ab6de82c73af401",
@@ -400,7 +400,7 @@
                             "line": 23,
                             "code": "\n22     try:\n23         tree = etree.parse(filename, etree.XMLParser(resolve_entities=False))\n24         return tree.getroot()\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B320</code>\n<strong>Filename:</strong> <code>project/tools/acunetix/parser_helper.py</code>\n<strong>Line number:</strong> <code>23</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n22     try:\n23         tree = etree.parse(filename, etree.XMLParser(resolve_entities=False))\n24         return tree.getroot()</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B320</code><br /><strong>Filename:</strong> <code>project/tools/acunetix/parser_helper.py</code><br /><strong>Line number:</strong> <code>23</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />22     try:<br />23         tree = etree.parse(filename, etree.XMLParser(resolve_entities=False))<br />24         return tree.getroot()</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "0deaed9becd1ab103ab6de82c73af401",
@@ -418,7 +418,7 @@
                             "line": 45,
                             "code": "\n44 \n45             dupe_key = hashlib.md5(\"{} | {}\".format(title, i.vuln_source)\n46                 .encode(\"utf-8\")) \\\n47                 .hexdigest()\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/blackduck/parser.py</code>\n<strong>Line number:</strong> <code>45</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n44 \n45             dupe_key = hashlib.md5(\"{} | {}\".format(title, i.vuln_source)\n46                 .encode(\"utf-8\")) \\\n47                 .hexdigest()</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/blackduck/parser.py</code><br /><strong>Line number:</strong> <code>45</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />44 <br />45             dupe_key = hashlib.md5(\"{} | {}\".format(title, i.vuln_source)<br />46                 .encode(\"utf-8\")) \\<br />47                 .hexdigest()</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "64b8f0b6787420b9f90cbafaa22dfa09",
@@ -436,7 +436,7 @@
                             "line": 73,
                             "code": "\n72 \n73                 key = hashlib.md5((finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n74 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/bugcrowd/parser.py</code>\n<strong>Line number:</strong> <code>73</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n72 \n73                 key = hashlib.md5((finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n74 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/bugcrowd/parser.py</code><br /><strong>Line number:</strong> <code>73</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />72 <br />73                 key = hashlib.md5((finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()<br />74 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "459ac706cd9c291b50c3267ba97087ba",
@@ -454,7 +454,7 @@
                             "line": 62,
                             "code": "\n61             fingerprint = \"bundler-audit\" + gem_name + gem_version + advisory_cve + sev\n62             dupe_key = hashlib.md5(fingerprint.encode(\"utf-8\")).hexdigest()\n63             if dupe_key in dupes:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/bundler_audit/parser.py</code>\n<strong>Line number:</strong> <code>62</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n61             fingerprint = \"bundler-audit\" + gem_name + gem_version + advisory_cve + sev\n62             dupe_key = hashlib.md5(fingerprint.encode(\"utf-8\")).hexdigest()\n63             if dupe_key in dupes:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/bundler_audit/parser.py</code><br /><strong>Line number:</strong> <code>62</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />61             fingerprint = \"bundler-audit\" + gem_name + gem_version + advisory_cve + sev<br />62             dupe_key = hashlib.md5(fingerprint.encode(\"utf-8\")).hexdigest()<br />63             if dupe_key in dupes:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "58d7a5b0fded907766518bb1225ce3c1",
@@ -472,7 +472,7 @@
                             "line": 53,
                             "code": "\n52                     vuln['image_id'] = tree['vendors'][vendor]['image_id']\n53                     unique_key = hashlib.md5(\n54                         str(vuln).encode('utf-8')).hexdigest()\n55                     item = get_item(vuln, test)\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/ccvs/parser.py</code>\n<strong>Line number:</strong> <code>53</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n52                     vuln['image_id'] = tree['vendors'][vendor]['image_id']\n53                     unique_key = hashlib.md5(\n54                         str(vuln).encode('utf-8')).hexdigest()\n55                     item = get_item(vuln, test)</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/ccvs/parser.py</code><br /><strong>Line number:</strong> <code>53</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />52                     vuln['image_id'] = tree['vendors'][vendor]['image_id']<br />53                     unique_key = hashlib.md5(<br />54                         str(vuln).encode('utf-8')).hexdigest()<br />55                     item = get_item(vuln, test)</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "6f064b1e9831c857b9b7bf65234c45db",
@@ -490,7 +490,7 @@
                             "line": 56,
                             "code": "\n55 \n56                 key = hashlib.md5((finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n57 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/cobalt/parser.py</code>\n<strong>Line number:</strong> <code>56</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n55 \n56                 key = hashlib.md5((finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n57 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/cobalt/parser.py</code><br /><strong>Line number:</strong> <code>56</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />55 <br />56                 key = hashlib.md5((finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()<br />57 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "f756a74bbc8cf187f82bb5b3c3a0e433",
@@ -508,7 +508,7 @@
                             "line": 43,
                             "code": "\n42 \n43             dupe_key = hashlib.md5(category.encode('utf-8') + str(cwe).encode('utf-8') + title.encode('utf-8')).hexdigest()\n44 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/contrast/parser.py</code>\n<strong>Line number:</strong> <code>43</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n42 \n43             dupe_key = hashlib.md5(category.encode('utf-8') + str(cwe).encode('utf-8') + title.encode('utf-8')).hexdigest()\n44 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/contrast/parser.py</code><br /><strong>Line number:</strong> <code>43</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />42 <br />43             dupe_key = hashlib.md5(category.encode('utf-8') + str(cwe).encode('utf-8') + title.encode('utf-8')).hexdigest()<br />44 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "b8a390396c5dc2ad5b18f4e0dd80e2b0",
@@ -526,7 +526,7 @@
                             "line": 95,
                             "code": "\n94         protocol = \"http\"\n95         host = \"0.0.0.0\"\n96         query = \"\"\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>hardcoded_bind_all_interfaces</code>\n<strong>Test ID:</strong> <code>B104</code>\n<strong>Filename:</strong> <code>project/tools/contrast/parser.py</code>\n<strong>Line number:</strong> <code>95</code>\n<strong>Issue Confidence:</strong> <code>MEDIUM</code>\n<strong>Code:</strong>\n```\n94         protocol = \"http\"\n95         host = \"0.0.0.0\"\n96         query = \"\"</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>hardcoded_bind_all_interfaces</code><br /><strong>Test ID:</strong> <code>B104</code><br /><strong>Filename:</strong> <code>project/tools/contrast/parser.py</code><br /><strong>Line number:</strong> <code>95</code><br /><strong>Issue Confidence:</strong> <code>MEDIUM</code><br /><strong>Code:</strong><br />```<br />94         protocol = \"http\"<br />95         host = \"0.0.0.0\"<br />96         query = \"\"</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "b8a390396c5dc2ad5b18f4e0dd80e2b0",
@@ -544,7 +544,7 @@
                             "line": 22,
                             "code": "\n21                                             finding.description)\n22             key = hashlib.md5(key_str.encode('utf-8')).hexdigest()\n23 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/dependency_check/parser.py</code>\n<strong>Line number:</strong> <code>22</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n21                                             finding.description)\n22             key = hashlib.md5(key_str.encode('utf-8')).hexdigest()\n23 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/dependency_check/parser.py</code><br /><strong>Line number:</strong> <code>22</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />21                                             finding.description)<br />22             key = hashlib.md5(key_str.encode('utf-8')).hexdigest()<br />23 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "6a374dece7175ccbac6c64e86ef55435",
@@ -562,7 +562,7 @@
                             "line": 345,
                             "code": "\n344             if finding is not None:\n345                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n346 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/generic/parser.py</code>\n<strong>Line number:</strong> <code>345</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n344             if finding is not None:\n345                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n346 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/generic/parser.py</code><br /><strong>Line number:</strong> <code>345</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />344             if finding is not None:<br />345                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()<br />346 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "37802763fc43f7023e321b83ada8759e",
@@ -580,7 +580,7 @@
                             "line": 57,
                             "code": "\n56 \n57                 dupe_key = hashlib.md5((issue[\"offender\"]).encode(\"utf-8\")).hexdigest()\n58 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/gitleaks/parser.py</code>\n<strong>Line number:</strong> <code>57</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n56 \n57                 dupe_key = hashlib.md5((issue[\"offender\"]).encode(\"utf-8\")).hexdigest()\n58 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/gitleaks/parser.py</code><br /><strong>Line number:</strong> <code>57</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />56 <br />57                 dupe_key = hashlib.md5((issue[\"offender\"]).encode(\"utf-8\")).hexdigest()<br />58 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "e04806d03632da2a5c207fe8728241c9",
@@ -598,7 +598,7 @@
                             "line": 77,
                             "code": "\n76 \n77             dupe_key = hashlib.md5(str(references + title).encode('utf-8')).hexdigest()\n78             if dupe_key in dupes:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/h1/parser.py</code>\n<strong>Line number:</strong> <code>77</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n76 \n77             dupe_key = hashlib.md5(str(references + title).encode('utf-8')).hexdigest()\n78             if dupe_key in dupes:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/h1/parser.py</code><br /><strong>Line number:</strong> <code>77</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />76 <br />77             dupe_key = hashlib.md5(str(references + title).encode('utf-8')).hexdigest()<br />78             if dupe_key in dupes:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "70d2be227da8ced8f6aabda247890d38",
@@ -616,7 +616,7 @@
                             "line": 125,
                             "code": "\n124             description += \"CVSS: {}\\n\".format(cvss)\n125         except:\n126             pass\n127 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code>\n<strong>Test ID:</strong> <code>B110</code>\n<strong>Filename:</strong> <code>project/tools/h1/parser.py</code>\n<strong>Line number:</strong> <code>125</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n124             description += \"CVSS: {}\\n\".format(cvss)\n125         except:\n126             pass\n127 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code><br /><strong>Test ID:</strong> <code>B110</code><br /><strong>Filename:</strong> <code>project/tools/h1/parser.py</code><br /><strong>Line number:</strong> <code>125</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />124             description += \"CVSS: {}\\n\".format(cvss)<br />125         except:<br />126             pass<br />127 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "70d2be227da8ced8f6aabda247890d38",
@@ -634,7 +634,7 @@
                             "line": 136,
                             "code": "\n135             description += \"\\n##Weakness: {}\\n{}\".format(weakness_title, weakness_desc)\n136         except:\n137             pass\n138 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code>\n<strong>Test ID:</strong> <code>B110</code>\n<strong>Filename:</strong> <code>project/tools/h1/parser.py</code>\n<strong>Line number:</strong> <code>136</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n135             description += \"\\n##Weakness: {}\\n{}\".format(weakness_title, weakness_desc)\n136         except:\n137             pass\n138 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code><br /><strong>Test ID:</strong> <code>B110</code><br /><strong>Filename:</strong> <code>project/tools/h1/parser.py</code><br /><strong>Line number:</strong> <code>136</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />135             description += \"\\n##Weakness: {}\\n{}\".format(weakness_title, weakness_desc)<br />136         except:<br />137             pass<br />138 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "70d2be227da8ced8f6aabda247890d38",
@@ -652,7 +652,7 @@
                             "line": 55,
                             "code": "\n54                             continue\n55                         unique_key = hashlib.md5(\n56                             str(vuln).encode('utf-8')).hexdigest()\n57                         item = get_item(vuln, test)\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/huskyci/parser.py</code>\n<strong>Line number:</strong> <code>55</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n54                             continue\n55                         unique_key = hashlib.md5(\n56                             str(vuln).encode('utf-8')).hexdigest()\n57                         item = get_item(vuln, test)</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/huskyci/parser.py</code><br /><strong>Line number:</strong> <code>55</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />54                             continue<br />55                         unique_key = hashlib.md5(<br />56                             str(vuln).encode('utf-8')).hexdigest()<br />57                         item = get_item(vuln, test)</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "06467e431664130b895dfe86c0ba6582",
@@ -670,7 +670,7 @@
                             "line": 89,
                             "code": "\n88                     # Now time to start assigning issues to findings and endpoints\n89                     dupe_key = hashlib.md5(str(issue_description + name + severity).encode('utf-8')).hexdigest()\n90                     # check if finding is a duplicate\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/ibm_app/parser.py</code>\n<strong>Line number:</strong> <code>89</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n88                     # Now time to start assigning issues to findings and endpoints\n89                     dupe_key = hashlib.md5(str(issue_description + name + severity).encode('utf-8')).hexdigest()\n90                     # check if finding is a duplicate</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/ibm_app/parser.py</code><br /><strong>Line number:</strong> <code>89</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />88                     # Now time to start assigning issues to findings and endpoints<br />89                     dupe_key = hashlib.md5(str(issue_description + name + severity).encode('utf-8')).hexdigest()<br />90                     # check if finding is a duplicate</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "de0d42fe5f463f827b1eb313875d8f10",
@@ -688,7 +688,7 @@
                             "line": 71,
                             "code": "\n70 \n71             dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()\n72 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/immuniweb/parser.py</code>\n<strong>Line number:</strong> <code>71</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n70 \n71             dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()\n72 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/immuniweb/parser.py</code><br /><strong>Line number:</strong> <code>71</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />70 <br />71             dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()<br />72 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "66f335d306aa2affbff78292edb1d8a9",
@@ -706,7 +706,7 @@
                             "line": 79,
                             "code": "\n78                 finding.cwe = int(row['CWE'])\n79             except:\n80                 pass\n81 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code>\n<strong>Test ID:</strong> <code>B110</code>\n<strong>Filename:</strong> <code>project/tools/kiuwan/parser.py</code>\n<strong>Line number:</strong> <code>79</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n78                 finding.cwe = int(row['CWE'])\n79             except:\n80                 pass\n81 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code><br /><strong>Test ID:</strong> <code>B110</code><br /><strong>Filename:</strong> <code>project/tools/kiuwan/parser.py</code><br /><strong>Line number:</strong> <code>79</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />78                 finding.cwe = int(row['CWE'])<br />79             except:<br />80                 pass<br />81 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "aff67882343ec104a94fbba32b9f3924",
@@ -724,7 +724,7 @@
                             "line": 88,
                             "code": "\n87 \n88                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n89 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/kiuwan/parser.py</code>\n<strong>Line number:</strong> <code>88</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n87 \n88                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()\n89 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/kiuwan/parser.py</code><br /><strong>Line number:</strong> <code>88</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />87 <br />88                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode(\"utf-8\")).hexdigest()<br />89 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "aff67882343ec104a94fbba32b9f3924",
@@ -742,7 +742,7 @@
                             "line": 72,
                             "code": "\n71                 # make dupe hash key\n72                 dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()\n73                 # check if dupes are present.\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/microfocus_webinspect/parser.py</code>\n<strong>Line number:</strong> <code>72</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n71                 # make dupe hash key\n72                 dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()\n73                 # check if dupes are present.</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/microfocus_webinspect/parser.py</code><br /><strong>Line number:</strong> <code>72</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />71                 # make dupe hash key<br />72                 dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()<br />73                 # check if dupes are present.</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "fcc123836c216057853f68de4a53d600",
@@ -760,7 +760,7 @@
                             "line": 55,
                             "code": "\n54 \n55                 dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()\n56 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/mozilla_observatory/parser.py</code>\n<strong>Line number:</strong> <code>55</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n54 \n55                 dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()\n56 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/mozilla_observatory/parser.py</code><br /><strong>Line number:</strong> <code>55</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />54 <br />55                 dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()<br />56 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "f3e09bf5f95c594d059d5637fcd0c6e4",
@@ -778,7 +778,7 @@
                             "line": 348,
                             "code": "\n347 \n348                 key = hashlib.md5((finding.url + '|' + finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n349 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/openvas_csv/parser.py</code>\n<strong>Line number:</strong> <code>348</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n347 \n348                 key = hashlib.md5((finding.url + '|' + finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n349 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/openvas_csv/parser.py</code><br /><strong>Line number:</strong> <code>348</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />347 <br />348                 key = hashlib.md5((finding.url + '|' + finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()<br />349 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "0d9301840c9c2996b6b225a8d554ca81",
@@ -796,7 +796,7 @@
                             "line": 55,
                             "code": "\n54             item = get_item(model, test)\n55             unique_key = hashlib.md5((item.title + item.references).encode()).hexdigest()\n56             items[unique_key] = item\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/ort/parser.py</code>\n<strong>Line number:</strong> <code>55</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n54             item = get_item(model, test)\n55             unique_key = hashlib.md5((item.title + item.references).encode()).hexdigest()\n56             items[unique_key] = item</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/ort/parser.py</code><br /><strong>Line number:</strong> <code>55</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />54             item = get_item(model, test)<br />55             unique_key = hashlib.md5((item.title + item.references).encode()).hexdigest()<br />56             items[unique_key] = item</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "07faf7e5c433779304f00ca755178465",
@@ -814,7 +814,7 @@
                             "line": 7,
                             "code": "\n6 import re\n7 import xml.etree.ElementTree\n8 from datetime import datetime\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B405</code>\n<strong>Filename:</strong> <code>project/tools/qualys_webapp/parser.py</code>\n<strong>Line number:</strong> <code>7</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n6 import re\n7 import xml.etree.ElementTree\n8 from datetime import datetime</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B405</code><br /><strong>Filename:</strong> <code>project/tools/qualys_webapp/parser.py</code><br /><strong>Line number:</strong> <code>7</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />6 import re<br />7 import xml.etree.ElementTree<br />8 from datetime import datetime</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "448e71f236d95c86843491990f1b0ae3",
@@ -832,7 +832,7 @@
                             "line": 237,
                             "code": "\n236     # supposed to be safe against XEE: https://docs.python.org/3/library/xml.html#xml-vulnerabilities\n237     tree = xml.etree.ElementTree.parse(qualys_xml_file)\n238     is_app_report = tree.getroot().tag == 'WAS_WEBAPP_REPORT'\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B314</code>\n<strong>Filename:</strong> <code>project/tools/qualys_webapp/parser.py</code>\n<strong>Line number:</strong> <code>237</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n236     # supposed to be safe against XEE: https://docs.python.org/3/library/xml.html#xml-vulnerabilities\n237     tree = xml.etree.ElementTree.parse(qualys_xml_file)\n238     is_app_report = tree.getroot().tag == 'WAS_WEBAPP_REPORT'</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B314</code><br /><strong>Filename:</strong> <code>project/tools/qualys_webapp/parser.py</code><br /><strong>Line number:</strong> <code>237</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />236     # supposed to be safe against XEE: https://docs.python.org/3/library/xml.html#xml-vulnerabilities<br />237     tree = xml.etree.ElementTree.parse(qualys_xml_file)<br />238     is_app_report = tree.getroot().tag == 'WAS_WEBAPP_REPORT'</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "448e71f236d95c86843491990f1b0ae3",
@@ -850,7 +850,7 @@
                             "line": 35,
                             "code": "\n34                         encrypted_file = node['file']\n35                         unique_key = hashlib.md5((item.title + item.references + encrypted_file).encode()).hexdigest()\n36                         items[unique_key] = item\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/retirejs/parser.py</code>\n<strong>Line number:</strong> <code>35</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n34                         encrypted_file = node['file']\n35                         unique_key = hashlib.md5((item.title + item.references + encrypted_file).encode()).hexdigest()\n36                         items[unique_key] = item</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/retirejs/parser.py</code><br /><strong>Line number:</strong> <code>35</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />34                         encrypted_file = node['file']<br />35                         unique_key = hashlib.md5((item.title + item.references + encrypted_file).encode()).hexdigest()<br />36                         items[unique_key] = item</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "711cf7dd2915eed3374c8185c9530a24",
@@ -868,7 +868,7 @@
                             "line": 25,
                             "code": "\n24         try:\n25             response = urllib.request.urlopen(url)\n26             return json.load(response)\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B310</code>\n<strong>Filename:</strong> <code>project/tools/safety/parser.py</code>\n<strong>Line number:</strong> <code>25</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n24         try:\n25             response = urllib.request.urlopen(url)\n26             return json.load(response)</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B310</code><br /><strong>Filename:</strong> <code>project/tools/safety/parser.py</code><br /><strong>Line number:</strong> <code>25</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />24         try:<br />25             response = urllib.request.urlopen(url)<br />26             return json.load(response)</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "b7c95fa1ddc8dc2f6b458646fdb163bc",
@@ -886,7 +886,7 @@
                             "line": 85,
                             "code": "\n84             if item:\n85                 hash_key = hashlib.md5(\n86                     node.get('Public ID').encode('utf-8') + node.get('Library').encode('utf-8')).hexdigest()\n87 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/scantist/parser.py</code>\n<strong>Line number:</strong> <code>85</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n84             if item:\n85                 hash_key = hashlib.md5(\n86                     node.get('Public ID').encode('utf-8') + node.get('Library').encode('utf-8')).hexdigest()\n87 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/scantist/parser.py</code><br /><strong>Line number:</strong> <code>85</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />84             if item:<br />85                 hash_key = hashlib.md5(<br />86                     node.get('Public ID').encode('utf-8') + node.get('Library').encode('utf-8')).hexdigest()<br />87 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "310ef0d0d2b1b746d8b02cd0fac13ace",
@@ -904,7 +904,7 @@
                             "line": 5,
                             "code": "\n4 from django.utils.html import strip_tags\n5 from lxml import etree\n6 \n7 from data.models import Finding\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B410</code>\n<strong>Filename:</strong> <code>project/tools/sonarqube/parser.py</code>\n<strong>Line number:</strong> <code>5</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n4 from django.utils.html import strip_tags\n5 from lxml import etree\n6 \n7 from data.models import Finding</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B410</code><br /><strong>Filename:</strong> <code>project/tools/sonarqube/parser.py</code><br /><strong>Line number:</strong> <code>5</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />4 from django.utils.html import strip_tags<br />5 from lxml import etree<br />6 <br />7 from data.models import Finding</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "7e25837084d8f9ed1546c889b2fcfe68",
@@ -922,7 +922,7 @@
                             "line": 33,
                             "code": "\n32         parser = etree.HTMLParser()\n33         tree = etree.parse(filename, parser)\n34         if self.mode not in [None, 'detailed']:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B320</code>\n<strong>Filename:</strong> <code>project/tools/sonarqube/parser.py</code>\n<strong>Line number:</strong> <code>33</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n32         parser = etree.HTMLParser()\n33         tree = etree.parse(filename, parser)\n34         if self.mode not in [None, 'detailed']:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B320</code><br /><strong>Filename:</strong> <code>project/tools/sonarqube/parser.py</code><br /><strong>Line number:</strong> <code>33</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />32         parser = etree.HTMLParser()<br />33         tree = etree.parse(filename, parser)<br />34         if self.mode not in [None, 'detailed']:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "7e25837084d8f9ed1546c889b2fcfe68",
@@ -940,7 +940,7 @@
                             "line": 5,
                             "code": "\n4 import html2text\n5 from lxml import etree\n6 \n7 from data.models import Finding, Sonarqube_Issue\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B410</code>\n<strong>Filename:</strong> <code>project/tools/sonarqube_api/importer.py</code>\n<strong>Line number:</strong> <code>5</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n4 import html2text\n5 from lxml import etree\n6 \n7 from data.models import Finding, Sonarqube_Issue</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B410</code><br /><strong>Filename:</strong> <code>project/tools/sonarqube_api/importer.py</code><br /><strong>Line number:</strong> <code>5</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />4 import html2text<br />5 from lxml import etree<br />6 <br />7 from data.models import Finding, Sonarqube_Issue</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "75214d5e4cc7f7e9223dbb11951e3055",
@@ -958,7 +958,7 @@
                             "line": 162,
                             "code": "\n161         parser = etree.HTMLParser()\n162         details = etree.fromstring(vuln_details, parser)\n163         rule_references = \"\"\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B320</code>\n<strong>Filename:</strong> <code>project/tools/sonarqube_api/importer.py</code>\n<strong>Line number:</strong> <code>162</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n161         parser = etree.HTMLParser()\n162         details = etree.fromstring(vuln_details, parser)\n163         rule_references = \"\"</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B320</code><br /><strong>Filename:</strong> <code>project/tools/sonarqube_api/importer.py</code><br /><strong>Line number:</strong> <code>162</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />161         parser = etree.HTMLParser()<br />162         details = etree.fromstring(vuln_details, parser)<br />163         rule_references = \"\"</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "75214d5e4cc7f7e9223dbb11951e3055",
@@ -976,7 +976,7 @@
                             "line": 124,
                             "code": "\n123                 if title and description is not None:\n124                     dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()\n125                     if dupe_key in dupes:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/sslyze/parser_xml.py</code>\n<strong>Line number:</strong> <code>124</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n123                 if title and description is not None:\n124                     dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()\n125                     if dupe_key in dupes:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/sslyze/parser_xml.py</code><br /><strong>Line number:</strong> <code>124</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />123                 if title and description is not None:<br />124                     dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()<br />125                     if dupe_key in dupes:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "0d7fd46316f8a760481959f6e7d5922c",
@@ -994,7 +994,7 @@
                             "line": 61,
                             "code": "\n60                 if title and description is not None:\n61                     dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()\n62                     if dupe_key in dupes:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/testssl/parser.py</code>\n<strong>Line number:</strong> <code>61</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n60                 if title and description is not None:\n61                     dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()\n62                     if dupe_key in dupes:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/testssl/parser.py</code><br /><strong>Line number:</strong> <code>61</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />60                 if title and description is not None:<br />61                     dupe_key = hashlib.md5(str(description + title).encode('utf-8')).hexdigest()<br />62                     if dupe_key in dupes:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "7e5ba448e3daa82efa37fca08b8843d9",
@@ -1012,7 +1012,7 @@
                             "line": 103,
                             "code": "\n102             host = rhost.group(4)\n103         except:\n104             pass\n105         try:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code>\n<strong>Test ID:</strong> <code>B110</code>\n<strong>Filename:</strong> <code>project/tools/testssl/parser.py</code>\n<strong>Line number:</strong> <code>103</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n102             host = rhost.group(4)\n103         except:\n104             pass\n105         try:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code><br /><strong>Test ID:</strong> <code>B110</code><br /><strong>Filename:</strong> <code>project/tools/testssl/parser.py</code><br /><strong>Line number:</strong> <code>103</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />102             host = rhost.group(4)<br />103         except:<br />104             pass<br />105         try:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "7e5ba448e3daa82efa37fca08b8843d9",
@@ -1030,7 +1030,7 @@
                             "line": 54,
                             "code": "\n53 \n54             dupe_key = hashlib.md5((file + reason).encode(\"utf-8\")).hexdigest()\n55             description += \"\\n**Strings Found:**\\n\\`\\`\\`\" + strings_found + \"\\`\\`\\`\\n\"\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/trufflehog/parser.py</code>\n<strong>Line number:</strong> <code>54</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n<code>``\n53 \n54             dupe_key = hashlib.md5((file + reason).encode(\"utf-8\")).hexdigest()\n55             description += \"\\n**Strings Found:**\\n\\</code>``\" + strings_found + \"```\\n\"</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/trufflehog/parser.py</code><br /><strong>Line number:</strong> <code>54</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br /><code>``53 54             dupe_key = hashlib.md5((file + reason).encode(\"utf-8\")).hexdigest()55             description += \"\\n**Strings Found:**\\n\\</code>``\" + strings_found + \"```\\n\"</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "6e570cd1615066b07e78691a85d99a15",
@@ -1048,7 +1048,7 @@
                             "line": 50,
                             "code": "\n49 \n50             dupe_key = hashlib.md5((file + reason).encode(\"utf-8\")).hexdigest()\n51             description += \"\\n**Strings Found:**\\n\\`\\`\\`\\n\" + strings_found + \"\\n\\`\\`\\`\\n\"\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/trufflehog3/parser.py</code>\n<strong>Line number:</strong> <code>50</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n<code>``\n49 \n50             dupe_key = hashlib.md5((file + reason).encode(\"utf-8\")).hexdigest()\n51             description += \"\\n**Strings Found:**\\n\\</code>``\\n\" + strings_found + \"\\n```\\n\"</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/trufflehog3/parser.py</code><br /><strong>Line number:</strong> <code>50</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br /><code>``49 50             dupe_key = hashlib.md5((file + reason).encode(\"utf-8\")).hexdigest()51             description += \"\\n**Strings Found:**\\n\\</code>``\\n\" + strings_found + \"\\n```\\n\"</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "f2ae9eb8d9911f5b26fd966695546cca",
@@ -1066,7 +1066,7 @@
                             "line": 71,
                             "code": "\n70             if finding is not None:\n71                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n72                 if key not in dupes:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/twistlock/parser.py</code>\n<strong>Line number:</strong> <code>71</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n70             if finding is not None:\n71                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n72                 if key not in dupes:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/twistlock/parser.py</code><br /><strong>Line number:</strong> <code>71</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />70             if finding is not None:<br />71                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()<br />72                 if key not in dupes:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "79ee1c4232266bb74ffb75345e7198cd",
@@ -1084,7 +1084,7 @@
                             "line": 114,
                             "code": "\n113             if finding is not None:\n114                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n115 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/vcg/parser.py</code>\n<strong>Line number:</strong> <code>114</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n113             if finding is not None:\n114                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n115 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/vcg/parser.py</code><br /><strong>Line number:</strong> <code>114</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />113             if finding is not None:<br />114                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()<br />115 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "9ee847f7e95ac48679c0a423d9bd9918",
@@ -1102,7 +1102,7 @@
                             "line": 174,
                             "code": "\n173             if finding is not None:\n174                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n175 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/vcg/parser.py</code>\n<strong>Line number:</strong> <code>174</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n173             if finding is not None:\n174                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()\n175 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/vcg/parser.py</code><br /><strong>Line number:</strong> <code>174</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />173             if finding is not None:<br />174                 key = hashlib.md5((finding.severity + '|' + finding.title + '|' + finding.description).encode('utf-8')).hexdigest()<br />175 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "9ee847f7e95ac48679c0a423d9bd9918",
@@ -1120,7 +1120,7 @@
                             "line": 75,
                             "code": "\n74                 # make dupe hash key\n75                 dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()\n76                 # check if dupes are present.\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/wapiti/parser.py</code>\n<strong>Line number:</strong> <code>75</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n74                 # make dupe hash key\n75                 dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()\n76                 # check if dupes are present.</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/wapiti/parser.py</code><br /><strong>Line number:</strong> <code>75</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />74                 # make dupe hash key<br />75                 dupe_key = hashlib.md5(str(description + title + severity).encode('utf-8')).hexdigest()<br />76                 # check if dupes are present.</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "5f9fc123b06283563362a7a1329f5897",
@@ -1138,7 +1138,7 @@
                             "line": 124,
                             "code": "\n123             host = rhost[4]\n124         except:\n125             pass\n126         try:\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code>\n<strong>Test ID:</strong> <code>B110</code>\n<strong>Filename:</strong> <code>project/tools/wapiti/parser.py</code>\n<strong>Line number:</strong> <code>124</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n123             host = rhost[4]\n124         except:\n125             pass\n126         try:</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code><br /><strong>Test ID:</strong> <code>B110</code><br /><strong>Filename:</strong> <code>project/tools/wapiti/parser.py</code><br /><strong>Line number:</strong> <code>124</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />123             host = rhost[4]<br />124         except:<br />125             pass<br />126         try:</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "5f9fc123b06283563362a7a1329f5897",
@@ -1156,7 +1156,7 @@
                             "line": 104,
                             "code": "\n103         def _dedup_and_create_finding(dupes, vuln):\n104             dupe_key = hashlib.md5(vuln.get('description').encode('utf-8') + vuln.get('title').encode('utf-8')).hexdigest()\n105 \n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code>\n<strong>Test ID:</strong> <code>B303</code>\n<strong>Filename:</strong> <code>project/tools/mend/parser.py</code>\n<strong>Line number:</strong> <code>104</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n103         def _dedup_and_create_finding(dupes, vuln):\n104             dupe_key = hashlib.md5(vuln.get('description').encode('utf-8') + vuln.get('title').encode('utf-8')).hexdigest()\n105 </p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>blacklist</code><br /><strong>Test ID:</strong> <code>B303</code><br /><strong>Filename:</strong> <code>project/tools/mend/parser.py</code><br /><strong>Line number:</strong> <code>104</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />103         def _dedup_and_create_finding(dupes, vuln):<br />104             dupe_key = hashlib.md5(vuln.get('description').encode('utf-8') + vuln.get('title').encode('utf-8')).hexdigest()<br />105 </p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "bb448050a7950c382d44436d36c02d6a",
@@ -1174,7 +1174,7 @@
                             "line": 162,
                             "code": "\n161             return socket.gethostbyname(host)\n162         except:\n163             pass\n164         return host\n\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code>\n<strong>Test ID:</strong> <code>B110</code>\n<strong>Filename:</strong> <code>project/tools/zap/parser.py</code>\n<strong>Line number:</strong> <code>162</code>\n<strong>Issue Confidence:</strong> <code>HIGH</code>\n<strong>Code:</strong>\n```\n161             return socket.gethostbyname(host)\n162         except:\n163             pass\n164         return host</p>\n<p>```</p>",
+                            "description": "<p><strong>Test Name:</strong> <code>try_except_pass</code><br /><strong>Test ID:</strong> <code>B110</code><br /><strong>Filename:</strong> <code>project/tools/zap/parser.py</code><br /><strong>Line number:</strong> <code>162</code><br /><strong>Issue Confidence:</strong> <code>HIGH</code><br /><strong>Code:</strong><br />```<br />161             return socket.gethostbyname(host)<br />162         except:<br />163             pass<br />164         return host</p><p>```</p>",
                             "stacks": [
                                 {
                                     "locationId": "992591c24bda4ba3d78dc21411de19b9",
