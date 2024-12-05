@@ -120,7 +120,7 @@ class HubParser:
 
         # Markdown to HTML
         if finding_hub.description:
-            finding_hub.description = markdown.markdown(finding_hub.description)
+            finding_hub.description = markdown.markdown(finding_hub.description, extensions=['nl2br']).replace('\n', '')
 
         if finding.dupe_key not in self.findings:
             self.findings[finding.dupe_key] = finding_hub
