@@ -32,8 +32,9 @@ def check_keys_parser_classes():
 
 
 def validate_args(args):
-    # Приведение к нижнему регистру
+    # Приведение к нижнему регистру и замена "-" на "_"
     args.type = args.type.lower()
+    args.scanner = args.scanner.replace('-', '_')
     if args.format is None:
         if args.scanner not in PARSER_CLASSES.keys():
             raise ValueError("scanner is not supported, provide format if available")

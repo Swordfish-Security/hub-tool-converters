@@ -50,6 +50,9 @@ class Rule:
 @dataclass(kw_only=True, eq=False, order=False)
 class RuleSCA(Rule):
     cveId: str
+    cvssv3: str
+    cvssv3_score: float
+    references: list[str]
 
     def __init__(
             self,
@@ -57,8 +60,13 @@ class RuleSCA(Rule):
             name: str,
             severity: str,
             description: str,
-            cwe: list[RuleCwe]
+            cwe: list[RuleCwe],
+            references: list[str],
+            cvssv3: str,
+            cvssv3_score: float
     ):
         self.cveId = name
+        self.cvssv3 = cvssv3
+        self.cvssv3_score = cvssv3_score
+        self.references = references
         super().__init__(type, name, severity, description, cwe)
-
