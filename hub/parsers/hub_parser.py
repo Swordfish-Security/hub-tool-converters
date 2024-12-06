@@ -69,6 +69,7 @@ class HubParser:
                 if isinstance(req_resp, dict):
                     for key, value in req_resp.items():
                         text += f'\n{key}: {value}\n'
+                        text = markdown.markdown(text, extensions=['nl2br']).replace('\n', '')
                 self.findings[finding.dupe_key].description += text
 
     def __parse_finding_stacks(self, finding_stacks, location_id) -> Optional[list[LocationStack]]:
