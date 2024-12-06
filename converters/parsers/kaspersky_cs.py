@@ -21,13 +21,16 @@ def _get_cvssv3(cvss_dict: dict):
         for priority_key in priority_order_keys:
             for key in cvss_dict.keys():
                 if key.lower().startswith(priority_key):
-                    if cvss_dict[key].get("V3Score"):
+                    if cvss_dict[key].get("V3Score") and cvss_dict[key].get("V3Vector"):
                         return cvss_dict[key]["V3Vector"], cvss_dict[key]["V3Score"]
                     else:
                         sorted_cvss_dict.pop(key)
         if sorted_cvss_dict:
             greater_cvss = next(iter(sorted_cvss_dict))
-            return sorted_cvss_dict[greater_cvss]["V3Vector"], sorted_cvss_dict[greater_cvss]["V3Score"]
+            score = sorted_cvss_dict[greater_cvss].get("V3Score") if sorted_cvss_dict[greater_cvss].get("V3Score") else None
+            vector = sorted_cvss_dict[greater_cvss].get("V3Vector") if score else None
+            return vector, score
+    return None, None
 
 
 def _get_cwes_id(cwes: list):
