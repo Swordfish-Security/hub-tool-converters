@@ -161,8 +161,8 @@ class Finding(AdditionalFields):
     cve: str | None = None  # Vulnerability Id
     epss_score: float | None = None  # EPSS score for the CVE. Describes how likely it is the vulnerability will be exploited in the next 30 days
     epss_percentile: float | None = None  # EPSS percentile for the CVE. Describes how many CVEs are scored at or below this one
-    cvssv3: str | None = None  # Common Vulnerability Scoring System version 3 (CVSSv3) score associated with this flaw
-    cvssv3_score: float | None = None  # Numerical CVSSv3 score for the vulnerability. If the vector is given, the score is updated while saving the finding. The value must be between 0-10.
+    cvss3_vector: str | None = None  # Common Vulnerability Scoring System version 3 (CVSSv3) score associated with this flaw
+    cvss3_score: str | None = None  # Numerical CVSSv3 score for the vulnerability. If the vector is given, the score is updated while saving the finding. The value must be between 0-10.
     url: str | None = None  # External reference that provides more information about this flaw
     severity: str | None = None  # The severity level of this flaw (Critical, High, Medium, Low, Informational)
     description: str | None = None  # Longer more descriptive information about the flaw

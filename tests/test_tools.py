@@ -114,14 +114,14 @@ TEST_EMPTY_CVSS_DATA = {}
 TEST_EMPTY_CVSS_EXPECTED_RESULT = (None, None)
 
 TEST_CVSS_EXPECTED_RESULT = [
-    ("nvd", 2.0),
-    ("bdu", 3.0),
-    ("ExploitationInfo", 4.0),
-    ("redhat", 5.0),
-    ("ros", 6.0),
-    ("any_source_3", 8.0),
-    ("any_source_1", 9.0),
-    ("bdu", 1.0),
+    ("nvd", "2.0"),
+    ("bdu", "3.0"),
+    ("ExploitationInfo", "4.0"),
+    ("redhat", "5.0"),
+    ("ros", "6.0"),
+    ("any_source_3", "8.0"),
+    ("any_source_1", "9.0"),
+    ("bdu", "1.0"),
     (None, None),
     (None, None),
 ]

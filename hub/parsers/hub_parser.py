@@ -165,8 +165,8 @@ class HubParser:
                     description=finding.description,
                     cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None,
                     references=finding.references,
-                    cvssv3=finding.cvssv3,
-                    cvssv3_score=finding.cvssv3_score
+                    cvss3_vector=finding.cvss3_vector,
+                    cvss3_score=finding.cvss3_score
                 )
             else:
                 self.rules[finding.ruleId] = Rule(

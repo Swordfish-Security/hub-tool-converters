@@ -22,12 +22,12 @@ def _get_cvssv3(cvss_dict: dict):
             for key in cvss_dict.keys():
                 if key.lower().startswith(priority_key):
                     if cvss_dict[key].get("V3Score") and cvss_dict[key].get("V3Vector"):
-                        return cvss_dict[key]["V3Vector"], cvss_dict[key]["V3Score"]
+                        return cvss_dict[key]["V3Vector"], str(cvss_dict[key]["V3Score"])
                     else:
                         sorted_cvss_dict.pop(key)
         if sorted_cvss_dict:
             greater_cvss = next(iter(sorted_cvss_dict))
-            score = sorted_cvss_dict[greater_cvss].get("V3Score") if sorted_cvss_dict[greater_cvss].get("V3Score") else None
+            score = str(sorted_cvss_dict[greater_cvss].get("V3Score")) if sorted_cvss_dict[greater_cvss].get("V3Score") else None
             vector = sorted_cvss_dict[greater_cvss].get("V3Vector") if score else None
             return vector, score
     return None, None
@@ -67,7 +67,7 @@ class KasperskyCSJSONParser:
             if not description:
                 description = "Description was not provided."
 
-            cvssv3, cvssv3_score = _get_cvssv3(vulnerability.get("CVSS"))
+            cvss3_vector, cvss3_score = _get_cvssv3(vulnerability.get("CVSS"))
 
             finding = Finding(
                 title=title,
@@ -81,8 +81,8 @@ class KasperskyCSJSONParser:
                 static_finding=False,
                 dynamic_finding=False,
                 vuln_id_from_tool=vulnerability.get("VulnerabilityID"),
-                cvssv3=cvssv3,
-                cvssv3_score=cvssv3_score
+                cvss3_vector=cvss3_vector,
+                cvss3_score=cvss3_score
             )
 
             if report_date:
