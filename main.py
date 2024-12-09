@@ -95,6 +95,12 @@ if __name__ == '__main__':
         help="Stage of instance",
         required=False
     )
+    parser.add_argument(
+        "-pr", "--path-replace",
+        type=str,
+        help="Specify the path to be cut from the results json (default: None)",
+        default=None
+    )
 
     args = parser.parse_args()
 

@@ -30,6 +30,7 @@
 | -c; --commit      | Коммит в репозитории, по которому запускалось сканирование                                                                             | Нет, по умолчанию master                              |
 | -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)                                                                                          | Нет, по умолчанию maven                               |
 | --stage           | Стадия экземпляра (ST - System Test, UAT - User Acceptance Test, IAT - Integration Acceptance Test, STG - Stage, PROD - Production)    | Нет                                                   |
+| -pr; --path_replace           | Строковое значение для удаления части пути из fileName в конечном json    | Нет                                                   |
 
 ### Список поддерживаемых форматов
 
