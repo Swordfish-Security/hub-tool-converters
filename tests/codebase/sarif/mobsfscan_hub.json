@@ -166,7 +166,7 @@
                             "line": 57,
                             "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.\n<strong>Snippet:</strong>\n<code>Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());</code>\n<strong>Rule name:</strong> AndroidLogging</p>",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong><br /><code>Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());</code><br /><strong>Rule name:</strong> AndroidLogging</p>",
                             "stacks": [
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
@@ -226,7 +226,7 @@
                             "line": 72,
                             "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.\n<strong>Snippet:</strong>\n<code>pinTxt.setVisibility(View.INVISIBLE);</code>\n<strong>Rule name:</strong> AndroidHiddenUi</p>",
+                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.<br /><strong>Snippet:</strong><br /><code>pinTxt.setVisibility(View.INVISIBLE);</code><br /><strong>Rule name:</strong> AndroidHiddenUi</p>",
                             "stacks": [
                                 {
                                     "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
@@ -250,7 +250,7 @@
                             "line": 67,
                             "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\n<strong>Snippet:</strong>\n<code>mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");</code>\n<strong>Rule name:</strong> SqliteInjection</p>",
+                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.<br /><strong>Snippet:</strong><br /><code>mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");</code><br /><strong>Rule name:</strong> SqliteInjection</p>",
                             "stacks": [
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
@@ -274,7 +274,7 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidDetectTapjacking",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidDetectTapjacking</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidDetectTapjacking</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
@@ -292,7 +292,7 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidPreventScreenshot",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidPreventScreenshot</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidPreventScreenshot</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
@@ -310,7 +310,7 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidSafetynetApi",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. \n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidSafetynetApi</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. <br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidSafetynetApi</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
@@ -328,7 +328,7 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidRootDetection",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidRootDetection</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidRootDetection</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
@@ -346,7 +346,7 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidCertificateTransparency",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidCertificateTransparency</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidCertificateTransparency</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
@@ -364,7 +364,7 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidCertificatePinning",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in <code>network_security_config.xml</code>.\n<strong>Snippet:</strong>\n<code>Missing Best Practice</code>\n<strong>Rule name:</strong> AndroidCertificatePinning</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in <code>network_security_config.xml</code>.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidCertificatePinning</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
