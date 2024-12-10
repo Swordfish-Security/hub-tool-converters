@@ -28,8 +28,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2019-5747",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -40,8 +40,8 @@
               "cwe": null,
               "description": "Fraudulent security certificates could allow sensitive information to\nbe exposed when accessing the Internet.\nIt was discovered that the BusyBox wget applet incorrectly validated SSL\ncertificates. A remote attacker could possibly use this issue to intercept\nsecure communications.\n",
               "cveId": "CVE-2018-1000500",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -52,8 +52,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-28831",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -64,8 +64,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42374",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -76,8 +76,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2021-28831)\nIt was discovered that BusyBox did not properly validate user input when\nperforming certain arithmetic operations. If a user or automated system\nwere tricked into processing a specially crafted file, an attacker could\npossibly use this issue to cause BusyBox to crash, resulting in a denial\nof service, or execute arbitrary code. (CVE-2022-48174)\n",
               "cveId": "CVE-2022-48174",
-              "cvssv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-              "cvssv3_score": 9.8,
+              "cvss3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "cvss3Score": "9.8",
               "references": []
             },
             {
@@ -88,8 +88,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42382",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -100,8 +100,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42384",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -112,8 +112,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42385",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -124,8 +124,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42386",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -136,8 +136,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2018-1000517",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -148,8 +148,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42380",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -160,8 +160,8 @@
               "cwe": null,
               "description": "Cloudflare version of zlib library was found to be vulnerable to memory corruption issues affecting the deflation algorithm implementation (deflate.c). The issues resulted from improper input validation and heap-based buffer overflow.\nA local attacker could exploit the problem during compression using a crafted malicious file potentially leading to denial of service of the software.\nPatches: The issue has been patched in commit  8352d10 https://github.com/cloudflare/zlib/commit/8352d108c05db1bdc5ac3bdf834dad641694c13c . The upstream repository is not affected.\n",
               "cveId": "CVE-2023-6992",
-              "cvssv3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
-              "cvssv3_score": 4,
+              "cvss3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+              "cvss3Score": "4",
               "references": []
             },
             {
@@ -172,8 +172,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2011-5325",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -184,8 +184,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2016-2147",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -196,8 +196,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2016-2148",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -208,8 +208,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2017-16544",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -220,8 +220,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42378",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -232,8 +232,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42379",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -244,8 +244,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nIt was discovered that BusyBox incorrectly handled certain malformed gzip\narchives. If a user or automated system were tricked into processing a\nspecially crafted gzip archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nexecute arbitrary code. (CVE-2021-28831)\nIt was discovered that BusyBox incorrectly handled certain malformed LZMA\narchives. If a user or automated system were tricked into processing a\nspecially crafted LZMA archive, a remote attacker could use this issue to\ncause BusyBox to crash, resulting in a denial of service, or possibly\nleak sensitive information. (CVE-2021-42374)\nVera Mens, Uri Katz, Tal Keren, Sharon Brizinov, and Shachar Menashe\ndiscovered that BusyBox incorrectly handled certain awk patterns. If a user\nor automated system were tricked into processing a specially crafted awk\npattern, a remote attacker could use this issue to cause BusyBox to crash,\nresulting in a denial of service, or possibly execute arbitrary code.\n(CVE-2021-42378, CVE-2021-42379, CVE-2021-42380, CVE-2021-42381,\nCVE-2021-42382, CVE-2021-42384, CVE-2021-42385, CVE-2021-42386)\n",
               "cveId": "CVE-2021-42381",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -256,8 +256,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2014-9645",
-              "cvssv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
-              "cvssv3_score": 5.5,
+              "cvss3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "cvss3Score": "5.5",
               "references": []
             },
             {
@@ -268,8 +268,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2015-9261",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -280,8 +280,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2017-15873",
-              "cvssv3": null,
-              "cvssv3_score": null,
+              "cvss3Vector": null,
+              "cvss3Score": null,
               "references": []
             },
             {
@@ -292,8 +292,8 @@
               "cwe": null,
               "description": "Several security issues were fixed in BusyBox.\nTyler Hicks discovered that BusyBox incorrectly handled symlinks inside tar\narchives. If a user or automated system were tricked into processing a\nspecially crafted tar archive, a remote attacker could overwrite arbitrary\nfiles outside of the current directory. This issue only affected Ubuntu\n14.04 LTS and Ubuntu 16.04 LTS. (CVE-2011-5325)\nMathias Krause discovered that BusyBox incorrectly handled kernel module\nloading restrictions. A local attacker could possibly use this issue to\nbypass intended restrictions. This issue only affected Ubuntu 14.04 LTS.\n(CVE-2014-9645)\nIt was discovered that BusyBox incorrectly handled certain ZIP archives. If\na user or automated system were tricked into processing a specially crafted\nZIP archive, a remote attacker could cause BusyBox to crash, leading to a\ndenial of service. This issue only affected Ubuntu 14.04 LTS and Ubuntu\n16.04 LTS. (CVE-2015-9261)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain malformed domain names. A remote attacker could possibly use this\nissue to cause the DHCP client to crash, leading to a denial of service.\nThis issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS.\n(CVE-2016-2147)\nNico Golde discovered that the BusyBox DHCP client incorrectly handled\ncertain 6RD options. A remote attacker could use this issue to cause the\nDHCP client to crash, leading to a denial of service, or possibly execute\narbitrary code. This issue only affected Ubuntu 14.04 LTS and Ubuntu 16.04\nLTS. (CVE-2016-2148)\nIt was discovered that BusyBox incorrectly handled certain bzip2 archives.\nIf a user or automated system were tricked into processing a specially\ncrafted bzip2 archive, a remote attacker could cause BusyBox to crash,\nleading to a denial of service, or possibly execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-15873)\nIt was discovered that BusyBox incorrectly handled tab completion. A local\nattacker could possibly use this issue to execute arbitrary code. This\nissue only affected Ubuntu 14.04 LTS and Ubuntu 16.04 LTS. (CVE-2017-16544)\nIt was discovered that the BusyBox wget utility incorrectly handled certain\nresponses. A remote attacker could use this issue to cause BusyBox to\ncrash, resulting in a denial of service, or possibly execute arbitrary\ncode. (CVE-2018-1000517)\nIt was discovered that the BusyBox DHCP utilities incorrectly handled\ncertain memory operations. A remote attacker could possibly use this issue\nto access sensitive information. (CVE-2018-20679, CVE-2019-5747)\n",
               "cveId": "CVE-2018-20679",
-              "cvssv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-              "cvssv3_score": 7.5,
+              "cvss3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "cvss3Score": "7.5",
               "references": []
             }
           ],

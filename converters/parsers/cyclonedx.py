@@ -149,11 +149,11 @@ class cycloneDXXMLParser:
             component_version = bom["version"]
 
         severity = cyclonedxhelper().fix_severity(severity)
-        references = ""
+        references = []
         for adv in vulnerability.findall(
             "v:advisories/v:advisory", namespaces=ns
         ):
-            references += f"{adv.text}\n"
+            references.append(f"{adv.text}")
         finding = Finding(
             title=f"{component_name}:{component_version} | {vuln_id}",
             description=description,
@@ -183,7 +183,7 @@ class cycloneDXXMLParser:
                 severity = rating.findtext("v:severity", namespaces=ns)
                 cvssv3 = cyclonedxhelper()._get_cvssv3(raw_vector)
                 if cvssv3:
-                    finding.cvssv3 = cvssv3.clean_vector()
+                    finding.cvss3_vector = cvssv3.clean_vector()
                     if severity:
                         finding.severity = cyclonedxhelper().fix_severity(severity)
                     else:
@@ -293,7 +293,7 @@ class cycloneDXXMLParser:
                     cvssv3 = cyclonedxhelper()._get_cvssv3(raw_vector)
                     if cvssv3:
                         finding.cvss3_vector = cvssv3.clean_vector()
-                        finding.cvss3_score = score
+                        finding.cvss3_score = str(score)
                         if severity:
                             finding.severity = cyclonedxhelper().fix_severity(severity)
                         else:
@@ -409,7 +409,7 @@ class cycloneDXJSONParser:
                         severity = rating.get("severity")
                         if cvssv3:
                             finding.cvss3_vector = cvssv3.clean_vector()
-                            finding.cvss3_score = rating.get("score")
+                            finding.cvss3_score = str(rating.get("score"))
                             if severity:
                                 finding.severity = cyclonedxhelper().fix_severity(severity)
                             else:

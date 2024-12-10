@@ -84,7 +84,7 @@ class ParsersTest(unittest.TestCase):
 
                 iparser = parser()
 
-                with open(args.filename, "r") as f:
+                with open(args.filename, "r", encoding='utf-8') as f:
                     results = iparser.get_findings(f, '')
                     self.results[args.type].update({f'{name} - {filename}': results})
                 hub_parser = HubParser(args=args, results=results)
@@ -128,7 +128,7 @@ class ParsersTest(unittest.TestCase):
             for name, report in self.reports[arg.type].items():
                 scanner, filename = name.split(' - ')
                 filename = filename.replace('.json', '')
-                with open(f'./tests/{arg.type}/{scanner}/{filename}_hub.json', 'r') as f:
+                with open(f'./tests/{arg.type}/{scanner}/{filename}_hub.json', 'r', encoding='utf-8') as f:
                     output = json.load(f)
 
                 self.__delete_independent_ids(report)

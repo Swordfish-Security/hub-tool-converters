@@ -1,6 +1,6 @@
 import os
 
-from config.constances import PARSER_CLASSES, TESTS_PATH, PARSERS_PATH
+from config.constances import PARSER_CLASSES, TESTS_PATH, PARSERS_PATH, PARSERS_NAMES_TO_FIX
 from config.enums import SourceTypes
 
 
@@ -32,9 +32,9 @@ def check_keys_parser_classes():
 
 
 def validate_args(args):
-    # Приведение к нижнему регистру и замена "-" на "_"
+    # Приведение к нижнему регистру и замена "-" на "_" если scanner в PARSERS_NAMES_TO_FIX
     args.type = args.type.lower()
-    args.scanner = args.scanner.replace('-', '_')
+    args.scanner = args.scanner.replace('-', '_') if args.scanner in PARSERS_NAMES_TO_FIX else args.scanner
     if args.format is None:
         if args.scanner not in PARSER_CLASSES.keys():
             raise ValueError("scanner is not supported, provide format if available")
