@@ -149,11 +149,11 @@ class cycloneDXXMLParser:
             component_version = bom["version"]
 
         severity = cyclonedxhelper().fix_severity(severity)
-        references = []
+        references = ""
         for adv in vulnerability.findall(
             "v:advisories/v:advisory", namespaces=ns
         ):
-            references.append(f"{adv.text}")
+            references += f"{adv.text}\n"
         finding = Finding(
             title=f"{component_name}:{component_version} | {vuln_id}",
             description=description,
@@ -235,13 +235,26 @@ class cycloneDXXMLParser:
             "b:ratings/b:rating/b:severity", namespaces=ns
         )
         severity = cyclonedxhelper().fix_severity(severity)
-        references = []
+        description_references = ""
         for advisory in vulnerability.findall(
-            "b:advisories/b:advisory", namespaces=ns
+                "b:advisories/b:advisory", namespaces=ns
         ):
+            title = advisory.findtext("b:title", namespaces=ns)
+            if title:
+                description_references += f"**Title:** {title}\n"
             url = advisory.findtext("b:url", namespaces=ns)
             if url:
-                references.append(url) #todo check multiple references
+                description_references += f"**URL:** {url}\n"
+            description_references += "\n"
+
+        references = []
+        for reference in vulnerability.findall(
+                "b:references/b:reference", namespaces=ns
+        ):
+            ref = reference.findtext("b:source/b:url", namespaces=ns)
+            if ref and ref not in references:
+                references.append(ref)
+
         vulnerability_ids = []
         # set id as first vulnerability id
         if vuln_id:
@@ -265,6 +278,7 @@ class cycloneDXXMLParser:
             finding = Finding(
                 title=f"{component_name}:{component_version} | {vuln_id}",
                 description=description,
+                description_references=description_references,
                 severity=severity,
                 mitigation=vulnerability.findtext(
                     "b:recommendation", namespaces=ns
@@ -368,12 +382,23 @@ class cycloneDXJSONParser:
                 severity = cyclonedxhelper().fix_severity(severity)
             else:
                 severity = "Medium"
-            references = []
+            description_references = ""
             advisories = vulnerability.get("advisories", [])
             for advisory in advisories:
+                title = advisory.get("title")
+                if title:
+                    description_references += f"**Title:** {title}\n"
                 url = advisory.get("url")
                 if url:
-                    references.append(url)
+                    description_references += f"**URL:** {url}\n"
+                description_references += "\n"
+
+            references = []
+            for reference in vulnerability.get("references", []):
+                source = reference.get("source")
+                if source and source.get("url"):
+                    references.append(source.get("url"))
+
             # for each component affected we create a finding if the "affects"
             # node is here
             for affect in vulnerability.get("affects", []):
@@ -387,6 +412,7 @@ class cycloneDXJSONParser:
                     title=f"{component_name}:{component_version} | {vulnerability.get('id')}",
                     test=test,
                     description=description,
+                    description_references=description_references,
                     severity=severity,
                     mitigation=vulnerability.get("recommendation", ""),
                     component_name=component_name,

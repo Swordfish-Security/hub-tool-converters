@@ -115,7 +115,7 @@ class HubParser:
                 idx=finding.dupe_key,
                 ruleId=finding.ruleId,
                 locationId=finding.file_key,
-                description=finding.description,
+                description=f"{finding.description}\n{finding.description_references}" if finding.description_references else finding.description,
                 status=self.__get_status(finding),
                 type=scanner_type
             )

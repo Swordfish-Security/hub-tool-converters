@@ -230,3 +230,4 @@ class Finding(AdditionalFields):
                   'High': 1, 'Critical': 0}
 
     finding_stacks: list[dict] | None = None
+    description_references: str | None = None
