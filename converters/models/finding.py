@@ -1,5 +1,5 @@
 import datetime
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 
 import hyperlink
@@ -161,8 +161,8 @@ class Finding(AdditionalFields):
     cve: str | None = None  # Vulnerability Id
     epss_score: float | None = None  # EPSS score for the CVE. Describes how likely it is the vulnerability will be exploited in the next 30 days
     epss_percentile: float | None = None  # EPSS percentile for the CVE. Describes how many CVEs are scored at or below this one
-    cvssv3: str | None = None  # Common Vulnerability Scoring System version 3 (CVSSv3) score associated with this flaw
-    cvssv3_score: float | None = None  # Numerical CVSSv3 score for the vulnerability. If the vector is given, the score is updated while saving the finding. The value must be between 0-10.
+    cvss3_vector: str | None = None  # Common Vulnerability Scoring System version 3 (CVSSv3) score associated with this flaw
+    cvss3_score: str | None = None  # Numerical CVSSv3 score for the vulnerability. If the vector is given, the score is updated while saving the finding. The value must be between 0-10.
     url: str | None = None  # External reference that provides more information about this flaw
     severity: str | None = None  # The severity level of this flaw (Critical, High, Medium, Low, Informational)
     description: str | None = None  # Longer more descriptive information about the flaw
@@ -172,7 +172,7 @@ class Finding(AdditionalFields):
     severity_justification: str | None = None  # Text describing why a certain severity was associated with this flaw
     endpoints: list[
                    Endpoint] | None = None  # The hosts within the product that are susceptible to this flaw. + The status of the endpoint associated with this flaw (Vulnerable, Mitigated, ...).
-    references: str | None = None  # The external documentation available for this flaw
+    references: list[str] | str = field(default_factory=list)  # The external documentation available for this flaw
     active: bool = True  # Denotes if this flaw is active or not
     verified: bool = False  # Denotes if this flaw has been manually verified by the tester
     false_p: bool = False  # Denotes if this flaw has been deemed a false positive by the tester
@@ -230,3 +230,4 @@ class Finding(AdditionalFields):
                   'High': 1, 'Critical': 0}
 
     finding_stacks: list[dict] | None = None
+    description_references: str | None = None

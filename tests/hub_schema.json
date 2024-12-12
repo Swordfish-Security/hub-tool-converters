@@ -416,11 +416,11 @@
           "description": "cvss2 vector"
         },
         "cvss3Score": {
-          "type": "string",
+          "type": ["string", "null"],
           "description": "Vulnerability score"
         },
         "cvss3Vector": {
-          "type": "string",
+          "type": ["string", "null"],
           "description": "cvss3 vector"
         },
         "recommendation": {
@@ -554,11 +554,11 @@
           "description": "cvss2 vector"
         },
         "cvss3Score": {
-          "type": "string",
+          "type": ["string", "null"],
           "description": "Vulnerability score"
         },
         "cvss3Vector": {
-          "type": "string",
+          "type": ["string", "null"],
           "description": "cvss3 vector"
         },
         "extraInformation": {

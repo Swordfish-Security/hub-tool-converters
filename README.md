@@ -79,7 +79,7 @@ pip install -r requirements.txt
 
 3. Запуск тестов
 ```bash
-python -m unittest tests/parsers.py
+pytest -s
 ```
 
 ## Вносите свой вклад

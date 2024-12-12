@@ -3,6 +3,7 @@ import uuid
 from typing import Any, Optional
 
 from config.enums import SourceTypes, ScannerTypes
+from config.constances import PARSERS_NAMES_TO_FIX
 from converters.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS
 from hub.models.location import LocationSast, LocationDast, LocationSca, LocationStack
@@ -68,6 +69,7 @@ class HubParser:
                 if isinstance(req_resp, dict):
                     for key, value in req_resp.items():
                         text += f'\n{key}: {value}\n'
+                        text = markdown.markdown(text, extensions=['nl2br']).replace('\n', '')
                 self.findings[finding.dupe_key].description += text
 
     def __parse_finding_stacks(self, finding_stacks, location_id) -> Optional[list[LocationStack]]:
@@ -113,7 +115,7 @@ class HubParser:
                 idx=finding.dupe_key,
                 ruleId=finding.ruleId,
                 locationId=finding.file_key,
-                description=finding.description,
+                description=f"{finding.description}\n{finding.description_references}" if finding.description_references else finding.description,
                 status=self.__get_status(finding),
                 type=scanner_type
             )
@@ -161,7 +163,10 @@ class HubParser:
                     name=finding.ruleId,
                     severity='Low' if finding.severity == 'Info' else finding.severity,
                     description=finding.description,
-                    cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None
+                    cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None,
+                    references=finding.references,
+                    cvss3_vector=finding.cvss3_vector,
+                    cvss3_score=finding.cvss3_score
                 )
             else:
                 self.rules[finding.ruleId] = Rule(
@@ -202,6 +207,8 @@ class HubParser:
             finding.check_additional_fields()
 
     def get_report(self) -> dict:
+        if self.args.scanner in PARSERS_NAMES_TO_FIX:
+            self.args.scanner = self.args.scanner.replace("_", "-")
         scan_result = ScanResult(
             rules=list(self.rules.values()),
             locations=list(self.locations.values()),

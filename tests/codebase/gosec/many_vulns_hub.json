@@ -147,7 +147,7 @@
                             "line": 79,
                             "code": "s.ListenAndServe()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/app.go</p>\n<p>Line number: 79</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>s.ListenAndServe()</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/app.go</p><p>Line number: 79</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>s.ListenAndServe()</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "300ff40dd869c3e56b29de930221087f",
@@ -165,7 +165,7 @@
                             "line": 64,
                             "code": "db,_ := database.Connect()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p>\n<p>Line number: 64</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>db,_ := database.Connect()</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p><p>Line number: 64</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>db,_ := database.Connect()</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "43a6ce4bfdc6203c2918d4ab660ef090",
@@ -183,7 +183,7 @@
                             "line": 66,
                             "code": "_ = db.QueryRow(sql).Scan(&version)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p>\n<p>Line number: 66</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>_ = db.QueryRow(sql).Scan(&amp;version)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/setting/setting.go</p><p>Line number: 66</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>_ = db.QueryRow(sql).Scan(&amp;version)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "43a6ce4bfdc6203c2918d4ab660ef090",
@@ -201,7 +201,7 @@
                             "line": 8,
                             "code": "\"crypto/md5\"",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 8</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p><p>Line number: 8</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>\"crypto/md5\"</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
@@ -219,7 +219,7 @@
                             "line": 160,
                             "code": "md5.New()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 160</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p><p>Line number: 160</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>md5.New()</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
@@ -237,7 +237,7 @@
                             "line": 161,
                             "code": "hasher.Write([]byte(text))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p>\n<p>Line number: 161</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/user/user.go</p><p>Line number: 161</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>hasher.Write([]byte(text))</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
@@ -255,7 +255,7 @@
                             "line": 42,
                             "code": "cookie, _ := r.Cookie(name)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/cookie.go</p>\n<p>Line number: 42</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>cookie, _ := r.Cookie(name)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/cookie.go</p><p>Line number: 42</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>cookie, _ := r.Cookie(name)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "b2d59c0c7e769bf642dfb74439dc579d",
@@ -273,7 +273,7 @@
                             "line": 35,
                             "code": "w.Write(b)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 35</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>w.Write(b)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p><p>Line number: 35</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>w.Write(b)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "c821785c97e8471c133324f49e77ce26",
@@ -291,7 +291,7 @@
                             "line": 41,
                             "code": "template.ExecuteTemplate(w, name, data)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 41</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>template.ExecuteTemplate(w, name, data)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p><p>Line number: 41</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>template.ExecuteTemplate(w, name, data)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "c821785c97e8471c133324f49e77ce26",
@@ -309,7 +309,7 @@
                             "line": 45,
                             "code": "template.HTML(text)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p>\n<p>Line number: 45</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(text)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/template.go</p><p>Line number: 45</p><p>Issue Confidence: LOW</p><p>Code:</p><p><code>template.HTML(text)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "c821785c97e8471c133324f49e77ce26",
@@ -327,7 +327,7 @@
                             "line": 70,
                             "code": "sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p>\n<p>Line number: 70</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p><p>Line number: 70</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>sqlmapDetected, _ := regexp.MatchString(\"sqlmap*\", userAgent)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8f8b5e58437eb58b3cda667d99afc3c3",
@@ -345,7 +345,7 @@
                             "line": 73,
                             "code": "w.Write([]byte(\"Forbidden\"))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p>\n<p>Line number: 73</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>w.Write([]byte(\"Forbidden\"))</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/util/middleware/middleware.go</p><p>Line number: 73</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>w.Write([]byte(\"Forbidden\"))</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8f8b5e58437eb58b3cda667d99afc3c3",
@@ -363,7 +363,7 @@
                             "line": 7,
                             "code": "\"crypto/md5\"",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 7</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p><p>Line number: 7</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>\"crypto/md5\"</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "372ca5daa138b427923927d2f2476718",
@@ -381,7 +381,7 @@
                             "line": 62,
                             "code": "md5.New()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 62</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p><p>Line number: 62</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>md5.New()</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "372ca5daa138b427923927d2f2476718",
@@ -399,7 +399,7 @@
                             "line": 63,
                             "code": "hasher.Write([]byte(text))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p>\n<p>Line number: 63</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/csa/csa.go</p><p>Line number: 63</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>hasher.Write([]byte(text))</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "372ca5daa138b427923927d2f2476718",
@@ -417,7 +417,7 @@
                             "line": 8,
                             "code": "\"crypto/md5\"",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 8</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>\"crypto/md5\"</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 8</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>\"crypto/md5\"</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -435,7 +435,7 @@
                             "line": 42,
                             "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 42</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 42</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>p.GetData(sid)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -453,7 +453,7 @@
                             "line": 61,
                             "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 61</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 61</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>p.GetData(sid)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -471,7 +471,7 @@
                             "line": 82,
                             "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 82</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 82</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>p.GetData(sid)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -489,7 +489,7 @@
                             "line": 124,
                             "code": "p.GetData(sid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 124</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>p.GetData(sid)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 124</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>p.GetData(sid)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -507,7 +507,7 @@
                             "line": 164,
                             "code": "md5.New()",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 164</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>md5.New()</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 164</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>md5.New()</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -525,7 +525,7 @@
                             "line": 165,
                             "code": "hasher.Write([]byte(text))",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p>\n<p>Line number: 165</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>hasher.Write([]byte(text))</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/idor/idor.go</p><p>Line number: 165</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>hasher.Write([]byte(text))</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "8ad5f8a094a24a90b5edbc50619d5e79",
@@ -543,7 +543,7 @@
                             "line": 36,
                             "code": "fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n\t\t\t\t\t\t\t\tFROM Profile as p,Users as u \n\t\t\t\t\t\t\t\twhere p.user_id = u.id \n\t\t\t\t\t\t\t\tand u.id=%s`,uid)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/sqli/function.go</p>\n<p>Line number: 36-39</p>\n<p>Issue Confidence: HIGH</p>\n<p>Code:</p>\n<p><code>fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number \n                                FROM Profile as p,Users as u \n                                where p.user_id = u.id \n                                and u.id=%s`,uid)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/sqli/function.go</p><p>Line number: 36-39</p><p>Issue Confidence: HIGH</p><p>Code:</p><p><code>fmt.Sprintf(`SELECT p.user_id, p.full_name, p.city, p.phone_number                                 FROM Profile as p,Users as u                                 where p.user_id = u.id                                 and u.id=%s`,uid)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "2ee8ac828af647526989f8c14c258b64",
@@ -561,7 +561,7 @@
                             "line": 58,
                             "code": "template.HTML(value)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 58</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(value)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p><p>Line number: 58</p><p>Issue Confidence: LOW</p><p>Code:</p><p><code>template.HTML(value)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "13830767e42dbd5e02bcbc040004d331",
@@ -579,7 +579,7 @@
                             "line": 59,
                             "code": "template.HTML(notFound)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 59</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(notFound)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p><p>Line number: 59</p><p>Issue Confidence: LOW</p><p>Code:</p><p><code>template.HTML(notFound)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "13830767e42dbd5e02bcbc040004d331",
@@ -597,7 +597,7 @@
                             "line": 62,
                             "code": "template.HTML(value)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 62</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(value)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p><p>Line number: 62</p><p>Issue Confidence: LOW</p><p>Code:</p><p><code>template.HTML(value)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "13830767e42dbd5e02bcbc040004d331",
@@ -615,7 +615,7 @@
                             "line": 63,
                             "code": "template.HTML(vuln)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 63</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(vuln)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p><p>Line number: 63</p><p>Issue Confidence: LOW</p><p>Code:</p><p><code>template.HTML(vuln)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "13830767e42dbd5e02bcbc040004d331",
@@ -633,7 +633,7 @@
                             "line": 100,
                             "code": "template.HTML(inlineJS)",
                             "status": "To Verify",
-                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p>\n<p>Line number: 100</p>\n<p>Issue Confidence: LOW</p>\n<p>Code:</p>\n<p><code>template.HTML(inlineJS)</code></p>",
+                            "description": "<p>Filename: /vagrant/go/src/govwa/vulnerability/xss/xss.go</p><p>Line number: 100</p><p>Issue Confidence: LOW</p><p>Code:</p><p><code>template.HTML(inlineJS)</code></p>",
                             "stacks": [
                                 {
                                     "locationId": "13830767e42dbd5e02bcbc040004d331",
