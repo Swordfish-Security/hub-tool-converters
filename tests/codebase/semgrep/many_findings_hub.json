@@ -44,21 +44,21 @@
                             "id": "4730e4e3fa3d2973b7d6fd907535b733",
                             "sourceId": "cc995d69-28d3-47a7-b076-cd1baad516ca",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02194.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "bcc192a00f0a6fd1cfebab12d5f07415",
                             "sourceId": "cc995d69-28d3-47a7-b076-cd1baad516ca",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest02195.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "19192bf22d09678733a38d92a7801fb3",
                             "sourceId": "cc995d69-28d3-47a7-b076-cd1baad516ca",
                             "fileName": "src/main/java/org/owasp/benchmark/testcode/BenchmarkTest01150.java",
-                            "language": "Any"
+                            "language": "Java"
                         }
                     ],
                     "findings": [

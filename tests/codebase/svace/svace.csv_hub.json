@@ -40,28 +40,28 @@
                             "id": "1134a43aa4c327489a5ff3fb7b7d53ba",
                             "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
                             "fileName": "/.build/src/main/java/hello/HelloWorld.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "29cf29395443515d099993816041333c",
                             "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
                             "fileName": "/.build/src/main/java/hello/HelloWorld2.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "23fed3fc1b547f122265d3380fee39ee",
                             "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
                             "fileName": "/.build/src/main/java/hello/HelloWorld3.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "12e7730955b36fb08c59360d830ce96b",
                             "sourceId": "3b16f071-784f-4de6-9c6b-21e9762f02de",
                             "fileName": "/.build/src/main/java/hello/HelloWorld4.java",
-                            "language": "Any"
+                            "language": "Java"
                         }
                     ],
                     "findings": [

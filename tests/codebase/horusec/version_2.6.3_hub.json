@@ -92,21 +92,21 @@
                             "id": "61b1194d0489dcc46c160913fac02e9c",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/settings/settings.dist.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "2a20a17372964d3fd9383d4026e285d5",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "docker-compose.override.integration_tests.yml",
-                            "language": "Any"
+                            "language": "CONFIG"
                         },
                         {
                             "type": "codebase",
                             "id": "4e5e90c6228fd48698d074241c2ba760",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "docker-compose.yml",
-                            "language": "Any"
+                            "language": "CONFIG"
                         },
                         {
                             "type": "codebase",
@@ -120,455 +120,455 @@
                             "id": "cde1217d77962133d734ac8c60289cd5",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/api_v2/serializers.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "a933107d5c1a944dae816064fcaea3be",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/static/front/js/index.js",
-                            "language": "Any"
+                            "language": "JavaScript"
                         },
                         {
                             "type": "codebase",
                             "id": "7d3c5cd3a245eed5926598d19ff3f505",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/reports/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "1577c48c539dfcd7e3f3b505c9c3fce6",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "tests/dedupe_test.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "163b6656ba80a06e26df2b62ef8f5288",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/unittests/test_rest_framework.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "ccd1aab8084c29138ced7b9a1c7321b8",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/appspider/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "66f335d306aa2affbff78292edb1d8a9",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/immuniweb/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "5cb680d591aa87668d4bd71e0232a15d",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/sslscan/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0d7fd46316f8a760481959f6e7d5922c",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/sslyze/parser_xml.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "de0d42fe5f463f827b1eb313875d8f10",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/ibm_app/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "22a3a66c75bfa8060968dfa7dab9150a",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/nessus/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "448e71f236d95c86843491990f1b0ae3",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/qualys_webapp/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "288f51c464c8631040e1b6088e67e818",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/management/commands/csv_findings_export.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "aedab6071ac90f9299972dc141064077",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/endpoint/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6a374dece7175ccbac6c64e86ef55435",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/dependency_check/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6f064b1e9831c857b9b7bf65234c45db",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/ccvs/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "711cf7dd2915eed3374c8185c9530a24",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/retirejs/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "64b8f0b6787420b9f90cbafaa22dfa09",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/blackduck/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "06467e431664130b895dfe86c0ba6582",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/huskyci/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "f2ae9eb8d9911f5b26fd966695546cca",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/trufflehog3/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "07faf7e5c433779304f00ca755178465",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/ort/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6e570cd1615066b07e78691a85d99a15",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/trufflehog/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "f756a74bbc8cf187f82bb5b3c3a0e433",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/cobalt/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "79ee1c4232266bb74ffb75345e7198cd",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/twistlock/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "58d7a5b0fded907766518bb1225ce3c1",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/bundler_audit/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "310ef0d0d2b1b746d8b02cd0fac13ace",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/scantist/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "70d2be227da8ced8f6aabda247890d38",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/h1/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "9ee847f7e95ac48679c0a423d9bd9918",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/vcg/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "459ac706cd9c291b50c3267ba97087ba",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/bugcrowd/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "aff67882343ec104a94fbba32b9f3924",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/kiuwan/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "bb448050a7950c382d44436d36c02d6a",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/mend/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "ad2dc76649ee429e49bf150a82981326",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/whitehat_sentinel/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "632992abdcfa6ea702a6715c461b9f3f",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/decorators.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "9b7586d5662239199f70e8dad6bc530c",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/finding/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0ad5be511a724c96025430388fc9427f",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/forms.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "a2e1a3253c77c7864188d43308dc8464",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/management/commands/migrate_surveys.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "51a0afd2112fe33fd9f6f318207b38f8",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/reports/widgets.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "f6922ec766f82b4432b29c6c70663312",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/survey/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "33d53e706371d32e1177b4c8acc4517b",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/templatetags/display_tags.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "12781f08150195a0a4f9f7f28444c080",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/templatetags/get_banner.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "cc2ec764b39b0021df2e6492bbe79107",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/templatetags/navigation_tags.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "ec562fcd5b5bf9029219b0f25fbf8df3",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/burp_enterprise/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "b8a390396c5dc2ad5b18f4e0dd80e2b0",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/contrast/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "b7c95fa1ddc8dc2f6b458646fdb163bc",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/safety/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "7e25837084d8f9ed1546c889b2fcfe68",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/sonarqube/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "75214d5e4cc7f7e9223dbb11951e3055",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/sonarqube_api/importer.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "5ac69b8ab5b3472ce48d4e09303d5a5d",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/unittests/tools/test_contrast_parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "2b5c767cb33a3d88b5496e945f3e4b05",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/unittests/tools/test_jfrog_xray_unified_parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "566df3a5983c6c1822d4a85fccf57cd7",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/unittests/tools/test_tfsec_parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "e4ce50f11debc667d871b3ef3e3885bd",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/wsgi.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "5d77dc6d03297ea9d9b9796f22619c83",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/benchmark/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "8b3bb696887e718d72bd5678152f7efc",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/cred/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "cc35010d828a5899b5a109b47e761311",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/db_migrations/0047_jira_minimum_severity_default.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0a7971b77af1e3c138881c03984d2a6c",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/db_migrations/0061_jira_webhook_secret.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6ad121fe2fcdb194895b2ab45ec27c3a",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/finding/helper.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "7fc373ba28390480894efa1603c33b93",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/google_sheet/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "a91f1e2c01b2aa10b47fda29a8496eaa",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/middleware.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "83512e3be7f0e66479b749a348eaac71",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/models.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "12de1899b3c199feb9bcf92ba131875a",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/okta.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0d3456d4b84bd72b5dcaa4dd8f934562",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/product/views.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "8c4554ac55e17b0fe32d953a35d6b5af",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/tools/gitlab_api_fuzzing/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "91350233e8e3e27e2f24b6c798ee6daf",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/unittests/test_swagger_schema.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "49899b172db080c455ed94a373abce47",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "project/unittests/test_tags.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "3bcefa5e951b4dfd67d556956854fdf8",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "tests/Import_scanner_test.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "c20fd8677fc2705e8f09d28babba56aa",
                             "sourceId": "1ca3b998-02b3-4c09-b932-4b800fa81388",
                             "fileName": "tests/base_test_class.py",
-                            "language": "Any"
+                            "language": "Python"
                         }
                     ],
                     "findings": [

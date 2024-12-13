@@ -140,14 +140,14 @@
                             "id": "ad6047709ffcc0b8e2f2577daf066e9a",
                             "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "f91d0476aac66e2d11ce1f3ece59a05d",
                             "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",

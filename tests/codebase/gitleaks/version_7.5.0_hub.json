@@ -56,21 +56,21 @@
                             "id": "e9de00b28104d8313a23c08859f6dab6",
                             "sourceId": "fac5e5b7-4e70-4bb2-a528-72698e7e1a65",
                             "fileName": "project/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_1_vuln.json",
-                            "language": "Any"
+                            "language": "CONFIG"
                         },
                         {
                             "type": "codebase",
                             "id": "213d369d14133ba3dbf5c7fee56e2d58",
                             "sourceId": "d3b7c398-3b82-4723-b67a-6c232a882b75",
                             "fileName": "project/unittests/scans/gitlab_secret_detection_report/gitlab_secret_detection_report_3_vuln.json",
-                            "language": "Any"
+                            "language": "CONFIG"
                         },
                         {
                             "type": "codebase",
                             "id": "c15c7622d84d0a85e132c46b7b29b875",
                             "sourceId": "d3b7c398-3b82-4723-b67a-6c232a882b75",
                             "fileName": "project/unittests/tools/test_gitlab_secret_detection_report_parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         }
                     ],
                     "findings": [

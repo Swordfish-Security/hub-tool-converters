@@ -96,245 +96,245 @@
                             "id": "06d7c7d3bdb7332f5d49fbf2b5555edd",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/acunetix/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0deaed9becd1ab103ab6de82c73af401",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/acunetix/parser_helper.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "64b8f0b6787420b9f90cbafaa22dfa09",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/blackduck/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "459ac706cd9c291b50c3267ba97087ba",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/bugcrowd/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "58d7a5b0fded907766518bb1225ce3c1",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/bundler_audit/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6f064b1e9831c857b9b7bf65234c45db",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/ccvs/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "f756a74bbc8cf187f82bb5b3c3a0e433",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/cobalt/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "b8a390396c5dc2ad5b18f4e0dd80e2b0",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/contrast/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6a374dece7175ccbac6c64e86ef55435",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/dependency_check/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "37802763fc43f7023e321b83ada8759e",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/generic/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "e04806d03632da2a5c207fe8728241c9",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/gitleaks/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "70d2be227da8ced8f6aabda247890d38",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/h1/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "06467e431664130b895dfe86c0ba6582",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/huskyci/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "de0d42fe5f463f827b1eb313875d8f10",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/ibm_app/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "66f335d306aa2affbff78292edb1d8a9",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/immuniweb/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "aff67882343ec104a94fbba32b9f3924",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/kiuwan/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "fcc123836c216057853f68de4a53d600",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/microfocus_webinspect/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "f3e09bf5f95c594d059d5637fcd0c6e4",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/mozilla_observatory/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0d9301840c9c2996b6b225a8d554ca81",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/openvas_csv/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "07faf7e5c433779304f00ca755178465",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/ort/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "448e71f236d95c86843491990f1b0ae3",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/qualys_webapp/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "711cf7dd2915eed3374c8185c9530a24",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/retirejs/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "b7c95fa1ddc8dc2f6b458646fdb163bc",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/safety/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "310ef0d0d2b1b746d8b02cd0fac13ace",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/scantist/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "7e25837084d8f9ed1546c889b2fcfe68",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/sonarqube/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "75214d5e4cc7f7e9223dbb11951e3055",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/sonarqube_api/importer.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "0d7fd46316f8a760481959f6e7d5922c",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/sslyze/parser_xml.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "7e5ba448e3daa82efa37fca08b8843d9",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/testssl/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "6e570cd1615066b07e78691a85d99a15",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/trufflehog/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "f2ae9eb8d9911f5b26fd966695546cca",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/trufflehog3/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "79ee1c4232266bb74ffb75345e7198cd",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/twistlock/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "9ee847f7e95ac48679c0a423d9bd9918",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/vcg/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "5f9fc123b06283563362a7a1329f5897",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/wapiti/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "bb448050a7950c382d44436d36c02d6a",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/mend/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         },
                         {
                             "type": "codebase",
                             "id": "992591c24bda4ba3d78dc21411de19b9",
                             "sourceId": "9904c7a8-ced8-46f5-b1d8-9503c5aa65ec",
                             "fileName": "project/tools/zap/parser.py",
-                            "language": "Any"
+                            "language": "Python"
                         }
                     ],
                     "findings": [
