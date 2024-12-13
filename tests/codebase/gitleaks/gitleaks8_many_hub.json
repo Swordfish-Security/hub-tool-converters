@@ -82,7 +82,7 @@
                             "id": "ccfe001d953dbc1cd4d0d5470911eca7",
                             "sourceId": "fbb7add3-0904-4359-8492-9f2c0776e345",
                             "fileName": "tests/api.py",
-                            "language": "Any"
+                            "language": "Python"
                         }
                     ],
                     "findings": [
