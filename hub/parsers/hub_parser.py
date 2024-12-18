@@ -1,6 +1,6 @@
 import json
 import uuid
-from typing import Any, Optional
+from typing import Any
 
 from config.enums import SourceTypes, ScannerTypes
 from config.constances import PARSERS_NAMES_TO_FIX
@@ -72,19 +72,6 @@ class HubParser:
                         text = markdown.markdown(text, extensions=['nl2br']).replace('\n', '')
                 self.findings[finding.dupe_key].description += text
 
-    def __parse_finding_stacks(self, finding_stacks, location_id) -> Optional[list[LocationStack]]:
-        stacks = []
-        if finding_stacks:
-            for finding_stack in finding_stacks:
-                stacks.append(
-                    LocationStack(
-                        locationId=location_id,
-                        sequence=finding_stack["sequence"],
-                        code=finding_stack["code"],
-                        line=finding_stack["line"]
-                    ))
-            return stacks
-
     def __parse_finding(self, finding: Finding):
         scanner_type = self.__get_scanner_type(finding)
         if scanner_type == ScannerTypes.SAST.value:
@@ -96,8 +83,7 @@ class HubParser:
                 code=finding.code,
                 description=finding.description,
                 status=self.__get_status(finding),
-                type=scanner_type,
-                stacks=self.__parse_finding_stacks(finding.finding_stacks, finding.file_key)
+                type=scanner_type
             )
 
         elif scanner_type == ScannerTypes.DAST.value:
