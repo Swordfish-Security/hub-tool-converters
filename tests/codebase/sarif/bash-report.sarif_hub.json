@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "bacf1700-3185-4684-abe9-07bad815c67c",
+                "id": "8fea6a24-9caa-4b78-9add-328a31cf40fe",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "4aea100e-3860-43fa-9d1b-0025da382452",
+                    "id": "0cd4b889-4b55-4019-8d4c-5b1699b227a7",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -70,35 +70,35 @@
                         {
                             "type": "codebase",
                             "id": "25eccab89a1c31a6d5afcf23712f6de8",
-                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "sourceId": "0cd4b889-4b55-4019-8d4c-5b1699b227a7",
                             "fileName": "file:///home/damien/dd/docker/setEnv.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "1a89d0b781386d207ec5d7c3f3a3e1d6",
-                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "sourceId": "0cd4b889-4b55-4019-8d4c-5b1699b227a7",
                             "fileName": "file:///home/damien/dd/docker/project-data.bash",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "c86e442b4211a54735732324079b33d9",
-                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "sourceId": "0cd4b889-4b55-4019-8d4c-5b1699b227a7",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/project-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "93688eb57b93becff6c9435f546b5ac0",
-                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "sourceId": "0cd4b889-4b55-4019-8d4c-5b1699b227a7",
                             "fileName": "file:///home/damien/dd/setup/scripts/common/project-shared-resources.sh",
                             "language": "Any"
                         },
                         {
                             "type": "codebase",
                             "id": "7b72273b3024b58104952a0df0bca7d9",
-                            "sourceId": "4aea100e-3860-43fa-9d1b-0025da382452",
+                            "sourceId": "0cd4b889-4b55-4019-8d4c-5b1699b227a7",
                             "fileName": "file:///home/damien/dd/entrypoint_scripts/common/common-os.sh",
                             "language": "Any"
                         }
@@ -117,7 +117,7 @@
                                 {
                                     "locationId": "25eccab89a1c31a6d5afcf23712f6de8",
                                     "sequence": 1,
-                                    "code": "if [ ${#} -eq 1 ] && [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]\n",
+                                    "code": "if [ ${#} -eq 1 ] && [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]\n\n**Rule name:**",
                                     "line": 134
                                 }
                             ]
@@ -135,7 +135,7 @@
                                 {
                                     "locationId": "1a89d0b781386d207ec5d7c3f3a3e1d6",
                                     "sequence": 1,
-                                    "code": "if [ $# > 1 ]\n",
+                                    "code": "if [ $# > 1 ]\n\n**Rule name:** \n**Rule short description:** > is for string comparisons",
                                     "line": 4
                                 }
                             ]
@@ -153,7 +153,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                                     "line": 143
                                 }
                             ]
@@ -171,7 +171,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n",
+                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
                                     "line": 410
                                 }
                             ]
@@ -189,7 +189,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n",
+                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
                                     "line": 412
                                 }
                             ]
@@ -207,7 +207,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                                     "line": 142
                                 }
                             ]
@@ -225,7 +225,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                                     "line": 142
                                 }
                             ]
@@ -243,7 +243,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n",
+                                    "code": "  if [ $DBTYPE==\"mysql\" ]; then\n\n**Rule name:**",
                                     "line": 458
                                 }
                             ]
@@ -261,7 +261,7 @@
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
                                     "sequence": 1,
-                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n",
+                                    "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n\n**Rule name:**",
                                     "line": 460
                                 }
                             ]
@@ -279,7 +279,7 @@
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                                     "line": 143
                                 }
                             ]
@@ -297,7 +297,7 @@
                                 {
                                     "locationId": "7b72273b3024b58104952a0df0bca7d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:**",
                                     "line": 130
                                 }
                             ]
@@ -315,7 +315,7 @@
                                 {
                                     "locationId": "7b72273b3024b58104952a0df0bca7d9",
                                     "sequence": 1,
-                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
+                                    "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule name:** \n**Rule short description:** Decimals are not supported",
                                     "line": 130
                                 }
                             ]
