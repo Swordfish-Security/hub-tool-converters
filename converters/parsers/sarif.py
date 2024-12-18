@@ -256,7 +256,7 @@ def get_description(result, rule, location_number):
     if (snippet := get_snippet(result, location_number)) is not None:
         description += "**Snippet:**\n```{}```\n".format(snippet)
     if rule is not None:
-        if "name" in rule:
+        if "name" in rule and rule.get("name"):
             description += f"**Rule name:** {rule.get('name')}\n"
         shortDescription = ""
         if "shortDescription" in rule:
