@@ -1,5 +1,5 @@
 from dataclasses import dataclass, asdict
-from typing import Any, Optional
+from typing import Any
 
 from hub.models.location import LocationStack
 from hub.models.source import SourceSast
@@ -60,8 +60,7 @@ class FindingHubSast:
             code: str,
             description: str,
             status: str,
-            type: str,
-            stacks: Optional[list[LocationStack]]
+            type: str
     ):
         self.type = type
         self.id = idx
@@ -71,8 +70,7 @@ class FindingHubSast:
         self.code = code
         self.description = description
         self.status = status
-        self.stacks = stacks
-        if not self.stacks and self.line is not None:
+        if self.line is not None:
             self.stacks = [
                 LocationStack(locationId=self.locationId, line=self.line, code=self.code)
             ]

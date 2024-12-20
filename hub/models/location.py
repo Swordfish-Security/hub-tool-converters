@@ -44,7 +44,7 @@ class LocationSast:
                 self.language = "Kotlin"
             elif file_format in ["h", "m", "mm", "C"]:
                 self.language = "Objc"
-            elif file_format in ["c", "h", "cc", "cpp", "cxx", "c", "c++", "h", "hpp", "hh", "hxx", "h++"]:
+            elif file_format in ["c","cc", "cpp", "cxx", "c++", "h", "hh", "hpp", "hxx", "h++"]:
                 self.language = "C/C++"
 
 
