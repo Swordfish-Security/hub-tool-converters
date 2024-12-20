@@ -108,6 +108,10 @@ class HubParser:
 
         # Markdown to HTML
         if finding_hub.description:
+            if "**Snippet:**\n```" in finding_hub.description:
+                finding_hub.description = finding_hub.description.split("```")
+                formatted_snippet = "<pre><code>```" + finding_hub.description[1].replace("\n", "<br>") + "```</code></pre>"
+                finding_hub.description = f'{finding_hub.description[0]}{formatted_snippet}{finding_hub.description[2]}'
             finding_hub.description = markdown.markdown(finding_hub.description, extensions=['nl2br']).replace('\n', '')
 
         if finding.dupe_key not in self.findings:

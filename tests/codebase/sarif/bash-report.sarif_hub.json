@@ -112,7 +112,7 @@
                             "line": 134,
                             "code": "if [ ${#} -eq 1 ] && [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Don't quote right-hand side of =~, it'll match literally rather than as a regex.<br /><strong>Snippet:</strong><br /><code>if [ ${#} -eq 1 ] &amp;&amp; [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]</code></p>",
+                            "description": "<p><strong>Result message:</strong> Don't quote right-hand side of =~, it'll match literally rather than as a regex.<br /><strong>Snippet:</strong></p><pre><code>```if [ ${#} -eq 1 ] && [[ 'dev unit_tests unit_tests_cicd integration_tests release ptvsd' =~ \"${1}\" ]]<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "25eccab89a1c31a6d5afcf23712f6de8",
@@ -130,7 +130,7 @@
                             "line": 4,
                             "code": "if [ $# > 1 ]\n\n**Rule short description:** > is for string comparisons",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> &gt; is for string comparisons. Use -gt instead.<br /><strong>Snippet:</strong><br /><code>if [ $# &gt; 1 ]</code><br /><strong>Rule short description:</strong> &gt; is for string comparisons</p>",
+                            "description": "<p><strong>Result message:</strong> &gt; is for string comparisons. Use -gt instead.<br /><strong>Snippet:</strong></p><pre><code>```if [ $# > 1 ]<br>```</code></pre><p><strong>Rule short description:</strong> &gt; is for string comparisons</p>",
                             "stacks": [
                                 {
                                     "locationId": "1a89d0b781386d207ec5d7c3f3a3e1d6",
@@ -148,7 +148,7 @@
                             "line": 143,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule short description:** Decimals are not supported",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.<br /><strong>Snippet:</strong><br /><code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code><br /><strong>Rule short description:</strong> Decimals are not supported</p>",
+                            "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.<br /><strong>Snippet:</strong></p><pre><code>```    if [[ \"$PYV\"<\"2.7\" ]]; then<br>```</code></pre><p><strong>Rule short description:</strong> Decimals are not supported</p>",
                             "stacks": [
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
@@ -166,7 +166,7 @@
                             "line": 410,
                             "code": "  if [ $DBTYPE==\"mysql\" ]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong><br /><code>if [ $DBTYPE==\"mysql\" ]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong></p><pre><code>```  if [ $DBTYPE==\"mysql\" ]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
@@ -184,7 +184,7 @@
                             "line": 412,
                             "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong><br /><code>elif [ $DBTYPE==\"postgres\" ]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong></p><pre><code>```  elif [ $DBTYPE==\"postgres\" ]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
@@ -202,7 +202,7 @@
                             "line": 142,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You are missing a required space here.<br /><strong>Snippet:</strong><br /><code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You are missing a required space here.<br /><strong>Snippet:</strong></p><pre><code>```    if [[ \"$PYV\"<\"2.7\" ]]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
@@ -220,7 +220,7 @@
                             "line": 142,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule short description:** Decimals are not supported",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.<br /><strong>Snippet:</strong><br /><code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code><br /><strong>Rule short description:</strong> Decimals are not supported</p>",
+                            "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.<br /><strong>Snippet:</strong></p><pre><code>```    if [[ \"$PYV\"<\"2.7\" ]]; then<br>```</code></pre><p><strong>Rule short description:</strong> Decimals are not supported</p>",
                             "stacks": [
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
@@ -238,7 +238,7 @@
                             "line": 458,
                             "code": "  if [ $DBTYPE==\"mysql\" ]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong><br /><code>if [ $DBTYPE==\"mysql\" ]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong></p><pre><code>```  if [ $DBTYPE==\"mysql\" ]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
@@ -256,7 +256,7 @@
                             "line": 460,
                             "code": "  elif [ $DBTYPE==\"postgres\" ]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong><br /><code>elif [ $DBTYPE==\"postgres\" ]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You need spaces around the comparison operator.<br /><strong>Snippet:</strong></p><pre><code>```  elif [ $DBTYPE==\"postgres\" ]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "93688eb57b93becff6c9435f546b5ac0",
@@ -274,7 +274,7 @@
                             "line": 143,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You are missing a required space here.<br /><strong>Snippet:</strong><br /><code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You are missing a required space here.<br /><strong>Snippet:</strong></p><pre><code>```    if [[ \"$PYV\"<\"2.7\" ]]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "c86e442b4211a54735732324079b33d9",
@@ -292,7 +292,7 @@
                             "line": 130,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> You are missing a required space here.<br /><strong>Snippet:</strong><br /><code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code></p>",
+                            "description": "<p><strong>Result message:</strong> You are missing a required space here.<br /><strong>Snippet:</strong></p><pre><code>```    if [[ \"$PYV\"<\"2.7\" ]]; then<br>```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "7b72273b3024b58104952a0df0bca7d9",
@@ -310,7 +310,7 @@
                             "line": 130,
                             "code": "    if [[ \"$PYV\"<\"2.7\" ]]; then\n\n**Rule short description:** Decimals are not supported",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.<br /><strong>Snippet:</strong><br /><code>if [[ \"$PYV\"&lt;\"2.7\" ]]; then</code><br /><strong>Rule short description:</strong> Decimals are not supported</p>",
+                            "description": "<p><strong>Result message:</strong> Decimals are not supported. Either use integers only, or use bc or awk to compare.<br /><strong>Snippet:</strong></p><pre><code>```    if [[ \"$PYV\"<\"2.7\" ]]; then<br>```</code></pre><p><strong>Rule short description:</strong> Decimals are not supported</p>",
                             "stacks": [
                                 {
                                     "locationId": "7b72273b3024b58104952a0df0bca7d9",

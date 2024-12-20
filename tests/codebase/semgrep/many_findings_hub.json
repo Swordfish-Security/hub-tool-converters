@@ -70,7 +70,7 @@
                             "line": 64,
                             "code": "\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor<br />could discern the difference between plaintext with valid or invalid padding. Further,<br />CBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.<br />Use 'AES/GCM/NoPadding' instead.</p><p><strong>Snippet:</strong><br /><code>javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");</code></p>",
+                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor<br />could discern the difference between plaintext with valid or invalid padding. Further,<br />CBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.<br />Use 'AES/GCM/NoPadding' instead.</p><p><strong>Snippet:</strong></p><pre><code>```          javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "4730e4e3fa3d2973b7d6fd907535b733",
@@ -88,7 +88,7 @@
                             "line": 64,
                             "code": "\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor<br />could discern the difference between plaintext with valid or invalid padding. Further,<br />CBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.<br />Use 'AES/GCM/NoPadding' instead.</p><p><strong>Snippet:</strong><br /><code>javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");</code></p>",
+                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor<br />could discern the difference between plaintext with valid or invalid padding. Further,<br />CBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.<br />Use 'AES/GCM/NoPadding' instead.</p><p><strong>Snippet:</strong></p><pre><code>```          javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "bcc192a00f0a6fd1cfebab12d5f07415",
@@ -106,7 +106,7 @@
                             "line": 66,
                             "code": "\t\t\tjavax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor<br />could discern the difference between plaintext with valid or invalid padding. Further,<br />CBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.<br />Use 'AES/GCM/NoPadding' instead.</p><p><strong>Snippet:</strong><br /><code>javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");</code></p>",
+                            "description": "<p><strong>Result message:</strong> Using CBC with PKCS5Padding is susceptible to padding orcale attacks. A malicious actor<br />could discern the difference between plaintext with valid or invalid padding. Further,<br />CBC mode does not include any integrity checks. See https://find-sec-bugs.github.io/bugs.htm#CIPHER_INTEGRITY.<br />Use 'AES/GCM/NoPadding' instead.</p><p><strong>Snippet:</strong></p><pre><code>```          javax.crypto.Cipher c = javax.crypto.Cipher.getInstance(\"DES/CBC/PKCS5Padding\");```</code></pre>",
                             "stacks": [
                                 {
                                     "locationId": "19192bf22d09678733a38d92a7801fb3",
