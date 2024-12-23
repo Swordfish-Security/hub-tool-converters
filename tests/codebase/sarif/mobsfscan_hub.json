@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "1e9b9620-8c65-4780-96fd-04585cd5bb44",
+                "id": "303006fa-0c0c-48e2-9019-8cd9f0808ee6",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "111f57c1-5875-4396-95d5-c33f0a59ad87",
+                    "id": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -138,21 +138,49 @@
                         {
                             "type": "codebase",
                             "id": "ad6047709ffcc0b8e2f2577daf066e9a",
-                            "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java",
-                            "language": "Any"
+                            "language": "Java"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "e51901b77256f843193fae0662d72acb",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java",
+                            "language": "Java"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "cb4dd37bf3f126dc034c9545b490800a",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java",
+                            "language": "Java"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "74cdf8df3786264de8805d93c2066de8",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "fileName": "app/src/main/java/jakhar/aseem/diva/LogActivity.java",
+                            "language": "Java"
+                        },
+                        {
+                            "type": "codebase",
+                            "id": "12da7457452af3efdc3876a0a70f3557",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "fileName": "app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java",
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "f91d0476aac66e2d11ce1f3ece59a05d",
-                            "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java",
-                            "language": "Any"
+                            "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "0374ec857381230fa83049643ce3cdee",
-                            "sourceId": "111f57c1-5875-4396-95d5-c33f0a59ad87",
+                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
                             "fileName": "./",
                             "language": "Any"
                         }
@@ -166,54 +194,138 @@
                             "line": 57,
                             "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong><br /><code>Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());</code><br /><strong>Rule name:</strong> AndroidLogging</p>",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
                             "stacks": [
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 1,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());",
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while creating database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 57
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "a1d9e955bae8b06bd6dfd123291e85d8",
+                            "ruleId": "android_logging",
+                            "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
+                            "line": 71,
+                            "code": "            Log.d(\"Diva\", \"Error occurred while inserting into database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.d(\"Diva\", \"Error occurred while inserting into database: \" + e.getMessage());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 2,
-                                    "code": "            Log.d(\"Diva\", \"Error occurred while inserting into database: \" + e.getMessage());",
+                                    "sequence": 1,
+                                    "code": "            Log.d(\"Diva\", \"Error occurred while inserting into database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 71
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "bba9a52d05b1d4ef6d8df4b419427e41",
+                            "ruleId": "android_logging",
+                            "locationId": "e51901b77256f843193fae0662d72acb",
+                            "line": 72,
+                            "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.d(\"Diva\", \"File error: \" + e.getMessage());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 3,
-                                    "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());",
+                                    "locationId": "e51901b77256f843193fae0662d72acb",
+                                    "sequence": 1,
+                                    "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 72
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "3d1f0563e680438205f447a0bdd00805",
+                            "ruleId": "android_logging",
+                            "locationId": "cb4dd37bf3f126dc034c9545b490800a",
+                            "line": 71,
+                            "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.d(\"Diva\", \"File error: \" + e.getMessage());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 4,
-                                    "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());",
+                                    "locationId": "cb4dd37bf3f126dc034c9545b490800a",
+                                    "sequence": 1,
+                                    "code": "            Log.d(\"Diva\", \"File error: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 71
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "a17b08baf4b84a9e6bcba1ce67e2d4c5",
+                            "ruleId": "android_logging",
+                            "locationId": "74cdf8df3786264de8805d93c2066de8",
+                            "line": 50,
+                            "code": "        EditText cctxt = (EditText) findViewById(R.id.ccText);\n        try {\n            // Assuming we do some HTTP requests credit card validation and processing\n            //Everything seems fine and then we hit some unforseen error\n            processCC(cctxt.getText().toString());\n        } catch (RuntimeException re) {\n            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());\n            Toast.makeText(this, \"An error occured. Please try again later\", Toast.LENGTH_SHORT).show();\n        }\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```        EditText cctxt = (EditText) findViewById(R.id.ccText);<br>        try {<br>            // Assuming we do some HTTP requests credit card validation and processing<br>            //Everything seems fine and then we hit some unforseen error<br>            processCC(cctxt.getText().toString());<br>        } catch (RuntimeException re) {<br>            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());<br>            Toast.makeText(this, \"An error occured. Please try again later\", Toast.LENGTH_SHORT).show();<br>        }```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 5,
-                                    "code": "        EditText cctxt = (EditText) findViewById(R.id.ccText);\n        try {\n            // Assuming we do some HTTP requests credit card validation and processing\n            //Everything seems fine and then we hit some unforseen error\n            processCC(cctxt.getText().toString());\n        } catch (RuntimeException re) {\n            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());\n            Toast.makeText(this, \"An error occured. Please try again later\", Toast.LENGTH_SHORT).show();\n        }",
+                                    "locationId": "74cdf8df3786264de8805d93c2066de8",
+                                    "sequence": 1,
+                                    "code": "        EditText cctxt = (EditText) findViewById(R.id.ccText);\n        try {\n            // Assuming we do some HTTP requests credit card validation and processing\n            //Everything seems fine and then we hit some unforseen error\n            processCC(cctxt.getText().toString());\n        } catch (RuntimeException re) {\n            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());\n            Toast.makeText(this, \"An error occured. Please try again later\", Toast.LENGTH_SHORT).show();\n        }\n**Rule name:** AndroidLogging",
                                     "line": 50
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "5e31b1e527b3a04fc95e20af82f0341e",
+                            "ruleId": "android_logging",
+                            "locationId": "74cdf8df3786264de8805d93c2066de8",
+                            "line": 56,
+                            "code": "            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 6,
-                                    "code": "            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());",
+                                    "locationId": "74cdf8df3786264de8805d93c2066de8",
+                                    "sequence": 1,
+                                    "code": "            Log.e(\"diva-log\", \"Error while processing transaction with credit card: \" + cctxt.getText().toString());\n**Rule name:** AndroidLogging",
                                     "line": 56
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "0504684bb69470ce6e483902af36b188",
+                            "ruleId": "android_logging",
+                            "locationId": "12da7457452af3efdc3876a0a70f3557",
+                            "line": 61,
+                            "code": "            Log.d(\"Diva-sqli\", \"Error occurred while creating database for SQLI: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.d(\"Diva-sqli\", \"Error occurred while creating database for SQLI: \" + e.getMessage());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 7,
-                                    "code": "            Log.d(\"Diva-sqli\", \"Error occurred while creating database for SQLI: \" + e.getMessage());",
+                                    "locationId": "12da7457452af3efdc3876a0a70f3557",
+                                    "sequence": 1,
+                                    "code": "            Log.d(\"Diva-sqli\", \"Error occurred while creating database for SQLI: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 61
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "affe737896dcfd649bff4d8391dc47ea",
+                            "ruleId": "android_logging",
+                            "locationId": "12da7457452af3efdc3876a0a70f3557",
+                            "line": 85,
+                            "code": "            Log.d(\"Diva-sqli\", \"Error occurred while searching in database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> The App logs information. Please ensure that sensitive information is never logged.<br /><strong>Snippet:</strong></p><pre><code>```            Log.d(\"Diva-sqli\", \"Error occurred while searching in database: \" + e.getMessage());```</code></pre><p><strong>Rule name:</strong> AndroidLogging</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 8,
-                                    "code": "            Log.d(\"Diva-sqli\", \"Error occurred while searching in database: \" + e.getMessage());",
+                                    "locationId": "12da7457452af3efdc3876a0a70f3557",
+                                    "sequence": 1,
+                                    "code": "            Log.d(\"Diva-sqli\", \"Error occurred while searching in database: \" + e.getMessage());\n**Rule name:** AndroidLogging",
                                     "line": 85
                                 }
                             ]
@@ -226,18 +338,30 @@
                             "line": 72,
                             "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.<br /><strong>Snippet:</strong><br /><code>pinTxt.setVisibility(View.INVISIBLE);</code><br /><strong>Rule name:</strong> AndroidHiddenUi</p>",
+                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.<br /><strong>Snippet:</strong></p><pre><code>```            pinTxt.setVisibility(View.INVISIBLE);```</code></pre><p><strong>Rule name:</strong> AndroidHiddenUi</p>",
                             "stacks": [
                                 {
                                     "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
                                     "sequence": 1,
-                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);",
+                                    "code": "            pinTxt.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
                                     "line": 72
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "811c6f2821ce4fbe2352c74f35ab743b",
+                            "ruleId": "android_hidden_ui",
+                            "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
+                            "line": 73,
+                            "code": "            abutton.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> Hidden elements in view can be used to hide data from user. But this data can be leaked.<br /><strong>Snippet:</strong></p><pre><code>```            abutton.setVisibility(View.INVISIBLE);```</code></pre><p><strong>Rule name:</strong> AndroidHiddenUi</p>",
+                            "stacks": [
                                 {
                                     "locationId": "f91d0476aac66e2d11ce1f3ece59a05d",
-                                    "sequence": 2,
-                                    "code": "            abutton.setVisibility(View.INVISIBLE);",
+                                    "sequence": 1,
+                                    "code": "            abutton.setVisibility(View.INVISIBLE);\n**Rule name:** AndroidHiddenUi",
                                     "line": 73
                                 }
                             ]
@@ -250,18 +374,30 @@
                             "line": 67,
                             "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.<br /><strong>Snippet:</strong><br /><code>mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");</code><br /><strong>Rule name:</strong> SqliteInjection</p>",
+                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.<br /><strong>Snippet:</strong></p><pre><code>```            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");```</code></pre><p><strong>Rule name:</strong> SqliteInjection</p>",
                             "stacks": [
                                 {
                                     "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
                                     "sequence": 1,
-                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");",
+                                    "code": "            mDB.execSQL(\"INSERT INTO myuser VALUES ('\"+ usr.getText().toString() +\"', '\"+ pwd.getText().toString() +\"');\");\n**Rule name:** SqliteInjection",
                                     "line": 67
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "type": "sast",
+                            "id": "36f054b5c7bbea54ff626b882df18cab",
+                            "ruleId": "sqlite_injection",
+                            "locationId": "12da7457452af3efdc3876a0a70f3557",
+                            "line": 70,
+                            "code": "            cr = mDB.rawQuery(\"SELECT * FROM sqliuser WHERE user = '\" + srchtxt.getText().toString() + \"'\", null);\n**Rule name:** SqliteInjection",
+                            "status": "To Verify",
+                            "description": "<p><strong>Result message:</strong> App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.<br /><strong>Snippet:</strong></p><pre><code>```            cr = mDB.rawQuery(\"SELECT * FROM sqliuser WHERE user = '\" + srchtxt.getText().toString() + \"'\", null);```</code></pre><p><strong>Rule name:</strong> SqliteInjection</p>",
+                            "stacks": [
                                 {
-                                    "locationId": "ad6047709ffcc0b8e2f2577daf066e9a",
-                                    "sequence": 2,
-                                    "code": "            cr = mDB.rawQuery(\"SELECT * FROM sqliuser WHERE user = '\" + srchtxt.getText().toString() + \"'\", null);",
+                                    "locationId": "12da7457452af3efdc3876a0a70f3557",
+                                    "sequence": 1,
+                                    "code": "            cr = mDB.rawQuery(\"SELECT * FROM sqliuser WHERE user = '\" + srchtxt.getText().toString() + \"'\", null);\n**Rule name:** SqliteInjection",
                                     "line": 70
                                 }
                             ]
@@ -274,12 +410,12 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidDetectTapjacking",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidDetectTapjacking</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.<br /><strong>Snippet:</strong></p><pre><code>```Missing Best Practice```</code></pre><p><strong>Rule name:</strong> AndroidDetectTapjacking</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice",
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidDetectTapjacking",
                                     "line": 1
                                 }
                             ]
@@ -292,12 +428,12 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidPreventScreenshot",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidPreventScreenshot</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.<br /><strong>Snippet:</strong></p><pre><code>```Missing Best Practice```</code></pre><p><strong>Rule name:</strong> AndroidPreventScreenshot</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice",
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidPreventScreenshot",
                                     "line": 1
                                 }
                             ]
@@ -310,12 +446,12 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidSafetynetApi",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. <br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidSafetynetApi</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. <br /><strong>Snippet:</strong></p><pre><code>```Missing Best Practice```</code></pre><p><strong>Rule name:</strong> AndroidSafetynetApi</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice",
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidSafetynetApi",
                                     "line": 1
                                 }
                             ]
@@ -328,12 +464,12 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidRootDetection",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidRootDetection</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.<br /><strong>Snippet:</strong></p><pre><code>```Missing Best Practice```</code></pre><p><strong>Rule name:</strong> AndroidRootDetection</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice",
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidRootDetection",
                                     "line": 1
                                 }
                             ]
@@ -346,12 +482,12 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidCertificateTransparency",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidCertificateTransparency</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.<br /><strong>Snippet:</strong></p><pre><code>```Missing Best Practice```</code></pre><p><strong>Rule name:</strong> AndroidCertificateTransparency</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice",
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidCertificateTransparency",
                                     "line": 1
                                 }
                             ]
@@ -364,12 +500,12 @@
                             "line": 1,
                             "code": "Missing Best Practice\n**Rule name:** AndroidCertificatePinning",
                             "status": "To Verify",
-                            "description": "<p><strong>Result message:</strong> This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in <code>network_security_config.xml</code>.<br /><strong>Snippet:</strong><br /><code>Missing Best Practice</code><br /><strong>Rule name:</strong> AndroidCertificatePinning</p>",
+                            "description": "<p><strong>Result message:</strong> This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in <code>network_security_config.xml</code>.<br /><strong>Snippet:</strong></p><pre><code>```Missing Best Practice```</code></pre><p><strong>Rule name:</strong> AndroidCertificatePinning</p>",
                             "stacks": [
                                 {
                                     "locationId": "0374ec857381230fa83049643ce3cdee",
                                     "sequence": 1,
-                                    "code": "Missing Best Practice",
+                                    "code": "Missing Best Practice\n**Rule name:** AndroidCertificatePinning",
                                     "line": 1
                                 }
                             ]

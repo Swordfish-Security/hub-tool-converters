@@ -79,7 +79,7 @@ pip install -r requirements.txt
 
 3. Запуск тестов
 ```bash
-pytest -s
+python -m pytest -s
 ```
 
 ## Вносите свой вклад

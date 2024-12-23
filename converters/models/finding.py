@@ -229,5 +229,4 @@ class Finding(AdditionalFields):
     SEVERITIES = {'Info': 4, 'Low': 3, 'Medium': 2,
                   'High': 1, 'Critical': 0}
 
-    finding_stacks: list[dict] | None = None
     description_references: str | None = None

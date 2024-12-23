@@ -72,70 +72,70 @@
                             "id": "300ff40dd869c3e56b29de930221087f",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/app.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "43a6ce4bfdc6203c2918d4ab660ef090",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/setting/setting.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "c23d4d2da659af9d2bfdbdc3c5c93f1c",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/user/user.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "b2d59c0c7e769bf642dfb74439dc579d",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/util/cookie.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "c821785c97e8471c133324f49e77ce26",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/util/template.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "8f8b5e58437eb58b3cda667d99afc3c3",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/util/middleware/middleware.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "372ca5daa138b427923927d2f2476718",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/csa/csa.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "8ad5f8a094a24a90b5edbc50619d5e79",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/idor/idor.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "2ee8ac828af647526989f8c14c258b64",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/sqli/function.go",
-                            "language": "Any"
+                            "language": "Go"
                         },
                         {
                             "type": "codebase",
                             "id": "13830767e42dbd5e02bcbc040004d331",
                             "sourceId": "26682ae9-528e-4c4e-8655-795a72a296fb",
                             "fileName": "/vagrant/go/src/govwa/vulnerability/xss/xss.go",
-                            "language": "Any"
+                            "language": "Go"
                         }
                     ],
                     "findings": [

@@ -96,49 +96,49 @@
                             "id": "89a1d752e22ba7ff7d32db2fe0e67b74",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/command/IdentityFunctionCommandInjection.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         },
                         {
                             "type": "codebase",
                             "id": "40a351dacf6a1c648bd61f429e192d0d",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/command/StringManipulationCommandInjection.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         },
                         {
                             "type": "codebase",
                             "id": "37c42f3607b15d600cea11f0a33a7215",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/injection/KotlinLogging.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         },
                         {
                             "type": "codebase",
                             "id": "af606ad64c3a876c3d725d7ad8b9f3c9",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/injection/KotlinSSRFController.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         },
                         {
                             "type": "codebase",
                             "id": "0b18cd0986edf33bb2dacc946445dd72",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/injection/KotlinSlf4jSample.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         },
                         {
                             "type": "codebase",
                             "id": "3253498ada9fdd158121350c43337738",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/password/HardCode2.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         },
                         {
                             "type": "codebase",
                             "id": "c139d7bd764de966fd5dd6afac210efb",
                             "sourceId": "086bf451-4d69-4f1e-b17c-ef20ff9aae36",
                             "fileName": "securitytest/pathtraversal/PathTraversalKotlin.kt",
-                            "language": "Any"
+                            "language": "Kotlin"
                         }
                     ],
                     "findings": [

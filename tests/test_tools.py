@@ -1,6 +1,7 @@
 import pytest
 
 from converters.parsers.kaspersky_cs import _get_cvssv3
+from hub.models.location import LocationSast, SourceTypes
 
 TEST_CVSS_DATA = [
     {
@@ -141,3 +142,25 @@ TEST_CVSS_EXPECTED_RESULT = [
                           (TEST_EMPTY_CVSS_DATA, TEST_EMPTY_CVSS_EXPECTED_RESULT)])
 def test_kaspersky_cs_cvssv3(cvss_data, expected_result):
     assert _get_cvssv3(cvss_data) == expected_result
+
+
+@pytest.mark.parametrize("file_name, expected_language",
+                         [("test_file.java", "Java"),
+                          ("test_file.js", "JavaScript"),
+                          ("test_file.ts", "TypeScript"),
+                          ("test_file.py", "Python"),
+                          ("test_file.csproj", "C#"),
+                          ("test_file.yaml", "CONFIG"),
+                          ("test_file.html", "HTML5"),
+                          ("test_file.go", "Go"),
+                          ("test_file.kt", "Kotlin"),
+                          ("test_file.c", "C/C++"),
+                          ("test_file", "Any")])
+def test_parse_language_from_filename(file_name, expected_language):
+    location = LocationSast(
+        type=SourceTypes.CODEBASE,
+        id="test_id",
+        sourceId="test_source_id",
+        fileName=file_name,
+    )
+    assert location.language == expected_language
