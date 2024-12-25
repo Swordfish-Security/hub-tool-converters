@@ -31,7 +31,7 @@
                             "id": "2076",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "right-hand\nhttps://github.com/koalaman/shellcheck/wiki/SC2076"
+                            "description": "Don't quote right-hand side of =~, it'll match literally rather than as a regex."
                         },
                         {
                             "type": "sast",
@@ -39,7 +39,7 @@
                             "id": "2071",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "for\nhttps://github.com/koalaman/shellcheck/wiki/SC2071"
+                            "description": "> is for string comparisons. Use -gt instead."
                         },
                         {
                             "type": "sast",
@@ -47,7 +47,7 @@
                             "id": "2072",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "not\nhttps://github.com/koalaman/shellcheck/wiki/SC2072"
+                            "description": "Decimals are not supported. Either use integers only, or use bc or awk to compare."
                         },
                         {
                             "type": "sast",
@@ -55,7 +55,7 @@
                             "id": "2077",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "spaces\nhttps://github.com/koalaman/shellcheck/wiki/SC2077"
+                            "description": "You need spaces around the comparison operator."
                         },
                         {
                             "type": "sast",
@@ -63,7 +63,7 @@
                             "id": "1035",
                             "severity": "Low",
                             "cwe": null,
-                            "description": "missing\nhttps://github.com/koalaman/shellcheck/wiki/SC1035"
+                            "description": "You are missing a required space here."
                         }
                     ],
                     "locations": [
