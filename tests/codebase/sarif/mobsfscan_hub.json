@@ -3,12 +3,12 @@
     "scans": [
         {
             "scanDetails": {
-                "id": "303006fa-0c0c-48e2-9019-8cd9f0808ee6",
+                "id": "dd628e05-2fa4-4c23-875e-b6093986ad01",
                 "description": "Import sarif results"
             },
             "source": [
                 {
-                    "id": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                    "id": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                     "type": "codebase",
                     "name": "hub-tool-converters",
                     "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
@@ -35,7 +35,7 @@
                                     "id": 532
                                 }
                             ],
-                            "description": "The App logs information. Please ensure that sensitive information is never logged."
+                            "description": "The App logs information. Please ensure that sensitive information is never logged.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs"
                         },
                         {
                             "type": "sast",
@@ -47,7 +47,7 @@
                                     "id": 919
                                 }
                             ],
-                            "description": "Hidden elements in view can be used to hide data from user. But this data can be leaked."
+                            "description": "Hidden elements in view can be used to hide data from user. But this data can be leaked.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#checking-for-sensitive-data-disclosure-through-the-user-interface-mstg-storage-7"
                         },
                         {
                             "type": "sast",
@@ -59,7 +59,7 @@
                                     "id": 78
                                 }
                             ],
-                            "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database."
+                            "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2"
                         },
                         {
                             "type": "sast",
@@ -71,7 +71,7 @@
                                     "id": 200
                                 }
                             ],
-                            "description": "This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to."
+                            "description": "This app does not have capabilities to prevent tapjacking attacks. An attacker can hijack the user's taps and tricks him into performing some critical operations that he did not intend to.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-for-overlay-attacks-mstg-platform-9"
                         },
                         {
                             "type": "sast",
@@ -83,7 +83,7 @@
                                     "id": 200
                                 }
                             ],
-                            "description": "This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc."
+                            "description": "This app does not have capabilities to prevent against Screenshots from Recent Task History/ Now On Tap etc.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#finding-sensitive-information-in-auto-generated-screenshots-mstg-storage-9"
                         },
                         {
                             "type": "sast",
@@ -95,7 +95,7 @@
                                     "id": 353
                                 }
                             ],
-                            "description": "This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. "
+                            "description": "This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. \nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1"
                         },
                         {
                             "type": "sast",
@@ -107,7 +107,7 @@
                                     "id": 919
                                 }
                             ],
-                            "description": "This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data."
+                            "description": "This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1"
                         },
                         {
                             "type": "sast",
@@ -119,7 +119,7 @@
                                     "id": 295
                                 }
                             ],
-                            "description": "This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority."
+                            "description": "This app does not enforce TLS Certificate Transparency that helps to detect SSL certificates that have been mistakenly issued by a certificate authority or maliciously acquired from an otherwise unimpeachable certificate authority.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4"
                         },
                         {
                             "type": "sast",
@@ -131,56 +131,56 @@
                                     "id": 295
                                 }
                             ],
-                            "description": "This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in `network_security_config.xml`."
+                            "description": "This app does not use a TLS/SSL certificate or public key pinning in code to detect or prevent MITM attacks in secure communication channel. Please verify if pinning is enabled in `network_security_config.xml`.\nhttps://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4"
                         }
                     ],
                     "locations": [
                         {
                             "type": "codebase",
                             "id": "ad6047709ffcc0b8e2f2577daf066e9a",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java",
                             "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "e51901b77256f843193fae0662d72acb",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java",
                             "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "cb4dd37bf3f126dc034c9545b490800a",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java",
                             "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "74cdf8df3786264de8805d93c2066de8",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/LogActivity.java",
                             "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "12da7457452af3efdc3876a0a70f3557",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java",
                             "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "f91d0476aac66e2d11ce1f3ece59a05d",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java",
                             "language": "Java"
                         },
                         {
                             "type": "codebase",
                             "id": "0374ec857381230fa83049643ce3cdee",
-                            "sourceId": "d94f5556-b376-408a-ae15-1b6fee40c6e5",
+                            "sourceId": "7bdd13e6-7f72-4faa-87fb-4473ff634ac4",
                             "fileName": "./",
                             "language": "Any"
                         }

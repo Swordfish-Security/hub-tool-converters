@@ -146,11 +146,17 @@ def cve_try(val):
 
 def get_rule_description(result, rule):
     rule_description = ""
+    references = ""
     if result.get("message") and result.get("message").get("text"):
         rule_description = result["message"]["text"]
-    elif not rule_description and rule.get("name"):
+    if result.get("properties") and result.get("properties").get("reference"):
+        references = f"\n{result['properties']['reference']}"
+    if not rule_description and rule.get("name"):
         rule_description = rule["name"]
-    return rule_description
+    if not references and rule:
+        if rule.get("helpUri"):
+            references = f"\n{rule['helpUri']}"
+    return f"{rule_description}{references}"
 
 
 def get_title(result, rule):
