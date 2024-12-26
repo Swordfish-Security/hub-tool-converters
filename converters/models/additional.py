@@ -105,12 +105,13 @@ class AdditionalFields:
 
     def __parse_rule_description(self) -> None:
         # Trying to use title for DAST
-        if hasattr(self, "unsaved_endpoints") and isinstance(self.unsaved_endpoints, list):
-            self.rule_description = self.title + '\n\n' + self.impact + '\n' + self.mitigation
-        else:
-            self.rule_description = self.reason if self.reason else "Unknown"
-            if self.reason and self.references and isinstance(self.references, str):
-                self.rule_description += '\n' + self.references
+        if not self.rule_description:
+            if hasattr(self, "unsaved_endpoints") and isinstance(self.unsaved_endpoints, list):
+                self.rule_description = self.title + '\n\n' + self.impact + '\n' + self.mitigation
+            else:
+                self.rule_description = self.reason if self.reason else "Unknown"
+                if self.reason and self.references and isinstance(self.references, str):
+                    self.rule_description += '\n' + self.references
 
     def parse_additional_fields(self) -> None:
         self.__parse_url()

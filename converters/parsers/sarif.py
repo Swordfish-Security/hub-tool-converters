@@ -144,6 +144,21 @@ def cve_try(val):
         return None
 
 
+def get_rule_description(result, rule):
+    rule_description = ""
+    references = ""
+    if result.get("message") and result.get("message").get("text"):
+        rule_description = result["message"]["text"]
+    if result.get("properties") and result.get("properties").get("reference"):
+        references = f"\n{result['properties']['reference']}"
+    if not rule_description and rule.get("name"):
+        rule_description = rule["name"]
+    if not references and rule:
+        if rule.get("helpUri"):
+            references = f"\n{rule['helpUri']}"
+    return f"{rule_description}{references}"
+
+
 def get_title(result, rule):
     title = None
     if "message" in result:
@@ -385,7 +400,8 @@ def get_item(result, rules, artifacts, run_date):
             active=not suppressed,
             file_path=file_path,
             line=line,
-            references=get_references(rule)
+            references=get_references(rule),
+            rule_description=get_rule_description(result, rule)
         )
 
         location_number += 1
