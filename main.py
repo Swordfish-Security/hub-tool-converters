@@ -78,7 +78,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "-c", "--commit",
         type=str,
-        help="AppSec.Hub repository's commit (default: master)"
+        help="AppSec.Hub repository's commit"
     )
     parser.add_argument(
         "-bt", "--build-tool",
