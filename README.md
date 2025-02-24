@@ -25,9 +25,9 @@
 | -o; --output      | Путь где будет создан отчет в формате AppSec.HUB                                                                                       | Да                                                    |
 | -n; --name        | Название репозитория в AppSec.Hub/артефакта/инстанса                                                                                   | Да                                                    |
 | -u; --url         | Урл репозитория/артефакта/инстанса                                                                                                     | Да                                                    |
+| -c; --commit      | Коммит в репозитории, по которому запускалось сканирование                                                                             | Да                                                    |
 | --format          | Формат входного файла (bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, spotbugs, trufflehog, svace, cyclonedx) | Нет, по умолчанию взято значение из аргумента scanner |
 | -b; --branch      | Ветка в репозитории, по которой запускалось сканирование                                                                               | Нет, по умолчанию master                              |
-| -c; --commit      | Коммит в репозитории, по которому запускалось сканирование                                                                             | Нет, по умолчанию master                              |
 | -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)                                                                                          | Нет, по умолчанию maven                               |
 | --stage           | Стадия экземпляра (ST - System Test, UAT - User Acceptance Test, IAT - Integration Acceptance Test, STG - Stage, PROD - Production)    | Нет                                                   |
 
