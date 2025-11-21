@@ -358,8 +358,11 @@ def get_item(result, rules, artifacts, run_date):
     # see
     # https://docs.oasis-open.org/sarif/sarif/v2.1.0/csprd01/sarif-v2.1.0-csprd01.html
     # / 3.27.9
+    # Значение по умолчанию на основе спецификации - fail
     kind = result.get("kind", "fail")
-    if kind != "fail":
+    # Откидываем уязвимости только если они не являются реальными срабатываниями (pass)
+    # или находятся Out of Scope (notApplicable)
+    if kind in ("pass", "notApplicable"):
         return None
 
     # if finding is suppressed, mark it as False Positive
