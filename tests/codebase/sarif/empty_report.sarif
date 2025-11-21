@@ -1,0 +1,77 @@
+{
+    "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/3a361e0bc07860055a926e0d41df405c6f0eb3d4/Documents/CommitteeSpecifications/2.1.0/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "appScreener",
+                    "organization": "Solar appScreener",
+                    "product": "appScreener",
+                    "fullName": "Solar appScreener",
+                    "version": "3.15.2",
+                    "notifications": [
+                    ],
+                    "rules": [
+                    ],
+                    "taxa": [
+                    ],
+                    "locations": [
+                    ],
+                    "language": "en-US",
+                    "contents": [
+                        "localizedData",
+                        "nonLocalizedData"
+                    ],
+                    "isComprehensive": false,
+                    "supportedTaxonomies": [
+                    ]
+                },
+                "extensions": [
+                ]
+            },
+            "invocations": [
+            ],
+            "language": "en-US",
+            "versionControlProvenance": [
+            ],
+            "artifacts": [
+            ],
+            "logicalLocations": [
+            ],
+            "graphs": [
+            ],
+            "results": [
+            ],
+            "runAggregates": [
+            ],
+            "redactionTokens": [
+            ],
+            "newlineSequences": [
+                "\r\n",
+                "\n"
+            ],
+            "threadFlowLocations": [
+            ],
+            "taxonomies": [
+            ],
+            "addresses": [
+            ],
+            "translations": [
+            ],
+            "policies": [
+            ],
+            "webRequests": [
+            ],
+            "webResponses": [
+            ]
+        }
+    ],
+    "inlineExternalProperties": [
+    ],
+    "properties": {
+        "tags": [
+        ],
+        "rulesVersion": "3.15.1.5e059565"
+    }
+}
