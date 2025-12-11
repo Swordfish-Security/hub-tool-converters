@@ -80,7 +80,7 @@ class HubParser:
                 ruleId=finding.ruleId,
                 locationId=finding.file_key,
                 line=finding.line,
-                code=finding.code,
+                code=finding.code[:5000] if isinstance(finding.code, str) else finding.code,
                 description=finding.description,
                 status=self.__get_status(finding),
                 type=scanner_type
@@ -110,7 +110,8 @@ class HubParser:
         if finding_hub.description:
             if "**Snippet:**\n```" in finding_hub.description:
                 finding_hub.description = finding_hub.description.split("```")
-                formatted_snippet = "<pre><code>```" + finding_hub.description[1].replace("\n", "<br>") + "```</code></pre>"
+                description_code = finding_hub.description[1][:5000] if isinstance(finding_hub.description[1], str) else finding_hub.description[1]
+                formatted_snippet = "<pre><code>```" + description_code.replace("\n", "<br>") + "```</code></pre>"
                 finding_hub.description = f'{finding_hub.description[0]}{formatted_snippet}{finding_hub.description[2]}'
             finding_hub.description = markdown.markdown(finding_hub.description, extensions=['nl2br']).replace('\n', '')
 
