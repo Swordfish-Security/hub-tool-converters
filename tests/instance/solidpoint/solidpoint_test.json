@@ -1,0 +1,434 @@
+{
+  "endpoints": [
+    {
+      "har": {
+        "bodySize": 0,
+        "headers": [
+          {
+            "name": "host",
+            "value": "172.16.34.30:3000"
+          },
+          {
+            "name": "proxy-connection",
+            "value": "keep-alive"
+          },
+          {
+            "name": "user-agent",
+            "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36"
+          },
+          {
+            "name": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "name": "referer",
+            "value": "http://172.16.34.30:3000/"
+          },
+          {
+            "name": "accept-encoding",
+            "value": "gzip, deflate"
+          }
+        ],
+        "httpVersion": "HTTP/1.1",
+        "initiator": {
+          "is_dynamic_crawler": true,
+          "resourceType": "xhr",
+          "type": "script",
+          "wasDuringInteraction": false
+        },
+        "method": "GET",
+        "queryString": [
+          {
+            "name": "name",
+            "value": "Score Board"
+          }
+        ],
+        "url": "http://172.16.34.30:3000/api/Challenges/?name=Score%20Board"
+      },
+      "id": 4564,
+      "tags": [
+        {
+          "attributes": {
+            "analyzer": "Shell injection scanner",
+            "confidence": "tentative",
+            "cve": [],
+            "cvss": [
+              {
+                "metrics": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "score": 9.8
+              }
+            ],
+            "cwe": [
+              "CWE-78"
+            ],
+            "issue": "Shell injection",
+            "issueId": "22904e44bb68013a8c04238884f9202bd0b36cc6529cbe5b1e439278682d66b5",
+            "moduleName": "shell-injection-scanner",
+            "payloads": [
+              {
+                "details": "The value of the &#34;name&#34; parameter in the query string appears to be vulnerable to shell injection attacks.\nThe payload ping -c 5 127\\.0\\.0\\.1 was submitted.\n1 requests were made. The delays were: 2m47.672809841s.",
+                "payload": [
+                  {
+                    "data": "ping -c 5 127\\.0\\.0\\.1",
+                    "selector": {
+                      "path": [
+                        "queryString",
+                        0
+                      ],
+                      "type": "value"
+                    }
+                  }
+                ],
+                "request": {
+                  "blob": "R0VUIC9hcGkvQ2hhbGxlbmdlcy8/bmFtZT1waW5nJTIwLWMlMjA1JTIwMTI3XC4wXC4wXC4xIEhUVFAvMS4xDQpIb3N0OiAxNzIuMTYuMzQuMzA6MzAwMA0KQWNjZXB0OiBhcHBsaWNhdGlvbi9qc29uLCB0ZXh0L3BsYWluLCAqLyoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KUHJveHktQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KUmVmZXJlcjogaHR0cDovLzE3Mi4xNi4zNC4zMDozMDAwLw0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTAwLjAuNDg4OS4wIFNhZmFyaS81MzcuMzYNCg0K",
+                  "type": "blob"
+                },
+                "response": {
+                  "blob": "SFRUUC8xLjEgNTAwIEludGVybmFsIFNlcnZlciBFcnJvcg0KQ29udGVudC1MZW5ndGg6IDU2DQpDb250ZW50LVR5cGU6IHRleHQvcGxhaW47IGNoYXJzZXQ9dXRmLTgNCkRhdGU6IFdlZCwgMjggSmFuIDIwMjYgMDk6NDU6MzYgR01UDQpYLUNvbnRlbnQtVHlwZS1PcHRpb25zOiBub3NuaWZmDQoNCmRpYWwgdGNwIDE3Mi4xNi4zNC4zMDozMDAwOiBjb25uZWN0OiBjb25uZWN0aW9uIHJlZnVzZWQK",
+                  "type": "blob"
+                }
+              }
+            ],
+            "severity": "critical",
+            "type": "IssueFound",
+            "url": "http://172.16.34.30:3000/api/Challenges/?name=Score%20Board"
+          },
+          "id": 4656,
+          "label": "shell-injection-scanner"
+        }
+      ]
+    },
+    {
+      "har": {
+        "bodySize": 0,
+        "headers": [
+          {
+            "name": "host",
+            "value": "172.16.34.30:3000"
+          },
+          {
+            "name": "proxy-connection",
+            "value": "keep-alive"
+          },
+          {
+            "name": "user-agent",
+            "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36"
+          },
+          {
+            "name": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "name": "cookie",
+            "value": "language=en; continueCode=lLrP7weLvQboX2p1gO354xyjdRLUETK7UQQ0Nl8K9mnRzD6qMaWVBJkEZYoO"
+          },
+          {
+            "name": "referer",
+            "value": "http://172.16.34.30:3000/"
+          },
+          {
+            "name": "accept-encoding",
+            "value": "gzip, deflate"
+          }
+        ],
+        "httpVersion": "HTTP/1.1",
+        "initiator": {
+          "is_dynamic_crawler": true,
+          "resourceType": "xhr",
+          "type": "script",
+          "wasDuringInteraction": true
+        },
+        "method": "GET",
+        "queryString": [],
+        "url": "http://172.16.34.30:3000/rest/products/38/reviews"
+      },
+      "id": 4602,
+      "tags": [
+        {
+          "attributes": {
+            "analyzer": "Shell injection scanner",
+            "confidence": "tentative",
+            "cve": [],
+            "cvss": [
+              {
+                "metrics": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "score": 9.8
+              }
+            ],
+            "cwe": [
+              "CWE-78"
+            ],
+            "issue": "Shell injection",
+            "issueId": "7b528abc7e217c3320f453bda3369c17cebe1f8b63ceca4d411d1839a7d64cc2",
+            "moduleName": "shell-injection-scanner",
+            "payloads": [
+              {
+                "details": "The pathname parameter #1 appears to be vulnerable to shell injection attacks.\nThe payload %27%3B%20sleep%205%3B%20%27 was submitted.\n1 requests were made. The delays were: 3.026s.",
+                "payload": [
+                  {
+                    "data": "%27%3B%20sleep%205%3B%20%27",
+                    "selector": {
+                      "path": [
+                        "url",
+                        "path",
+                        0
+                      ],
+                      "type": "value"
+                    }
+                  }
+                ],
+                "request": {
+                  "blob": "R0VUIC8lMjclM0IlMjBzbGVlcCUyMDUlM0IlMjAlMjcgSFRUUC8xLjENCkhvc3Q6IDE3Mi4xNi4zNC4zMDozMDAwDQpBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24sIHRleHQvcGxhaW4sICovKg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpDb29raWU6IGxhbmd1YWdlPWVuOyBjb250aW51ZUNvZGU9bExyUDd3ZUx2UWJvWDJwMWdPMzU0eHlqZFJMVUVUSzdVUVEwTmw4SzltblJ6RDZxTWFXVkJKa0VaWW9PDQpQcm94eS1Db25uZWN0aW9uOiBrZWVwLWFsaXZlDQpSZWZlcmVyOiBodHRwOi8vMTcyLjE2LjM0LjMwOjMwMDAvDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMDAuMC40ODg5LjAgU2FmYXJpLzUzNy4zNg0KDQo=",
+                  "type": "blob"
+                },
+                "response": {
+                  "blob": "SFRUUC8xLjEgMjAwIE9LDQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbjogKg0KQ2FjaGUtQ29udHJvbDogcHVibGljLCBtYXgtYWdlPTANCkNvbm5lY3Rpb246IGtlZXAtYWxpdmUNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQpEYXRlOiBXZWQsIDI4IEphbiAyMDI2IDA5OjQ0OjE2IEdNVA0KRXRhZzogVy8iN2MzLTE5YzAzZjZiMDc1Ig0KRmVhdHVyZS1Qb2xpY3k6IHBheW1lbnQgJ3NlbGYnDQpLZWVwLUFsaXZlOiB0aW1lb3V0PTUNCkxhc3QtTW9kaWZpZWQ6IFdlZCwgMjggSmFuIDIwMjYgMDk6Mzc6MDQgR01UDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNClgtQ29udGVudC1UeXBlLU9wdGlvbnM6IG5vc25pZmYNClgtRnJhbWUtT3B0aW9uczogU0FNRU9SSUdJTg0KWC1SZWNydWl0aW5nOiAvIy9qb2JzDQoNCjwhLS0KICB+IENvcHlyaWdodCAoYykgMjAxNC0yMDIzIEJqb2VybiBLaW1taW5pY2ggJiB0aGUgT1dBU1AgSnVpY2UgU2hvcCBjb250cmlidXRvcnMuCiAgfiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogTUlUCiAgLS0+PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KICA8dGl0bGU+T1dBU1AgSnVpY2UgU2hvcDwvdGl0bGU+CiAgPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IlByb2JhYmx5IHRoZSBtb3N0IG1vZGVybiBhbmQgc29waGlzdGljYXRlZCBpbnNlY3VyZSB3ZWIgYXBwbGljYXRpb24iPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CiAgPGxpbmsgaWQ9ImZhdmljb24iIHJlbD0iaWNvbiIgdHlwZT0iaW1hZ2UveC1pY29uIiBocmVmPSJhc3NldHMvcHVibGljL2Zhdmljb25fanMuaWNvIj4KICA8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSIvL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9jb29raWVjb25zZW50Mi8zLjEuMC9jb29raWVjb25zZW50Lm1pbi5jc3MiPgogIDxzY3JpcHQgc3JjPSIvL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9jb29raWVjb25zZW50Mi8zLjEuMC9jb29raWVjb25zZW50Lm1pbi5qcyI+PC9zY3JpcHQ+CiAgPHNjcmlwdCBzcmM9Ii8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL2pxdWVyeS8yLjIuNC9qcXVlcnkubWluLmpzIj48L3NjcmlwdD4KICA8c2NyaXB0PgogICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoImxvYWQiLCBmdW5jdGlvbigpewogICAgICB3aW5kb3cuY29va2llY29uc2VudC5pbml0aWFsaXNlKHsKICAgICAgICAicGFsZXR0ZSI6IHsKICAgICAgICAgICJwb3B1cCI6IHsgImJhY2tncm91bmQiOiAiIzU0NmU3YSIsICJ0ZXh0IjogIiNmZmZmZmYiIH0sCiAgICAgICAgICAiYnV0dG9uIjogeyAiYmFja2dyb3VuZCI6ICIjNTU4YjJmIiwgInRleHQiOiAiI2ZmZmZmZiIgfQogICAgICAgIH0sCiAgICAgICAgInRoZW1lIjogImNsYXNzaWMiLAogICAgICAgICJwb3NpdGlvbiI6ICJib3R0b20tcmlnaHQiLAogICAgICAgICJjb250ZW50IjogeyAibWVzc2FnZSI6ICJUaGlzIHdlYnNpdGUgdXNlcyBmcnVpdCBjb29raWVzIHRvIGVuc3VyZSB5b3UgZ2V0IHRoZSBqdWljaWVzdCB0cmFja2luZyBleHBlcmllbmNlLiIsICJkaXNtaXNzIjogIk1lIHdhbnQgaXQhIiwgImxpbmsiOiAiQnV0IG1lIHdhaXQhIiwgImhyZWYiOiAiaHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj05UG5iS0wzd3VINCIgfQogICAgICB9KX0pOwogIDwvc2NyaXB0Pgo8c3R5bGU+LmJsdWVncmV5LWxpZ2h0Z3JlZW4tdGhlbWUubWF0LWFwcC1iYWNrZ3JvdW5ke2JhY2tncm91bmQtY29sb3I6IzMwMzAzMDtjb2xvcjojZmZmfUBjaGFyc2V0ICJVVEYtOCI7QG1lZGlhIHNjcmVlbiBhbmQgKC13ZWJraXQtbWluLWRldmljZS1waXhlbC1yYXRpbzowKXt9PC9zdHlsZT48bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9InN0eWxlcy5jc3MiIG1lZGlhPSJwcmludCIgb25sb2FkPSJ0aGlzLm1lZGlhPSdhbGwnIj48bm9zY3JpcHQ+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZXMuY3NzIj48L25vc2NyaXB0PjwvaGVhZD4KPGJvZHkgY2xhc3M9Im1hdC1hcHAtYmFja2dyb3VuZCBibHVlZ3JleS1saWdodGdyZWVuLXRoZW1lIj4KICA8YXBwLXJvb3Q+PC9hcHAtcm9vdD4KPHNjcmlwdCBzcmM9InJ1bnRpbWUuanMiIHR5cGU9Im1vZHVsZSI+PC9zY3JpcHQ+PHNjcmlwdCBzcmM9InBvbHlmaWxscy5qcyIgdHlwZT0ibW9kdWxlIj48L3NjcmlwdD48c2NyaXB0IHNyYz0idmVuZG9yLmpzIiB0eXBlPSJtb2R1bGUiPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSJtYWluLmpzIiB0eXBlPSJtb2R1bGUiPjwvc2NyaXB0PgoKPC9ib2R5PjwvaHRtbD4=",
+                  "type": "blob"
+                }
+              }
+            ],
+            "severity": "critical",
+            "type": "IssueFound",
+            "url": "http://172.16.34.30:3000/rest/products/38/reviews"
+          },
+          "id": 4643,
+          "label": "shell-injection-scanner"
+        }
+      ]
+    },
+    {
+      "har": {
+        "bodySize": 0,
+        "headers": [
+          {
+            "name": "host",
+            "value": "172.16.34.30:3000"
+          },
+          {
+            "name": "proxy-connection",
+            "value": "keep-alive"
+          },
+          {
+            "name": "user-agent",
+            "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36"
+          },
+          {
+            "name": "accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "name": "cookie",
+            "value": "language=en; continueCode=lLrP7weLvQboX2p1gO354xyjdRLUETK7UQQ0Nl8K9mnRzD6qMaWVBJkEZYoO"
+          },
+          {
+            "name": "referer",
+            "value": "http://172.16.34.30:3000/"
+          },
+          {
+            "name": "accept-encoding",
+            "value": "gzip, deflate"
+          }
+        ],
+        "httpVersion": "HTTP/1.1",
+        "initiator": {
+          "is_dynamic_crawler": true,
+          "resourceType": "xhr",
+          "type": "script",
+          "wasDuringInteraction": true
+        },
+        "method": "GET",
+        "queryString": [],
+        "url": "http://172.16.34.30:3000/rest/products/37/reviews"
+      },
+      "id": 4606,
+      "tags": [
+        {
+          "attributes": {
+            "analyzer": "Shell injection scanner",
+            "confidence": "tentative",
+            "cve": [],
+            "cvss": [
+              {
+                "metrics": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "score": 9.8
+              }
+            ],
+            "cwe": [
+              "CWE-78"
+            ],
+            "issue": "Shell injection",
+            "issueId": "32bfa3903823b3b9ce9b203ef21b25944c2fb177340a468c6a4c76cfc414e04f",
+            "moduleName": "shell-injection-scanner",
+            "payloads": [
+              {
+                "details": "The pathname parameter #4 appears to be vulnerable to shell injection attacks.\nThe payload %60sleep%203%60 was submitted.\n1 requests were made. The delays were: 3.338s.",
+                "payload": [
+                  {
+                    "data": "%60sleep%203%60",
+                    "selector": {
+                      "path": [
+                        "url",
+                        "path",
+                        3
+                      ],
+                      "type": "value"
+                    }
+                  }
+                ],
+                "request": {
+                  "blob": "R0VUIC9yZXN0L3Byb2R1Y3RzLzM3LyU2MHNsZWVwJTIwMyU2MCBIVFRQLzEuMQ0KSG9zdDogMTcyLjE2LjM0LjMwOjMwMDANCkFjY2VwdDogYXBwbGljYXRpb24vanNvbiwgdGV4dC9wbGFpbiwgKi8qDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkNvb2tpZTogbGFuZ3VhZ2U9ZW47IGNvbnRpbnVlQ29kZT1sTHJQN3dlTHZRYm9YMnAxZ08zNTR4eWpkUkxVRVRLN1VRUTBObDhLOW1uUnpENnFNYVdWQkprRVpZb08NClByb3h5LUNvbm5lY3Rpb246IGtlZXAtYWxpdmUNClJlZmVyZXI6IGh0dHA6Ly8xNzIuMTYuMzQuMzA6MzAwMC8NClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMC4wLjQ4ODkuMCBTYWZhcmkvNTM3LjM2DQoNCg==",
+                  "type": "blob"
+                },
+                "response": {
+                  "blob": "SFRUUC8xLjEgNTAwIEludGVybmFsIFNlcnZlciBFcnJvcg0KVHJhbnNmZXItRW5jb2Rpbmc6IGNodW5rZWQNCkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbjogKg0KQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PXV0Zi04DQpEYXRlOiBXZWQsIDI4IEphbiAyMDI2IDA5OjQ1OjA0IEdNVA0KRmVhdHVyZS1Qb2xpY3k6IHBheW1lbnQgJ3NlbGYnDQpLZWVwLUFsaXZlOiB0aW1lb3V0PTUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KWC1GcmFtZS1PcHRpb25zOiBTQU1FT1JJR0lODQpYLVJlY3J1aXRpbmc6IC8jL2pvYnMNCg0KewogICJlcnJvciI6IHsKICAgICJtZXNzYWdlIjogIlVuZXhwZWN0ZWQgcGF0aDogL3Jlc3QvcHJvZHVjdHMvMzcvJTYwc2xlZXAlMjAzJTYwIiwKICAgICJzdGFjayI6ICJFcnJvcjogVW5leHBlY3RlZCBwYXRoOiAvcmVzdC9wcm9kdWN0cy8zNy8lNjBzbGVlcCUyMDMlNjBcbiAgICBhdCAvanVpY2Utc2hvcC9idWlsZC9yb3V0ZXMvYW5ndWxhci5qczoxNToxOFxuICAgIGF0IExheWVyLmhhbmRsZSBbYXMgaGFuZGxlX3JlcXVlc3RdICgvanVpY2Utc2hvcC9ub2RlX21vZHVsZXMvZXhwcmVzcy9saWIvcm91dGVyL2xheWVyLmpzOjk1OjUpXG4gICAgYXQgdHJpbV9wcmVmaXggKC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9leHByZXNzL2xpYi9yb3V0ZXIvaW5kZXguanM6MzI4OjEzKVxuICAgIGF0IC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9leHByZXNzL2xpYi9yb3V0ZXIvaW5kZXguanM6Mjg2OjlcbiAgICBhdCBGdW5jdGlvbi5wcm9jZXNzX3BhcmFtcyAoL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczozNDY6MTIpXG4gICAgYXQgbmV4dCAoL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczoyODA6MTApXG4gICAgYXQgL2p1aWNlLXNob3AvYnVpbGQvcm91dGVzL3ZlcmlmeS5qczoxMzU6NVxuICAgIGF0IExheWVyLmhhbmRsZSBbYXMgaGFuZGxlX3JlcXVlc3RdICgvanVpY2Utc2hvcC9ub2RlX21vZHVsZXMvZXhwcmVzcy9saWIvcm91dGVyL2xheWVyLmpzOjk1OjUpXG4gICAgYXQgdHJpbV9wcmVmaXggKC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9leHByZXNzL2xpYi9yb3V0ZXIvaW5kZXguanM6MzI4OjEzKVxuICAgIGF0IC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9leHByZXNzL2xpYi9yb3V0ZXIvaW5kZXguanM6Mjg2OjlcbiAgICBhdCBGdW5jdGlvbi5wcm9jZXNzX3BhcmFtcyAoL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczozNDY6MTIpXG4gICAgYXQgbmV4dCAoL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczoyODA6MTApXG4gICAgYXQgL2p1aWNlLXNob3AvYnVpbGQvcm91dGVzL3ZlcmlmeS5qczo3MTo1XG4gICAgYXQgTGF5ZXIuaGFuZGxlIFthcyBoYW5kbGVfcmVxdWVzdF0gKC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9leHByZXNzL2xpYi9yb3V0ZXIvbGF5ZXIuanM6OTU6NSlcbiAgICBhdCB0cmltX3ByZWZpeCAoL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczozMjg6MTMpXG4gICAgYXQgL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczoyODY6OVxuICAgIGF0IEZ1bmN0aW9uLnByb2Nlc3NfcGFyYW1zICgvanVpY2Utc2hvcC9ub2RlX21vZHVsZXMvZXhwcmVzcy9saWIvcm91dGVyL2luZGV4LmpzOjM0NjoxMilcbiAgICBhdCBuZXh0ICgvanVpY2Utc2hvcC9ub2RlX21vZHVsZXMvZXhwcmVzcy9saWIvcm91dGVyL2luZGV4LmpzOjI4MDoxMClcbiAgICBhdCBsb2dnZXIgKC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9tb3JnYW4vaW5kZXguanM6MTQ0OjUpXG4gICAgYXQgTGF5ZXIuaGFuZGxlIFthcyBoYW5kbGVfcmVxdWVzdF0gKC9qdWljZS1zaG9wL25vZGVfbW9kdWxlcy9leHByZXNzL2xpYi9yb3V0ZXIvbGF5ZXIuanM6OTU6NSlcbiAgICBhdCB0cmltX3ByZWZpeCAoL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczozMjg6MTMpXG4gICAgYXQgL2p1aWNlLXNob3Avbm9kZV9tb2R1bGVzL2V4cHJlc3MvbGliL3JvdXRlci9pbmRleC5qczoyODY6OSIKICB9Cn0=",
+                  "type": "blob"
+                }
+              }
+            ],
+            "severity": "critical",
+            "type": "IssueFound",
+            "url": "http://172.16.34.30:3000/rest/products/37/reviews"
+          },
+          "id": 4647,
+          "label": "shell-injection-scanner"
+        },
+        {
+          "attributes": {
+            "analyzer": "Shell injection scanner",
+            "confidence": "tentative",
+            "cve": [],
+            "cvss": [
+              {
+                "metrics": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "score": 9.8
+              }
+            ],
+            "cwe": [
+              "CWE-78"
+            ],
+            "issue": "Shell injection",
+            "issueId": "fc30e1b68245ba044eabaad40666e30c22a222266c669636e2a470b002f0a4a6",
+            "moduleName": "shell-injection-scanner",
+            "payloads": [
+              {
+                "details": "The pathname parameter #1 appears to be vulnerable to shell injection attacks.\nThe payload $%28sleep%203%29 was submitted.\n1 requests were made. The delays were: 3.044s.",
+                "payload": [
+                  {
+                    "data": "$%28sleep%203%29",
+                    "selector": {
+                      "path": [
+                        "url",
+                        "path",
+                        0
+                      ],
+                      "type": "value"
+                    }
+                  }
+                ],
+                "request": {
+                  "blob": "R0VUIC8kKHNsZWVwJTIwMykgSFRUUC8xLjENCkhvc3Q6IDE3Mi4xNi4zNC4zMDozMDAwDQpBY2NlcHQ6IGFwcGxpY2F0aW9uL2pzb24sIHRleHQvcGxhaW4sICovKg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpDb29raWU6IGxhbmd1YWdlPWVuOyBjb250aW51ZUNvZGU9bExyUDd3ZUx2UWJvWDJwMWdPMzU0eHlqZFJMVUVUSzdVUVEwTmw4SzltblJ6RDZxTWFXVkJKa0VaWW9PDQpQcm94eS1Db25uZWN0aW9uOiBrZWVwLWFsaXZlDQpSZWZlcmVyOiBodHRwOi8vMTcyLjE2LjM0LjMwOjMwMDAvDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMDAuMC40ODg5LjAgU2FmYXJpLzUzNy4zNg0KDQo=",
+                  "type": "blob"
+                },
+                "response": {
+                  "blob": "SFRUUC8xLjEgMjAwIE9LDQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbjogKg0KQ2FjaGUtQ29udHJvbDogcHVibGljLCBtYXgtYWdlPTANCkNvbm5lY3Rpb246IGtlZXAtYWxpdmUNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQpEYXRlOiBXZWQsIDI4IEphbiAyMDI2IDA5OjQ0OjU1IEdNVA0KRXRhZzogVy8iN2MzLTE5YzAzZjZiMDc1Ig0KRmVhdHVyZS1Qb2xpY3k6IHBheW1lbnQgJ3NlbGYnDQpLZWVwLUFsaXZlOiB0aW1lb3V0PTUNCkxhc3QtTW9kaWZpZWQ6IFdlZCwgMjggSmFuIDIwMjYgMDk6Mzc6MDQgR01UDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNClgtQ29udGVudC1UeXBlLU9wdGlvbnM6IG5vc25pZmYNClgtRnJhbWUtT3B0aW9uczogU0FNRU9SSUdJTg0KWC1SZWNydWl0aW5nOiAvIy9qb2JzDQoNCjwhLS0KICB+IENvcHlyaWdodCAoYykgMjAxNC0yMDIzIEJqb2VybiBLaW1taW5pY2ggJiB0aGUgT1dBU1AgSnVpY2UgU2hvcCBjb250cmlidXRvcnMuCiAgfiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogTUlUCiAgLS0+PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KICA8dGl0bGU+T1dBU1AgSnVpY2UgU2hvcDwvdGl0bGU+CiAgPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9IlByb2JhYmx5IHRoZSBtb3N0IG1vZGVybiBhbmQgc29waGlzdGljYXRlZCBpbnNlY3VyZSB3ZWIgYXBwbGljYXRpb24iPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CiAgPGxpbmsgaWQ9ImZhdmljb24iIHJlbD0iaWNvbiIgdHlwZT0iaW1hZ2UveC1pY29uIiBocmVmPSJhc3NldHMvcHVibGljL2Zhdmljb25fanMuaWNvIj4KICA8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSIvL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9jb29raWVjb25zZW50Mi8zLjEuMC9jb29raWVjb25zZW50Lm1pbi5jc3MiPgogIDxzY3JpcHQgc3JjPSIvL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9jb29raWVjb25zZW50Mi8zLjEuMC9jb29raWVjb25zZW50Lm1pbi5qcyI+PC9zY3JpcHQ+CiAgPHNjcmlwdCBzcmM9Ii8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL2pxdWVyeS8yLjIuNC9qcXVlcnkubWluLmpzIj48L3NjcmlwdD4KICA8c2NyaXB0PgogICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoImxvYWQiLCBmdW5jdGlvbigpewogICAgICB3aW5kb3cuY29va2llY29uc2VudC5pbml0aWFsaXNlKHsKICAgICAgICAicGFsZXR0ZSI6IHsKICAgICAgICAgICJwb3B1cCI6IHsgImJhY2tncm91bmQiOiAiIzU0NmU3YSIsICJ0ZXh0IjogIiNmZmZmZmYiIH0sCiAgICAgICAgICAiYnV0dG9uIjogeyAiYmFja2dyb3VuZCI6ICIjNTU4YjJmIiwgInRleHQiOiAiI2ZmZmZmZiIgfQogICAgICAgIH0sCiAgICAgICAgInRoZW1lIjogImNsYXNzaWMiLAogICAgICAgICJwb3NpdGlvbiI6ICJib3R0b20tcmlnaHQiLAogICAgICAgICJjb250ZW50IjogeyAibWVzc2FnZSI6ICJUaGlzIHdlYnNpdGUgdXNlcyBmcnVpdCBjb29raWVzIHRvIGVuc3VyZSB5b3UgZ2V0IHRoZSBqdWljaWVzdCB0cmFja2luZyBleHBlcmllbmNlLiIsICJkaXNtaXNzIjogIk1lIHdhbnQgaXQhIiwgImxpbmsiOiAiQnV0IG1lIHdhaXQhIiwgImhyZWYiOiAiaHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj05UG5iS0wzd3VINCIgfQogICAgICB9KX0pOwogIDwvc2NyaXB0Pgo8c3R5bGU+LmJsdWVncmV5LWxpZ2h0Z3JlZW4tdGhlbWUubWF0LWFwcC1iYWNrZ3JvdW5ke2JhY2tncm91bmQtY29sb3I6IzMwMzAzMDtjb2xvcjojZmZmfUBjaGFyc2V0ICJVVEYtOCI7QG1lZGlhIHNjcmVlbiBhbmQgKC13ZWJraXQtbWluLWRldmljZS1waXhlbC1yYXRpbzowKXt9PC9zdHlsZT48bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9InN0eWxlcy5jc3MiIG1lZGlhPSJwcmludCIgb25sb2FkPSJ0aGlzLm1lZGlhPSdhbGwnIj48bm9zY3JpcHQ+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZXMuY3NzIj48L25vc2NyaXB0PjwvaGVhZD4KPGJvZHkgY2xhc3M9Im1hdC1hcHAtYmFja2dyb3VuZCBibHVlZ3JleS1saWdodGdyZWVuLXRoZW1lIj4KICA8YXBwLXJvb3Q+PC9hcHAtcm9vdD4KPHNjcmlwdCBzcmM9InJ1bnRpbWUuanMiIHR5cGU9Im1vZHVsZSI+PC9zY3JpcHQ+PHNjcmlwdCBzcmM9InBvbHlmaWxscy5qcyIgdHlwZT0ibW9kdWxlIj48L3NjcmlwdD48c2NyaXB0IHNyYz0idmVuZG9yLmpzIiB0eXBlPSJtb2R1bGUiPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSJtYWluLmpzIiB0eXBlPSJtb2R1bGUiPjwvc2NyaXB0PgoKPC9ib2R5PjwvaHRtbD4=",
+                  "type": "blob"
+                }
+              }
+            ],
+            "severity": "critical",
+            "type": "IssueFound",
+            "url": "http://172.16.34.30:3000/rest/products/37/reviews"
+          },
+          "id": 4646,
+          "label": "shell-injection-scanner"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": 1432,
+      "resource": {
+        "fetchedAt": "2026-01-28T07:48:56.57428Z",
+        "hash": "2d156b45cb381b5d6aad101e2d6425ff46b9d995ec5e82cd2b8e18260e661c4e",
+        "statusCode": 200,
+        "url": "http://172.16.34.30:3000/"
+      },
+      "tags": [
+        {
+          "attributes": {
+            "analyzer": "Active Signature Scanner",
+            "confidence": "certain",
+            "cve": [],
+            "cvss": [],
+            "cwe": [
+              "CWE-200"
+            ],
+            "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+            "issue": "CAA Record",
+            "issueId": "4306b012522c828f2594adee57cb9923764ee311712fb9e32f2ce88e6ba452c5",
+            "moduleName": "nuclei-runner",
+            "payloads": [
+              {
+                "payload": [
+                  {
+                    "data": "http://172.16.34.30:3000/",
+                    "selector": "unknown"
+                  }
+                ],
+                "request": {
+                  "blob": "Ozsgb3Bjb2RlOiBRVUVSWSwgc3RhdHVzOiBOT0VSUk9SLCBpZDogMzM5NjcKOzsgZmxhZ3M6IHJkOyBRVUVSWTogMSwgQU5TV0VSOiAwLCBBVVRIT1JJVFk6IDAsIEFERElUSU9OQUw6IDEKCjs7IE9QVCBQU0VVRE9TRUNUSU9OOgo7IEVETlM6IHZlcnNpb24gMDsgZmxhZ3M6OyB1ZHA6IDQwOTYKCjs7IFFVRVNUSU9OIFNFQ1RJT046CjtodHRwOi8vMTcyLjE2LjM0LjMwOjMwMDAvLglJTgkgQ0FBCg==",
+                  "type": "blob"
+                },
+                "response": {
+                  "blob": "Ozsgb3Bjb2RlOiBRVUVSWSwgc3RhdHVzOiBOWERPTUFJTiwgaWQ6IDMzOTY3Cjs7IGZsYWdzOiBxciByZCByYTsgUVVFUlk6IDEsIEFOU1dFUjogMCwgQVVUSE9SSVRZOiAxLCBBRERJVElPTkFMOiAxCgo7OyBPUFQgUFNFVURPU0VDVElPTjoKOyBFRE5TOiB2ZXJzaW9uIDA7IGZsYWdzOjsgdWRwOiAxMjMyCgo7OyBRVUVTVElPTiBTRUNUSU9OOgo7aHR0cDovLzE3Mi4xNi4zNC4zMDozMDAwLy4JSU4JIENBQQoKOzsgQVVUSE9SSVRZIFNFQ1RJT046Ci4JODY0MDAJSU4JU09BCWEucm9vdC1zZXJ2ZXJzLm5ldC4gbnN0bGQudmVyaXNpZ24tZ3JzLmNvbS4gMjAyNjAxMjgwMCAxODAwIDkwMCA2MDQ4MDAgODY0MDAK",
+                  "type": "blob"
+                }
+              }
+            ],
+            "severity": "info",
+            "type": "IssueFound",
+            "url": "http://172.16.34.30:3000/"
+          },
+          "id": 2062,
+          "label": "nuclei-runner"
+        },
+        {
+          "attributes": {
+            "analyzer": "Active Signature Scanner",
+            "confidence": "certain",
+            "cve": [],
+            "cvss": [],
+            "cwe": [],
+            "issue": "robots.txt endpoint prober",
+            "issueId": "0c6a5c0c4099920abd81f0f815903ccf3c6d4bde04ee569985a85ae2dea8f392",
+            "moduleName": "nuclei-runner",
+            "payloads": [
+              {
+                "payload": [
+                  {
+                    "data": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0' 'http://172.16.34.30:3000/robots.txt'",
+                    "selector": "unknown"
+                  }
+                ],
+                "request": {
+                  "blob": "R0VUIC9yb2JvdHMudHh0IEhUVFAvMS4xDQpIb3N0OiAxNzIuMTYuMzQuMzA6MzAwMA0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTAuMTU7IHJ2OjEwOS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzExNy4wDQpDb25uZWN0aW9uOiBjbG9zZQ0KQWNjZXB0OiAqLyoNCkFjY2VwdC1MYW5ndWFnZTogZW4NCkFjY2VwdC1FbmNvZGluZzogZ3ppcA0KDQo=",
+                  "type": "blob"
+                },
+                "response": {
+                  "blob": "SFRUUC8xLjEgMjAwIE9LDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1MZW5ndGg6IDI4DQpBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW46ICoNCkNvbnRlbnQtVHlwZTogdGV4dC9wbGFpbjsgY2hhcnNldD11dGYtOA0KRGF0ZTogV2VkLCAyOCBKYW4gMjAyNiAwODowMToyMSBHTVQNCkV0YWc6IFcvIjFjLThIZ0Y2bU55aHNTRkswcGFzY0M5dUIwd2pYMCINCkZlYXR1cmUtUG9saWN5OiBwYXltZW50ICdzZWxmJw0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpYLUNvbnRlbnQtVHlwZS1PcHRpb25zOiBub3NuaWZmDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NClgtRnVjaHNpYS1SZXNwb25zZS1UaW1lLU1zOiA2DQpYLVJlY3J1aXRpbmc6IC8jL2pvYnMNCg0KVXNlci1hZ2VudDogKgpEaXNhbGxvdzogL2Z0cA==",
+                  "type": "blob"
+                }
+              }
+            ],
+            "severity": "info",
+            "type": "IssueFound",
+            "url": "http://172.16.34.30:3000/"
+          },
+          "id": 2061,
+          "label": "nuclei-runner"
+        }
+      ]
+    }
+  ]
+}
