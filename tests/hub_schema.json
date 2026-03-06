@@ -1047,7 +1047,7 @@
     "status": {
       "type": "string",
       "enum": [
-        "To Verify", "Confirmed", "Open", "Fixed", "False Positive", "Accepted risk"
+        "To Verify", "Confirmed", "Fixed", "False Positive", "Accepted risk"
       ]
     },
 
