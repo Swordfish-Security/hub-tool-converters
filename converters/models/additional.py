@@ -88,6 +88,8 @@ class AdditionalFields:
             self.file_key = 'Unknown'
 
     def __parse_dupe_key(self) -> None:
+        if self.dupe_key:
+            return
         try:
             key = self.title
             if self.secret:

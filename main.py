@@ -122,6 +122,14 @@ if __name__ == '__main__':
         help="Stage of instance",
         required=False
     )
+    parser.add_argument(
+        "--report-version",
+        type=str,
+        choices=["1.0.1", "1.0.2"],
+        help="AppSec.Hub report schema version (default: 1.0.1)",
+        default="1.0.1",
+        dest="report_version"
+    )
 
     args = parser.parse_args()
 

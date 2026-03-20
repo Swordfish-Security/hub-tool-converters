@@ -5,7 +5,7 @@ from typing import Any
 from config.enums import SourceTypes, ScannerTypes
 from config.constances import PARSERS_NAMES_TO_FIX
 from converters.models import Finding
-from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS
+from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS, HttpMessage
 from hub.models.location import LocationSast, LocationDast, LocationSca, LocationStack
 from hub.models.rule import Rule, RuleCwe, RuleSCA
 from hub.models.source import SourceSast, SourceDast, SourceArtifact
@@ -19,6 +19,7 @@ class HubParser:
         self.results = results
 
         self.args = args
+        self.report_version = getattr(args, 'report_version', '1.0.1')
         self.__create_source()
 
         self.rules: dict[str, Rule] = {}
@@ -61,16 +62,57 @@ class HubParser:
 
     def __parse_reqresps(self, finding: Finding):
         """
-        Save request and responses in descriptions
+        Save request and responses.
+        For v1.0.2: populate structured httpRequest/httpResponse on DAST findings.
+        For v1.0.1: append to description as before.
         """
-        if hasattr(finding, "unsaved_req_resp") and isinstance(finding.unsaved_req_resp, list):
+        if not hasattr(finding, "unsaved_req_resp") or not isinstance(finding.unsaved_req_resp, list):
+            return
+
+        hub_finding = self.findings.get(finding.dupe_key)
+        if not hub_finding:
+            return
+
+        if (self.report_version == "1.0.2"
+                and isinstance(hub_finding, FindingHubDast)
+                and finding.unsaved_req_resp):
+            # For v1.0.2, use structured httpRequest/httpResponse from first req/resp pair
+            first_rr = finding.unsaved_req_resp[0] if finding.unsaved_req_resp else None
+            if first_rr and isinstance(first_rr, dict):
+                req_raw = first_rr.get("req", "")
+                resp_raw = first_rr.get("resp", "")
+                hub_finding.httpRequest = self.__split_http_message(req_raw)
+                hub_finding.httpResponse = self.__split_http_message(resp_raw)
+
+            # Append remaining req/resp pairs to description
+            for req_resp in finding.unsaved_req_resp[1:]:
+                text = ''
+                if isinstance(req_resp, dict):
+                    for key, value in req_resp.items():
+                        text += f'\n{key}: {value}\n'
+                        text = markdown.markdown(text, extensions=['nl2br']).replace('\n', '')
+                hub_finding.description += text
+        else:
+            # v1.0.1 behavior: append everything to description
             for req_resp in finding.unsaved_req_resp:
                 text = ''
                 if isinstance(req_resp, dict):
                     for key, value in req_resp.items():
                         text += f'\n{key}: {value}\n'
                         text = markdown.markdown(text, extensions=['nl2br']).replace('\n', '')
-                self.findings[finding.dupe_key].description += text
+                hub_finding.description += text
+
+    @staticmethod
+    def __split_http_message(raw: str) -> HttpMessage:
+        """Split raw HTTP message into header and body parts."""
+        if not raw:
+            return HttpMessage(header="", body="")
+        # HTTP messages separate headers from body with double CRLF
+        for separator in ["\r\n\r\n", "\n\n"]:
+            if separator in raw:
+                parts = raw.split(separator, 1)
+                return HttpMessage(header=parts[0], body=parts[1] if len(parts) > 1 else "")
+        return HttpMessage(header=raw, body="")
 
     def __parse_finding(self, finding: Finding):
         scanner_type = self.__get_scanner_type(finding)
@@ -215,6 +257,7 @@ class HubParser:
             tool={'product': f"{self.args.scanner}"}
         )
         report = Report(
+            version=self.report_version,
             scans=[scan]
         )
         report = report.to_dict()

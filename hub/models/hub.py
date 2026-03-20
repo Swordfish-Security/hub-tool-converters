@@ -36,7 +36,22 @@ class Report:
         result = asdict(self)
         result["$schema"] = self.schema
         del result["schema"]
+        # Clean up optional DAST fields (httpRequest/httpResponse) when not set
+        self._remove_optional_dast_fields(result)
         return result
+
+    @staticmethod
+    def _remove_optional_dast_fields(d):
+        """Remove httpRequest/httpResponse keys when they are None (v1.0.1 compat)."""
+        if isinstance(d, dict):
+            for key in ("httpRequest", "httpResponse"):
+                if key in d and d[key] is None:
+                    del d[key]
+            for v in d.values():
+                Report._remove_optional_dast_fields(v)
+        elif isinstance(d, list):
+            for item in d:
+                Report._remove_optional_dast_fields(item)
 
 
 @dataclass(kw_only=False, eq=False, order=False)
@@ -78,6 +93,13 @@ class FindingHubSast:
 
 
 @dataclass(kw_only=False, eq=False, order=False)
+class HttpMessage:
+    """Structured HTTP message for v1.0.2 schema."""
+    header: str = ""
+    body: str = ""
+
+
+@dataclass(kw_only=False, eq=False, order=False)
 class FindingHubDast:
     type: str
     id: str
@@ -86,6 +108,8 @@ class FindingHubDast:
     url: str
     status: str
     description: str
+    httpRequest: HttpMessage = None
+    httpResponse: HttpMessage = None
 
     def __init__(
             self,
@@ -95,7 +119,9 @@ class FindingHubDast:
             url: str,
             description: str,
             status: str,
-            type: str
+            type: str,
+            httpRequest: HttpMessage = None,
+            httpResponse: HttpMessage = None
     ):
         self.type = type
         self.id = idx
@@ -104,6 +130,8 @@ class FindingHubDast:
         self.url = url
         self.description = description
         self.status = status
+        self.httpRequest = httpRequest
+        self.httpResponse = httpResponse
         super().__init__()
 
 
