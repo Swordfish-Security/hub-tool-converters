@@ -94,8 +94,8 @@ class AdditionalFields:
             key = self.title
             if self.secret:
                 key = key + self.secret
-            if self.line:
-                key = key + str(self.line)
+            # if self.line:
+            #     key = key + str(self.line)
             self.dupe_key = hashlib.md5((key + self.file_path + self.description).encode("utf-8")).hexdigest()
         except TypeError:
             self.dupe_key = hashlib.md5(
