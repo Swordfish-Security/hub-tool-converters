@@ -203,6 +203,7 @@ class Finding(AdditionalFields):
     file_path: str | None = None  # Identified file(s) containing the flaw
     component_name: str | None = None  # Name of the affected component (library name, part of a system, ...).
     component_version: str | None = None  # Version of the affected component
+    has_exploit: bool | None = None  # Наличие публичного эксплойта для уязвимости (sca_s, схема отчёта Hub >= 1.0.3)
     found_by: list[str] | None = None  # The name of the scanner that identified the flaw
     static_finding: bool = False  # Flaw has been detected from a Static Application Security Testing tool (SAST).
     dynamic_finding: bool = True  # Flaw has been detected from a Dynamic Application Security Testing tool (DAST).

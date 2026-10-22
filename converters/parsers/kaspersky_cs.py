@@ -1,6 +1,7 @@
 import dateutil
 import json
 import logging
+import re
 
 from converters.models import Finding
 
@@ -44,12 +45,30 @@ def _fix_severity(severity):
         severity = "Medium"
     return severity
 
+_EXPLOIT_CODE_MATURITY = re.compile(r"(?:^|/)E:([XUPFH])(?=/|$)")
+_EXPLOIT_EXISTS = {"P", "F", "H"}
+
+def _get_has_exploit(cvss_dict) -> bool | None:
+    if not isinstance(cvss_dict, dict):
+        return None
+    exploitation_info = next(
+        (value for key, value in cvss_dict.items() if key.lower() == "exploitationinfo"), None
+    )
+    if not isinstance(exploitation_info, dict):
+        return None
+    match = _EXPLOIT_CODE_MATURITY.search(exploitation_info.get("V3Vector") or "")
+    if not match or match.group(1) == "X":
+        return None
+    return match.group(1) in _EXPLOIT_EXISTS
+
 
 class KasperskyCSJSONParser:
     def _get_findings_json(self, file, test):
         """Load a KasperskyCS file in JSON format"""
         data = json.load(file)
-        results = data.get("Results")[0] if data.get("Results") else []
+        # Отчёт KCS содержит несколько блоков результатов (пакеты ОС, языковые пакеты, лицензии...);
+        # уязвимости читаются из всех блоков, где они есть.
+        results_blocks = data.get("Results") or []
 
         report_date = None
         if data.get("ScanFinishedAt"):
@@ -58,50 +77,52 @@ class KasperskyCSJSONParser:
             )
 
         findings = []
-        for vulnerability in results.get("Vulnerabilities", []):
-            title = f"{vulnerability.get('PkgName')}:{vulnerability.get('InstalledVersion')} | {vulnerability.get('lnerabilityID')}"
-            description = vulnerability.get("Description")
+        for results in results_blocks:
+            for vulnerability in results.get("Vulnerabilities") or []:
+                title = f"{vulnerability.get('PkgName')}:{vulnerability.get('InstalledVersion')} | {vulnerability.get('lnerabilityID')}"
+                description = vulnerability.get("Description")
 
-            severity = _fix_severity(vulnerability.get("Severity"))
+                severity = _fix_severity(vulnerability.get("Severity"))
 
-            if not description:
-                description = "Description was not provided."
+                if not description:
+                    description = "Description was not provided."
 
-            cvss3_vector, cvss3_score = _get_cvssv3(vulnerability.get("CVSS"))
+                cvss3_vector, cvss3_score = _get_cvssv3(vulnerability.get("CVSS"))
 
-            finding = Finding(
-                title=title,
-                test=test,
-                description=description,
-                severity=severity,
-                mitigation="",  # todo add if necessary
-                component_name=vulnerability.get("PkgName"),
-                component_version=vulnerability.get("InstalledVersion"),
-                references=vulnerability.get("References"),
-                static_finding=False,
-                dynamic_finding=False,
-                vuln_id_from_tool=vulnerability.get("VulnerabilityID"),
-                cvss3_vector=cvss3_vector,
-                cvss3_score=cvss3_score
-            )
-
-            if report_date:
-                finding.date = report_date
-
-            vulnerability_ids = []
-
-            if vulnerability.get("VulnerabilityID"):
-                vulnerability_ids.append(vulnerability.get("VulnerabilityID"))
-
-            cwes = _get_cwes_id(vulnerability.get("CweIDs"))
-            if cwes and len(cwes) > 1:
-                # FIXME support more than one CWE
-                LOGGER.debug(
-                    f"more than one CWE for a finding {cwes}. NOT supported by parser API"
+                finding = Finding(
+                    title=title,
+                    test=test,
+                    description=description,
+                    severity=severity,
+                    mitigation="",  # todo add if necessary
+                    component_name=vulnerability.get("PkgName"),
+                    component_version=vulnerability.get("InstalledVersion"),
+                    references=vulnerability.get("References"),
+                    static_finding=False,
+                    dynamic_finding=False,
+                    vuln_id_from_tool=vulnerability.get("VulnerabilityID"),
+                    cvss3_vector=cvss3_vector,
+                    cvss3_score=cvss3_score,
+                    has_exploit=_get_has_exploit(vulnerability.get("CVSS"))
                 )
-            if cwes and len(cwes) > 0:
-                finding.cwe = cwes[0]
-            findings.append(finding)
+
+                if report_date:
+                    finding.date = report_date
+
+                vulnerability_ids = []
+
+                if vulnerability.get("VulnerabilityID"):
+                    vulnerability_ids.append(vulnerability.get("VulnerabilityID"))
+
+                cwes = _get_cwes_id(vulnerability.get("CweIDs"))
+                if cwes and len(cwes) > 1:
+                    # FIXME support more than one CWE
+                    LOGGER.debug(
+                        f"more than one CWE for a finding {cwes}. NOT supported by parser API"
+                    )
+                if cwes and len(cwes) > 0:
+                    finding.cwe = cwes[0]
+                findings.append(finding)
         return findings
 
 

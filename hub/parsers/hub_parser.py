@@ -2,7 +2,7 @@ import json
 import uuid
 from typing import Any
 
-from config.enums import SourceTypes, ScannerTypes
+from config.enums import SourceTypes, ScannerTypes, DEFAULT_REPORT_VERSION, report_version_at_least
 from config.constances import PARSERS_NAMES_TO_FIX
 from converters.models import Finding
 from hub.models.hub import ScanResult, Scan, ScanDetail, Report, FindingHubSast, FindingHubDast, FindingHubScaS, HttpMessage
@@ -19,7 +19,7 @@ class HubParser:
         self.results = results
 
         self.args = args
-        self.report_version = getattr(args, 'report_version', '1.0.1')
+        self.report_version = getattr(args, 'report_version', None) or DEFAULT_REPORT_VERSION
         self.__create_source()
 
         self.rules: dict[str, Rule] = {}
@@ -60,10 +60,20 @@ class HubParser:
             return ScannerTypes.DAST.value
         return ScannerTypes.SCA_S.value
 
+    def __supports(self, minimum_version: str) -> bool:
+        """Поддерживает ли выбранная версия схемы отчёта возможности, появившиеся в `minimum_version`."""
+        return report_version_at_least(self.report_version, minimum_version)
+
+    def __get_has_exploit(self, finding: Finding) -> bool | None:
+        """hasExploit sca_s-правила: только для схемы >= 1.0.3, иначе поле в отчёт не пишется."""
+        if not self.__supports("1.0.3") or finding.has_exploit is None:
+            return None
+        return bool(finding.has_exploit)
+
     def __parse_reqresps(self, finding: Finding):
         """
         Save request and responses.
-        For v1.0.2: populate structured httpRequest/httpResponse on DAST findings.
+        For v1.0.2 and newer: populate structured httpRequest/httpResponse on DAST findings.
         For v1.0.1: append to description as before.
         """
         if not hasattr(finding, "unsaved_req_resp") or not isinstance(finding.unsaved_req_resp, list):
@@ -73,10 +83,10 @@ class HubParser:
         if not hub_finding:
             return
 
-        if (self.report_version == "1.0.2"
+        if (self.__supports("1.0.2")
                 and isinstance(hub_finding, FindingHubDast)
                 and finding.unsaved_req_resp):
-            # For v1.0.2, use structured httpRequest/httpResponse from first req/resp pair
+            # For v1.0.2+, use structured httpRequest/httpResponse from first req/resp pair
             first_rr = finding.unsaved_req_resp[0] if finding.unsaved_req_resp else None
             if first_rr and isinstance(first_rr, dict):
                 req_raw = first_rr.get("req", "")
@@ -199,7 +209,8 @@ class HubParser:
                     cwe=[RuleCwe(idx=finding.cwe)] if finding.cwe else None,
                     references=finding.references,
                     cvss3_vector=finding.cvss3_vector,
-                    cvss3_score=finding.cvss3_score
+                    cvss3_score=finding.cvss3_score,
+                    has_exploit=self.__get_has_exploit(finding)
                 )
             else:
                 self.rules[finding.ruleId] = Rule(
@@ -214,6 +225,15 @@ class HubParser:
             if not self.rules[finding.ruleId].cwe:
                 self.rules[finding.ruleId].cwe = []
             self.rules[finding.ruleId].cwe.append(RuleCwe(idx=finding.cwe))
+        self.__merge_has_exploit(finding)
+
+    def __merge_has_exploit(self, finding: Finding):
+        rule = self.rules.get(finding.ruleId)
+        if not isinstance(rule, RuleSCA):
+            return
+        has_exploit = self.__get_has_exploit(finding)
+        if has_exploit is not None and (rule.hasExploit is None or has_exploit):
+            rule.hasExploit = has_exploit
 
     def __check_rule_id(self, finding: Finding):
         if not finding.ruleId:
