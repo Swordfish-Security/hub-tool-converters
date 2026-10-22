@@ -14,7 +14,8 @@
       "description": "The Hub.Report format version of this log file",
       "enum": [
         "1.0.1",
-        "1.0.2"
+        "1.0.2",
+        "1.0.3"
       ],
       "type": "string"
     },
@@ -497,6 +498,13 @@
         "extraInformation": {
           "description": "Additional Information about Rule",
           "$ref": "#/definitions/propertyBag"
+        },
+        "hasExploit": {
+          "description": "Public exploit availability for the vulnerability (schema version 1.0.3 and newer, optional)",
+          "type": [
+            "boolean",
+            "null"
+          ]
         }
       }
     },

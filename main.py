@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 from config.constances import PARSER_CLASSES
-from config.enums import SourceTypes, BuildTool, Stage
+from config.enums import SourceTypes, BuildTool, Stage, REPORT_VERSIONS, DEFAULT_REPORT_VERSION
 from hub.parsers.hub_parser import HubParser
 from utils import check_keys_parser_classes, validate_args
 
@@ -21,6 +21,7 @@ class Argument:
     commit: Optional[str] = None
     build_tool: Optional[str] = None
     stage: Optional[str] = None
+    report_version: str = DEFAULT_REPORT_VERSION
 
 class Converter:
     def __init__(self, args: Argument):
@@ -125,9 +126,9 @@ if __name__ == '__main__':
     parser.add_argument(
         "--report-version",
         type=str,
-        choices=["1.0.1", "1.0.2"],
-        help="AppSec.Hub report schema version (default: 1.0.1)",
-        default="1.0.1",
+        choices=list(REPORT_VERSIONS),
+        help=f"AppSec.Hub report schema version (default: {DEFAULT_REPORT_VERSION})",
+        default=DEFAULT_REPORT_VERSION,
         dest="report_version"
     )
 

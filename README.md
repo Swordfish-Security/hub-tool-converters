@@ -30,7 +30,7 @@
 | -c; --commit      | Коммит в репозитории, по которому запускалось сканирование                                                                             | Нет                                                   |
 | -bt; --build-tool | Сборщик (--help для просмотра всех сборщиков)                                                                                          | Нет, по умолчанию maven                               |
 | --stage           | Стадия экземпляра (ST - System Test, UAT - User Acceptance Test, IAT - Integration Acceptance Test, STG - Stage, PROD - Production)    | Нет                                                   |
-| --report-version  | Версия формата отчёта AppSec.HUB (1.0.1 или 1.0.2)                                                                                    | Нет, по умолчанию 1.0.1                               |
+| --report-version  | Версия формата отчёта AppSec.HUB (1.0.1, 1.0.2 или 1.0.3, см. раздел «Версии схемы отчёта»)                                           | Нет, по умолчанию 1.0.1                               |
 
 ### Список поддерживаемых форматов
 
