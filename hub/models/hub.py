@@ -32,7 +32,7 @@ class Report:
     version: str = "1.0.1"
     scans: list[Scan]
 
-    OPTIONAL_KEYS = ("httpRequest", "httpResponse", "hasExploit")
+    OPTIONAL_KEYS = ("httpRequest", "httpResponse", "hasExploit", "relation")
 
     def to_dict(self) -> dict:
         result = asdict(self)
@@ -145,6 +145,7 @@ class FindingHubScaS:
     locationId: str
     status: str
     description: str
+    relation: str | None = None  # схема >= 1.0.3; None — не пишется в отчёт
 
     def __init__(
             self,
@@ -153,7 +154,8 @@ class FindingHubScaS:
             locationId: str,
             description: str,
             status: str,
-            type: str
+            type: str,
+            relation: str | None = None
     ):
         self.type = type
         self.id = idx
@@ -161,4 +163,5 @@ class FindingHubScaS:
         self.locationId = locationId
         self.description = description
         self.status = status
+        self.relation = relation
         super().__init__()

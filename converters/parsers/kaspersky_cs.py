@@ -1,4 +1,4 @@
-import dateutil
+import dateutil.parser
 import json
 import logging
 import re
@@ -40,7 +40,7 @@ def _get_cwes_id(cwes: list):
 
 def _fix_severity(severity):
     possible_severities = ["Low", "Medium", "High", "Critical"]
-    severity = severity.capitalize()
+    severity = severity.capitalize() if isinstance(severity, str) else None
     if severity is None or severity not in possible_severities:
         severity = "Medium"
     return severity
@@ -62,10 +62,74 @@ def _get_has_exploit(cvss_dict) -> bool | None:
     return match.group(1) in _EXPLOIT_EXISTS
 
 
+_ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}")
+_NO_VENDOR_FIX = {"", "-"}
+
+
+def _parse_report_date(value):
+    """Дата отчёта KCS: ISO в выгрузке через API, «ДД.ММ.ГГГГ, ЧЧ:ММ:СС» в выгрузке из веб-интерфейса."""
+    if not value:
+        return None
+    try:
+        return dateutil.parser.parse(value, dayfirst=not _ISO_DATE.match(value))
+    except (ValueError, OverflowError):
+        LOGGER.warning(f"unsupported report date format: {value}")
+        return None
+
+
+def _split_resource(resource):
+    """«<пакет> <версия>» из поля resource отчёта Images Detailed Report."""
+    parts = (resource or "").strip().split(" ", 1)
+    name = parts[0] or None
+    version = parts[1].strip() if len(parts) > 1 and parts[1].strip() else None
+    return name, version
+
+
 class KasperskyCSJSONParser:
     def _get_findings_json(self, file, test):
         """Load a KasperskyCS file in JSON format"""
         data = json.load(file)
+        if isinstance(data, dict) and isinstance(data.get("images"), list):
+            return self._get_findings_images_report(data, test)
+        return self._get_findings_scan_report(data, test)
+
+    def _get_findings_images_report(self, data, test):
+        """Отчёт «Images Detailed Report» из веб-интерфейса KCS 2.x: images[].vulnerabilities[]."""
+        findings = []
+        for image in data.get("images") or []:
+            report_date = _parse_report_date(image.get("scanDate")) or _parse_report_date(data.get("generatedAt"))
+            for vulnerability in image.get("vulnerabilities") or []:
+                vulnerability_id = vulnerability.get("name")
+                component_name, component_version = _split_resource(vulnerability.get("resource"))
+                vendor_fix = (vulnerability.get("vendorFix") or "").strip()
+                references = [link.get("link") for link in vulnerability.get("dbLinks") or [] if link.get("link")]
+                exploit = vulnerability.get("exploit")
+
+                description = f"**Resource:** {vulnerability.get('resource')}"
+                if vendor_fix not in _NO_VENDOR_FIX:
+                    description += f"\n**Fixed version:** {vendor_fix}"
+
+                finding = Finding(
+                    title=f"{component_name}:{component_version} | {vulnerability_id}",
+                    test=test,
+                    description=description,
+                    severity=_fix_severity(vulnerability.get("severity")),
+                    mitigation=f"Upgrade to version {vendor_fix}" if vendor_fix not in _NO_VENDOR_FIX else "",
+                    component_name=component_name,
+                    component_version=component_version,
+                    references=references,
+                    static_finding=False,
+                    dynamic_finding=False,
+                    vuln_id_from_tool=vulnerability_id,
+                    has_exploit=exploit if isinstance(exploit, bool) else None
+                )
+                if report_date:
+                    finding.date = report_date
+                findings.append(finding)
+        return findings
+
+    def _get_findings_scan_report(self, data, test):
+        """Отчёт сканирования KCS в формате Results[] (выгрузка через API / CLI)."""
         # Отчёт KCS содержит несколько блоков результатов (пакеты ОС, языковые пакеты, лицензии...);
         # уязвимости читаются из всех блоков, где они есть.
         results_blocks = data.get("Results") or []

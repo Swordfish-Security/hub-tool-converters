@@ -1,0 +1,141 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "0af70e6f-08c6-4e2e-82cb-0010c07369a3",
+                "description": "Import kaspersky-cs results"
+            },
+            "source": [
+                {
+                    "id": "3ceb0d42-f0c4-443e-8d46-12b0966a460b",
+                    "type": "artifact",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git"
+                }
+            ],
+            "tool": {
+                "product": "kaspersky-cs"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "sca_s",
+                            "name": "CVE-2024-1001",
+                            "id": "CVE-2024-1001",
+                            "severity": "Critical",
+                            "cwe": null,
+                            "description": "**Resource:** libsample 1.2.3-1\n**Fixed version:** 1.2.4-1",
+                            "cveId": "CVE-2024-1001",
+                            "cvss3Vector": null,
+                            "cvss3Score": null,
+                            "references": [
+                                "https://nvd.nist.gov/vuln/detail/CVE-2024-1001",
+                                "https://www.exploit-db.com/exploits/00001"
+                            ]
+                        },
+                        {
+                            "type": "sca_s",
+                            "name": "CVE-2024-1002",
+                            "id": "CVE-2024-1002",
+                            "severity": "High",
+                            "cwe": null,
+                            "description": "**Resource:** libother 2:3.4.5.astra-1",
+                            "cveId": "CVE-2024-1002",
+                            "cvss3Vector": null,
+                            "cvss3Score": null,
+                            "references": [
+                                "https://nvd.nist.gov/vuln/detail/CVE-2024-1002"
+                            ]
+                        },
+                        {
+                            "type": "sca_s",
+                            "name": "CVE-2024-1003",
+                            "id": "CVE-2024-1003",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "**Resource:** libsample 1.2.3-1",
+                            "cveId": "CVE-2024-1003",
+                            "cvss3Vector": null,
+                            "cvss3Score": null,
+                            "references": []
+                        },
+                        {
+                            "type": "sca_s",
+                            "name": "TEMP-0000001-ABCDEF",
+                            "id": "TEMP-0000001-ABCDEF",
+                            "severity": "Medium",
+                            "cwe": null,
+                            "description": "**Resource:** tool-utils 0.9.1",
+                            "cveId": "TEMP-0000001-ABCDEF",
+                            "cvss3Vector": null,
+                            "cvss3Score": null,
+                            "references": [
+                                "https://vdb.example.local/TEMP-0000001-ABCDEF"
+                            ]
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "component",
+                            "id": "libsample@1.2.3-1",
+                            "sourceId": "3ceb0d42-f0c4-443e-8d46-12b0966a460b",
+                            "componentName": "libsample",
+                            "componentVersion": "1.2.3-1"
+                        },
+                        {
+                            "type": "component",
+                            "id": "libother@2:3.4.5.astra-1",
+                            "sourceId": "3ceb0d42-f0c4-443e-8d46-12b0966a460b",
+                            "componentName": "libother",
+                            "componentVersion": "2:3.4.5.astra-1"
+                        },
+                        {
+                            "type": "component",
+                            "id": "tool-utils@0.9.1",
+                            "sourceId": "3ceb0d42-f0c4-443e-8d46-12b0966a460b",
+                            "componentName": "tool-utils",
+                            "componentVersion": "0.9.1"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "sca_s",
+                            "id": "c2c22b1e5085717db24234519b1eb222",
+                            "ruleId": "CVE-2024-1001",
+                            "locationId": "libsample@1.2.3-1",
+                            "status": "To Verify",
+                            "description": "<p><strong>Resource:</strong> libsample 1.2.3-1<br /><strong>Fixed version:</strong> 1.2.4-1</p>"
+                        },
+                        {
+                            "type": "sca_s",
+                            "id": "b08f5d8408796a58e2f2dc673c83b447",
+                            "ruleId": "CVE-2024-1002",
+                            "locationId": "libother@2:3.4.5.astra-1",
+                            "status": "To Verify",
+                            "description": "<p><strong>Resource:</strong> libother 2:3.4.5.astra-1</p>"
+                        },
+                        {
+                            "type": "sca_s",
+                            "id": "fcc16f1ce373e5ce0dc87109080d31ee",
+                            "ruleId": "CVE-2024-1003",
+                            "locationId": "libsample@1.2.3-1",
+                            "status": "To Verify",
+                            "description": "<p><strong>Resource:</strong> libsample 1.2.3-1</p>"
+                        },
+                        {
+                            "type": "sca_s",
+                            "id": "c96e9072fa91dfd28760d5a51caf3fc0",
+                            "ruleId": "TEMP-0000001-ABCDEF",
+                            "locationId": "tool-utils@0.9.1",
+                            "status": "To Verify",
+                            "description": "<p><strong>Resource:</strong> tool-utils 0.9.1</p>"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}

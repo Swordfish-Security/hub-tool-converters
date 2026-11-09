@@ -36,6 +36,39 @@
 
 bandit, burp, checkov, gitleaks, gosec, horusec, mobsf, sarif, semgrep, solidpoint, spotbugs, trufflehog, cyclonedx, kaspersky-cs, svace(только .csv, в формате .sarif запускать через sarif)
 
+Для kaspersky-cs поддерживаются оба вида JSON-отчёта Kaspersky Container Security:
+- отчёт сканирования с блоками `Results[]` (выгрузка через API/CLI);
+- «Images Detailed Report» из веб-интерфейса KCS 2.x (`images[].vulnerabilities[]`).
+
+### Версии схемы отчёта
+
+| Версия | Что добавлено | Минимальная версия AppSec.Hub |
+|--------|---------------|-------------------------------|
+| 1.0.1  | Базовая схема | — |
+| 1.0.2  | Структурированные `httpRequest` / `httpResponse` у DAST-находок | — |
+| 1.0.3  | Необязательные поля `hasExploit` (правило `sca_s`) и `relation` (находки `sca_s` и `sca_c`) | 2026.4.2 |
+
+Отчёт версии 1.0.3 со значениями этих полей загружается только в AppSec.Hub, который их знает: более ранние версии не принимают отчёт с неизвестными полями целиком. Поля необязательны: если значение не известно, поле не пишется, и отчёт остаётся совместимым с отчётами предыдущих версий.
+
+Поля версии 1.0.3 используются в фильтрах списка уязвимостей AppSec.Hub «by exploit» и «by relation» — так же, как значения, полученные из интеграции с CodeScoring.
+
+| Поле | Где | Значения | Смысл |
+|------|-----|----------|-------|
+| `hasExploit` | `rules[]` с `"type": "sca_s"` | `true` / `false` | Для уязвимости известен публичный эксплойт. `false` пишется явно, когда инструмент сообщает, что эксплойта нет |
+| `relation` | `findings[]` с `"type": "sca_s"` или `"sca_c"` | `direct` / `indirect` (`transitive` — синоним `indirect`) | Уязвимый компонент — прямая или транзитивная зависимость |
+
+Пример фрагмента отчёта:
+```json
+{
+  "rules": [
+    {"type": "sca_s", "id": "CVE-2024-0001", "name": "CVE-2024-0001", "severity": "High", "cveId": "CVE-2024-0001", "hasExploit": true}
+  ],
+  "findings": [
+    {"type": "sca_s", "id": "finding-1", "ruleId": "CVE-2024-0001", "locationId": "libfoo@1.0", "relation": "direct"}
+  ]
+}
+```
+
 ## Пример запуска
 
 1. Создание виртуального окружения и его активация
@@ -64,6 +97,11 @@ python main.py -s svace -t CODEBASE --format sarif -f tests/codebase/svace/svace
 
 ```bash
 python main.py -s kaspersky-cs -t ARTIFACT -f input-file.json -o output-file.json -n artifact_name -u https://artifact-url.rpm
+```
+
+С признаком эксплойта (схема 1.0.3):
+```bash
+python main.py -s kaspersky-cs -t ARTIFACT -f input-file.json -o output-file.json -n artifact_name -u https://artifact-url.rpm --report-version 1.0.3
 ```
 
 5. Запуск конвертера для SolidPoint DAST

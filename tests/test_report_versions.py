@@ -201,3 +201,94 @@ def test_kaspersky_cs_fixture_report_1_0_1_has_no_has_exploit():
 
     assert all('hasExploit' not in rule for rule in report['scans'][0]['results'][0]['rules'])
     validate(report, _schema())
+
+
+# --- тип зависимости (relation) у sca_s-находки ---
+
+def _single_finding(report: dict) -> dict:
+    return report['scans'][0]['results'][0]['findings'][0]
+
+
+@pytest.mark.parametrize('version', ['1.0.1', '1.0.2'])
+def test_relation_is_not_emitted_for_older_schema_versions(version):
+    report = _report([_sca_finding(relation='direct')], version)
+
+    assert 'relation' not in _single_finding(report)
+    validate(report, _schema())
+
+
+@pytest.mark.parametrize('value, expected', [
+    ('direct', 'direct'),
+    ('Indirect', 'indirect'),
+    ('transitive', 'indirect'),   # синоним, в Hub хранится как INDIRECT
+])
+def test_relation_is_emitted_for_schema_1_0_3(value, expected):
+    report = _report([_sca_finding(relation=value)], '1.0.3')
+
+    assert _single_finding(report)['relation'] == expected
+    validate(report, _schema())
+
+
+@pytest.mark.parametrize('value', [None, '', 'optional'])
+def test_unknown_or_unset_relation_is_omitted_for_schema_1_0_3(value):
+    # неизвестное значение не пишем: бэкенд отклонил бы находку целиком
+    report = _report([_sca_finding(relation=value)], '1.0.3')
+
+    assert 'relation' not in _single_finding(report)
+    validate(report, _schema())
+
+
+# --- KCS: отчёт «Images Detailed Report» из веб-интерфейса (images[].vulnerabilities[]) ---
+
+KCS_IMAGES_FIXTURE = './tests/artifact/kaspersky_cs/kcs-images-detailed-report.json'
+
+
+def _kcs_images_findings() -> list[Finding]:
+    with open(KCS_IMAGES_FIXTURE, 'r', encoding='utf-8') as f:
+        return PARSER_CLASSES['kaspersky_cs']().get_findings(f, '')
+
+
+def test_kaspersky_cs_images_report_is_parsed():
+    findings = {f.vuln_id_from_tool: f for f in _kcs_images_findings()}
+
+    assert set(findings) == {'CVE-2024-1001', 'CVE-2024-1002', 'CVE-2024-1003', 'TEMP-0000001-ABCDEF'}
+
+    critical = findings['CVE-2024-1001']
+    assert (critical.component_name, critical.component_version) == ('libsample', '1.2.3-1')
+    assert critical.title == 'libsample:1.2.3-1 | CVE-2024-1001'
+    assert critical.severity == 'Critical'
+    assert critical.has_exploit is True
+    assert critical.mitigation == 'Upgrade to version 1.2.4-1'
+    assert critical.references == [
+        'https://nvd.nist.gov/vuln/detail/CVE-2024-1001', 'https://www.exploit-db.com/exploits/00001'
+    ]
+    assert (critical.date.year, critical.date.month, critical.date.day) == (2026, 10, 22)  # ДД.ММ.ГГГГ
+
+    no_fix = findings['CVE-2024-1002']
+    assert (no_fix.component_name, no_fix.component_version) == ('libother', '2:3.4.5.astra-1')
+    assert no_fix.has_exploit is False
+    assert no_fix.mitigation == ''
+
+    negligible = findings['TEMP-0000001-ABCDEF']
+    assert negligible.severity == 'Medium'    # Negligible нет в шкале Hub, как и в отчёте Results[]
+    assert negligible.has_exploit is None     # поля exploit нет
+
+
+def test_kaspersky_cs_images_report_converts_to_valid_hub_report():
+    report = _report(_kcs_images_findings(), '1.0.3')
+    rules = _rules_by_cve(report)
+    result = report['scans'][0]['results'][0]
+
+    assert rules['CVE-2024-1001']['hasExploit'] is True
+    assert rules['CVE-2024-1002']['hasExploit'] is False
+    assert 'hasExploit' not in rules['TEMP-0000001-ABCDEF']
+    assert len(result['findings']) == 4
+    assert len(result['locations']) == 3   # libsample встречается в двух уязвимостях
+    validate(report, _schema())
+
+
+def test_kaspersky_cs_images_report_1_0_1_is_valid():
+    report = _report(_kcs_images_findings(), '1.0.1')
+
+    assert all('hasExploit' not in rule for rule in report['scans'][0]['results'][0]['rules'])
+    validate(report, _schema())

@@ -70,6 +70,15 @@ class HubParser:
             return None
         return bool(finding.has_exploit)
 
+    def __get_relation(self, finding: Finding) -> str | None:
+        """relation sca_s-находки: только для схемы >= 1.0.3; 'transitive' приводится к 'indirect'."""
+        if not self.__supports("1.0.3") or not finding.relation:
+            return None
+        relation = str(finding.relation).strip().lower()
+        if relation == "transitive":
+            return "indirect"
+        return relation if relation in ("direct", "indirect") else None
+
     def __parse_reqresps(self, finding: Finding):
         """
         Save request and responses.
@@ -155,7 +164,8 @@ class HubParser:
                 locationId=finding.file_key,
                 description=f"{finding.description}\n{finding.description_references}" if finding.description_references else finding.description,
                 status=self.__get_status(finding),
-                type=scanner_type
+                type=scanner_type,
+                relation=self.__get_relation(finding)
             )
 
         # Markdown to HTML
