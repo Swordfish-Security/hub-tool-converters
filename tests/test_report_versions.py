@@ -292,3 +292,34 @@ def test_kaspersky_cs_images_report_1_0_1_is_valid():
 
     assert all('hasExploit' not in rule for rule in report['scans'][0]['results'][0]['rules'])
     validate(report, _schema())
+
+
+# --- эталон SolidPoint для схемы 1.0.2 (структурированные httpRequest / httpResponse) ---
+
+def _without_generated_ids(report: dict) -> dict:
+    for scan in report['scans']:
+        scan['scanDetails']['id'] = None
+        for source in scan['source']:
+            source['id'] = None
+        for result in scan['results']:
+            for location in result['locations']:
+                location['sourceId'] = None
+    return report
+
+
+def test_solidpoint_report_1_0_2_matches_golden_file():
+    args = ArgsInstance()
+    args.scanner = 'solidpoint'
+    args.filename = './tests/instance/solidpoint/solidpoint_test.json'
+    args.name = 'test-app'
+    args.url = 'http://172.16.34.30:3000'
+    args.report_version = '1.0.2'
+    with open(args.filename, 'r', encoding='utf-8') as f:
+        findings = PARSER_CLASSES['solidpoint']().get_findings(f, '')
+    parser = HubParser(args=args, results=findings)
+    parser.parse()
+
+    with open('./tests/instance/solidpoint/solidpoint_test_v1_0_2_hub.json', 'r', encoding='utf-8') as f:
+        golden = json.load(f)
+
+    assert _without_generated_ids(parser.get_report()) == _without_generated_ids(golden)

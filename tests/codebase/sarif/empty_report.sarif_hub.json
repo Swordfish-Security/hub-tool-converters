@@ -1,0 +1,35 @@
+{
+    "version": "1.0.1",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "9dfd201e-5772-465b-8686-d005255a472a",
+                "description": "Import sarif results"
+            },
+            "source": [
+                {
+                    "id": "92365f9b-f978-473d-92f8-e188a4dc3f5f",
+                    "type": "codebase",
+                    "name": "hub-tool-converters",
+                    "url": "https://github.com/Swordfish-Security/hub-tool-converters.git",
+                    "checkoutPath": "/",
+                    "branch": "master",
+                    "commit": "master",
+                    "vcsType": "git",
+                    "buildTool": "maven"
+                }
+            ],
+            "tool": {
+                "product": "sarif"
+            },
+            "results": [
+                {
+                    "rules": [],
+                    "locations": [],
+                    "findings": []
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}
