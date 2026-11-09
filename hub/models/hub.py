@@ -32,26 +32,28 @@ class Report:
     version: str = "1.0.1"
     scans: list[Scan]
 
+    OPTIONAL_KEYS = ("httpRequest", "httpResponse", "hasExploit", "relation")
+
     def to_dict(self) -> dict:
         result = asdict(self)
         result["$schema"] = self.schema
         del result["schema"]
-        # Clean up optional DAST fields (httpRequest/httpResponse) when not set
-        self._remove_optional_dast_fields(result)
+        # Clean up optional fields when not set, so reports of older schema versions stay unchanged
+        self._remove_optional_fields(result)
         return result
 
-    @staticmethod
-    def _remove_optional_dast_fields(d):
-        """Remove httpRequest/httpResponse keys when they are None (v1.0.1 compat)."""
+    @classmethod
+    def _remove_optional_fields(cls, d):
+        """Remove optional keys when they are None (compat with older schema versions)."""
         if isinstance(d, dict):
-            for key in ("httpRequest", "httpResponse"):
+            for key in cls.OPTIONAL_KEYS:
                 if key in d and d[key] is None:
                     del d[key]
             for v in d.values():
-                Report._remove_optional_dast_fields(v)
+                cls._remove_optional_fields(v)
         elif isinstance(d, list):
             for item in d:
-                Report._remove_optional_dast_fields(item)
+                cls._remove_optional_fields(item)
 
 
 @dataclass(kw_only=False, eq=False, order=False)
@@ -143,6 +145,7 @@ class FindingHubScaS:
     locationId: str
     status: str
     description: str
+    relation: str | None = None  # схема >= 1.0.3; None — не пишется в отчёт
 
     def __init__(
             self,
@@ -151,7 +154,8 @@ class FindingHubScaS:
             locationId: str,
             description: str,
             status: str,
-            type: str
+            type: str,
+            relation: str | None = None
     ):
         self.type = type
         self.id = idx
@@ -159,4 +163,5 @@ class FindingHubScaS:
         self.locationId = locationId
         self.description = description
         self.status = status
+        self.relation = relation
         super().__init__()

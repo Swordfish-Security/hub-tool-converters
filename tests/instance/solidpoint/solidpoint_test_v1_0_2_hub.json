@@ -1,0 +1,196 @@
+{
+    "version": "1.0.2",
+    "scans": [
+        {
+            "scanDetails": {
+                "id": "f4a3c9e8-9d05-4954-82a3-edab656381e4",
+                "description": "Import solidpoint results"
+            },
+            "source": [
+                {
+                    "id": "98f5e38d-b989-44f8-b23a-359b52d3b5c4",
+                    "type": "instance",
+                    "name": "test-app",
+                    "url": "http://172.16.34.30:3000",
+                    "stage": "ST"
+                }
+            ],
+            "tool": {
+                "product": "solidpoint"
+            },
+            "results": [
+                {
+                    "rules": [
+                        {
+                            "type": "dast",
+                            "name": "Shell injection",
+                            "id": "Shell injection",
+                            "severity": "Critical",
+                            "cwe": [
+                                {
+                                    "id": 78
+                                }
+                            ],
+                            "description": "Shell injection\n\n\n"
+                        },
+                        {
+                            "type": "dast",
+                            "name": "CAA Record",
+                            "id": "CAA Record",
+                            "severity": "Low",
+                            "cwe": [
+                                {
+                                    "id": 200
+                                }
+                            ],
+                            "description": "CAA Record\n\nA CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.\n"
+                        },
+                        {
+                            "type": "dast",
+                            "name": "robots.txt endpoint prober",
+                            "id": "robots.txt endpoint prober",
+                            "severity": "Low",
+                            "cwe": null,
+                            "description": "robots.txt endpoint prober\n\n\n"
+                        }
+                    ],
+                    "locations": [
+                        {
+                            "type": "instance",
+                            "id": "1cd4eb00ee1aec5ee7a568a9e554a073",
+                            "sourceId": "98f5e38d-b989-44f8-b23a-359b52d3b5c4",
+                            "url": "http://172.16.34.30:3000/api/Challenges/?name=Score%20Board",
+                            "description": "**URL:** GET http://172.16.34.30:3000/api/Challenges/?name=Score%20Board\n**Analyzer:** Shell injection scanner\n**Module:** shell-injection-scanner\n**Confidence:** tentative\n\n**Payloads:**\nThe value of the &#34;name&#34; parameter in the query string appears to be vulnerable to shell injection attacks.\nThe payload ping -c 5 127\\.0\\.0\\.1 was submitted.\n1 requests were made. The delays were: 2m47.672809841s.\n**Payload:** `ping -c 5 127\\.0\\.0\\.1`"
+                        },
+                        {
+                            "type": "instance",
+                            "id": "0cba79a4892609c4bddd0d51cc15b0dd",
+                            "sourceId": "98f5e38d-b989-44f8-b23a-359b52d3b5c4",
+                            "url": "http://172.16.34.30:3000/rest/products/38/reviews",
+                            "description": "**URL:** GET http://172.16.34.30:3000/rest/products/38/reviews\n**Analyzer:** Shell injection scanner\n**Module:** shell-injection-scanner\n**Confidence:** tentative\n\n**Payloads:**\nThe pathname parameter #1 appears to be vulnerable to shell injection attacks.\nThe payload %27%3B%20sleep%205%3B%20%27 was submitted.\n1 requests were made. The delays were: 3.026s.\n**Payload:** `%27%3B%20sleep%205%3B%20%27`"
+                        },
+                        {
+                            "type": "instance",
+                            "id": "1d7395893423945d60b359a0e5630021",
+                            "sourceId": "98f5e38d-b989-44f8-b23a-359b52d3b5c4",
+                            "url": "http://172.16.34.30:3000/rest/products/37/reviews",
+                            "description": "**URL:** GET http://172.16.34.30:3000/rest/products/37/reviews\n**Analyzer:** Shell injection scanner\n**Module:** shell-injection-scanner\n**Confidence:** tentative\n\n**Payloads:**\nThe pathname parameter #4 appears to be vulnerable to shell injection attacks.\nThe payload %60sleep%203%60 was submitted.\n1 requests were made. The delays were: 3.338s.\n**Payload:** `%60sleep%203%60`"
+                        },
+                        {
+                            "type": "instance",
+                            "id": "6653b551b82da90b83974fdaf25ed769",
+                            "sourceId": "98f5e38d-b989-44f8-b23a-359b52d3b5c4",
+                            "url": "http://172.16.34.30:3000/",
+                            "description": "**URL:** http://172.16.34.30:3000/\n**Analyzer:** Active Signature Scanner\n**Module:** nuclei-runner\n**Confidence:** certain\n\nA CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.\n\n**Payloads:**\n**Payload:** `http://172.16.34.30:3000/`"
+                        }
+                    ],
+                    "findings": [
+                        {
+                            "type": "dast",
+                            "id": "e4ce1e5efafc0b496b91153396fcbd0a",
+                            "ruleId": "Shell injection",
+                            "locationId": "1cd4eb00ee1aec5ee7a568a9e554a073",
+                            "url": "http://172.16.34.30:3000/api/Challenges/?name=Score%20Board",
+                            "status": "To Verify",
+                            "description": "<p><strong>URL:</strong> GET http://172.16.34.30:3000/api/Challenges/?name=Score%20Board<br /><strong>Analyzer:</strong> Shell injection scanner<br /><strong>Module:</strong> shell-injection-scanner<br /><strong>Confidence:</strong> tentative</p><p><strong>Payloads:</strong><br />The value of the &#34;name&#34; parameter in the query string appears to be vulnerable to shell injection attacks.<br />The payload ping -c 5 127.0.0.1 was submitted.<br />1 requests were made. The delays were: 2m47.672809841s.<br /><strong>Payload:</strong> <code>ping -c 5 127\\.0\\.0\\.1</code></p>",
+                            "httpRequest": {
+                                "header": "GET /api/Challenges/?name=ping%20-c%205%20127\\.0\\.0\\.1 HTTP/1.1\r\nHost: 172.16.34.30:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nProxy-Connection: keep-alive\r\nReferer: http://172.16.34.30:3000/\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36",
+                                "body": ""
+                            },
+                            "httpResponse": {
+                                "header": "HTTP/1.1 500 Internal Server Error\r\nContent-Length: 56\r\nContent-Type: text/plain; charset=utf-8\r\nDate: Wed, 28 Jan 2026 09:45:36 GMT\r\nX-Content-Type-Options: nosniff",
+                                "body": "dial tcp 172.16.34.30:3000: connect: connection refused\n"
+                            }
+                        },
+                        {
+                            "type": "dast",
+                            "id": "2af15a9194702012bda5dfe92b22dd6b",
+                            "ruleId": "Shell injection",
+                            "locationId": "0cba79a4892609c4bddd0d51cc15b0dd",
+                            "url": "http://172.16.34.30:3000/rest/products/38/reviews",
+                            "status": "To Verify",
+                            "description": "<p><strong>URL:</strong> GET http://172.16.34.30:3000/rest/products/38/reviews<br /><strong>Analyzer:</strong> Shell injection scanner<br /><strong>Module:</strong> shell-injection-scanner<br /><strong>Confidence:</strong> tentative</p><p><strong>Payloads:</strong><br />The pathname parameter #1 appears to be vulnerable to shell injection attacks.<br />The payload %27%3B%20sleep%205%3B%20%27 was submitted.<br />1 requests were made. The delays were: 3.026s.<br /><strong>Payload:</strong> <code>%27%3B%20sleep%205%3B%20%27</code></p>",
+                            "httpRequest": {
+                                "header": "GET /%27%3B%20sleep%205%3B%20%27 HTTP/1.1\r\nHost: 172.16.34.30:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nCookie: language=en; continueCode=lLrP7weLvQboX2p1gO354xyjdRLUETK7UQQ0Nl8K9mnRzD6qMaWVBJkEZYoO\r\nProxy-Connection: keep-alive\r\nReferer: http://172.16.34.30:3000/\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36",
+                                "body": ""
+                            },
+                            "httpResponse": {
+                                "header": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nConnection: keep-alive\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Wed, 28 Jan 2026 09:44:16 GMT\r\nEtag: W/\"7c3-19c03f6b075\"\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nLast-Modified: Wed, 28 Jan 2026 09:37:04 GMT\r\nVary: Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs",
+                                "body": "<!--\n  ~ Copyright (c) 2014-2023 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>"
+                            }
+                        },
+                        {
+                            "type": "dast",
+                            "id": "1411461a23f6d552fb7976e7a02531fe",
+                            "ruleId": "Shell injection",
+                            "locationId": "1d7395893423945d60b359a0e5630021",
+                            "url": "http://172.16.34.30:3000/rest/products/37/reviews",
+                            "status": "To Verify",
+                            "description": "<p><strong>URL:</strong> GET http://172.16.34.30:3000/rest/products/37/reviews<br /><strong>Analyzer:</strong> Shell injection scanner<br /><strong>Module:</strong> shell-injection-scanner<br /><strong>Confidence:</strong> tentative</p><p><strong>Payloads:</strong><br />The pathname parameter #4 appears to be vulnerable to shell injection attacks.<br />The payload %60sleep%203%60 was submitted.<br />1 requests were made. The delays were: 3.338s.<br /><strong>Payload:</strong> <code>%60sleep%203%60</code></p>",
+                            "httpRequest": {
+                                "header": "GET /rest/products/37/%60sleep%203%60 HTTP/1.1\r\nHost: 172.16.34.30:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nCookie: language=en; continueCode=lLrP7weLvQboX2p1gO354xyjdRLUETK7UQQ0Nl8K9mnRzD6qMaWVBJkEZYoO\r\nProxy-Connection: keep-alive\r\nReferer: http://172.16.34.30:3000/\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36",
+                                "body": ""
+                            },
+                            "httpResponse": {
+                                "header": "HTTP/1.1 500 Internal Server Error\r\nTransfer-Encoding: chunked\r\nAccess-Control-Allow-Origin: *\r\nConnection: keep-alive\r\nContent-Type: application/json; charset=utf-8\r\nDate: Wed, 28 Jan 2026 09:45:04 GMT\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nVary: Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs",
+                                "body": "{\n  \"error\": {\n    \"message\": \"Unexpected path: /rest/products/37/%60sleep%203%60\",\n    \"stack\": \"Error: Unexpected path: /rest/products/37/%60sleep%203%60\\n    at /juice-shop/build/routes/angular.js:15:18\\n    at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)\\n    at /juice-shop/node_modules/express/lib/router/index.js:286:9\\n    at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)\\n    at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)\\n    at /juice-shop/build/routes/verify.js:135:5\\n    at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)\\n    at /juice-shop/node_modules/express/lib/router/index.js:286:9\\n    at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)\\n    at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)\\n    at /juice-shop/build/routes/verify.js:71:5\\n    at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)\\n    at /juice-shop/node_modules/express/lib/router/index.js:286:9\\n    at Function.process_params (/juice-shop/node_modules/express/lib/router/index.js:346:12)\\n    at next (/juice-shop/node_modules/express/lib/router/index.js:280:10)\\n    at logger (/juice-shop/node_modules/morgan/index.js:144:5)\\n    at Layer.handle [as handle_request] (/juice-shop/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/juice-shop/node_modules/express/lib/router/index.js:328:13)\\n    at /juice-shop/node_modules/express/lib/router/index.js:286:9\"\n  }\n}"
+                            }
+                        },
+                        {
+                            "type": "dast",
+                            "id": "ffbc705de62759cf562f3056fb2a693b",
+                            "ruleId": "Shell injection",
+                            "locationId": "1d7395893423945d60b359a0e5630021",
+                            "url": "http://172.16.34.30:3000/rest/products/37/reviews",
+                            "status": "To Verify",
+                            "description": "<p><strong>URL:</strong> GET http://172.16.34.30:3000/rest/products/37/reviews<br /><strong>Analyzer:</strong> Shell injection scanner<br /><strong>Module:</strong> shell-injection-scanner<br /><strong>Confidence:</strong> tentative</p><p><strong>Payloads:</strong><br />The pathname parameter #1 appears to be vulnerable to shell injection attacks.<br />The payload $%28sleep%203%29 was submitted.<br />1 requests were made. The delays were: 3.044s.<br /><strong>Payload:</strong> <code>$%28sleep%203%29</code></p>",
+                            "httpRequest": {
+                                "header": "GET /$(sleep%203) HTTP/1.1\r\nHost: 172.16.34.30:3000\r\nAccept: application/json, text/plain, */*\r\nAccept-Encoding: gzip, deflate\r\nCookie: language=en; continueCode=lLrP7weLvQboX2p1gO354xyjdRLUETK7UQQ0Nl8K9mnRzD6qMaWVBJkEZYoO\r\nProxy-Connection: keep-alive\r\nReferer: http://172.16.34.30:3000/\r\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4889.0 Safari/537.36",
+                                "body": ""
+                            },
+                            "httpResponse": {
+                                "header": "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nAccept-Ranges: bytes\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: public, max-age=0\r\nConnection: keep-alive\r\nContent-Type: text/html; charset=UTF-8\r\nDate: Wed, 28 Jan 2026 09:44:55 GMT\r\nEtag: W/\"7c3-19c03f6b075\"\r\nFeature-Policy: payment 'self'\r\nKeep-Alive: timeout=5\r\nLast-Modified: Wed, 28 Jan 2026 09:37:04 GMT\r\nVary: Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Recruiting: /#/jobs",
+                                "body": "<!--\n  ~ Copyright (c) 2014-2023 Bjoern Kimminich & the OWASP Juice Shop contributors.\n  ~ SPDX-License-Identifier: MIT\n  --><!DOCTYPE html><html lang=\"en\"><head>\n  <meta charset=\"utf-8\">\n  <title>OWASP Juice Shop</title>\n  <meta name=\"description\" content=\"Probably the most modern and sophisticated insecure web application\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"icon\" type=\"image/x-icon\" href=\"assets/public/favicon_js.ico\">\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css\">\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>\n  <script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"#546e7a\", \"text\": \"#ffffff\" },\n          \"button\": { \"background\": \"#558b2f\", \"text\": \"#ffffff\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>\n<style>.bluegrey-lightgreen-theme.mat-app-background{background-color:#303030;color:#fff}@charset \"UTF-8\";@media screen and (-webkit-min-device-pixel-ratio:0){}</style><link rel=\"stylesheet\" href=\"styles.css\" media=\"print\" onload=\"this.media='all'\"><noscript><link rel=\"stylesheet\" href=\"styles.css\"></noscript></head>\n<body class=\"mat-app-background bluegrey-lightgreen-theme\">\n  <app-root></app-root>\n<script src=\"runtime.js\" type=\"module\"></script><script src=\"polyfills.js\" type=\"module\"></script><script src=\"vendor.js\" type=\"module\"></script><script src=\"main.js\" type=\"module\"></script>\n\n</body></html>"
+                            }
+                        },
+                        {
+                            "type": "dast",
+                            "id": "f0097203ece439825f1f5eb8db95e3f2",
+                            "ruleId": "CAA Record",
+                            "locationId": "6653b551b82da90b83974fdaf25ed769",
+                            "url": "http://172.16.34.30:3000/",
+                            "status": "To Verify",
+                            "description": "<p><strong>URL:</strong> http://172.16.34.30:3000/<br /><strong>Analyzer:</strong> Active Signature Scanner<br /><strong>Module:</strong> nuclei-runner<br /><strong>Confidence:</strong> certain</p><p>A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.</p><p><strong>Payloads:</strong><br /><strong>Payload:</strong> <code>http://172.16.34.30:3000/</code></p>",
+                            "httpRequest": {
+                                "header": ";; opcode: QUERY, status: NOERROR, id: 33967\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1",
+                                "body": ";; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;http://172.16.34.30:3000/.\tIN\t CAA\n"
+                            },
+                            "httpResponse": {
+                                "header": ";; opcode: QUERY, status: NXDOMAIN, id: 33967\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1",
+                                "body": ";; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;http://172.16.34.30:3000/.\tIN\t CAA\n\n;; AUTHORITY SECTION:\n.\t86400\tIN\tSOA\ta.root-servers.net. nstld.verisign-grs.com. 2026012800 1800 900 604800 86400\n"
+                            }
+                        },
+                        {
+                            "type": "dast",
+                            "id": "5e54e55111dac33081ff33c457c7ff24",
+                            "ruleId": "robots.txt endpoint prober",
+                            "locationId": "6653b551b82da90b83974fdaf25ed769",
+                            "url": "http://172.16.34.30:3000/",
+                            "status": "To Verify",
+                            "description": "<p><strong>URL:</strong> http://172.16.34.30:3000/<br /><strong>Analyzer:</strong> Active Signature Scanner<br /><strong>Module:</strong> nuclei-runner<br /><strong>Confidence:</strong> certain</p><p><strong>Payloads:</strong><br /><strong>Payload:</strong> <code>curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0' 'http://172.16.34.30:3000/robots.txt'</code></p>",
+                            "httpRequest": {
+                                "header": "GET /robots.txt HTTP/1.1\r\nHost: 172.16.34.30:3000\r\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip",
+                                "body": ""
+                            },
+                            "httpResponse": {
+                                "header": "HTTP/1.1 200 OK\r\nConnection: close\r\nContent-Length: 28\r\nAccess-Control-Allow-Origin: *\r\nContent-Type: text/plain; charset=utf-8\r\nDate: Wed, 28 Jan 2026 08:01:21 GMT\r\nEtag: W/\"1c-8HgF6mNyhsSFK0pascC9uB0wjX0\"\r\nFeature-Policy: payment 'self'\r\nVary: Accept-Encoding\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: SAMEORIGIN\r\nX-Fuchsia-Response-Time-Ms: 6\r\nX-Recruiting: /#/jobs",
+                                "body": "User-agent: *\nDisallow: /ftp"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "https://docs.appsec-hub.ru/"
+}

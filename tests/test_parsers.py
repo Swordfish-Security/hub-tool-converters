@@ -21,6 +21,7 @@ class ArgsBase:
     name: str = 'hub-tool-converters'
     url: str = 'https://github.com/Swordfish-Security/hub-tool-converters.git'
     format: str | None = None
+    report_version: str = '1.0.1'
 
 
 class ArgsCodebase(ArgsBase):
@@ -40,18 +41,22 @@ class ArgsArtifact(ArgsBase):
 
 
 class ParsersTest(unittest.TestCase):
+    REPORT_VERSION = '1.0.1'
 
     def setUp(self):
         self.results: dict[str, Any] = {}
         self.reports: dict[str, Any] = {}
 
         self.args_artifact = ArgsArtifact()
+        self.args_artifact.report_version = self.REPORT_VERSION
         self.__test(self.args_artifact)
 
         self.args_codebase = ArgsCodebase()
+        self.args_codebase.report_version = self.REPORT_VERSION
         self.__test(self.args_codebase)
 
         self.args_instance = ArgsInstance()
+        self.args_instance.report_version = self.REPORT_VERSION
         self.__test(self.args_instance)
 
         self.args = (self.args_artifact, self.args_codebase, self.args_instance)
@@ -136,3 +141,11 @@ class ParsersTest(unittest.TestCase):
 
                 print(f"\nComparing {name}")
                 self.assertEqual(report, output)
+
+
+class ParsersTestLatestSchema(ParsersTest):
+    """Те же парсеры на последней версии схемы: отчёты обязаны проходить валидацию схемы и сохранять уникальность id."""
+    REPORT_VERSION = '1.0.3'
+
+    def test_output_files(self):
+        self.skipTest('эталонные *_hub.json сформированы для версии схемы 1.0.1')

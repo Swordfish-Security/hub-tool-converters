@@ -14,7 +14,8 @@
       "description": "The Hub.Report format version of this log file",
       "enum": [
         "1.0.1",
-        "1.0.2"
+        "1.0.2",
+        "1.0.3"
       ],
       "type": "string"
     },
@@ -497,6 +498,13 @@
         "extraInformation": {
           "description": "Additional Information about Rule",
           "$ref": "#/definitions/propertyBag"
+        },
+        "hasExploit": {
+          "description": "Public exploit availability for the vulnerability (schema version 1.0.3 and newer, optional)",
+          "type": [
+            "boolean",
+            "null"
+          ]
         }
       }
     },
@@ -921,6 +929,19 @@
         "toolFindingLink": {
           "type": "string",
           "description": "Tool finding link"
+        },
+        "relation": {
+          "description": "Dependency relation of the vulnerable component: direct or indirect (transitive) dependency (schema version 1.0.3 and newer, optional)",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "direct",
+            "indirect",
+            "transitive",
+            null
+          ]
         }
       }
     },
@@ -995,6 +1016,19 @@
         "toolFindingLink": {
           "type": "string",
           "description": "Tool finding link"
+        },
+        "relation": {
+          "description": "Dependency relation of the vulnerable component: direct or indirect (transitive) dependency (schema version 1.0.3 and newer, optional)",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "direct",
+            "indirect",
+            "transitive",
+            null
+          ]
         }
       }
     },

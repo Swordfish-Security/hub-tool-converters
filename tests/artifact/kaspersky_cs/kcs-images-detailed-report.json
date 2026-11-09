@@ -1,0 +1,60 @@
+{
+  "generatedAt": "23.10.2026, 06:45:32",
+  "images": [
+    {
+      "imageName": "registry.example.local/sample/app-image:1.0.0",
+      "riskRating": "High",
+      "compliance": "Non-compliant",
+      "clusterName": "sample-cluster",
+      "scanDate": "22.10.2026, 18:10:05",
+      "assurancePolicies": [],
+      "vulnerabilitiesCount": {"total": 4, "critical": 1, "high": 1, "medium": 1, "low": 0, "negligible": 1},
+      "malwareCount": {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "negligible": 0},
+      "sensitiveDataCount": {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "negligible": 0},
+      "misconfigurationsCount": {"total": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "negligible": 0},
+      "vulnerabilities": [
+        {
+          "name": "CVE-2024-1001",
+          "severity": "Critical",
+          "exploit": true,
+          "resource": "libsample 1.2.3-1",
+          "vendorFix": "1.2.4-1",
+          "dbLinks": [
+            {"title": "NVD", "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-1001"},
+            {"title": "Exploit DB", "link": "https://www.exploit-db.com/exploits/00001"}
+          ]
+        },
+        {
+          "name": "CVE-2024-1002",
+          "severity": "High",
+          "exploit": false,
+          "resource": "libother 2:3.4.5.astra-1",
+          "vendorFix": "-",
+          "dbLinks": [
+            {"title": "NVD", "link": "https://nvd.nist.gov/vuln/detail/CVE-2024-1002"}
+          ]
+        },
+        {
+          "name": "CVE-2024-1003",
+          "severity": "Medium",
+          "exploit": false,
+          "resource": "libsample 1.2.3-1",
+          "vendorFix": "-",
+          "dbLinks": []
+        },
+        {
+          "name": "TEMP-0000001-ABCDEF",
+          "severity": "Negligible",
+          "resource": "tool-utils 0.9.1",
+          "vendorFix": "",
+          "dbLinks": [
+            {"title": "VDB (DSTD)", "link": "https://vdb.example.local/TEMP-0000001-ABCDEF"}
+          ]
+        }
+      ],
+      "malware": [],
+      "sensitiveData": [],
+      "misconfigurations": []
+    }
+  ]
+}

@@ -53,6 +53,7 @@ class RuleSCA(Rule):
     cvss3Vector: str
     cvss3Score: str
     references: list[str]
+    hasExploit: bool | None = None  # схема >= 1.0.3; None — не пишется в отчёт
 
     def __init__(
             self,
@@ -63,10 +64,12 @@ class RuleSCA(Rule):
             cwe: list[RuleCwe],
             references: list[str],
             cvss3_vector: str,
-            cvss3_score: str
+            cvss3_score: str,
+            has_exploit: bool | None = None
     ):
         self.cveId = name
         self.cvss3Vector = cvss3_vector
         self.cvss3Score = cvss3_score
         self.references = references
+        self.hasExploit = has_exploit
         super().__init__(type, name, severity, description, cwe)
